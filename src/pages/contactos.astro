@@ -1,0 +1,103 @@
+---
+import Layout from "../layouts/Layout.astro"
+import Header from "../components/Header.astro"
+import Footer from "../components/Footer.astro"
+import PageBanner from "../components/PageBanner.astro"
+import { Phone, Mail, MapPin, Clock } from "lucide-react"
+---
+
+<Layout
+  title="Contactos | GPTur · Companhia das Viagens"
+  description="Fale com a GPTur — Companhia das Viagens. Balcão em Lisboa, departamento de empresas, telefones, email e horário de atendimento."
+>
+  <Header />
+  <main>
+    <PageBanner
+      eyebrow="Estamos à sua disposição"
+      title="Contactos"
+      subtitle="Fora das horas de serviço, contacte-nos pelos restantes meios — respondemos sempre."
+      crumb="Contactos"
+    />
+
+    <section class="bg-white py-16">
+      <div class="mx-auto grid max-w-7xl gap-12 px-5 lg:grid-cols-[1fr_1.1fr] lg:px-8">
+        <!-- Info -->
+        <div class="space-y-8">
+          <div>
+            <h2 class="eyebrow text-gold-500">Telefones</h2>
+            <div class="mt-3 space-y-3">
+              <a href="tel:+351217530021" class="flex items-center gap-3 text-foreground hover:text-primary">
+                <Phone size={18} className="shrink-0 text-primary" />
+                <span><strong>Balcão:</strong> +351 217 530 021</span>
+              </a>
+              <a href="tel:+351913813584" class="flex items-center gap-3 text-foreground hover:text-primary">
+                <Phone size={18} className="shrink-0 text-primary" />
+                <span><strong>Empresas:</strong> +351 913 813 584</span>
+              </a>
+            </div>
+          </div>
+
+          <div>
+            <h2 class="eyebrow text-gold-500">Email</h2>
+            <div class="mt-3 space-y-3">
+              <a href="mailto:reservas@gptur.pt" class="flex items-center gap-3 text-foreground hover:text-primary">
+                <Mail size={18} className="shrink-0 text-primary" /> reservas@gptur.pt
+              </a>
+              <a href="mailto:empresas@gptur.pt" class="flex items-center gap-3 text-foreground hover:text-primary">
+                <Mail size={18} className="shrink-0 text-primary" /> empresas@gptur.pt
+              </a>
+            </div>
+          </div>
+
+          <div>
+            <h2 class="eyebrow text-gold-500">Morada</h2>
+            <p class="mt-3 flex items-start gap-3 text-foreground">
+              <MapPin size={18} className="mt-0.5 shrink-0 text-primary" />
+              R. Helena Vaz da Silva, 11, 1750-405 Lisboa · Portugal
+            </p>
+          </div>
+
+          <div>
+            <h2 class="eyebrow text-gold-500">Horário (balcão)</h2>
+            <p class="mt-3 flex items-center gap-3 text-foreground">
+              <Clock size={18} className="shrink-0 text-primary" /> 10:00 – 19:00
+            </p>
+          </div>
+        </div>
+
+        <!-- Form -->
+        <div class="rounded-xl border border-border bg-cream p-7 shadow-sm">
+          <h2 class="font-display text-2xl text-ink">Envie-nos uma mensagem</h2>
+          <p class="mt-1 text-sm text-muted-foreground">
+            Diga-nos como o podemos ajudar e entraremos em contacto.
+          </p>
+          <form class="mt-6 space-y-4" data-contact>
+            <div class="grid gap-4 sm:grid-cols-2">
+              <input name="nome" required placeholder="Nome" class="h-11 rounded-md border border-input bg-white px-3 text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
+              <input name="email" type="email" required placeholder="Email" class="h-11 rounded-md border border-input bg-white px-3 text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
+            </div>
+            <input name="assunto" placeholder="Assunto" class="h-11 w-full rounded-md border border-input bg-white px-3 text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
+            <textarea name="mensagem" required rows="5" placeholder="A sua mensagem" class="w-full rounded-md border border-input bg-white p-3 text-sm focus:outline-none focus:ring-2 focus:ring-ring"></textarea>
+            <button type="submit" class="h-12 w-full rounded-md bg-primary text-sm font-semibold uppercase tracking-widest text-primary-foreground transition-colors hover:bg-teal-700">
+              Enviar mensagem
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>
+
+<script>
+  const form = document.querySelector<HTMLFormElement>("[data-contact]")
+  form?.addEventListener("submit", (e) => {
+    e.preventDefault()
+    const data = new FormData(form)
+    const subject = encodeURIComponent(`Contacto site: ${data.get("assunto") || "Mensagem"}`)
+    const body = encodeURIComponent(
+      `Nome: ${data.get("nome")}\nEmail: ${data.get("email")}\n\n${data.get("mensagem")}`
+    )
+    window.location.href = `mailto:reservas@gptur.pt?subject=${subject}&body=${body}`
+  })
+</script>

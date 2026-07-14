@@ -2,12 +2,19 @@
 import { MapPin, Phone, Mail, Clock } from "lucide-react"
 
 const destinos = [
-  "Paris", "Egito", "Amesterdão", "Roma", "Marrocos",
-  "Islândia", "Jordânia", "Japão", "Douro", "Caminho de Santiago",
+  { label: "China Clássica", href: "/viagens/china-classica" },
+  { label: "Istambul", href: "/viagens/istambul-dois-continentes" },
+  { label: "Marrocos", href: "/viagens/marrocos-1000-kasbahs" },
+  { label: "Itália Clássica", href: "/viagens/italia-classica" },
+  { label: "Circuito Açoriano", href: "/viagens/circuito-acoriano" },
+  { label: "Ver catálogo completo", href: "/catalogo" },
 ]
 const info = [
-  "A nossa identidade", "Viagens à medida", "Empresas",
-  "Ofertas", "Termos e Condições", "Política de Privacidade",
+  { label: "A nossa identidade", href: "/identidade" },
+  { label: "Circuitos à medida", href: "/circuitos-a-medida" },
+  { label: "Empresas", href: "/empresas" },
+  { label: "Catálogo de viagens", href: "/catalogo" },
+  { label: "Contactos", href: "/contactos" },
 ]
 ---
 
@@ -56,7 +63,7 @@ const info = [
           {
             destinos.map((l) => (
               <li>
-                <a href="#ofertas" class="text-white/60 transition-colors hover:text-white">{l}</a>
+                <a href={l.href} class="text-white/60 transition-colors hover:text-white">{l.label}</a>
               </li>
             ))
           }
@@ -69,7 +76,7 @@ const info = [
           {
             info.map((l) => (
               <li>
-                <a href="#" class="text-white/60 transition-colors hover:text-white">{l}</a>
+                <a href={l.href} class="text-white/60 transition-colors hover:text-white">{l.label}</a>
               </li>
             ))
           }

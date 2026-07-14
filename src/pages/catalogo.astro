@@ -1,0 +1,99 @@
+---
+import Layout from "../layouts/Layout.astro"
+import Header from "../components/Header.astro"
+import Footer from "../components/Footer.astro"
+import PageBanner from "../components/PageBanner.astro"
+import TripCard from "../components/TripCard.astro"
+import { trips, regions } from "../data/trips"
+---
+
+<Layout
+  title="Catálogo de Viagens | GPTur · Companhia das Viagens"
+  description="Descubra todas as viagens GPTur — circuitos culturais em grupo, city breaks e programas à medida, por todo o mundo."
+>
+  <Header />
+  <main>
+    <PageBanner
+      eyebrow="Todas as viagens"
+      title="Catálogo de Viagens"
+      subtitle="Dos clássicos aos destinos mais invulgares — filtre por região e encontre a viagem certa para si."
+      crumb="Catálogo de Viagens"
+    />
+
+    <section class="bg-white py-12">
+      <div class="mx-auto max-w-7xl px-5 lg:px-8">
+        <div class="mb-8 flex flex-wrap gap-2" id="region-filter">
+          <button
+            data-region="all"
+            class="filter-chip rounded-full border border-primary bg-primary px-4 py-1.5 text-sm font-medium text-primary-foreground"
+            >Todas</button
+          >
+          {
+            regions.map((r) => (
+              <button
+                data-region={r}
+                class="filter-chip rounded-full border border-border px-4 py-1.5 text-sm text-foreground/80 transition-colors hover:border-primary hover:text-primary"
+              >
+                {r}
+              </button>
+            ))
+          }
+        </div>
+
+        <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3" id="trip-grid">
+          {
+            trips.map((trip) => (
+              <div class="trip-item" data-region={trip.region}>
+                <TripCard trip={trip} />
+              </div>
+            ))
+          }
+        </div>
+        <p id="empty-state" class="hidden py-12 text-center text-muted-foreground">
+          Sem viagens nesta região de momento. Fale connosco para um circuito à medida.
+        </p>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>
+
+<script>
+  const chips = document.querySelectorAll<HTMLButtonElement>(".filter-chip")
+  const items = document.querySelectorAll<HTMLElement>(".trip-item")
+  const empty = document.getElementById("empty-state")
+
+  const activeCls = ["border-primary", "bg-primary", "text-primary-foreground"]
+  const idleCls = ["border-border", "text-foreground/80"]
+
+  function setActive(target: HTMLButtonElement) {
+    chips.forEach((c) => {
+      c.classList.remove(...activeCls)
+      c.classList.add(...idleCls)
+    })
+    target.classList.remove(...idleCls)
+    target.classList.add(...activeCls)
+  }
+
+  chips.forEach((chip) => {
+    chip.addEventListener("click", () => {
+      const region = chip.dataset.region
+      setActive(chip)
+      let visible = 0
+      items.forEach((item) => {
+        const match = region === "all" || item.dataset.region === region
+        item.classList.toggle("hidden", !match)
+        if (match) visible++
+      })
+      empty?.classList.toggle("hidden", visible > 0)
+    })
+  })
+
+  // Deep-link support: /catalogo?regiao=Ásia
+  const params = new URLSearchParams(location.search)
+  const preset = params.get("regiao")
+  if (preset) {
+    const match = Array.from(chips).find((c) => c.dataset.region === preset)
+    match?.click()
+  }
+</script>

@@ -1,0 +1,80 @@
+---
+import Layout from "../layouts/Layout.astro"
+import Header from "../components/Header.astro"
+import Footer from "../components/Footer.astro"
+import PageBanner from "../components/PageBanner.astro"
+import { Briefcase, Clock, Wallet, ShieldCheck, Users, Globe } from "lucide-react"
+
+const services = [
+  { icon: Briefcase, title: "Viagens de negócios", body: "Voos, hotéis e transferes tratados de ponta a ponta, com tarifas negociadas e faturação organizada." },
+  { icon: Globe, title: "Eventos e incentivos", body: "Convenções, feiras e viagens de incentivo para equipas, chave-na-mão." },
+  { icon: Clock, title: "Assistência 24h", body: "Um interlocutor dedicado e apoio permanente, dentro e fora das horas de expediente." },
+  { icon: Wallet, title: "Otimização de custos", body: "Análise das melhores condições operacionais e financeiras para cada deslocação." },
+  { icon: ShieldCheck, title: "Segurança e seguros", body: "Cobertura adequada e apoio na ativação de seguros sempre que necessário." },
+  { icon: Users, title: "Gestão de grupos", body: "Coordenação de grupos de qualquer dimensão, com rigor de horários e programas." },
+]
+---
+
+<Layout
+  title="Empresas | GPTur · Companhia das Viagens"
+  description="Travel management para empresas: viagens de negócios, eventos e incentivos, com um interlocutor dedicado e assistência 24h."
+>
+  <Header />
+  <main>
+    <PageBanner
+      eyebrow="Mercado corporativo"
+      title="GPTur Empresas"
+      subtitle="O intermediário profissional que dá segurança, conhecimento e proximidade à gestão de viagens da sua organização."
+      crumb="Empresas"
+    />
+
+    <section class="bg-white py-16">
+      <div class="mx-auto max-w-3xl px-5 text-[0.98rem] leading-relaxed text-foreground/85 lg:px-8">
+        <p>
+          Num tempo de compra direta e de intermediários sem rosto humano, os
+          nossos clientes corporativos contam com uma equipa dedicada que trata de
+          toda a logística de viagem — para que possa concentrar-se no que
+          realmente importa: o seu negócio.
+        </p>
+      </div>
+    </section>
+
+    <section class="bg-cream py-16">
+      <div class="mx-auto max-w-7xl px-5 lg:px-8">
+        <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          {
+            services.map((s) => (
+              <div class="rounded-xl border border-border bg-white p-6 shadow-sm">
+                <s.icon className="text-primary" size={28} strokeWidth={1.5} />
+                <h3 class="mt-4 font-display text-xl text-ink">{s.title}</h3>
+                <p class="mt-2 text-sm leading-relaxed text-muted-foreground">{s.body}</p>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-teal-800 py-14 text-white">
+      <div class="mx-auto flex max-w-4xl flex-col items-center gap-6 px-5 text-center lg:flex-row lg:justify-between lg:text-left lg:px-8">
+        <div>
+          <h2 class="font-display text-2xl text-white sm:text-3xl">Departamento de Empresas</h2>
+          <p class="mt-2 text-white/80">Fale diretamente com a nossa equipa corporativa.</p>
+        </div>
+        <div class="flex flex-col gap-3 sm:flex-row">
+          <a
+            href="tel:+351913813584"
+            class="flex h-12 items-center justify-center rounded-md bg-accent px-6 text-sm font-semibold uppercase tracking-widest text-accent-foreground transition-colors hover:bg-gold-400"
+            >+351 913 813 584</a
+          >
+          <a
+            href="mailto:empresas@gptur.pt"
+            class="flex h-12 items-center justify-center rounded-md border border-white/40 px-6 text-sm font-semibold uppercase tracking-widest text-white transition-colors hover:bg-white/10"
+            >empresas@gptur.pt</a
+          >
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>

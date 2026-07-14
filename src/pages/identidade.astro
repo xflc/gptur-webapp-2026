@@ -1,0 +1,95 @@
+---
+import Layout from "../layouts/Layout.astro"
+import Header from "../components/Header.astro"
+import Footer from "../components/Footer.astro"
+import PageBanner from "../components/PageBanner.astro"
+---
+
+<Layout
+  title="A Nossa Identidade | GPTur · Companhia das Viagens"
+  description="Desde 1979, a GPTur é o elo entre o cliente e a viagem — um intermediário profissional que dá segurança, conhecimento e proximidade."
+>
+  <Header />
+  <main>
+    <PageBanner
+      eyebrow="Desde 1979"
+      title="A GPTUR, as agências e o turismo"
+      subtitle="Uma empresa de pessoas que acredita no valor de um intermediário profissional, com rosto humano."
+      crumb="A Nossa Identidade"
+    />
+
+    <section class="bg-white py-16">
+      <div class="mx-auto max-w-3xl space-y-5 px-5 text-[0.98rem] leading-relaxed text-foreground/85 lg:px-8">
+        <p>
+          Nascemos em <strong class="text-foreground">1979</strong>, o ano em que o
+          turismo em Portugal começou a recuperar da crise dos anos anteriores.
+          Trabalhamos numa área entusiasmante, que existe desde a mais remota
+          antiguidade, quando as pessoas se deslocavam em caravanas através de
+          desertos, campos, montanhas e pelas águas dos rios e mares.
+        </p>
+        <p>
+          Temos antecessores curiosos, como a Cúria Romana — que dizem ter sido a
+          primeira grande agência de viagens com organização, programação e meios
+          para deslocar pessoas — ou a Companhia Geral do Comércio do Brasil,
+          idealizada pelo Pe. António Vieira e aprovada por D. João IV em 1649,
+          que fazia a rota Brasil–Portugal.
+        </p>
+        <p>
+          As agências de viagens são responsáveis pela comercialização dos vários
+          produtos junto do consumidor. Começámos a trabalhar através de lojas
+          físicas e evoluímos para o mercado virtual, no atendimento ao público e
+          ao mercado corporativo. Viemos de um tempo em que as principais
+          ferramentas eram o telefone, o telex e o fax; hoje, os GDS e a Internet
+          são fundamentais na nossa rotina.
+        </p>
+        <p>
+          Existe atualmente uma tendência para a compra direta, ou através de
+          intermediários sem rosto humano. Mas os tempos têm demonstrado a
+          importância de um intermediário profissional, ao dispor do cliente, que
+          dá segurança e conhecimento e, na maioria das vezes, ajuda a reduzir
+          custos e a otimizar as soluções. Sem esquecer um ponto fundamental: a
+          assistência durante todo o processo — desde sonhar a viagem, ao
+          acompanhamento no destino, até à ativação de seguros quando é preciso
+          (lembremos os tempos da Covid, em que só os clientes das agências viram
+          os seus problemas resolvidos sem custos).
+        </p>
+        <p>
+          A GPTUR é uma dessas empresas intermediárias ao serviço dos viajantes: o
+          elo entre o cliente e o fornecedor. A nossa finalidade é auxiliar e
+          orientar quanto às melhores condições operacionais e financeiras da
+          viagem — vistos, reservas de hotéis, horários e ligações de voos,
+          análise da oferta de atrativos e guias.
+        </p>
+        <p>
+          Temos evoluído para um mercado muito específico, de organização de
+          viagens à medida de cada cliente ou grupo, que proporcionem experiências
+          completas de viagem — por fora, mas também por dentro — em que a cultura,
+          a natureza, a história, a beleza e a espiritualidade fazem de cada
+          viagem um ponto de mudança.
+        </p>
+      </div>
+    </section>
+
+    <section class="bg-cream py-14">
+      <div class="mx-auto grid max-w-5xl grid-cols-2 gap-8 px-5 text-center lg:grid-cols-4 lg:px-8">
+        <div>
+          <p class="font-display text-4xl font-semibold text-primary">1979</p>
+          <p class="eyebrow mt-1 text-[0.6rem] text-muted-foreground">Fundação</p>
+        </div>
+        <div>
+          <p class="font-display text-4xl font-semibold text-primary">100%</p>
+          <p class="eyebrow mt-1 text-[0.6rem] text-muted-foreground">À medida</p>
+        </div>
+        <div>
+          <p class="font-display text-4xl font-semibold text-primary">24h</p>
+          <p class="eyebrow mt-1 text-[0.6rem] text-muted-foreground">Assistência</p>
+        </div>
+        <div>
+          <p class="font-display text-4xl font-semibold text-primary">+40</p>
+          <p class="eyebrow mt-1 text-[0.6rem] text-muted-foreground">Anos de experiência</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>
