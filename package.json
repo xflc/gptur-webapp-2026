@@ -8,7 +8,8 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "import": "node scripts/import-pdf.mjs"
+    "import": "node scripts/import-pdf.mjs",
+    "fetch:brochures": "node scripts/fetch-brochures.mjs"
   },
   "dependencies": {
     "@astrojs/react": "^4.2.0",
@@ -26,6 +27,7 @@
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
     "pdfjs-dist": "^4.10.38",
+    "playwright": "^1.61.1",
     "tailwindcss": "^4.0.0"
   }
 }
