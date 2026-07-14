@@ -21,7 +21,7 @@ export default function TripFinder({ regions, months }: Props) {
     if (region) params.set("regiao", region)
     if (month) params.set("mes", month)
     params.set("orcamento", String(budget))
-    window.location.hash = `catalogo?${params.toString()}`
+    window.location.hash = `ofertas?${params.toString()}`
   }
 
   return (

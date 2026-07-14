@@ -43,7 +43,7 @@ export default function Hero({ slides }: { slides: Slide[] }) {
       <div className="relative z-10 mx-auto flex h-full max-w-7xl flex-col justify-center px-5 lg:px-8">
         <div className="max-w-xl">
           <span className="eyebrow inline-block bg-accent px-3 py-1 text-accent-foreground">
-            Viagem em destaque
+            Marque a próxima viagem connosco
           </span>
           <h1 className="mt-4 font-display text-4xl leading-tight text-white sm:text-5xl lg:text-6xl">
             {slides[index].title}
@@ -53,8 +53,8 @@ export default function Hero({ slides }: { slides: Slide[] }) {
           </p>
           <p className="mt-4 eyebrow text-white/70">{slides[index].dates}</p>
           <div className="mt-7 flex flex-wrap gap-3">
-            <Button size="lg" onClick={() => (window.location.hash = "#catalogo")}>
-              Saiba Mais
+            <Button size="lg" onClick={() => (window.location.hash = "#ofertas")}>
+              Ver ofertas
             </Button>
             <Button
               size="lg"

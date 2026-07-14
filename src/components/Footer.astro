@@ -1,14 +1,13 @@
 ---
-import { MapPin, Phone, Mail } from "lucide-react"
+import { MapPin, Phone, Mail, Clock } from "lucide-react"
 
-const findLinks = [
-  "Portugal", "Espanha", "Resto da Europa", "Ásia", "América",
-  "África", "Médio Oriente", "Oceânia", "Cruzeiros", "Viagens com Autores",
+const destinos = [
+  "Paris", "Egito", "Amesterdão", "Roma", "Marrocos",
+  "Islândia", "Jordânia", "Japão", "Douro", "Caminho de Santiago",
 ]
-const infoLinks = [
-  "Quem somos", "FAQ – Perguntas frequentes", "Na Imprensa & Notícias",
-  "Recrutamento", "Seguros de Viagem", "Condições Gerais",
-  "Política de Privacidade", "Livro de Reclamações Online",
+const info = [
+  "A nossa identidade", "Viagens à medida", "Empresas",
+  "Ofertas", "Termos e Condições", "Política de Privacidade",
 ]
 ---
 
@@ -16,47 +15,43 @@ const infoLinks = [
   <div class="mx-auto max-w-7xl px-5 py-16 lg:px-8">
     <div class="grid gap-10 lg:grid-cols-4">
       <div>
-        <span class="font-display text-3xl font-semibold text-white">gptur</span>
-        <p class="mt-4 text-sm leading-relaxed text-white/60">
-          Operador turístico especializado em viagens culturais em grupo e de
-          autor, com guia em português.
+        <span class="text-2xl font-bold tracking-[0.18em] text-white">GPTUR</span>
+        <p class="eyebrow mt-1 text-[0.55rem] text-white/50">Companhia das Viagens</p>
+        <p class="mt-5 text-sm leading-relaxed text-white/60">
+          Desde 1979, o elo entre si e a sua próxima viagem. Organização de
+          viagens à medida, com um rosto humano e assistência em todo o percurso.
         </p>
-        <p class="eyebrow mt-6 text-[0.6rem] text-olive-300">RNAVT n.º 0000</p>
       </div>
 
       <div>
-        <h3 class="eyebrow text-[0.65rem] text-white">Morada e contactos</h3>
-        <div class="mt-4 space-y-4 text-sm">
-          <div>
-            <p class="font-semibold text-white/90">Agência Porto</p>
-            <p class="mt-1 flex items-start gap-2 text-white/60">
-              <MapPin size={15} className="mt-0.5 shrink-0 text-olive-300" />
-              Rua Pinto Bessa, 466, 4300-428 Porto
-            </p>
-            <p class="mt-1 flex items-center gap-2 text-white/60">
-              <Phone size={15} className="shrink-0 text-olive-300" /> 222 088 098
-            </p>
-          </div>
-          <div>
-            <p class="font-semibold text-white/90">Agência Lisboa</p>
-            <p class="mt-1 flex items-start gap-2 text-white/60">
-              <MapPin size={15} className="mt-0.5 shrink-0 text-olive-300" />
-              Rua Viriato, 23A, 1050-234 Lisboa
-            </p>
-            <p class="mt-1 flex items-center gap-2 text-white/60">
-              <Mail size={15} className="shrink-0 text-olive-300" /> geral@gptur.pt
-            </p>
-          </div>
+        <h3 class="eyebrow text-[0.65rem] text-white">Contactos</h3>
+        <div class="mt-4 space-y-3 text-sm text-white/60">
+          <p class="flex items-start gap-2">
+            <Phone size={15} className="mt-0.5 shrink-0 text-gold-300" />
+            <span>Balcão: +351 217 530 021<br />Empresas: +351 913 813 584</span>
+          </p>
+          <p class="flex items-start gap-2">
+            <Mail size={15} className="mt-0.5 shrink-0 text-gold-300" />
+            <span>reservas@gptur.pt<br />empresas@gptur.pt</span>
+          </p>
+          <p class="flex items-start gap-2">
+            <Clock size={15} className="mt-0.5 shrink-0 text-gold-300" />
+            <span>Balcão: 10:00 – 19:00</span>
+          </p>
+          <p class="flex items-start gap-2">
+            <MapPin size={15} className="mt-0.5 shrink-0 text-gold-300" />
+            <span>R. Helena Vaz da Silva, 11<br />1750-405 Lisboa · Portugal</span>
+          </p>
         </div>
       </div>
 
       <div>
-        <h3 class="eyebrow text-[0.65rem] text-white">Encontre a sua viagem</h3>
+        <h3 class="eyebrow text-[0.65rem] text-white">Destinos</h3>
         <ul class="mt-4 space-y-2 text-sm">
           {
-            findLinks.map((l) => (
+            destinos.map((l) => (
               <li>
-                <a href="#catalogo" class="text-white/60 transition-colors hover:text-white">{l}</a>
+                <a href="#ofertas" class="text-white/60 transition-colors hover:text-white">{l}</a>
               </li>
             ))
           }
@@ -64,10 +59,10 @@ const infoLinks = [
       </div>
 
       <div>
-        <h3 class="eyebrow text-[0.65rem] text-white">Outra informação</h3>
+        <h3 class="eyebrow text-[0.65rem] text-white">Informação</h3>
         <ul class="mt-4 space-y-2 text-sm">
           {
-            infoLinks.map((l) => (
+            info.map((l) => (
               <li>
                 <a href="#" class="text-white/60 transition-colors hover:text-white">{l}</a>
               </li>
@@ -80,8 +75,8 @@ const infoLinks = [
     <div
       class="mt-12 flex flex-col items-center justify-between gap-3 border-t border-white/15 pt-6 text-xs text-white/50 sm:flex-row"
     >
-      <p>© {new Date().getFullYear()} gptur · Viagens Culturais</p>
-      <p>Feito com Astro + Tailwind</p>
+      <p>© {new Date().getFullYear()} GPTUR · Companhia das Viagens. Todos os direitos reservados.</p>
+      <p>Fora das horas de serviço, contacte-nos pelos restantes meios.</p>
     </div>
   </div>
 </footer>

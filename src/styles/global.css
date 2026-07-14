@@ -3,57 +3,61 @@
 @custom-variant dark (&:is(.dark *));
 
 /*
-  Brand: "gptur" — cultural group travel, in the editorial spirit of
-  Pinto Lopes Viagens. Wine primary, olive accent, warm cream neutrals.
+  GPTur — Companhia das Viagens (est. 1979).
+  Refreshed identity: the brand's teal + gold, kept light and airy.
+  Editorial serif + clean sans, soft cream base, soft deep-teal for
+  dark sections instead of heavy charcoal.
 */
 :root {
-  --radius: 0.5rem;
+  --radius: 0.625rem;
 
-  /* Brand scales */
-  --wine-50: #fbf0f4;
-  --wine-100: #f6dbe4;
-  --wine-200: #ecb6c9;
-  --wine-300: #dd85a6;
-  --wine-400: #c85482;
-  --wine-500: #ac3162;
-  --wine-600: #8c1d40; /* primary */
-  --wine-700: #741636;
-  --wine-800: #5c132c;
-  --wine-900: #491226;
+  /* Teal (petrol) — primary */
+  --teal-50: #eef6f4;
+  --teal-100: #d3e8e3;
+  --teal-200: #a9d2c9;
+  --teal-300: #76b5a9;
+  --teal-400: #4d968a;
+  --teal-500: #327d71;
+  --teal-600: #2a6b61; /* primary */
+  --teal-700: #235650;
+  --teal-800: #1f4741;
+  --teal-900: #1b3b36;
 
-  --olive-50: #f7f8ee;
-  --olive-100: #edf0d6;
-  --olive-200: #dbe1af;
-  --olive-300: #c2cd7f;
-  --olive-400: #a9b755;
-  --olive-500: #8a9a3f; /* accent */
-  --olive-600: #6c7a31;
-  --olive-700: #535e29;
-  --olive-800: #434b25;
-  --olive-900: #394022;
+  /* Gold — accent */
+  --gold-50: #fdf8e7;
+  --gold-100: #faedbf;
+  --gold-200: #f4dc85;
+  --gold-300: #edc84a; /* accent */
+  --gold-400: #e0b52f;
+  --gold-500: #c1971f;
+  --gold-600: #99751a;
+  --gold-700: #745819;
+  --gold-800: #5f481a;
+  --gold-900: #513d1a;
 
-  --cream: #faf7f2;
-  --sand: #f1ebe1;
+  --cream: #f9f7f2;
+  --sand: #eaeee9;
+  --ink: #26302e; /* soft deep teal-charcoal */
 
   /* Semantic tokens (shadcn-compatible) */
   --background: #ffffff;
-  --foreground: #2b2320;
+  --foreground: #26302e;
   --card: #ffffff;
-  --card-foreground: #2b2320;
+  --card-foreground: #26302e;
   --popover: #ffffff;
-  --popover-foreground: #2b2320;
-  --primary: var(--wine-600);
+  --popover-foreground: #26302e;
+  --primary: var(--teal-600);
   --primary-foreground: #ffffff;
   --secondary: var(--sand);
-  --secondary-foreground: #2b2320;
-  --muted: #f5f1ea;
-  --muted-foreground: #766c63;
-  --accent: var(--olive-500);
-  --accent-foreground: #ffffff;
+  --secondary-foreground: #26302e;
+  --muted: #f1f4f1;
+  --muted-foreground: #5f6b67;
+  --accent: var(--gold-300);
+  --accent-foreground: #3d2f08;
   --destructive: #b42318;
-  --border: #e7ded2;
-  --input: #e7ded2;
-  --ring: var(--wine-400);
+  --border: #e2e6df;
+  --input: #e2e6df;
+  --ring: var(--teal-400);
 }
 
 @theme inline {
@@ -86,29 +90,29 @@
 
   --color-cream: var(--cream);
   --color-sand: var(--sand);
-  --color-ink: #2b2320;
+  --color-ink: var(--ink);
 
-  --color-wine-50: var(--wine-50);
-  --color-wine-100: var(--wine-100);
-  --color-wine-200: var(--wine-200);
-  --color-wine-300: var(--wine-300);
-  --color-wine-400: var(--wine-400);
-  --color-wine-500: var(--wine-500);
-  --color-wine-600: var(--wine-600);
-  --color-wine-700: var(--wine-700);
-  --color-wine-800: var(--wine-800);
-  --color-wine-900: var(--wine-900);
+  --color-teal-50: var(--teal-50);
+  --color-teal-100: var(--teal-100);
+  --color-teal-200: var(--teal-200);
+  --color-teal-300: var(--teal-300);
+  --color-teal-400: var(--teal-400);
+  --color-teal-500: var(--teal-500);
+  --color-teal-600: var(--teal-600);
+  --color-teal-700: var(--teal-700);
+  --color-teal-800: var(--teal-800);
+  --color-teal-900: var(--teal-900);
 
-  --color-olive-50: var(--olive-50);
-  --color-olive-100: var(--olive-100);
-  --color-olive-200: var(--olive-200);
-  --color-olive-300: var(--olive-300);
-  --color-olive-400: var(--olive-400);
-  --color-olive-500: var(--olive-500);
-  --color-olive-600: var(--olive-600);
-  --color-olive-700: var(--olive-700);
-  --color-olive-800: var(--olive-800);
-  --color-olive-900: var(--olive-900);
+  --color-gold-50: var(--gold-50);
+  --color-gold-100: var(--gold-100);
+  --color-gold-200: var(--gold-200);
+  --color-gold-300: var(--gold-300);
+  --color-gold-400: var(--gold-400);
+  --color-gold-500: var(--gold-500);
+  --color-gold-600: var(--gold-600);
+  --color-gold-700: var(--gold-700);
+  --color-gold-800: var(--gold-800);
+  --color-gold-900: var(--gold-900);
 }
 
 @layer base {
@@ -131,7 +135,7 @@
   }
 }
 
-/* Utility: the thin uppercase, letter-spaced label used across the site */
+/* Thin uppercase, letter-spaced label */
 .eyebrow {
   font-size: 0.75rem;
   font-weight: 600;

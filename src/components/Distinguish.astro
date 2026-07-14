@@ -1,36 +1,36 @@
 ---
-import { Compass, Users, BadgeCheck, BookOpen } from "lucide-react"
+import { HeartHandshake, Compass, ShieldCheck, Building2 } from "lucide-react"
 
 const features = [
   {
     icon: Compass,
-    title: "Destinos invulgares",
-    body: "Além dos clássicos, damos a conhecer destinos afastados das rotas convencionais, em muitos dos quais fomos pioneiros com grupos.",
+    title: "Viagens à medida",
+    body: "Organizamos cada viagem em torno de si — cultura, natureza, história, beleza e espiritualidade, à medida de cada cliente ou grupo.",
   },
   {
-    icon: BookOpen,
-    title: "Viagens com Autores",
-    body: "Experiências únicas partilhadas por um Autor, que lhes imprime uma identidade e sensibilidade próprias.",
+    icon: HeartHandshake,
+    title: "Um rosto humano",
+    body: "Num mundo de compra direta e intermediários sem rosto, somos o intermediário profissional que dá conhecimento e proximidade.",
   },
   {
-    icon: Users,
-    title: "Acompanhamento em português",
-    body: "Um guia ou representante da agência acompanha todo o circuito, uma garantia da nossa presença e disponibilidade 24h.",
+    icon: ShieldCheck,
+    title: "Assistência sempre",
+    body: "Acompanhamos todo o processo, desde sonhar o produto final ao apoio em viagem e à ativação de seguros quando é preciso.",
   },
   {
-    icon: BadgeCheck,
-    title: "Regime Tudo Incluído",
-    body: "A maioria das viagens inclui pensão completa e entradas em museus e monumentos. Sem surpresas com despesas extra.",
+    icon: Building2,
+    title: "Balcão e empresas",
+    body: "Atendimento ao público e ao mercado corporativo, com soluções operacionais e financeiras otimizadas para cada viagem.",
   },
 ]
 ---
 
-<section id="sustentabilidade" class="bg-ink py-20 text-white">
+<section id="empresas" class="bg-teal-800 py-20 text-white">
   <div class="mx-auto max-w-7xl px-5 lg:px-8">
     <div class="max-w-2xl">
-      <span class="eyebrow text-olive-300">O que nos distingue</span>
+      <span class="eyebrow text-gold-300">O que nos distingue</span>
       <h2 class="mt-2 font-display text-4xl text-white">
-        Mais do que visitar um destino, vivê-lo.
+        Viagens para fora, mas também por dentro.
       </h2>
     </div>
 
@@ -38,7 +38,7 @@ const features = [
       {
         features.map((f) => (
           <div class="border-t border-white/15 pt-6">
-            <f.icon className="text-olive-300" size={30} strokeWidth={1.5} />
+            <f.icon className="text-gold-300" size={30} strokeWidth={1.5} />
             <h3 class="mt-4 font-display text-2xl text-white">{f.title}</h3>
             <p class="mt-2 text-sm leading-relaxed text-white/70">{f.body}</p>
           </div>
