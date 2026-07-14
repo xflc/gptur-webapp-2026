@@ -7,6 +7,26 @@ export type Region =
   | "Oceânia"
   | "Portugal"
 
+export interface ItineraryDay {
+  day: string
+  route: string
+  body: string
+}
+
+export interface TripDetails {
+  groupTravel?: boolean
+  meals?: string
+  overview: string[]
+  highlights?: string[]
+  otherDates?: string[]
+  itinerary: ItineraryDay[]
+  included: string[]
+  notIncluded?: string[]
+  notes?: string[]
+  documentation?: string[]
+  gallery?: string[]
+}
+
 export interface Trip {
   slug: string
   title: string
@@ -19,6 +39,7 @@ export interface Trip {
   tagline: string
   featured?: boolean
   withAuthor?: boolean
+  details?: TripDetails
 }
 
 // Placeholder imagery via picsum (stable, real photos) — swap for
@@ -38,6 +59,114 @@ export const trips: Trip[] = [
     image: img("china-greatwall"),
     tagline: "Da Grande Muralha aos guerreiros de terracota, com guia em português.",
     featured: true,
+    details: {
+      groupTravel: true,
+      meals: "Pensão completa · 24 refeições",
+      overview: [
+        "Da capital imperial às margens do Rio Li, a China Clássica reúne num só circuito os grandes ícones de uma civilização com mais de cinco mil anos. Caminhe sobre a Grande Muralha, encare o exército de guerreiros de terracota e deixe-se surpreender pelo contraste entre a Pequim milenar e a Xangai do futuro.",
+        "Uma viagem em grupo com guia em português durante todo o percurso, pensada para quem quer compreender a China — a sua história, a sua espiritualidade e a energia das suas cidades — sem abdicar do conforto.",
+      ],
+      highlights: [
+        "Grande Muralha em Mutianyu, o troço mais espetacular e menos concorrido",
+        "Guerreiros de terracota de Xi'an, Património da Humanidade",
+        "Cruzeiro pelo Rio Li, entre os picos cársicos de Guilin",
+        "Cidade Proibida e Praça de Tiananmen, o coração de Pequim",
+        "O Bund e os jardins clássicos de Xangai",
+      ],
+      otherDates: [
+        "16 a 26 de setembro de 2026",
+        "14 a 24 de outubro de 2026",
+        "8 a 18 de abril de 2027",
+      ],
+      itinerary: [
+        {
+          day: "1º Dia",
+          route: "Lisboa ou Porto (avião) – Pequim",
+          body: "Comparência no aeroporto para embarque em voo com destino a Pequim. Refeições e noite a bordo.",
+        },
+        {
+          day: "2º Dia",
+          route: "Pequim",
+          body: "Chegada a Pequim, capital da China. Receção pelo nosso guia e transfer para o hotel. Restante dia livre para uma primeira aproximação à cidade. Jantar e alojamento.",
+        },
+        {
+          day: "3º Dia",
+          route: "Pequim",
+          body: "Dia dedicado ao coração imperial: a imensa Praça de Tiananmen e a Cidade Proibida, palácio dos imperadores das dinastias Ming e Qing. À tarde, o Templo do Céu, obra-prima da arquitetura religiosa, rodeado do seu parque. Almoço e jantar incluídos.",
+        },
+        {
+          day: "4º Dia",
+          route: "Pequim – Grande Muralha – Palácio de Verão",
+          body: "Excursão à Grande Muralha, no troço de Mutianyu, onde a subida de teleférico revela panorâmicas inesquecíveis. Regresso a Pequim com visita ao Palácio de Verão, residência estival da corte, à beira do Lago Kunming. Almoço e jantar.",
+        },
+        {
+          day: "5º Dia",
+          route: "Pequim – Xi'an (comboio de alta velocidade)",
+          body: "Manhã livre e viagem em comboio de alta velocidade até Xi'an, antiga capital e ponto de partida da Rota da Seda. Passeio pelo Bairro Muçulmano. Alojamento.",
+        },
+        {
+          day: "6º Dia",
+          route: "Xi'an",
+          body: "Visita ao exército de guerreiros de terracota, milhares de figuras que velavam o túmulo do primeiro imperador. À tarde, subida às muralhas Ming e visita à Pequena Pagoda do Ganso Selvagem. Almoço e jantar.",
+        },
+        {
+          day: "7º Dia",
+          route: "Xi'an – Guilin (avião)",
+          body: "Voo para Guilin, na região de paisagens cársicas mais célebre da China. Tempo para passear junto aos lagos e às colinas que emolduram a cidade. Alojamento.",
+        },
+        {
+          day: "8º Dia",
+          route: "Guilin – Cruzeiro no Rio Li – Yangshuo",
+          body: "Cruzeiro pelo Rio Li até Yangshuo, entre pães-de-açúcar verdejantes, campos de arroz e aldeias de pescadores — a paisagem que inspirou séculos de pintura chinesa. Almoço a bordo. Alojamento.",
+        },
+        {
+          day: "9º Dia",
+          route: "Guilin – Xangai (avião)",
+          body: "Voo para Xangai, a metrópole mais cosmopolita da China. Primeiro contacto com o Bund e a sua marginal histórica, frente à silhueta futurista de Pudong. Jantar e alojamento.",
+        },
+        {
+          day: "10º Dia",
+          route: "Xangai",
+          body: "Visita ao Jardim Yuyuan, ao Templo do Buda de Jade e à Cidade Antiga. Tarde livre para compras na Nanjing Road ou passeio pela zona da antiga Concessão Francesa. Alojamento.",
+        },
+        {
+          day: "11º Dia",
+          route: "Xangai (avião) – Lisboa ou Porto",
+          body: "Em hora a combinar, transfer ao aeroporto para embarque em voo de regresso a Portugal. Fim da viagem e dos nossos serviços.",
+        },
+      ],
+      included: [
+        "Passagem aérea em classe económica, com taxas incluídas",
+        "Comboio de alta velocidade Pequim–Xi'an e voos domésticos",
+        "Alojamento em hotéis 4* e 5* em quarto duplo",
+        "Regime de pensão completa (24 refeições)",
+        "Guia acompanhante em português durante todo o circuito",
+        "Guias locais e todas as entradas mencionadas no programa",
+        "Seguro de viagem",
+      ],
+      notIncluded: [
+        "Vistos e taxas consulares",
+        "Bebidas às refeições e despesas de caráter pessoal",
+        "Gorjetas a guias e motoristas",
+        "Excursões e atividades assinaladas como opcionais",
+      ],
+      notes: [
+        "Programa sujeito a alterações de ordem operacional, mantendo-se o conteúdo das visitas.",
+        "Preço por pessoa em quarto duplo. Suplemento de quarto individual sob consulta.",
+        "Poderão existir pequenas diferenças entre os programas de cada partida.",
+      ],
+      documentation: [
+        "Passaporte com validade mínima de 6 meses após a data de regresso.",
+        "Visto de entrada na China obrigatório para cidadãos portugueses (tratado pela agência mediante procuração).",
+        "Recomenda-se consultar o Centro de Vacinação Internacional antes da partida.",
+      ],
+      gallery: [
+        img("china-greatwall"),
+        img("china-terracotta-xian"),
+        img("china-liriver-guilin"),
+        img("china-shanghai-bund"),
+      ],
+    },
   },
   {
     slug: "istambul-dois-continentes",
