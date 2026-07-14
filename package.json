@@ -7,7 +7,8 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "import": "node scripts/import-pdf.mjs"
   },
   "dependencies": {
     "@astrojs/react": "^4.2.0",
@@ -20,9 +21,11 @@
     "tailwind-merge": "^2.6.0"
   },
   "devDependencies": {
+    "@anthropic-ai/sdk": "^0.39.0",
     "@tailwindcss/vite": "^4.0.0",
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
+    "pdfjs-dist": "^4.10.38",
     "tailwindcss": "^4.0.0"
   }
 }

@@ -24,3 +24,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Partner source PDFs (local only)
+partner-pdfs/
