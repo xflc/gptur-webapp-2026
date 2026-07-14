@@ -1,0 +1,79 @@
+---
+const nav = [
+  { label: "Início", href: "#inicio" },
+  { label: "Catálogo de Viagens", href: "#catalogo" },
+  { label: "Viagens com Autores", href: "#autores" },
+  { label: "Circuitos à Medida", href: "#medida" },
+  { label: "Sustentabilidade", href: "#sustentabilidade" },
+  { label: "Contactos", href: "#contactos" },
+]
+---
+
+<header class="sticky top-0 z-50 border-b border-border bg-cream/95 backdrop-blur">
+  <div class="mx-auto flex max-w-7xl items-center justify-between gap-6 px-5 py-4 lg:px-8">
+    <a href="#inicio" class="flex items-center gap-3">
+      <span
+        class="grid h-11 w-11 place-items-center rounded-md bg-primary font-display text-2xl leading-none text-primary-foreground"
+        >g</span
+      >
+      <span class="flex flex-col leading-none">
+        <span class="font-display text-2xl font-semibold text-primary">gptur</span>
+        <span class="eyebrow text-[0.6rem] text-muted-foreground">Viagens Culturais</span>
+      </span>
+    </a>
+
+    <nav class="hidden items-center gap-7 lg:flex">
+      {
+        nav.map((item) => (
+          <a
+            href={item.href}
+            class="eyebrow text-[0.7rem] text-foreground/80 transition-colors hover:text-primary"
+          >
+            {item.label}
+          </a>
+        ))
+      }
+    </nav>
+
+    <a
+      href="#catalogo"
+      class="hidden rounded-md border border-primary px-4 py-2 text-xs font-semibold uppercase tracking-widest text-primary transition-colors hover:bg-primary hover:text-primary-foreground lg:inline-block"
+      >Reservar</a
+    >
+
+    <button
+      id="mobile-toggle"
+      class="grid h-10 w-10 place-items-center rounded-md text-primary lg:hidden"
+      aria-label="Abrir menu"
+    >
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="3" y1="6" x2="21" y2="6" /><line x1="3" y1="12" x2="21" y2="12" /><line x1="3" y1="18" x2="21" y2="18" />
+      </svg>
+    </button>
+  </div>
+
+  <nav
+    id="mobile-menu"
+    class="hidden flex-col gap-1 border-t border-border bg-cream px-5 py-4 lg:hidden"
+  >
+    {
+      nav.map((item) => (
+        <a
+          href={item.href}
+          class="eyebrow rounded-md px-2 py-3 text-xs text-foreground/80 hover:bg-secondary"
+        >
+          {item.label}
+        </a>
+      ))
+    }
+  </nav>
+</header>
+
+<script>
+  const toggle = document.getElementById("mobile-toggle")
+  const menu = document.getElementById("mobile-menu")
+  toggle?.addEventListener("click", () => menu?.classList.toggle("hidden"))
+  menu?.querySelectorAll("a").forEach((a) =>
+    a.addEventListener("click", () => menu?.classList.add("hidden"))
+  )
+</script>

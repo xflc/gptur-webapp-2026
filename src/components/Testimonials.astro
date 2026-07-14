@@ -1,0 +1,42 @@
+---
+const quotes = [
+  {
+    text: "Uma excelente agência, com ótimos programas e viagens muito bem organizadas. Recomendo a quem queira viajar.",
+    author: "Maria L.",
+  },
+  {
+    text: "Organização, simpatia, cuidado com o cliente, cumprimento de horários e programas. A minha agência de eleição.",
+    author: "João P.",
+  },
+  {
+    text: "Recomendo tudo. Desde a organização, à competência e delicadeza dos guias.",
+    author: "Ana R.",
+  },
+]
+---
+
+<section class="bg-sand py-20">
+  <div class="mx-auto max-w-7xl px-5 lg:px-8">
+    <div class="grid gap-6 lg:grid-cols-3">
+      {
+        quotes.map((q) => (
+          <figure class="flex flex-col rounded-xl bg-white p-7 shadow-sm">
+            <div class="font-display text-5xl leading-none text-accent">“</div>
+            <blockquote class="mt-2 flex-1 text-[0.95rem] leading-relaxed text-foreground">
+              {q.text}
+            </blockquote>
+            <figcaption class="eyebrow mt-5 text-[0.65rem] text-muted-foreground">
+              {q.author}
+            </figcaption>
+          </figure>
+        ))
+      }
+    </div>
+
+    <p class="mx-auto mt-12 max-w-2xl text-center font-display text-2xl leading-snug text-ink">
+      Com base em mais de 27.000 inquéritos de satisfação,
+      <span class="text-primary">98,8% dos viajantes recomenda</span> os nossos serviços.
+    </p>
+    <p class="eyebrow mt-3 text-center text-accent">#dolongesefazperto</p>
+  </div>
+</section>

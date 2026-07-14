@@ -1,0 +1,87 @@
+---
+import { MapPin, Phone, Mail } from "lucide-react"
+
+const findLinks = [
+  "Portugal", "Espanha", "Resto da Europa", "Ásia", "América",
+  "África", "Médio Oriente", "Oceânia", "Cruzeiros", "Viagens com Autores",
+]
+const infoLinks = [
+  "Quem somos", "FAQ – Perguntas frequentes", "Na Imprensa & Notícias",
+  "Recrutamento", "Seguros de Viagem", "Condições Gerais",
+  "Política de Privacidade", "Livro de Reclamações Online",
+]
+---
+
+<footer id="contactos" class="bg-ink text-white/80">
+  <div class="mx-auto max-w-7xl px-5 py-16 lg:px-8">
+    <div class="grid gap-10 lg:grid-cols-4">
+      <div>
+        <span class="font-display text-3xl font-semibold text-white">gptur</span>
+        <p class="mt-4 text-sm leading-relaxed text-white/60">
+          Operador turístico especializado em viagens culturais em grupo e de
+          autor, com guia em português.
+        </p>
+        <p class="eyebrow mt-6 text-[0.6rem] text-olive-300">RNAVT n.º 0000</p>
+      </div>
+
+      <div>
+        <h3 class="eyebrow text-[0.65rem] text-white">Morada e contactos</h3>
+        <div class="mt-4 space-y-4 text-sm">
+          <div>
+            <p class="font-semibold text-white/90">Agência Porto</p>
+            <p class="mt-1 flex items-start gap-2 text-white/60">
+              <MapPin size={15} className="mt-0.5 shrink-0 text-olive-300" />
+              Rua Pinto Bessa, 466, 4300-428 Porto
+            </p>
+            <p class="mt-1 flex items-center gap-2 text-white/60">
+              <Phone size={15} className="shrink-0 text-olive-300" /> 222 088 098
+            </p>
+          </div>
+          <div>
+            <p class="font-semibold text-white/90">Agência Lisboa</p>
+            <p class="mt-1 flex items-start gap-2 text-white/60">
+              <MapPin size={15} className="mt-0.5 shrink-0 text-olive-300" />
+              Rua Viriato, 23A, 1050-234 Lisboa
+            </p>
+            <p class="mt-1 flex items-center gap-2 text-white/60">
+              <Mail size={15} className="shrink-0 text-olive-300" /> geral@gptur.pt
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <h3 class="eyebrow text-[0.65rem] text-white">Encontre a sua viagem</h3>
+        <ul class="mt-4 space-y-2 text-sm">
+          {
+            findLinks.map((l) => (
+              <li>
+                <a href="#catalogo" class="text-white/60 transition-colors hover:text-white">{l}</a>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="eyebrow text-[0.65rem] text-white">Outra informação</h3>
+        <ul class="mt-4 space-y-2 text-sm">
+          {
+            infoLinks.map((l) => (
+              <li>
+                <a href="#" class="text-white/60 transition-colors hover:text-white">{l}</a>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    </div>
+
+    <div
+      class="mt-12 flex flex-col items-center justify-between gap-3 border-t border-white/15 pt-6 text-xs text-white/50 sm:flex-row"
+    >
+      <p>© {new Date().getFullYear()} gptur · Viagens Culturais</p>
+      <p>Feito com Astro + Tailwind</p>
+    </div>
+  </div>
+</footer>

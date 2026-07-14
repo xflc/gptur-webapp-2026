@@ -1,0 +1,34 @@
+---
+import Layout from "../layouts/Layout.astro"
+import Header from "../components/Header.astro"
+import Hero from "../components/Hero.tsx"
+import Intro from "../components/Intro.astro"
+import FeaturedTrips from "../components/FeaturedTrips.astro"
+import Distinguish from "../components/Distinguish.astro"
+import Testimonials from "../components/Testimonials.astro"
+import Newsletter from "../components/Newsletter.astro"
+import DestinationsIndex from "../components/DestinationsIndex.astro"
+import Footer from "../components/Footer.astro"
+import { trips } from "../data/trips"
+
+const slides = trips.slice(0, 4).map((t) => ({
+  title: t.title,
+  dates: t.dates,
+  image: t.image,
+  tagline: t.tagline,
+}))
+---
+
+<Layout>
+  <Header />
+  <main>
+    <Hero client:load slides={slides} />
+    <Intro />
+    <FeaturedTrips />
+    <Distinguish />
+    <Testimonials />
+    <Newsletter />
+    <DestinationsIndex />
+  </main>
+  <Footer />
+</Layout>

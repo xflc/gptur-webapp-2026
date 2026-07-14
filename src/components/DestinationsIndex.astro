@@ -1,0 +1,29 @@
+---
+import { destinations } from "../data/trips"
+---
+
+<section id="medida" class="bg-white py-20">
+  <div class="mx-auto max-w-7xl px-5 lg:px-8">
+    <div class="max-w-2xl">
+      <span class="eyebrow text-accent">O mundo inteiro</span>
+      <h2 class="mt-2 font-display text-4xl text-ink">
+        Destinos construídos ao longo de décadas de experiência
+      </h2>
+    </div>
+
+    <ul class="mt-10 flex flex-wrap gap-x-2 gap-y-3">
+      {
+        destinations.map((d) => (
+          <li>
+            <a
+              href="#catalogo"
+              class="inline-block rounded-full border border-border px-3.5 py-1.5 text-sm text-foreground/80 transition-colors hover:border-primary hover:bg-primary hover:text-primary-foreground"
+            >
+              {d}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</section>

@@ -1,0 +1,52 @@
+---
+import type { Trip } from "../data/trips"
+
+interface Props {
+  trip: Trip
+}
+const { trip } = Astro.props
+---
+
+<article
+  class="group flex flex-col overflow-hidden rounded-xl border border-border bg-card shadow-sm transition-shadow hover:shadow-md"
+>
+  <div class="relative aspect-[4/3] overflow-hidden">
+    <img
+      src={trip.image}
+      alt={trip.title}
+      loading="lazy"
+      class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+    />
+    {
+      trip.withAuthor && (
+        <span class="eyebrow absolute left-3 top-3 bg-accent px-2.5 py-1 text-[0.6rem] text-accent-foreground">
+          Com Autor
+        </span>
+      )
+    }
+    <span
+      class="eyebrow absolute right-3 top-3 bg-cream/90 px-2.5 py-1 text-[0.6rem] text-primary"
+      >{trip.region}</span
+    >
+  </div>
+
+  <div class="flex flex-1 flex-col p-5">
+    <p class="eyebrow text-[0.62rem] text-muted-foreground">{trip.dates}</p>
+    <h3 class="mt-2 font-display text-xl leading-snug text-ink">{trip.title}</h3>
+    <p class="mt-2 line-clamp-2 text-sm text-muted-foreground">{trip.tagline}</p>
+
+    <div class="mt-4 flex items-end justify-between border-t border-border pt-4">
+      <div>
+        <span class="block text-[0.65rem] text-muted-foreground">desde</span>
+        <span class="font-display text-2xl font-semibold text-primary"
+          >{trip.price.toLocaleString("pt-PT")} €</span
+        >
+      </div>
+      <a
+        href={`#viagem-${trip.slug}`}
+        class="eyebrow text-[0.68rem] text-primary transition-colors hover:text-wine-800"
+        >Saiba Mais →</a
+      >
+    </div>
+  </div>
+</article>

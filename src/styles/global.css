@@ -1,0 +1,140 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+  Brand: "gptur" — cultural group travel, in the editorial spirit of
+  Pinto Lopes Viagens. Wine primary, olive accent, warm cream neutrals.
+*/
+:root {
+  --radius: 0.5rem;
+
+  /* Brand scales */
+  --wine-50: #fbf0f4;
+  --wine-100: #f6dbe4;
+  --wine-200: #ecb6c9;
+  --wine-300: #dd85a6;
+  --wine-400: #c85482;
+  --wine-500: #ac3162;
+  --wine-600: #8c1d40; /* primary */
+  --wine-700: #741636;
+  --wine-800: #5c132c;
+  --wine-900: #491226;
+
+  --olive-50: #f7f8ee;
+  --olive-100: #edf0d6;
+  --olive-200: #dbe1af;
+  --olive-300: #c2cd7f;
+  --olive-400: #a9b755;
+  --olive-500: #8a9a3f; /* accent */
+  --olive-600: #6c7a31;
+  --olive-700: #535e29;
+  --olive-800: #434b25;
+  --olive-900: #394022;
+
+  --cream: #faf7f2;
+  --sand: #f1ebe1;
+
+  /* Semantic tokens (shadcn-compatible) */
+  --background: #ffffff;
+  --foreground: #2b2320;
+  --card: #ffffff;
+  --card-foreground: #2b2320;
+  --popover: #ffffff;
+  --popover-foreground: #2b2320;
+  --primary: var(--wine-600);
+  --primary-foreground: #ffffff;
+  --secondary: var(--sand);
+  --secondary-foreground: #2b2320;
+  --muted: #f5f1ea;
+  --muted-foreground: #766c63;
+  --accent: var(--olive-500);
+  --accent-foreground: #ffffff;
+  --destructive: #b42318;
+  --border: #e7ded2;
+  --input: #e7ded2;
+  --ring: var(--wine-400);
+}
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+
+  --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Cormorant Garamond", ui-serif, Georgia, serif;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --color-cream: var(--cream);
+  --color-sand: var(--sand);
+  --color-ink: #2b2320;
+
+  --color-wine-50: var(--wine-50);
+  --color-wine-100: var(--wine-100);
+  --color-wine-200: var(--wine-200);
+  --color-wine-300: var(--wine-300);
+  --color-wine-400: var(--wine-400);
+  --color-wine-500: var(--wine-500);
+  --color-wine-600: var(--wine-600);
+  --color-wine-700: var(--wine-700);
+  --color-wine-800: var(--wine-800);
+  --color-wine-900: var(--wine-900);
+
+  --color-olive-50: var(--olive-50);
+  --color-olive-100: var(--olive-100);
+  --color-olive-200: var(--olive-200);
+  --color-olive-300: var(--olive-300);
+  --color-olive-400: var(--olive-400);
+  --color-olive-500: var(--olive-500);
+  --color-olive-600: var(--olive-600);
+  --color-olive-700: var(--olive-700);
+  --color-olive-800: var(--olive-800);
+  --color-olive-900: var(--olive-900);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    font-weight: 500;
+    letter-spacing: -0.01em;
+  }
+}
+
+/* Utility: the thin uppercase, letter-spaced label used across the site */
+.eyebrow {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
