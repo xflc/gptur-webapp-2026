@@ -9,7 +9,8 @@
     "preview": "astro preview",
     "astro": "astro",
     "import": "node scripts/import-pdf.mjs",
-    "fetch:brochures": "node scripts/fetch-brochures.mjs"
+    "fetch:brochures": "node scripts/fetch-brochures.mjs",
+    "build:offers": "node scripts/build-offers.mjs"
   },
   "dependencies": {
     "@astrojs/react": "^4.2.0",

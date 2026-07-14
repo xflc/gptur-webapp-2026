@@ -1,0 +1,1399 @@
+{
+  "generatedAt": "2026-07-14T23:56:58.160Z",
+  "count": 75,
+  "offers": [
+    {
+      "slug": "marrocos-agadir",
+      "type": "estadia",
+      "destino": "Agadir",
+      "country": "Marrocos",
+      "region": "África",
+      "priceFrom": 570,
+      "priceTo": 1543,
+      "hotels": 18,
+      "nights": 7,
+      "boards": [
+        "TI",
+        "APA"
+      ],
+      "source": {
+        "file": "00047078.pdf",
+        "hash": "fb2cd9f9f4bc"
+      }
+    },
+    {
+      "slug": "egito-cairo-circuito-25",
+      "type": "circuito",
+      "destino": "Cairo",
+      "country": "Egito",
+      "region": "África",
+      "nights": 8,
+      "priceFrom": null,
+      "source": {
+        "file": "00047085.pdf",
+        "hash": "760758d672e6",
+        "page": 25
+      }
+    },
+    {
+      "slug": "egito-cairo-circuito-26",
+      "type": "circuito",
+      "destino": "Cairo",
+      "country": "Egito",
+      "region": "África",
+      "nights": 7,
+      "priceFrom": null,
+      "source": {
+        "file": "00047085.pdf",
+        "hash": "760758d672e6",
+        "page": 26
+      }
+    },
+    {
+      "slug": "egito-cairo-circuito-27",
+      "type": "circuito",
+      "destino": "Cairo",
+      "country": "Egito",
+      "region": "África",
+      "nights": 9,
+      "priceFrom": null,
+      "source": {
+        "file": "00047085.pdf",
+        "hash": "760758d672e6",
+        "page": 27
+      }
+    },
+    {
+      "slug": "egito-cairo-circuito-28",
+      "type": "circuito",
+      "destino": "Cairo",
+      "country": "Egito",
+      "region": "África",
+      "nights": 9,
+      "priceFrom": null,
+      "source": {
+        "file": "00047085.pdf",
+        "hash": "760758d672e6",
+        "page": 28
+      }
+    },
+    {
+      "slug": "marrocos-casablanca",
+      "type": "estadia",
+      "destino": "Casablanca",
+      "country": "Marrocos",
+      "region": "África",
+      "priceFrom": 421,
+      "priceTo": 459,
+      "hotels": 2,
+      "nights": null,
+      "boards": [
+        "APA"
+      ],
+      "source": {
+        "file": "00047078.pdf",
+        "hash": "fb2cd9f9f4bc"
+      }
+    },
+    {
+      "slug": "tunisia-djerba",
+      "type": "estadia",
+      "destino": "Djerba",
+      "country": "Tunísia",
+      "region": "África",
+      "priceFrom": 739,
+      "priceTo": 1477,
+      "hotels": 20,
+      "nights": 7,
+      "boards": [
+        "TI"
+      ],
+      "source": {
+        "file": "00047087.pdf",
+        "hash": "daff84a39fc5"
+      }
+    },
+    {
+      "slug": "egito-el-alamein",
+      "type": "estadia",
+      "destino": "El Alamein",
+      "country": "Egito",
+      "region": "África",
+      "priceFrom": 1109,
+      "priceTo": 1730,
+      "hotels": 18,
+      "nights": 7,
+      "boards": [
+        "TI"
+      ],
+      "source": {
+        "file": "00047085.pdf",
+        "hash": "760758d672e6"
+      }
+    },
+    {
+      "slug": "tunisia-enfidha",
+      "type": "estadia",
+      "destino": "Enfidha",
+      "country": "Tunísia",
+      "region": "África",
+      "priceFrom": 873,
+      "priceTo": 1596,
+      "hotels": 12,
+      "nights": 7,
+      "boards": [
+        "TI"
+      ],
+      "source": {
+        "file": "00047087.pdf",
+        "hash": "daff84a39fc5"
+      }
+    },
+    {
+      "slug": "marrocos-fez",
+      "type": "estadia",
+      "destino": "Fez",
+      "country": "Marrocos",
+      "region": "África",
+      "priceFrom": 359,
+      "priceTo": 409,
+      "hotels": 2,
+      "nights": null,
+      "boards": [
+        "APA"
+      ],
+      "source": {
+        "file": "00047078.pdf",
+        "hash": "fb2cd9f9f4bc"
+      }
+    },
+    {
+      "slug": "tunisia-hammamet",
+      "type": "estadia",
+      "destino": "Hammamet",
+      "country": "Tunísia",
+      "region": "África",
+      "priceFrom": 550,
+      "priceTo": 839,
+      "hotels": 16,
+      "nights": 7,
+      "boards": [
+        "TI",
+        "MP"
+      ],
+      "source": {
+        "file": "00047087.pdf",
+        "hash": "daff84a39fc5"
+      }
+    },
+    {
+      "slug": "egito-hurghada",
+      "type": "estadia",
+      "destino": "Hurghada",
+      "country": "Egito",
+      "region": "África",
+      "priceFrom": 969,
+      "priceTo": 1863,
+      "hotels": 24,
+      "nights": 7,
+      "boards": [
+        "TI"
+      ],
+      "source": {
+        "file": "00047085.pdf",
+        "hash": "760758d672e6"
+      }
+    },
+    {
+      "slug": "marrocos-marraquexe",
+      "type": "estadia",
+      "destino": "Marraquexe",
+      "country": "Marrocos",
+      "region": "África",
+      "priceFrom": 349,
+      "priceTo": 1094,
+      "hotels": 34,
+      "nights": null,
+      "boards": [
+        "APA",
+        "TI",
+        "APA+TI",
+        "APA+MP",
+        "APA+PC"
+      ],
+      "source": {
+        "file": "00047078.pdf",
+        "hash": "fb2cd9f9f4bc"
+      }
+    },
+    {
+      "slug": "egito-marsa-alam",
+      "type": "estadia",
+      "destino": "Marsa Alam",
+      "country": "Egito",
+      "region": "África",
+      "priceFrom": 1309,
+      "priceTo": 1678,
+      "hotels": 4,
+      "nights": 7,
+      "boards": [
+        "TI"
+      ],
+      "source": {
+        "file": "00047085.pdf",
+        "hash": "760758d672e6"
+      }
+    },
+    {
+      "slug": "tunisia-monastir",
+      "type": "estadia",
+      "destino": "Monastir",
+      "country": "Tunísia",
+      "region": "África",
+      "priceFrom": 155,
+      "priceTo": 1306,
+      "hotels": 21,
+      "nights": 7,
+      "boards": [
+        "TI",
+        "APA"
+      ],
+      "source": {
+        "file": "00047087.pdf",
+        "hash": "daff84a39fc5"
+      }
+    },
+    {
+      "slug": "marrocos-saidia",
+      "type": "estadia",
+      "destino": "Saïdia",
+      "country": "Marrocos",
+      "region": "África",
+      "priceFrom": 748,
+      "priceTo": 886,
+      "hotels": 3,
+      "nights": 7,
+      "boards": [
+        "TI"
+      ],
+      "source": {
+        "file": "00047078.pdf",
+        "hash": "fb2cd9f9f4bc"
+      }
+    },
+    {
+      "slug": "egito-sharm-el-sheik",
+      "type": "estadia",
+      "destino": "Sharm el-Sheik",
+      "country": "Egito",
+      "region": "África",
+      "priceFrom": 182,
+      "priceTo": 2112,
+      "hotels": 18,
+      "nights": 7,
+      "boards": [
+        "TI"
+      ],
+      "source": {
+        "file": "00047085.pdf",
+        "hash": "760758d672e6"
+      }
+    },
+    {
+      "slug": "brasil-flor-ianopolis",
+      "type": "estadia",
+      "destino": "Flor ianópolis",
+      "country": "Brasil",
+      "region": "América",
+      "priceFrom": 1249,
+      "priceTo": 2261,
+      "hotels": 12,
+      "nights": 7,
+      "boards": [
+        "APA"
+      ],
+      "source": {
+        "file": "00047103.pdf",
+        "hash": "79f4b4f374db"
+      }
+    },
+    {
+      "slug": "brasil-fortaleza",
+      "type": "estadia",
+      "destino": "Fortaleza",
+      "country": "Brasil",
+      "region": "América",
+      "priceFrom": 1115,
+      "priceTo": 3762,
+      "hotels": 24,
+      "nights": 7,
+      "boards": [
+        "APA",
+        "TI"
+      ],
+      "source": {
+        "file": "00047103.pdf",
+        "hash": "79f4b4f374db"
+      }
+    },
+    {
+      "slug": "brasil-fortaleza-circuito-13",
+      "type": "circuito",
+      "destino": "Fortaleza",
+      "country": "Brasil",
+      "region": "América",
+      "nights": 7,
+      "priceFrom": null,
+      "source": {
+        "file": "00047103.pdf",
+        "hash": "79f4b4f374db",
+        "page": 13
+      }
+    },
+    {
+      "slug": "brasil-joao-pessoa",
+      "type": "estadia",
+      "destino": "João Pessoa",
+      "country": "Brasil",
+      "region": "América",
+      "priceFrom": 1479,
+      "priceTo": 2061,
+      "hotels": 8,
+      "nights": 7,
+      "boards": [
+        "APA"
+      ],
+      "source": {
+        "file": "00047103.pdf",
+        "hash": "79f4b4f374db"
+      }
+    },
+    {
+      "slug": "brasil-maceio",
+      "type": "estadia",
+      "destino": "Maceió",
+      "country": "Brasil",
+      "region": "América",
+      "priceFrom": 1424,
+      "priceTo": 3601,
+      "hotels": 24,
+      "nights": 7,
+      "boards": [
+        "APA",
+        "MP",
+        "TI"
+      ],
+      "source": {
+        "file": "00047103.pdf",
+        "hash": "79f4b4f374db"
+      }
+    },
+    {
+      "slug": "brasil-natal",
+      "type": "estadia",
+      "destino": "Natal",
+      "country": "Brasil",
+      "region": "América",
+      "priceFrom": 1309,
+      "priceTo": 2110,
+      "hotels": 14,
+      "nights": 7,
+      "boards": [
+        "APA",
+        "TI"
+      ],
+      "source": {
+        "file": "00047103.pdf",
+        "hash": "79f4b4f374db"
+      }
+    },
+    {
+      "slug": "brasil-recife",
+      "type": "estadia",
+      "destino": "Recife",
+      "country": "Brasil",
+      "region": "América",
+      "priceFrom": 1330,
+      "priceTo": 2996,
+      "hotels": 14,
+      "nights": 7,
+      "boards": [
+        "APA",
+        "TI",
+        "MP"
+      ],
+      "source": {
+        "file": "00047103.pdf",
+        "hash": "79f4b4f374db"
+      }
+    },
+    {
+      "slug": "brasil-rio-de-janeiro",
+      "type": "estadia",
+      "destino": "Rio de Janeiro",
+      "country": "Brasil",
+      "region": "América",
+      "priceFrom": 374,
+      "priceTo": 3791,
+      "hotels": 34,
+      "nights": 7,
+      "boards": [
+        "APA"
+      ],
+      "source": {
+        "file": "00047103.pdf",
+        "hash": "79f4b4f374db"
+      }
+    },
+    {
+      "slug": "brasil-rio-de-janeiro-circuito-57",
+      "type": "circuito",
+      "destino": "Rio de Janeiro",
+      "country": "Brasil",
+      "region": "América",
+      "nights": 7,
+      "priceFrom": null,
+      "source": {
+        "file": "00047103.pdf",
+        "hash": "79f4b4f374db",
+        "page": 57
+      }
+    },
+    {
+      "slug": "brasil-rio-de-janeiro-circuito-59",
+      "type": "circuito",
+      "destino": "Rio de Janeiro",
+      "country": "Brasil",
+      "region": "América",
+      "nights": 5,
+      "priceFrom": null,
+      "source": {
+        "file": "00047103.pdf",
+        "hash": "79f4b4f374db",
+        "page": 59
+      }
+    },
+    {
+      "slug": "brasil-salvador-da-bahia",
+      "type": "estadia",
+      "destino": "Salvador da Bahia",
+      "country": "Brasil",
+      "region": "América",
+      "priceFrom": 1293,
+      "priceTo": 2609,
+      "hotels": 18,
+      "nights": 7,
+      "boards": [
+        "APA",
+        "TI",
+        "MP"
+      ],
+      "source": {
+        "file": "00047103.pdf",
+        "hash": "79f4b4f374db"
+      }
+    },
+    {
+      "slug": "asia-abu-dhabi",
+      "type": "estadia",
+      "destino": "Abu Dhabi",
+      "country": "Ásia",
+      "region": "Ásia",
+      "priceFrom": 1045,
+      "priceTo": 1897,
+      "hotels": 32,
+      "nights": 4,
+      "boards": [
+        "APA",
+        "TI"
+      ],
+      "source": {
+        "file": "00047318.pdf",
+        "hash": "c5e8fdaf75a6"
+      }
+    },
+    {
+      "slug": "americas-aruba",
+      "type": "estadia",
+      "destino": "Aruba",
+      "country": "Américas",
+      "region": "Ásia",
+      "priceFrom": 1755,
+      "priceTo": 3292,
+      "hotels": 23,
+      "nights": 5,
+      "boards": [
+        "APA",
+        "SA",
+        "TI"
+      ],
+      "source": {
+        "file": "00047251.pdf",
+        "hash": "1d8d35e86c83"
+      }
+    },
+    {
+      "slug": "americas-bahamas",
+      "type": "estadia",
+      "destino": "Bahamas",
+      "country": "Américas",
+      "region": "Ásia",
+      "priceFrom": 1669,
+      "priceTo": 4864,
+      "hotels": 21,
+      "nights": 5,
+      "boards": [
+        "SA",
+        "APA",
+        "TI"
+      ],
+      "source": {
+        "file": "00047251.pdf",
+        "hash": "1d8d35e86c83"
+      }
+    },
+    {
+      "slug": "verde-boa-vista",
+      "type": "estadia",
+      "destino": "Boa Vista",
+      "country": "Verde",
+      "region": "Ásia",
+      "priceFrom": 799,
+      "priceTo": 1289,
+      "hotels": 9,
+      "nights": 7,
+      "boards": [
+        "APA",
+        "TI"
+      ],
+      "source": {
+        "file": "00047091.pdf",
+        "hash": "97757250ce97"
+      }
+    },
+    {
+      "slug": "americas-colombia",
+      "type": "estadia",
+      "destino": "Colômbia",
+      "country": "Américas",
+      "region": "Ásia",
+      "priceFrom": 1566,
+      "priceTo": 4096,
+      "hotels": 44,
+      "nights": 5,
+      "boards": [
+        "APA",
+        "TI"
+      ],
+      "source": {
+        "file": "00047251.pdf",
+        "hash": "1d8d35e86c83"
+      }
+    },
+    {
+      "slug": "americas-costa-rica",
+      "type": "estadia",
+      "destino": "Costa Rica",
+      "country": "Américas",
+      "region": "Ásia",
+      "priceFrom": 1884,
+      "priceTo": 4124,
+      "hotels": 54,
+      "nights": 5,
+      "boards": [
+        "SA",
+        "APA",
+        "TI",
+        "MP",
+        "APA+MP"
+      ],
+      "source": {
+        "file": "00047251.pdf",
+        "hash": "1d8d35e86c83"
+      }
+    },
+    {
+      "slug": "americas-curacao",
+      "type": "estadia",
+      "destino": "Curaçao",
+      "country": "Américas",
+      "region": "Ásia",
+      "priceFrom": 1634,
+      "priceTo": 6630,
+      "hotels": 18,
+      "nights": 5,
+      "boards": [
+        "APA",
+        "SA",
+        "TI"
+      ],
+      "source": {
+        "file": "00047251.pdf",
+        "hash": "1d8d35e86c83"
+      }
+    },
+    {
+      "slug": "null-de-alvor-a-portimao-13",
+      "type": "estadia",
+      "destino": "DE ALVOR A PORTIMÃO 13",
+      "country": null,
+      "region": "Ásia",
+      "priceFrom": 150,
+      "priceTo": 220,
+      "hotels": 2,
+      "nights": null,
+      "boards": [
+        "APA",
+        "TI"
+      ],
+      "source": {
+        "file": "00044569.pdf",
+        "hash": "af9c1b14e5df"
+      }
+    },
+    {
+      "slug": "asia-dubai",
+      "type": "estadia",
+      "destino": "Dubai",
+      "country": "Ásia",
+      "region": "Ásia",
+      "priceFrom": 930,
+      "priceTo": 2206,
+      "hotels": 73,
+      "nights": 4,
+      "boards": [
+        "APA",
+        "TI",
+        "MP"
+      ],
+      "source": {
+        "file": "00047318.pdf",
+        "hash": "c5e8fdaf75a6"
+      }
+    },
+    {
+      "slug": "americas-e-u-a",
+      "type": "estadia",
+      "destino": "E.U.A",
+      "country": "Américas",
+      "region": "Ásia",
+      "priceFrom": 819,
+      "priceTo": 3282,
+      "hotels": 273,
+      "nights": 4,
+      "boards": [
+        "SA",
+        "APA"
+      ],
+      "source": {
+        "file": "00047251.pdf",
+        "hash": "1d8d35e86c83"
+      }
+    },
+    {
+      "slug": "verde-fogo",
+      "type": "estadia",
+      "destino": "Fogo",
+      "country": "Verde",
+      "region": "Ásia",
+      "priceFrom": 399,
+      "priceTo": 469,
+      "hotels": 5,
+      "nights": 3,
+      "boards": [
+        "APA"
+      ],
+      "source": {
+        "file": "00047091.pdf",
+        "hash": "97757250ce97"
+      }
+    },
+    {
+      "slug": "baleares-formentera",
+      "type": "estadia",
+      "destino": "Formentera",
+      "country": "Baleares",
+      "region": "Ásia",
+      "priceFrom": 881,
+      "priceTo": 3067,
+      "hotels": 14,
+      "nights": 7,
+      "boards": [
+        "SA",
+        "MP",
+        "APA",
+        "APA+SA",
+        "TI+MP"
+      ],
+      "source": {
+        "file": "00047073.pdf",
+        "hash": "4f139bbbd275"
+      }
+    },
+    {
+      "slug": "canarias-fuerteventura",
+      "type": "estadia",
+      "destino": "Fuerteventura",
+      "country": "Canárias",
+      "region": "Ásia",
+      "priceFrom": 728,
+      "priceTo": 2346,
+      "hotels": 24,
+      "nights": 7,
+      "boards": [
+        "APA",
+        "SA",
+        "TI",
+        "MP"
+      ],
+      "source": {
+        "file": "00047319.pdf",
+        "hash": "d673f60fb9a9"
+      }
+    },
+    {
+      "slug": "africa-gambia",
+      "type": "estadia",
+      "destino": "Gâmbia",
+      "country": "África",
+      "region": "Ásia",
+      "priceFrom": 1379,
+      "priceTo": 1717,
+      "hotels": 6,
+      "nights": 7,
+      "boards": [
+        "TI",
+        "MP",
+        "APA"
+      ],
+      "source": {
+        "file": "00047089.pdf",
+        "hash": "e9fb35275ae1"
+      }
+    },
+    {
+      "slug": "canarias-gran-canaria",
+      "type": "estadia",
+      "destino": "Gran Canária",
+      "country": "Canárias",
+      "region": "Ásia",
+      "priceFrom": 592,
+      "priceTo": 2518,
+      "hotels": 52,
+      "nights": 7,
+      "boards": [
+        "SA",
+        "APA",
+        "TI",
+        "MP"
+      ],
+      "source": {
+        "file": "00047319.pdf",
+        "hash": "d673f60fb9a9"
+      }
+    },
+    {
+      "slug": "baleares-ibiza",
+      "type": "estadia",
+      "destino": "Ibiza",
+      "country": "Baleares",
+      "region": "Ásia",
+      "priceFrom": 716,
+      "priceTo": 1882,
+      "hotels": 26,
+      "nights": 7,
+      "boards": [
+        "SA",
+        "APA",
+        "MP",
+        "TI"
+      ],
+      "source": {
+        "file": "00047073.pdf",
+        "hash": "4f139bbbd275"
+      }
+    },
+    {
+      "slug": "canarias-lanzarote",
+      "type": "estadia",
+      "destino": "Lanzarote",
+      "country": "Canárias",
+      "region": "Ásia",
+      "priceFrom": 727,
+      "priceTo": 2167,
+      "hotels": 14,
+      "nights": 7,
+      "boards": [
+        "SA",
+        "APA",
+        "MP",
+        "TI"
+      ],
+      "source": {
+        "file": "00047319.pdf",
+        "hash": "d673f60fb9a9"
+      }
+    },
+    {
+      "slug": "baleares-maiorca",
+      "type": "estadia",
+      "destino": "Maiorca",
+      "country": "Baleares",
+      "region": "Ásia",
+      "priceFrom": 543,
+      "priceTo": 1364,
+      "hotels": 40,
+      "nights": 7,
+      "boards": [
+        "SA",
+        "APA",
+        "MP",
+        "TI"
+      ],
+      "source": {
+        "file": "00047073.pdf",
+        "hash": "4f139bbbd275"
+      }
+    },
+    {
+      "slug": "idilicas-mauricia",
+      "type": "estadia",
+      "destino": "Maurícia",
+      "country": "Idílicas",
+      "region": "Ásia",
+      "priceFrom": 1461,
+      "priceTo": 3681,
+      "hotels": 66,
+      "nights": 7,
+      "boards": [
+        "MP",
+        "TI",
+        "APA"
+      ],
+      "source": {
+        "file": "00047116.pdf",
+        "hash": "b3617624adbb"
+      }
+    },
+    {
+      "slug": "baleares-menorca",
+      "type": "estadia",
+      "destino": "Menorca",
+      "country": "Baleares",
+      "region": "Ásia",
+      "priceFrom": 566,
+      "priceTo": 1544,
+      "hotels": 20,
+      "nights": 7,
+      "boards": [
+        "APA",
+        "SA",
+        "MP"
+      ],
+      "source": {
+        "file": "00047073.pdf",
+        "hash": "4f139bbbd275"
+      }
+    },
+    {
+      "slug": "africa-mocambique",
+      "type": "estadia",
+      "destino": "Moçambique",
+      "country": "África",
+      "region": "Ásia",
+      "priceFrom": 1188,
+      "priceTo": 1626,
+      "hotels": 6,
+      "nights": 7,
+      "boards": [
+        "APA"
+      ],
+      "source": {
+        "file": "00047089.pdf",
+        "hash": "e9fb35275ae1"
+      }
+    },
+    {
+      "slug": "null-momentos-75",
+      "type": "estadia",
+      "destino": "MOMENTOS 75",
+      "country": null,
+      "region": "Ásia",
+      "priceFrom": 320,
+      "priceTo": 515,
+      "hotels": 2,
+      "nights": null,
+      "boards": [
+        "APA"
+      ],
+      "source": {
+        "file": "00044569.pdf",
+        "hash": "af9c1b14e5df"
+      }
+    },
+    {
+      "slug": "asia-oma",
+      "type": "estadia",
+      "destino": "Omã",
+      "country": "Ásia",
+      "region": "Ásia",
+      "priceFrom": 509,
+      "priceTo": 1786,
+      "hotels": 33,
+      "nights": 4,
+      "boards": [
+        "APA",
+        "MP"
+      ],
+      "source": {
+        "file": "00047318.pdf",
+        "hash": "c5e8fdaf75a6"
+      }
+    },
+    {
+      "slug": "idilicas-play-madagascar",
+      "type": "estadia",
+      "destino": "Play Madagáscar",
+      "country": "Idílicas",
+      "region": "Ásia",
+      "priceFrom": 4274,
+      "priceTo": 4975,
+      "hotels": 3,
+      "nights": 11,
+      "boards": [
+        "MP",
+        "APA"
+      ],
+      "source": {
+        "file": "00047116.pdf",
+        "hash": "b3617624adbb"
+      }
+    },
+    {
+      "slug": "idilicas-play-maldivas",
+      "type": "estadia",
+      "destino": "Play Maldivas",
+      "country": "Idílicas",
+      "region": "Ásia",
+      "priceFrom": 1110,
+      "priceTo": 8159,
+      "hotels": 110,
+      "nights": 7,
+      "boards": [
+        "APA",
+        "MP",
+        "PC",
+        "TI",
+        "SOF"
+      ],
+      "source": {
+        "file": "00047116.pdf",
+        "hash": "b3617624adbb"
+      }
+    },
+    {
+      "slug": "idilicas-play-seicheles",
+      "type": "estadia",
+      "destino": "Play Seicheles",
+      "country": "Idílicas",
+      "region": "Ásia",
+      "priceFrom": 280,
+      "priceTo": 9688,
+      "hotels": 59,
+      "nights": 7,
+      "boards": [
+        "APA",
+        "MP",
+        "SA+APA",
+        "SA"
+      ],
+      "source": {
+        "file": "00047116.pdf",
+        "hash": "b3617624adbb"
+      }
+    },
+    {
+      "slug": "asia-qatar",
+      "type": "estadia",
+      "destino": "Qatar",
+      "country": "Ásia",
+      "region": "Ásia",
+      "priceFrom": 841,
+      "priceTo": 1583,
+      "hotels": 32,
+      "nights": 4,
+      "boards": [
+        "APA"
+      ],
+      "source": {
+        "file": "00047318.pdf",
+        "hash": "c5e8fdaf75a6"
+      }
+    },
+    {
+      "slug": "africa-quenia",
+      "type": "estadia",
+      "destino": "Quénia",
+      "country": "África",
+      "region": "Ásia",
+      "priceFrom": 2969,
+      "priceTo": 3408,
+      "hotels": 4,
+      "nights": 6,
+      "boards": [
+        "PC",
+        "PC+APA"
+      ],
+      "source": {
+        "file": "00047089.pdf",
+        "hash": "e9fb35275ae1"
+      }
+    },
+    {
+      "slug": "asia-ras-al-khaimah",
+      "type": "estadia",
+      "destino": "Ras Al Khaimah",
+      "country": "Ásia",
+      "region": "Ásia",
+      "priceFrom": 978,
+      "priceTo": 1964,
+      "hotels": 16,
+      "nights": 4,
+      "boards": [
+        "APA",
+        "TI",
+        "MP"
+      ],
+      "source": {
+        "file": "00047318.pdf",
+        "hash": "c5e8fdaf75a6"
+      }
+    },
+    {
+      "slug": "verde-sal",
+      "type": "estadia",
+      "destino": "Sal",
+      "country": "Verde",
+      "region": "Ásia",
+      "priceFrom": 779,
+      "priceTo": 1489,
+      "hotels": 18,
+      "nights": 7,
+      "boards": [
+        "APA",
+        "TI"
+      ],
+      "source": {
+        "file": "00047091.pdf",
+        "hash": "97757250ce97"
+      }
+    },
+    {
+      "slug": "verde-santiago",
+      "type": "estadia",
+      "destino": "Santiago",
+      "country": "Verde",
+      "region": "Ásia",
+      "priceFrom": 769,
+      "priceTo": 1100,
+      "hotels": 8,
+      "nights": 4,
+      "boards": [
+        "APA"
+      ],
+      "source": {
+        "file": "00047091.pdf",
+        "hash": "97757250ce97"
+      }
+    },
+    {
+      "slug": "verde-santo-antao",
+      "type": "estadia",
+      "destino": "Santo Antão",
+      "country": "Verde",
+      "region": "Ásia",
+      "priceFrom": 249,
+      "priceTo": 369,
+      "hotels": 5,
+      "nights": null,
+      "boards": [
+        "APA"
+      ],
+      "source": {
+        "file": "00047091.pdf",
+        "hash": "97757250ce97"
+      }
+    },
+    {
+      "slug": "verde-sao-vicente",
+      "type": "estadia",
+      "destino": "São Vicente",
+      "country": "Verde",
+      "region": "Ásia",
+      "priceFrom": 709,
+      "priceTo": 1769,
+      "hotels": 45,
+      "nights": 7,
+      "boards": [
+        "APA",
+        "TI+APA",
+        "TI"
+      ],
+      "source": {
+        "file": "00047091.pdf",
+        "hash": "97757250ce97"
+      }
+    },
+    {
+      "slug": "africa-senegal",
+      "type": "estadia",
+      "destino": "Senegal",
+      "country": "África",
+      "region": "Ásia",
+      "priceFrom": 1238,
+      "priceTo": 1549,
+      "hotels": 4,
+      "nights": 7,
+      "boards": [
+        "TI",
+        "APA",
+        "APA+TI"
+      ],
+      "source": {
+        "file": "00047089.pdf",
+        "hash": "e9fb35275ae1"
+      }
+    },
+    {
+      "slug": "canarias-tenerife",
+      "type": "estadia",
+      "destino": "Tenerife",
+      "country": "Canárias",
+      "region": "Ásia",
+      "priceFrom": 601,
+      "priceTo": 2350,
+      "hotels": 36,
+      "nights": 7,
+      "boards": [
+        "APA",
+        "SA",
+        "TI",
+        "MP"
+      ],
+      "source": {
+        "file": "00047319.pdf",
+        "hash": "d673f60fb9a9"
+      }
+    },
+    {
+      "slug": "africa-zanzibar",
+      "type": "estadia",
+      "destino": "Zanzibar",
+      "country": "África",
+      "region": "Ásia",
+      "priceFrom": 2057,
+      "priceTo": 3356,
+      "hotels": 6,
+      "nights": 7,
+      "boards": [
+        "TI"
+      ],
+      "source": {
+        "file": "00047089.pdf",
+        "hash": "e9fb35275ae1"
+      }
+    },
+    {
+      "slug": "grecia-atenas",
+      "type": "estadia",
+      "destino": "Atenas",
+      "country": "Grécia",
+      "region": "Europa",
+      "priceFrom": 1629,
+      "priceTo": 3269,
+      "hotels": 15,
+      "nights": 3,
+      "boards": [
+        "APA"
+      ],
+      "source": {
+        "file": "00047083.pdf",
+        "hash": "663578258d06"
+      }
+    },
+    {
+      "slug": "grecia-especial-cruzeiros-circuito-28",
+      "type": "circuito",
+      "destino": "Especial Cruzeiros",
+      "country": "Grécia",
+      "region": "Europa",
+      "nights": 9,
+      "priceFrom": null,
+      "source": {
+        "file": "00047083.pdf",
+        "hash": "663578258d06",
+        "page": 28
+      }
+    },
+    {
+      "slug": "malta-malta",
+      "type": "estadia",
+      "destino": "Malta",
+      "country": "Malta",
+      "region": "Europa",
+      "priceFrom": 701,
+      "priceTo": 1385,
+      "hotels": 34,
+      "nights": 7,
+      "boards": [
+        "APA",
+        "SA",
+        "TI"
+      ],
+      "source": {
+        "file": "00047081.pdf",
+        "hash": "02dae5d10f0b"
+      }
+    },
+    {
+      "slug": "acores-faial",
+      "type": "estadia",
+      "destino": "Faial",
+      "country": "Açores",
+      "region": "Portugal",
+      "priceFrom": 288,
+      "priceTo": 786,
+      "hotels": 21,
+      "nights": 2,
+      "boards": [
+        "APA",
+        "SA"
+      ],
+      "source": {
+        "file": "00047077.pdf",
+        "hash": "11da84955cf3"
+      }
+    },
+    {
+      "slug": "acores-faial-circuito-34",
+      "type": "circuito",
+      "destino": "Faial",
+      "country": "Açores",
+      "region": "Portugal",
+      "nights": 6,
+      "priceFrom": null,
+      "source": {
+        "file": "00047077.pdf",
+        "hash": "11da84955cf3",
+        "page": 34
+      }
+    },
+    {
+      "slug": "madeira-madeira",
+      "type": "estadia",
+      "destino": "Madeira",
+      "country": "Madeira",
+      "region": "Portugal",
+      "priceFrom": 219,
+      "priceTo": 1110,
+      "hotels": 37,
+      "nights": 2,
+      "boards": [
+        "APA",
+        "SA",
+        "TI",
+        "MP"
+      ],
+      "source": {
+        "file": "00047071.pdf",
+        "hash": "ccc3849bf389"
+      }
+    },
+    {
+      "slug": "madeira-madeira-circuito-16",
+      "type": "circuito",
+      "destino": "Madeira",
+      "country": "Madeira",
+      "region": "Portugal",
+      "nights": 4,
+      "priceFrom": null,
+      "source": {
+        "file": "00047071.pdf",
+        "hash": "ccc3849bf389",
+        "page": 16
+      }
+    },
+    {
+      "slug": "madeira-madeira-circuito-17",
+      "type": "circuito",
+      "destino": "Madeira",
+      "country": "Madeira",
+      "region": "Portugal",
+      "nights": 4,
+      "priceFrom": null,
+      "source": {
+        "file": "00047071.pdf",
+        "hash": "ccc3849bf389",
+        "page": 17
+      }
+    },
+    {
+      "slug": "madeira-porto-santo",
+      "type": "estadia",
+      "destino": "Porto Santo",
+      "country": "Madeira",
+      "region": "Portugal",
+      "priceFrom": 307,
+      "priceTo": 3386,
+      "hotels": 16,
+      "nights": 7,
+      "boards": [
+        "APA",
+        "TI",
+        "SA"
+      ],
+      "source": {
+        "file": "00047071.pdf",
+        "hash": "ccc3849bf389"
+      }
+    },
+    {
+      "slug": "acores-sao-miguel",
+      "type": "estadia",
+      "destino": "São Miguel",
+      "country": "Açores",
+      "region": "Portugal",
+      "priceFrom": 287,
+      "priceTo": 616,
+      "hotels": 32,
+      "nights": 2,
+      "boards": [
+        "APA",
+        "SA",
+        "MP"
+      ],
+      "source": {
+        "file": "00047077.pdf",
+        "hash": "11da84955cf3"
+      }
+    },
+    {
+      "slug": "acores-terceira",
+      "type": "estadia",
+      "destino": "Terceira",
+      "country": "Açores",
+      "region": "Portugal",
+      "priceFrom": 275,
+      "priceTo": 595,
+      "hotels": 14,
+      "nights": 2,
+      "boards": [
+        "APA"
+      ],
+      "source": {
+        "file": "00047077.pdf",
+        "hash": "11da84955cf3"
+      }
+    }
+  ]
+}

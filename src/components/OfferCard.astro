@@ -1,0 +1,55 @@
+---
+import type { Offer } from "../data/offers"
+import { offerImage } from "../data/offers"
+
+interface Props { offer: Offer }
+const { offer } = Astro.props
+const meta = [
+  offer.nights ? `${offer.nights} noites` : null,
+  offer.hotels ? `${offer.hotels} hotéis` : null,
+].filter(Boolean).join(" · ")
+---
+
+<article
+  class="group flex flex-col overflow-hidden rounded-xl border border-border bg-card shadow-sm transition-shadow hover:shadow-md"
+>
+  <div class="relative aspect-[4/3] overflow-hidden">
+    <img
+      src={offerImage(offer.slug)}
+      alt={offer.destino}
+      loading="lazy"
+      class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+    />
+    <span class="eyebrow absolute left-3 top-3 bg-accent px-2.5 py-1 text-[0.6rem] text-accent-foreground">
+      {offer.type === "circuito" ? "Circuito" : "Estadia"}
+    </span>
+    <span class="eyebrow absolute right-3 top-3 bg-cream/90 px-2.5 py-1 text-[0.6rem] text-primary">{offer.region}</span>
+  </div>
+
+  <div class="flex flex-1 flex-col p-5">
+    <p class="eyebrow text-[0.62rem] text-muted-foreground">{offer.country}</p>
+    <h3 class="mt-1 font-display text-2xl leading-snug text-ink">{offer.destino}</h3>
+    {meta && <p class="mt-1 text-sm text-muted-foreground">{meta}</p>}
+
+    <div class="mt-4 flex items-end justify-between border-t border-border pt-4">
+      <div>
+        {offer.priceFrom ? (
+          <>
+            <span class="block text-[0.65rem] text-muted-foreground">desde</span>
+            <span class="font-display text-2xl font-semibold text-primary">
+              {offer.priceFrom.toLocaleString("pt-PT")} €
+              <span class="text-sm font-normal text-muted-foreground">/ pessoa</span>
+            </span>
+          </>
+        ) : (
+          <span class="text-sm text-muted-foreground">sob consulta</span>
+        )}
+      </div>
+      <a
+        href={`/ofertas/${offer.slug}`}
+        class="eyebrow text-[0.68rem] text-primary transition-colors hover:text-teal-800"
+        >Ver oferta →</a
+      >
+    </div>
+  </div>
+</article>
