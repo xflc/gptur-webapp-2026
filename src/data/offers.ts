@@ -1,5 +1,17 @@
 import data from "./solferias-offers.json"
 
+export interface HotelRow {
+  name: string
+  stars: number
+  price: number | null
+  nights: number | null
+  board: string | null
+}
+export interface OfferDetails {
+  overview?: string | null
+  hotels?: HotelRow[]
+  routes?: { day: string; route: string }[]
+}
 export interface Offer {
   slug: string
   type: "estadia" | "circuito"
@@ -11,6 +23,7 @@ export interface Offer {
   hotels?: number
   nights?: number | null
   boards?: string[]
+  details?: OfferDetails
   source: { file: string; hash: string; page?: number }
 }
 

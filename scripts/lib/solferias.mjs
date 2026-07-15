@@ -57,6 +57,34 @@ function routePlaces(t) {
   return toks
 }
 
+// ---------- extração rica ----------
+const RE_HOTEL = /([A-ZÀ-Ú0-9][A-ZÀ-Ú0-9 '&.()\/-]{3,46}?)\s+([1-5])\s*\*/g
+// tabela de hotéis: nomes e preços vêm por linha, na mesma ordem → zip por índice
+const cleanName = (s) =>
+  s.trim().replace(/\s+/g, " ")
+    .replace(/^\d+\s+/, "")                    // nº de página que vaza ("8 ORQUÍDEA")
+    .replace(/^(SA|APA|MP|PC|TI)(\s*\+\s*(SA|APA|MP|PC|TI))?\s+/i, "") // código de regime que vaza
+    .trim()
+function hotelRows(t) {
+  const names = [...t.matchAll(RE_HOTEL)].map((m) => ({ name: cleanName(m[1]), stars: +m[2] }))
+  const offs = [...t.matchAll(RE_OFFER)].map((m) => ({ nights: +m[1], board: m[2].replace(/\s+/g, "") }))
+  const prices = intPrices(t)
+  return names.map((n, i) => ({ ...n, price: prices[i] ?? null, nights: offs[i]?.nights ?? null, board: offs[i]?.board ?? null }))
+}
+const RE_DAYHEAD = /(\d{1,2})\s*º\s*(?:E\s*\d{1,2}\s*º\s*)?DIAS?\s*[-–]\s*([A-ZÀ-Ú][A-ZÀ-Ú '’\/]{2,55})/g
+function dayRoutes(t) {
+  const map = new Map()
+  for (const m of t.matchAll(RE_DAYHEAD)) { const d = +m[1]; if (!map.has(d)) map.set(d, m[2].trim().replace(/\s+/g, " ")) }
+  return [...map.entries()].sort((a, b) => a[0] - b[0]).map(([d, route]) => ({ day: `${d}º Dia`, route }))
+}
+function cleanGuide(t, country) {
+  let s = t.split(/MOEDA:|FUSO HOR|IDIOMA:/i)[0] // corta a caixa guia (moeda/fuso/idioma)
+  s = s.replace(/Sobre\s+(?:[oa]s?\s+)?\S+/i, "").replace(/\bA VISITAR\b/gi, "").replace(/\bGUIA\b/gi, "").trim()
+  if (!/Madeira|Açores|Portugal/i.test(country || ""))
+    s = s.split(". ").filter((x) => !/Algarv|Monchique|Albufeira|Sagres|Vicentina|Quarteira/i.test(x)).join(". ")
+  return s.replace(/\s+/g, " ").slice(0, 650).trim()
+}
+
 function scoreProgram(t) {
   const dur = t.match(RE_DUR)
   const nights = dur ? +dur[2] : 0
@@ -141,20 +169,22 @@ export async function analyze(absPath) {
   const kinds = {}
   const areas = new Map()
   const programs = []
-  let area = null, exc = 0, rent = 0
+  let area = null, exc = 0, rent = 0, overview = null
   const bucket = () => {
     const key = area || "(sem secção)"
-    if (!areas.has(key)) areas.set(key, { name: key, hotels: 0, prices: [], boards: new Set(), nights: null })
+    if (!areas.has(key)) areas.set(key, { name: key, hotels: 0, prices: [], boards: new Set(), nights: null, list: [] })
     return areas.get(key)
   }
   for (const { p, c } of seq) {
     kinds[c.kind] = (kinds[c.kind] || 0) + 1
     if (c.kind === "divisória") area = c.title
+    else if (c.kind === "guia" && !overview) overview = cleanGuide(p.text, country)
     else if (c.kind === "programa") {
-      programs.push({ page: p.n, area, type: c.type, conf: c.conf, boosted: !!c.boosted, feat: c.feat })
+      programs.push({ page: p.n, area, type: c.type, conf: c.conf, boosted: !!c.boosted, feat: c.feat, routes: c.type === "circuito" ? dayRoutes(p.text) : [] })
       if (c.type === "estadia") { const b = bucket(); if (!b.nights) b.nights = c.nights }
     } else if (c.kind === "hotéis") {
       const b = bucket(); b.hotels += c.rows; b.prices.push(...c.prices); c.boards.forEach((x) => b.boards.add(x))
+      b.list.push(...hotelRows(p.text))
     } else if (c.kind === "excursões") exc += c.n
     else if (c.kind === "rent-a-car") rent++
   }
@@ -164,10 +194,11 @@ export async function analyze(absPath) {
     priceFrom: a.prices.length ? Math.min(...a.prices) : null,
     priceTo: a.prices.length ? Math.max(...a.prices) : null,
     boards: [...a.boards],
+    list: a.list.filter((h) => h.name && h.name.length > 3),
   }))
 
   return {
-    meta: { file: absPath.split("/").pop(), hash, operator, rnavt, country, region: regionOf(country), pages: pages.length },
+    meta: { file: absPath.split("/").pop(), hash, operator, rnavt, country, region: regionOf(country), pages: pages.length, overview },
     kinds, programs, areas: areaList, excursoes: exc, rentacar: rent,
   }
 }

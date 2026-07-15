@@ -24,11 +24,18 @@ const push = (o) => { if (o.slug && !seen.has(o.slug)) { seen.add(o.slug); offer
 for (const f of pdfs) {
   let r
   try { r = await analyze(join(PDF_DIR, f)) } catch (e) { console.log(`erro ${f}: ${e.message}`); continue }
-  const { country, region, file, hash } = r.meta
+  const { country, region, file, hash, overview } = r.meta
 
   // ESTADIA — áreas com preço e hotéis (alta confiança estrutural)
   for (const a of r.areas) {
     if (!a.hotels || !a.priceFrom || a.name.startsWith("(")) continue
+    // dedup da lista de hotéis por nome, mantendo o mais barato
+    const byName = new Map()
+    for (const h of a.list) {
+      const k = h.name.toLowerCase()
+      if (!byName.has(k) || (h.price && h.price < (byName.get(k).price ?? Infinity))) byName.set(k, h)
+    }
+    const hotelsList = [...byName.values()].sort((x, y) => (x.price ?? 9e9) - (y.price ?? 9e9))
     push({
       slug: slugify(`${country}-${a.name}`),
       type: "estadia",
@@ -39,13 +46,13 @@ for (const f of pdfs) {
       hotels: a.hotels,
       nights: a.nights || null,
       boards: a.boards,
+      details: { overview, hotels: hotelsList },
       source: { file, hash },
     })
   }
-  // CIRCUITOS — só alta confiança e com preço
+  // CIRCUITOS — só alta confiança
   for (const p of r.programs) {
     if (p.type !== "circuito" || p.conf !== "alta") continue
-    const price = null // preço do circuito fica para o passo LLM (título/itinerário)
     push({
       slug: slugify(`${country}-${p.area}-circuito-${p.page}`),
       type: "circuito",
@@ -53,6 +60,7 @@ for (const f of pdfs) {
       country, region,
       nights: p.feat.nights || null,
       priceFrom: null,
+      details: { overview, routes: p.routes || [] },
       source: { file, hash, page: p.page },
     })
   }
