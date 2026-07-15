@@ -10,7 +10,6 @@
     "astro": "astro",
     "import": "node scripts/import-pdf.mjs",
     "fetch:brochures": "node scripts/fetch-brochures.mjs",
-    "build:manifest": "node scripts/build-manifest.mjs",
     "build:offers": "node scripts/build-offers.mjs"
   },
   "dependencies": {
