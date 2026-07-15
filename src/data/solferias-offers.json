@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-15T00:11:23.060Z",
+  "generatedAt": "2026-07-15T09:42:44.709Z",
   "count": 75,
   "offers": [
     {
@@ -152,11 +152,30 @@
             "nights": null,
             "board": null
           }
-        ]
+        ],
+        "program": {
+          "days": [
+            {
+              "header": "1º DIA – CIDADE DE ORIGEM / AGADIR",
+              "body": "Comparência no aeroporto duas horas antes da partida para as formalidades de embarque. Saída em voo Royal Air Maroc, com destino a Agadir (via Casablanca). Chegada, acolhimento e transporte para o hotel escolhido. Resto do dia livre para atividades de caráter pessoal. Alojamento."
+            },
+            {
+              "header": "2º AO 7º DIA – AGADIR",
+              "body": "Esta antiga vila costeira de pescadores, outrora fundada por portugueses no ano de 1500, é hoje uma das principais estâncias balneares de Marrocos. Agadir é conhecida pelas suas praias, com areais que se estendem por dez quilómetros, que podem ser aproveitados durante praticamente todo o ano, devido ao clima que se faz sentir. Desfrute do sol, das praias, das extensas avenidas, ladeadas por palmeiras, bares e restaurantes. Deixe-se levar por este verdadeiro “resort” à beira-mar plantado."
+            },
+            {
+              "header": "8º DIA – AGADIR / CIDADE DE ORIGEM",
+              "body": "Após o pequeno-almoço e em horário a combinar localmente, transporte para o aeroporto de Agadir. Chegada e embarque no voo previsto, com destino a Portugal (via Casablanca). Chegada e fim dos nossos serviços SERVIÇOS NÃO INCLUÍDOS NO PREÇO Outros que não mencionados no programa e extras de caráter pessoal. Notas Preços válidos para um mínimo de 2 pessoas."
+            }
+          ],
+          "included": "Voo Lisboa / Casablanca / Agadira / Casablanca / Lisboa, em voos Royal Air Maroc em Classe “S”; transporte aeroporto/ hotel/aeroporto com assistência local; 7 noites de alojamento no hotel e regime indicados; Taxas de aeroportos, segurança e combustível (valor indicativo 159,00 Euros,sujeitas a reconfirmação e alterações legais); Seguro de Viagem",
+          "notIncluded": ""
+        }
       },
       "source": {
         "file": "00047078.pdf",
-        "hash": "fb2cd9f9f4bc"
+        "hash": "fb2cd9f9f4bc",
+        "page": 21
       }
     },
     {
@@ -206,7 +225,49 @@
             "day": "9º Dia",
             "route": "CAIRO / CIDADE DE ORIGEM"
           }
-        ]
+        ],
+        "program": {
+          "days": [
+            {
+              "header": "1º DIA – CIDADE DE ORIGEM / CAIRO",
+              "body": ""
+            },
+            {
+              "header": "2º DIA – CAIRO",
+              "body": "Após o pequeno-almoço, saída para visita de dia inteiro. Passagem pelas Pirâmides de Gizé(não inclui entrada), Esfinges e o Museu do Cairo (o mais importante do Egito - não inclui entrada na sala das múmias reais). Almoço em restaurante local (bebidas não incluídas). Ao final da tarde regresso ao Hotel. Alojamento."
+            },
+            {
+              "header": "3º DIA – CAIRO / LUXOR / CRUZEIRO",
+              "body": "Após o pequeno-almoço, e em horário a combinar localmente, transporte para o aeroporto. Formalidades de embarque. Saída em voo Egyptair com destino a Luxor. Transporte para o porto. Embarque e alojamento em Pensão Completa no cruzeiro. Visita a Luxor e ao Templo de Karnak. Almoço e Jantar a bordo."
+            },
+            {
+              "header": "4º DIA – LUXOR",
+              "body": "Após o pequeno-almoço, visita ao Templo de Hatsheput, ao complexo de Deir El Bahari, Colossos de Mêmnon e o Vale dos Reis. Navegação com almoço e jantar a bordo (bebidas não incluídas)."
+            },
+            {
+              "header": "5º DIA – EDFU",
+              "body": ""
+            },
+            {
+              "header": "6º DIA – ASSUÃO",
+              "body": "Comparência no aeroporto com 3 horas de antecedência para formalidades de embarque. Partida em voo (1 escala) com destino a Cairo. Chegada e acolhimento. Transfer para o hotel no Cairo para check-in. Após o pequeno-almoço, saída (opcional) para visita a Abu-Simbel, aos templos escavados na rocha. Regresso para visita à Barragem de Assuão, inaugurada em 1970 e que na altura fornecia 50% da energia produzida no Egito, sendo também uma das maiores do mundo. Regresso ao Navio. Almoço e Jantar a bordo (bebidas não incluídas)."
+            },
+            {
+              "header": "7º DIA – ASSUÃO / CAIRO",
+              "body": "Após o pequeno-almoço, desembarque para visita ao Templo de Philae e ao Obelisco Inacabado de Assuão, cuja extração não foi concluída devido a fissuras encontradas no mesmo. Transporte para o aeroporto. Formalidades de embarque para saída em voo da Egyptair com destino a Cairo. Transporte para o Hotel no Cairo. Jantar e alojamento."
+            },
+            {
+              "header": "8º DIA – CAIRO",
+              "body": "Após o pequeno-almoço, visita opcional de dia inteiro a Cidadela do Cairo e a Copta, com almoço em restaurante local (bebidas não incluídas). Transporte para o Hotel no Cairo. Jantar e alojamento."
+            },
+            {
+              "header": "9º DIA – CAIRO / CIDADE DE ORIGEM",
+              "body": "Após o pequeno-almoço, e em horário a combinar localmente, transporte para o aeroporto. Formalidades de embarque. Saída em voo com destino a Portugal. Fim dos nossos serviços. Após o pequeno-almoço, navegação até Edfu. Visita ao Templo de Horus (também conhecido por Templo de Edfu) seguido de visita ao Templo de Sobek em Com Ombo, construído há mais de dois mil anos. Navegação até Assuão. Jantar e alojamento (bebidas não incluídas)."
+            }
+          ],
+          "included": "Voo Egyptair Lisboa / Madrid / Cairo / Madrid / Lisboa em classe “V”; Voo interno Cairo / Luxor e Assuão / Cairo em classe “O”; 4 noites no Cairo no Hotel Golden Tulip Flamenco Hotel 4* em regime de alojamento e pequenoalmoço + Cruzeiro MS Carnival Nile ou similar por 4 noites em regime de pensão completa; Taxas de aeroportos, segurança e combustível (350,00€ passageiro, sujeitas a reconfirmação e alterações legais); Seguro de Viagem e Visto.",
+          "notIncluded": "Gratificações no valor de 30,00€ por pessoa e estadia (pagas localmente ao guia no cruzeiro); outros que não mencionados no programa, extras de caráter pessoal."
+        }
       },
       "source": {
         "file": "00047085.pdf",
@@ -257,7 +318,45 @@
             "day": "8º Dia",
             "route": "CAIRO / CIDADE DE ORIGEM"
           }
-        ]
+        ],
+        "program": {
+          "days": [
+            {
+              "header": "1º DIA – CIDADE DE ORIGEM / CAIRO",
+              "body": ""
+            },
+            {
+              "header": "2º DIA - CAIRO",
+              "body": ""
+            },
+            {
+              "header": "3º DIA – CAIRO / LUXOR / CRUZEIRO",
+              "body": ""
+            },
+            {
+              "header": "4º DIA – LUXOR",
+              "body": "Após o pequeno-almoço, saída (opcional) para visita a dois templos em AbuSimbel. Regresso a Assuão para almoço a bordo. Após o almoço visita ao Templo de Sobek em Com Ombo, construído há mais de dois mil anos. Navegação a Edfu. Jantar a bordo."
+            },
+            {
+              "header": "5º DIA – EDFU",
+              "body": "Comparência no aeroporto com 3 horas de antecedência para formalidades de embarque. Partida em voo direto com destino a Cairo. Chegada e acolhimento. Transfer para o hotel no Cairo para check-in. Após o pequeno-almoço, visita ao Templo de Horus (também conhecido por Templo de Edfu) seguido de navegação até Luxor com passagem por Esna. Visita a Luxor e ao Templo de Karnak. Jantar e alojamento a bordo."
+            },
+            {
+              "header": "6º DIA – LUXOR / CAIRO",
+              "body": "Após o pequeno-almoço, saída para visita de dia inteiro. Passagem pelas Pirâmides de Gizé(não inclui entrada), Esfinges e o Museu do Cairo (o mais importante do Egito - não inclui entrada na sala das múmias reais). Almoço em restaurante local (bebidas não incluídas). Ao final da tarde regresso ao Hotel. Alojamento. Após o pequeno-almoço, desembarque para visita ao Vale dos Reis, Templo de Hatsheput e ao complexo de Deir El Bahari. Transporte para o aeroporto. Formalidades de embarque para saída em voo da Egyptair com destino a Cairo. Transporte para o Hotel no Cairo. Jantar e alojamento."
+            },
+            {
+              "header": "7º DIA – CAIRO",
+              "body": "Após o pequeno-almoço, e em horário a combinar localmente, transporte para o aeroporto. Formalidades de embarque. Saída em voo Egyptair com destino a Assuão. Transporte para o porto. Embarque e alojamento em Pensão Completa. Visita à Barragem de Assuão, as Pedreiras e ao Templo de Philae. Volta em redor da Ilha de Elefantina em barco à vela (típico egípcio). Jantar a bordo. Após o pequeno-almoço, visita opcional de dia inteiro a Cidadela do Cairo e a Copta, com almoço em restaurante local (bebidas não incluídas). Transporte para o Hotel no Cairo. Jantar e alojamento."
+            },
+            {
+              "header": "8º DIA – CAIRO / CIDADE DE ORIGEM",
+              "body": "Após o pequeno-almoço, e em horário a combinar localmente, transporte para o aeroporto. Formalidades de embarque. Saída em voo com destino a Portugal. Fim dos nossos serviços."
+            }
+          ],
+          "included": "Voo Egyptair Lisboa / Cairo / Lisboa em classe “V”; Voo interno Cairo / Assuão e Luxor / Cairo em classe “O”; 4 noites no Cairo no Hotel Golden Tulip Flamenco 4* em regime de alojamento e pequeno-almoço + Cruzeiro MS Carnival Nile ou similar por 3 noites em regime de pensão completa; Taxas de aeroportos, segurança e combustível (350,00€ passageiro sujeitas a reconfirmação e alterações legais); Seguro de Viagem e Visto.",
+          "notIncluded": "Gratificações no valor de 30,00€ por pessoa e estadia (pagas localmente ao guia no cruzeiro); outros que não mencionados no programa, extras de caráter pessoal."
+        }
       },
       "source": {
         "file": "00047085.pdf",
@@ -312,7 +411,49 @@
             "day": "10º Dia",
             "route": "HURGHADA / CIDADE DE ORIGEM"
           }
-        ]
+        ],
+        "program": {
+          "days": [
+            {
+              "header": "1º DIA – CIDADE DE ORIGEM / CAIRO",
+              "body": ""
+            },
+            {
+              "header": "2º DIA - CAIRO",
+              "body": ""
+            },
+            {
+              "header": "3º DIA – CAIRO",
+              "body": "Dia livre para continuar a explorar o Cairo. Não deixe de tirar um tempo para viver a cidade e passear por entre as ruas da zona histórica que rodeiam o Nilo. Descubra este Cairo Islâmico e “perca-se” nestas ruas antigas repletas de história, cultura e muito comércio. Alojamento."
+            },
+            {
+              "header": "4º DIA – CAIRO / ASSUÃO / CRUZEIRO",
+              "body": "Após o pequeno-almoço, e em horário a combinar localmente, transporte para o aeroporto. Formalidades de embarque. Saída em voo Egyptair com destino a Assuão. Transporte para o porto. Embarque e alojamento em Pensão Completa. Visita à Barragem de Assuão, as Pedreiras e ao Templo de Philae. Volta em redor da Ilha de Elefantina em barco à vela (típico egípcio). Jantar a bordo."
+            },
+            {
+              "header": "5º DIA – ASSUÃO",
+              "body": ""
+            },
+            {
+              "header": "6º DIA – EDFU",
+              "body": "Comparência no aeroporto com 3 horas de antecedência para formalidades de embarque. Partida em voo Turkish Airlines (1 escala) com destino ao Cairo. Chegada e acolhimento. Transfer para hotel no Cairo para check-in. Após o pequeno-almoço, visita ao Templo de Horus (também conhecido por Templo de Edfu) seguido de navegação até Luxor com passagem por Esna. Visita a Luxor e ao Templo de Karnak. Jantar e alojamento a bordo."
+            },
+            {
+              "header": "7º DIA – LUXOR / HURGHADA",
+              "body": "Aproveite o dia para conhecer a incrível cidade do Cairo. Visite o Grande Museu Egípcio, onde pode conhecer mais sobre a história deste povo que marcou a antiguidade, passeie junto ao Nilo, explore o Bairro Copta, e não deixe, claro, de visitar as sumptuosas Pirâmides de Gizé. Deslumbre-se com as inúmeras paisagens e não deixe de experimentar a condimentada gastronomia local. Alojamento. Após o pequeno-almoço, desembarque para visita ao Vale dos Reis, Templo de Hatsheput e ao complexo de Deir El Bahari. Transporte terrestre para Hurghada. Chegada e acolhimento. Alojamento em regime de tudo incluído."
+            },
+            {
+              "header": "8º E 9º DIA - HURGHADA",
+              "body": "Dias livres para atividades de caráter pessoal. Hurghada é um verdadeiro paraíso no Mar Vermelho, perfeito para quem goste de dias solarengos. Avenidas repletas de comércio, restaurantes e bares, misturam-se com resorts de elevada qualidade e que lhe darão a oportunidade de descansar à beiramar. Aproveite para fazer snorkeling nas águas cristalinas, ou para fazer um passeio de barco a uma das paradisíacas ilhas ao largo da cidade. Alojamento."
+            },
+            {
+              "header": "10º DIA - HURGHADA / CIDADE DE ORIGEM",
+              "body": "Após pequeno-almoço, e em horário a combinar localmente, transporte para o aeroporto. Formalidades de embarque. Saída em voo Turkish Arlines (1 escala) com destino a Portugal. Fim dos nossos serviços. Após o pequeno-almoço, saída (opcional) para visita a dois templos em Abu-Simbel. Regresso a Assuão para almoço a bordo. Após o almoço visita ao Templo de Sobek em Com Ombo, construído há mais de dois mil anos. Navegação a Edfu. Jantar a bordo."
+            }
+          ],
+          "included": "Voo Turkish Airlines Lisboa ou Porto / Istambul / Cairo / Hurghada / Istambul / Lisboa ou Porto em classe “P”; Voo interno Cairo / Assuão em classe “O”; 3 noites no Cairo no Hotel Golden Tulip Flamenco 4* em regime de alojamento e pequeno-almoço + Cruzeiro MS Carnival Nile ou similar por 3 noites em regime de pensão completa + 3 noites de alojamento em Hurghada no Blend Aqua Resort 4* no regime de tudo incluído; Taxas de aeroporto, segurança e combustível (320,00€ passageiro, sujeitas a reconfirmação e alterações legais); Seguro de Viagem e Visto.",
+          "notIncluded": ""
+        }
       },
       "source": {
         "file": "00047085.pdf",
@@ -347,7 +488,29 @@
             "day": "4º Dia",
             "route": "CAIRO / ASSUÃO / CRUZEIRO"
           }
-        ]
+        ],
+        "program": {
+          "days": [
+            {
+              "header": "1º DIA – CIDADE DE ORIGEM / CAIRO",
+              "body": "Comparência no aeroporto com 3 horas de antecedência para formalidades de embarque. Partida em voo Turkish Airlines (1 escala) com destino ao Cairo. Chegada e acolhimento. Transfer para hotel no Cairo para check-in."
+            },
+            {
+              "header": "2º DIA - CAIRO",
+              "body": "Aproveite o dia para conhecer a incrível cidade do Cairo. Visite o Grande Museu Egípcio, onde pode conhecer mais sobre a história deste povo que marcou a antiguidade, passeie junto ao Nilo, explore o Bairro Copta, e não deixe, claro, de visitar as sumptuosas Pirâmides de Gizé. Deslumbre-se com as inúmeras paisagens e não deixe de experimentar a condimentada gastronomia local. Alojamento."
+            },
+            {
+              "header": "3º DIA – CAIRO",
+              "body": "Dia livre para continuar a explorar o Cairo. Não deixe de tirar um tempo para viver a cidade e passear por entre as ruas da zona histórica que rodeiam o Nilo. Descubra este Cairo Islâmico e “perca-se” nestas ruas antigas repletas de história, cultura e muito comércio. Alojamento."
+            },
+            {
+              "header": "4º DIA – CAIRO / ASSUÃO / CRUZEIRO",
+              "body": "Após o pequeno-almoço, e em horário a combinar localmente, transporte para o aeroporto. Formalidades de embarque. Saída em voo Egyptair com destino a Assuão. Transporte para o porto. Embarque e alojamento em Pensão Completa. Visita à Barragem de Assuão, as Pedreiras e ao Templo de Philae. Volta em redor da Ilha de Elefantina em barco à vela (típico egípcio). Jantar a bordo."
+            }
+          ],
+          "included": "Voo Turkish Airlines Lisboa ou Porto / Istambul / Cairo / SHARM El-Sheikh / Istambul / Lisboa ou Porto em classe “P”; Voo interno Cairo / Assuão e Luxor / Sharm El-Sheikh em classe “O”; 3 noites no Cairo no Hotel Golden Tulip Flamenco 4* em regime de alojamento e pequeno-almoço + Cruzeiro MS Carnival Nile ou similar por 3 noites em regime de pensão completa + 3 noites de alojamento em Sharm El-Sheikh no Facon Hills 4* no regime de tudo incluído; Taxas de aeroporto, segurança e combustível (320,00€ passageiro, sujeitas a reconfirmação e alterações legais); Seguro de Viagem e Visto.",
+          "notIncluded": "Gratificações no valor de 30,00€ por pessoa e estadia (pagas localmente ao guia no cruzeiro); outros serviços não mencionados no programa e extras de caráter pessoal."
+        }
       },
       "source": {
         "file": "00047085.pdf",
@@ -385,11 +548,13 @@
             "nights": 2,
             "board": "APA"
           }
-        ]
+        ],
+        "program": null
       },
       "source": {
         "file": "00047078.pdf",
-        "hash": "fb2cd9f9f4bc"
+        "hash": "fb2cd9f9f4bc",
+        "page": null
       }
     },
     {
@@ -541,11 +706,30 @@
             "nights": 7,
             "board": "TI"
           }
-        ]
+        ],
+        "program": {
+          "days": [
+            {
+              "header": "1º DIA - LISBOA OU PORTO / DJERBA",
+              "body": "Comparência no aeroporto de Lisboa ou Porto duas horas antes da partida para as formalidades de embarque. Saída em voo especial. Chegada, acolhimento e transporte para o hotel escolhido. Resto de dia livre para atividades de caráter pessoal. Alojamento."
+            },
+            {
+              "header": "2º AO 7º DIA - DJERBA",
+              "body": "Aproveite os dias solarengos nesta magnífica ilha tunisina e desfrute das águas tépidas e areias claras que se estendem ao longo de vários quilómetros. Aproveite ainda para visitar Houmt Souk, a “capital” da ilha, cujas construções pitorescas são das mais tradicionais que se pode encontrar. Perca-se no mercado local e aproveite para fazer umas compras ou contactar com a amistosa população local."
+            },
+            {
+              "header": "8º DIA - DJERBA / LISBOA OU PORTO",
+              "body": "À hora indicada, partida para o aeroporto de Djerba. Formalidades de embarque assistidas pelos delegados Solférias. Chegada e fim dos nossos serviços."
+            }
+          ],
+          "included": "",
+          "notIncluded": "Qualquer outro serviço não mencionado; Extras de carácter pessoal; Taxas turísticas locais."
+        }
       },
       "source": {
         "file": "00047087.pdf",
-        "hash": "daff84a39fc5"
+        "hash": "daff84a39fc5",
+        "page": 18
       }
     },
     {
@@ -690,11 +874,30 @@
             "nights": 7,
             "board": "TI"
           }
-        ]
+        ],
+        "program": {
+          "days": [
+            {
+              "header": "1º DIA - CIDADE DE ORIGEM / EL ALAMEIN",
+              "body": "Comparência no aeroporto do Porto três horas antes da partida para as formalidades de embarque. Saída em voo especial do Porto. Chegada, acolhimento e transporte para o hotel escolhido com assistência local. Resto de dia livre para atividades de caráter pessoal. Alojamento."
+            },
+            {
+              "header": "2º DIA AO 7º DIA - COSTA NORTE",
+              "body": "Dias livres para atividades de caráter pessoal. Aproveite o bom tempo e desfrute de uns dias à beira mar, nas águas cristalinas da Riviera Egípcia. Pela proximidade, não deixe ainda de visitar cidades como Alexandria ou o Cairo e o seu mundialmente famoso complexo piramidal de Gizé. Alojamento."
+            },
+            {
+              "header": "8º DIA - EL ALAMEIN / CIDADA DE ORIGEM",
+              "body": "À hora indicada, partida para o aeroporto de El Alamein. Formalidades de embarque com vista ao voo de regresso ao Porto. Chegada e fim dos nossos serviços."
+            }
+          ],
+          "included": "Voos Air Cairo Porto / El Alamein / Porto com direito a 1pc 15kg de bagagem de porão; transporte aeroporto / hotel / aeroporto com assistência; 7 noites de alojamento no hotel e regime escolhidos; Taxas de aeroporto, segurança e combustível – 419,00€ (sujeitas a reconfirmação e alterações legais); Visto e Seguro de Viagem",
+          "notIncluded": "Outros serviços não mencionados no programa e extras de caráter pessoal."
+        }
       },
       "source": {
         "file": "00047085.pdf",
-        "hash": "760758d672e6"
+        "hash": "760758d672e6",
+        "page": 15
       }
     },
     {
@@ -797,11 +1000,30 @@
             "nights": 7,
             "board": "TI"
           }
-        ]
+        ],
+        "program": {
+          "days": [
+            {
+              "header": "1º DIA - PORTO / ENFIDHA",
+              "body": "Comparência no aeroporto do Porto duas horas antes da partida para as formalidades de embarque. Saída em voo especial. Chegada, acolhimento e transporte para o hotel escolhido. Resto do dia livre para atividades de caráter pessoal. Alojamento."
+            },
+            {
+              "header": "2º AO 7º DIA - ENFIDHA",
+              "body": "Estadia em Hammamet, Port El Kantaoui, Sousse, Monastir ou Mahdia. Dias inteiramente livres. Considerada como um dos destinos mais apetecíveis a nível mundial tem nas suas praias, na simpatia das suas gentes e no seu legado patrimonial algumas das razões mais importantes para desfrutar de umas férias magníficas. Prove também a saborosa gastronomia local, recheada de influência magrebina, sendo a base verduras, carne de ovelha, vaca e camelo, peixe e massa. Os doces típicos são Baklawas, feito à base de mel, frutos secos, açúcar, manteiga salgada, ovos, azeite, amêndoas e água. As bebidas mais populares são o aromático chá com menta e o café tunisino. A simpatia está patente nos mais pequenos detalhes, onde tudo foi pensado para transmitir bem-estar e tranquilidade, por isso desfrute de uns solarengos dias à beira-mar."
+            },
+            {
+              "header": "8º DIA - ENFIDHA / PORTO",
+              "body": "À hora indicada, partida para o aeroporto. Formalidades de embarque assistidas pelos delegados Solférias. Chegada e fim dos nossos serviços."
+            }
+          ],
+          "included": "Voo Especial Air Horizont Porto / Enfidha / Porto em classe “S”, 7 noites de alojamento em Hammamet, Port El Kantaoui, Sousse ou Monastir, no hotel e regime selecionado; Taxas de aeroporto, segurança e combustível (195,00€) sujeitas a reconfirmação e alterações legais); Seguro de Viagem.",
+          "notIncluded": "Qualquer outro serviço não mencionado; Extras de carácter pessoal; Taxas turísticas locais."
+        }
       },
       "source": {
         "file": "00047087.pdf",
-        "hash": "daff84a39fc5"
+        "hash": "daff84a39fc5",
+        "page": 13
       }
     },
     {
@@ -827,11 +1049,13 @@
             "nights": 2,
             "board": "APA"
           }
-        ]
+        ],
+        "program": null
       },
       "source": {
         "file": "00047078.pdf",
-        "hash": "fb2cd9f9f4bc"
+        "hash": "fb2cd9f9f4bc",
+        "page": null
       }
     },
     {
@@ -963,11 +1187,30 @@
             "nights": 7,
             "board": "TI"
           }
-        ]
+        ],
+        "program": {
+          "days": [
+            {
+              "header": "1º DIA - LISBOA / TUNES / HAMMAMET",
+              "body": "Comparência no aeroporto duas horas antes da partida para as formalidades de embarque. Saída em voo regular, com destino a Tunes. Chegada, acolhimento e transporte para o hotel escolhido. Resto do dia livre para atividades de caráter pessoal. Alojamento."
+            },
+            {
+              "header": "2º AO 7º DIA - HAMMAMET",
+              "body": "Estadia em Hammamet. Dias inteiramente livres. Esta região, considerada como um dos destinos mais apetecíveis a nível mundial tem nas suas praias, na simpatia das suas gentes e no seu legado patrimonial algumas das razões mais importantes para desfrutar de umas férias magníficas. Prove também a saborosa gastronomia local, recheada de influência magrebina, sendo a base verduras, carne de ovelha, vaca e camelo, peixe e massa. Os doces típicos são Baklawas, feitos à base de mel, frutos secos, açúcar, manteiga salgada, ovos, azeite, amêndoas e água. As bebidas mais populares são o aromático chá com menta e o café tunisino. A simpatia está patente nos mais pequenos detalhes, onde tudo foi pensado para transmitir bem-estar e tranquilidade, por isso desfrute de uns solarengos dias à beira-mar. Aproveite ainda para descobrir as características Medinas e faça umas compras no comércio local, ou desfrute dos magníficos pôr do sol."
+            },
+            {
+              "header": "8º DIA - HAMMAMET / TUNES / LISBOA",
+              "body": "À hora indicada, partida para o aeroporto. Formalidades de embarque assistidas pelos delegados Solférias. Regresso a Lisboa. Chegada e fim dos nossos serviços."
+            }
+          ],
+          "included": "Voo Tunisair Lisboa / Tunes / Lisboa em classe “V”, 7 noites de estadia em Hammamet, no tipo de quarto e no regime selecionado; Taxas de aeroporto, segurança e combustível (195€) sujeitos a reconfirmação e alterações legais); Seguro Multiviagens.",
+          "notIncluded": "Qualquer outro serviço não mencionado; Extras de carácter pessoal; Taxas turísticas locais."
+        }
       },
       "source": {
         "file": "00047087.pdf",
-        "hash": "daff84a39fc5"
+        "hash": "daff84a39fc5",
+        "page": 25
       }
     },
     {
@@ -1154,11 +1397,30 @@
             "nights": 7,
             "board": "TI"
           }
-        ]
+        ],
+        "program": {
+          "days": [
+            {
+              "header": "1º DIA - CIDADE DE ORIGEM / HURGHADA",
+              "body": "Comparência no aeroporto de Lisboa ou Porto três horas antes da partida para as formalidades de embarque. Saída em voo especial, de Lisboa e do Porto às. Chegada, acolhimento e transporte para o hotel escolhido com assistência local. Resto de dia livre para atividades de caráter pessoal. Alojamento."
+            },
+            {
+              "header": "2º DIA AO 7º DIA - HURGHADA",
+              "body": "Dias livres para atividades de caráter pessoal. Hurghada é um verdadeiro paraíso no Mar Vermelho, perfeito para quem goste de dias solarengos e para quem queira passar o dia na água. Avenidas repletas de comércio, restaurantes e bares, misturam-se com resorts de elevadíssima qualidade e que lhe darão a oportunidade de passar uns dias incríveis no Egito. Se não quiser passar todos os dias à beira mar, pode ainda optar por fazer uma excursão à magnífica cidade de Luxor e o seu Templo de Karnak, ou entrar no verdadeiro espírito do Antigo Egito, passeando pelo Vale dos Reis ou pelo Templo de Hatshesput. Aproveite ainda para fazer snorkeling nas cristalinas águas, para fazer um passeio de barco até uma das paradisíacas ilhas ao largo de Hurghada, ou ainda pode optar por fazer um passeio no deserto de moto4. Alojamento."
+            },
+            {
+              "header": "8º DIA - HURGHADA / CIDADE DE ORIGEM",
+              "body": "Outros serviços não mencionados no programa e extras de caráter pessoal."
+            }
+          ],
+          "included": "Voos Red Sea Airlines de Lisboa ou Porto / Hurghada / Lisboa ou Porto com direito a 1pc 15kg de bagagem de porão; transporte aeroporto / hotel / aeroporto com assistência; 7 noites de alojamento no hotel e regime escolhidos; Taxas de aeroporto, segurança e combustível – 419,00€ (sujeitas a reconfirmação e alterações legais); Visto e Seguro de Viagem",
+          "notIncluded": "À hora indicada, partida para o aeroporto de Hurghada. Formalidades de embarque assistidas pelos representantes Solférias. Voo de regresso a Lisboa ou Porto. Chegada e fim dos nossos serviços."
+        }
       },
       "source": {
         "file": "00047085.pdf",
-        "hash": "760758d672e6"
+        "hash": "760758d672e6",
+        "page": 6
       }
     },
     {
@@ -1370,11 +1632,13 @@
             "nights": 2,
             "board": "APA"
           }
-        ]
+        ],
+        "program": null
       },
       "source": {
         "file": "00047078.pdf",
-        "hash": "fb2cd9f9f4bc"
+        "hash": "fb2cd9f9f4bc",
+        "page": null
       }
     },
     {
@@ -1421,11 +1685,30 @@
             "nights": 7,
             "board": "TI"
           }
-        ]
+        ],
+        "program": {
+          "days": [
+            {
+              "header": "1º DIA - CIDADE DE ORIGEM / HURGHADA",
+              "body": "Comparência no aeroporto de Lisboa ou Porto três horas antes da partida para as formalidades de embarque. Saída em voo especial, de Lisboa e do Porto. Chegada, acolhimento e transporte para o hotel escolhido com assistência local. Resto de dia livre para atividades de caráter pessoal. Alojamento."
+            },
+            {
+              "header": "2º DIA AO 7º DIA - MARSA ALAM",
+              "body": "Dias livres para atividades de caráter pessoal. Alojamento."
+            },
+            {
+              "header": "8º DIA - MARSA ALAM / CIDADE DE ORIGEM",
+              "body": "À hora indicada, partida para o aeroporto de Hurghada. Formalidades de embarque assistidas pelos representantes Solférias. Voo de regresso a Lisboa ou Porto. Chegada e fim dos nossos serviços."
+            }
+          ],
+          "included": "Voos Red Sea Airlines de Lisboa ou Porto / Hurghada / Lisboa ou Porto com direito a 1pc 15kg de bagagem de porão; transporte aeroporto / hotel / aeroporto com assistência; 7 noites de alojamento no hotel e regime escolhidos; Taxas de aeroporto, segurança e combustível – 419,00€ (sujeitas a reconfirmação e alterações legais); Visto e Seguro de Viagem",
+          "notIncluded": "Outros serviços não mencionados no programa e extras de caráter pessoal."
+        }
       },
       "source": {
         "file": "00047085.pdf",
-        "hash": "760758d672e6"
+        "hash": "760758d672e6",
+        "page": 12
       }
     },
     {
@@ -1592,11 +1875,30 @@
             "nights": 7,
             "board": "TI"
           }
-        ]
+        ],
+        "program": {
+          "days": [
+            {
+              "header": "1º DIA - LISBOA OU PORTO / MONASTIR",
+              "body": "Comparência no aeroporto de Lisboa ou Porto duas horas antes da partida para as formalidades de embarque. Saída em voo especial. Chegada, acolhimento e transporte para o hotel escolhido. Resto do dia livre para atividades de caráter pessoal. Alojamento."
+            },
+            {
+              "header": "2º AO 7º DIA - MONASTIR",
+              "body": "Estadia em Hammamet, Port El Kantaoui, Sousse, Monastir ou Mahdia. Dias inteiramente livres. Considerada como um dos destinos mais apetecíveis a nível mundial tem nas suas praias, na simpatia das suas gentes e no seu legado patrimonial algumas das razões mais importantes para desfrutar de umas férias magníficas. Prove também a saborosa gastronomia local, recheada de influência magrebina, sendo a base verduras, carne de ovelha, vaca e camelo, peixe e massa. Os doces típicos são Baklawas, feito à base de mel, frutos secos, açúcar, manteiga salgada, ovos, azeite, amêndoas e água. As bebidas mais populares são o aromático chá com menta e o café tunisino. A simpatia está patente nos mais pequenos detalhes, onde tudo foi pensado para transmitir bem-estar e tranquilidade, por isso desfrute de uns solarengos dias à beira-mar."
+            },
+            {
+              "header": "8º DIA - MONASTIR / LISBOA OU PORTO",
+              "body": "À hora indicada, partida para o aeroporto. Formalidades de embarque assistidas pelos delegados Solférias. Chegada e fim dos nossos serviços."
+            }
+          ],
+          "included": "Voo Especial Nouvelair Lisboa ou Porto / Monastir / Lisboa ou Porto em classe “S”; 7 noites de alojamento em Hammamet, Port El Kantaoui, Sousse, Monastir ou Mahdia, no hotel e regime selecionado; Taxas de aeroporto, segurança e combustível (195,00€) sujeitos a reconfirmação e alterações legais); Seguro de Viagem.",
+          "notIncluded": "Qualquer outro serviço não mencionado; Extras de carácter pessoal; Taxas turísticas locais."
+        }
       },
       "source": {
         "file": "00047087.pdf",
-        "hash": "daff84a39fc5"
+        "hash": "daff84a39fc5",
+        "page": 6
       }
     },
     {
@@ -1636,11 +1938,30 @@
             "nights": 7,
             "board": "TI"
           }
-        ]
+        ],
+        "program": {
+          "days": [
+            {
+              "header": "1º DIA – LISBOA OU PORTO / OUJDA / SAÏDIA",
+              "body": "Comparência no aeroporto de Lisboa ou Porto duas horas antes da partida para as formalidades de embarque. Saída em voo Air Horizont ou TAP, com destino a Saïdia. Chegada, acolhimento e transporte para o hotel escolhido. Resto do dia livre para atividades de caráter pessoal. Alojamento."
+            },
+            {
+              "header": "2º AO 7º DIA - SAÏDIA",
+              "body": "Desfrute de uns dias relaxantes à beira da piscina e aproveite o bom tempo desta estância balnear do nordeste marroquino. Mergulhe nas águas tépidas ou passeie no extenso areal dourado de Saïdia."
+            },
+            {
+              "header": "8º DIA – SAÏDIA / OUJDA / LISBOA OU PORTO",
+              "body": "Após o pequeno-almoço e em horário a combinar localmente, transporte para o aeroporto de Oujda. Chegada e embarque no voo previsto, com destino a Lisboa ou Porto. Chegada e fim dos nossos serviços. SERVIÇOS NÃO INCLUÍDOS NO PREÇO Taxas Locais (3,6€ por pessoa e noite), outros serviços que não mencionados no programa e extras de caráter pessoal. Nota: Preços válidos para um mínimo de 2 pessoas."
+            }
+          ],
+          "included": "Voos Lisboa ou Porto / Oujda / Lisboa ou Porto, em voos Smartwings em Classe “S” com direito a 20kg de bagagem; trnasporte aeroporto/hotel/aeroporto com assistência local; 7 noites de alojamento no hotel e regime indicados; Taxas de aeroportos, segurança e combustível (valor indicativo de 120,00 Euros,sujeitas a reconfirmação e alterações legais); Seguro de Viagem.",
+          "notIncluded": ""
+        }
       },
       "source": {
         "file": "00047078.pdf",
-        "hash": "fb2cd9f9f4bc"
+        "hash": "fb2cd9f9f4bc",
+        "page": 30
       }
     },
     {
@@ -1778,11 +2099,30 @@
             "nights": 7,
             "board": "TI"
           }
-        ]
+        ],
+        "program": {
+          "days": [
+            {
+              "header": "1º DIA - CIDADE DE ORIGEM / SHARM EL-SHEIKH",
+              "body": "Comparência no aeroporto do Porto três horas antes da partida para as formalidades de embarque. Saída em voo respecial do Porto. Chegada, acolhimento e transporte para o hotel escolhido com assistência local. Resto de dia livre para atividades de caráter pessoal. Alojamento."
+            },
+            {
+              "header": "2º DIA AO 7º DIA - SHARM EL-SHEIKH",
+              "body": "Dias livres para atividades de caráter pessoal. Sharm El-Sheikh é uma das grandes atrações do Mar Vermelho. Dotada de hotéis de elevada qualidade, este destino cosmopolita vai dar-lhe uns dias de descanso em águas quentes e cristalinas. Os seus bancos de coral são uns dos mais procurados por mergulhadores do mundo inteiro, por isso aproveite e experimente ir à descoberta do habitat mais exótico e colorido que pode existir. Parte ainda à descoberta do deserto do Sinai, onde ainda hoje existem beduínos nómadas. Alojamento."
+            },
+            {
+              "header": "8º DIA - SHARM EL-SHEIKH / CIDADE DE ORIGEM",
+              "body": "À hora indicada, partida para o aeroporto de Sharm El-Sheikh. Formalidades de embarque com vista ao voo de regresso ao Porto. Chegada e fim dos nossos serviços"
+            }
+          ],
+          "included": "Voos Red Sea Airlines Porto / Sharm El-Sheikh / Porto com direito a 1pc 15kg de bagagem de porão; transporte aeroporto / hotel / aeroporto com assistência; 7 noites de alojamento no hotel e regime escolhidos; Taxas de aeroporto, segurança e combustível – 419,00€ (sujeitas a reconfirmação e alterações legais); e Seguro de Viagem",
+          "notIncluded": "mencionados no programa e extras de caráter pessoal."
+        }
       },
       "source": {
         "file": "00047085.pdf",
-        "hash": "760758d672e6"
+        "hash": "760758d672e6",
+        "page": 20
       }
     },
     {
@@ -1885,11 +2225,30 @@
             "nights": 7,
             "board": "APA"
           }
-        ]
+        ],
+        "program": {
+          "days": [
+            {
+              "header": "1º DIA – CIDADE DE ORIGEM / FLORIANÓPOLIS",
+              "body": "Comparência no aeroporto 3 horas antes da partida. Formalidades de embarque e partida com destino a Florianópolis. Acolhimento à chegada, transporte ao hotel escolhido e alojamento."
+            },
+            {
+              "header": "2º AO 7º DIA – FLORIANÓPOLIS, BALNEÁRIO CAMBORIÚ, PRAIA DO SANTINHO, JURERÊ, PRAIA DOS INGLESES",
+              "body": "Dias livres para desfrutar da região. Descubra as maravilhas de Florianópolis, onde as atividades turísticas se misturam perfeitamente com a beleza natural e cultural. Conhecida por suas praias deslumbrantes, como a famosa Praia da Joaquina para os surfistas e a tranquila Praia da Lagoinha para relaxar, a cidade oferece um cenário tropical espetacular. Explore a rica história da cidade através do centro histórico, repleto de construções coloniais preservadas, como a Catedral Metropolitana e o Mercado Público. A culinária local é uma verdadeira festa para o paladar, com frutos do mar frescos e pratos típicos da região. Não deixe de conferir a vibrante vida noturna na Lagoa da Conceição, onde bares e restaurantes se misturam em uma atmosfera descontraída. Com uma variedade de atividades ao ar livre, desde trilhas em morros exuberantes até passeios de barco pelas baías e ilhas, Florianópolis é um paraíso para os amantes da natureza e da cultura."
+            },
+            {
+              "header": "8º E 9º DIAS – FLORIANÓPOLIS / CIDADE DE ORIGEM",
+              "body": "Em hora a combinar localmente, trasporte ao aeroporto. Formalidades de embarque e partida com destino a Portugal. Chegada e fim dos nossos serviços."
+            }
+          ],
+          "included": "Voo TAP Lisboa/Florianópolis/Lisboa em classe “T” Basic com direito a 1 bagagem de porão de 23kg; transporte aeroporto/ hotel/aeroporto com assistência local; 7 noites de alojamento no hotel e regime selecionado; Taxas de aeroporto, segurança e combustível (valor indicativo 336,00 euros) sujeitas a reconfirmação e alterações legais; seguro de viagem.",
+          "notIncluded": "Outros que não mencionados no programa e extras de caráter pessoal."
+        }
       },
       "source": {
         "file": "00047103.pdf",
-        "hash": "79f4b4f374db"
+        "hash": "79f4b4f374db",
+        "page": 44
       }
     },
     {
@@ -2077,11 +2436,30 @@
             "nights": null,
             "board": null
           }
-        ]
+        ],
+        "program": {
+          "days": [
+            {
+              "header": "1º DIA – CIDADE DE ORIGEM / FORTALEZA",
+              "body": "Comparência no aeroporto 3 horas antes da partida. Formalidades de embarque e partida com destino a Fortaleza. Acolhimento à chegada, transporte ao hotel escolhido e alojamento."
+            },
+            {
+              "header": "2º AO 7º DIA – FORTALEZA OU PORTO DAS DUNAS OU CUMBUCO OU TAÍBA",
+              "body": "Dias completamente livres. Com dunas e mar verde-azulado, Fortaleza é a capital do Brasil que oferece mais horas de sol durante o ano. A cidade também é famosa pela excelente infraestrutura turística. A rede hoteleira está entre as mais modernas do país. Destaque ainda para a variada oferta de restaurantes, com uma vasta culinária, de pratos típicos e mariscos. Durante o dia, aproveite para desfrutar das praias do Futuro, do Cumbuco, do Porto das Dunas, da Taíba e ainda divertir-se à beira-mar no Beach Park, maior parque aquático da América Latina. Imperdível também é apreciar o artesanato, uma autêntica manifestação de arte popular. À noite, não perca o forró, as discotecas, bares, teatros e espetáculos de humor. Fortaleza é uma cidade com diversão em todos os dias da semana."
+            },
+            {
+              "header": "8º E 9º DIAS – FORTALEZA / CIDADE DE ORIGEM",
+              "body": "Em hora a combinar localmente, transporte ao aeroporto. Formalidades de embarque e partida com destino a Portugal. Chegada e fim dos nossos serviços."
+            }
+          ],
+          "included": "Voo TAP Lisboa/ Fortaleza/ Lisboa em classe “T” BASIC com direito a 1 bagagem de porão de 23kg; transporte aeroporto/ hotel/ aeroporto com assistência local; 7 noites de alojamento no hotel e regime selecionado; Taxas de aeroportos, segurança e combustível (valor indicativo 336,00 euros) sujeitas a reconfirmação e alterações legais)); Seguro Multiviagens.",
+          "notIncluded": "Taxa turística de carater opcional cobrada pelo hotel no ato de check-out, com valor estabelecido pela unidade hoteleira por quarto e por noite. Outros que não mencionados no programa e extras de caráter pessoal."
+        }
       },
       "source": {
         "file": "00047103.pdf",
-        "hash": "79f4b4f374db"
+        "hash": "79f4b4f374db",
+        "page": 7
       }
     },
     {
@@ -2123,7 +2501,41 @@
             "day": "8º Dia",
             "route": "JERICOACOARA / FORTALEZA / LISBOA P"
           }
-        ]
+        ],
+        "program": {
+          "days": [
+            {
+              "header": "1º DIA - LISBOA / BELORIZONTE / SÃO LUÍS DO MARANHÃO",
+              "body": "Comparência no aeroporto três horas antes da hora da partida. Formalidades de embarque e partida para São Luís (com 1 escala ou 2 escalas de acordo com o voo selecionado). Acolhimento à chegada e transporte partilhado para o hotel escolhido em São Luís. Alojamento no Hotel Luzeiros ou similar."
+            },
+            {
+              "header": "3º DIA - SÃO LUÍS DO MARANHÃO / BARREIRINHAS",
+              "body": "Após pequeno-almoço, saída do hotel para city tour. Ao final do dia, regresso ao hotel de São Luís do Maranhão. Alojamento"
+            },
+            {
+              "header": "4º DIA - BARREIRINHAS",
+              "body": "Saída de manhã para passeio em lancha pelo Rio Preguiças, com paragem nas comunidades de Vassouras, Mandacaru (subida ao farol com vista panorâmica) até Caburé, sendo este um braço de dunas localizadas entre o Rio e o Mar. Regresso à pousada. Alojamento na Pousada do Buriti ou similar NOTAS IMPORTANTES O programa poderá sofrer alterações ou ajustes ou mudar a sua sequência, por motivos meteorológicos ou de feriados ou outros condicionantes; Programa não adequado para pessoas com mobilidade reduzida, por incluir acesso a aviões, transportes regulares e alojamentos com escadas e por o acesso às praias não estar preparado para receber e assistir este tipo de clientes; Máximo 30Kg de bagagem por passageiro durante o percurso."
+            },
+            {
+              "header": "5º DIA - BARREIRINHAS / PARNAÍBA",
+              "body": "Pequeno-almoço no hotel. Saída por volta das 13h00 em veiculo 4X4 com destino a Tutóia passando pela povoação de Paulino Neves. Em Tutóia, embarque numa lancha para fazer travessia do delta, onde passará por inúmeros labirintos formados pelos Igarapés. Chegada ao Porto de Tatus em Parnaíba e transporte para a pousada (duração do percurso 5 horas aproximadamente). Alojamento na Pousada Villa Parnaíba ou similar."
+            },
+            {
+              "header": "6º DIA - PARNAÍBA / JERICOACOARA",
+              "body": "Pequeno-almoço no hotel. Saída do hotel por volta das 09h00 em veículo 4X4 com destino a Jericoacoara (duração do percurso 4 horas aproximadamente). No caminho paragem em Camocim, para embarque num ferry com destino a ilha do amor, onde iniciaremos a nossa viagem com vista para os quilómetros de dunas e praias desertas. No percurso, paragem para fotos na Duna do Funil e Lagoa da Torta em Tatajuba onde iremos almoçar (não incluído). Seguiremos pelas praias até Guriú, onde faremos uma nova travessia de ferry até Mangue Seco e por fim Jericoacoara. Alojamento na Pousada Surfing Jeri ou similar."
+            },
+            {
+              "header": "7º DIA - JERICOACOARA",
+              "body": "Pequeno-almoço no hotel. Dia livre para desfrutar das belíssimas praias, dunas e lagoas da região (Lagoa do Paraíso e Lagoa Azul). Alojamento na Pousada Surfing Jeri ou similar."
+            },
+            {
+              "header": "8º DIA – JERICOACOARA / FORTALEZA / LISBOA",
+              "body": "Por volta das 08h00 aproximadamente (horário a reconfirmar localmente), transporte privado em 4X4 para o aeroporto de Fortaleza. Formalidades de embarque e partida com destino a Lisboa, via Paris. Refeição e noite a bordo. Chegada e fim dos nossos serviços."
+            }
+          ],
+          "included": "Voos TAP Lisboa / Belo Horizonte e Fortaleza / Lisboa em classe “G” e voo Azul Belo Horizonte / São luís do Maranhão em classe “O” com direto a 1 peça de bagagem de porão. transporte partilhado Aeroporto São Luís / hotel em São Luís do Maranhão; 2 noites em São Luís do Maranhão em quarto duplo no Hotel Luzeiros ou similar em alojamento e pequeno-almoço; transporte partilhado de São Luís / Barreirinhas; 2 noites de alojamento em Barreirinhas em quarto duplo na Pousada Buriti ou similar em alojamento e pequenoalmoço; Passeio de Toyota 4X4 até aos Grandes Lençóis - Visita na lagoa da estação; passeio de lancha pelo Rio Preguiças até Caburé; 1 noite de alojamento em Parnaíba em quarto duplo na Pousada Villa Parnaíba ou similar em alojamento e pequeno-almoço; transporte em veículo 4X4 de Barreirinhas / Jericoacoara; 2 noites de alojamento em Jericoacoara em quarto duplo na Pousada Surfing Jeri ou similar em alojamento e pequeno almoço; transporte em veículo 4X4 de Jericoacoara / Fortaleza; Guia local (português) durante as excursões; Taxas de aeroportos, segurança e combustível (valor indicativo 287,00 euros) sujeitas a reconfirmação e alterações legais); Seguro de Viagem",
+          "notIncluded": "Taxa turística de carater opcional cobrada pelo hotel no ato de check-out, com valor estabelecido pela unidade hoteleira por quarto e por noite; Gratificações, refeições e excursões não mencionadas; Outros que não mencionados no programa e extras de caráter pessoal"
+        }
       },
       "source": {
         "file": "00047103.pdf",
@@ -2203,11 +2615,30 @@
             "nights": 7,
             "board": "APA"
           }
-        ]
+        ],
+        "program": {
+          "days": [
+            {
+              "header": "1º DIA – CIDADE DE ORIGEM / RECIFE / JOÃO PESSOA",
+              "body": "Comparência no aeroporto 3 horas antes da partida. Formalidades de embarque e partida com destino a Recife. Acolhimento à chegada, transporte para a capital do estado da Paraíba, João Pessoa e ao hotel escolhido, alojamento."
+            },
+            {
+              "header": "2º AO 7º DIA – JOÃO PESSOA",
+              "body": "Dias livres para desfrutar das maravilhosas praias e todo o ambiente especial que se vive no Nordeste Brasileiro. Por ser uma das mais pequenas capitais do Nordeste, é igualmente uma das mais acolhedoras e recheada de história. Com uma extensa linha de praias urbanas de areia fina e águas tranquilas, a cidade tem na Ponta do Seixas o ponto extremo leste da América continental. Entre os mergulhos nas praias de Tambaba, Cabo Branco ou do Tambaú, não deixe igualmente de assistir ao pôr-do-sol na praia do Jacaré e de visitar alguns dos marcos históricos desta bela cidade, dos quais destacamos o Conjunto de São Francisco, a Estação de Cabo Branco e a Fortaleza de Santa Catarina. Alojamento no hotel selecionado no regime alimentar escolhido."
+            },
+            {
+              "header": "8º E 9º DIAS – JOÃO PESSOA / RECIFE / CIDADE DE ORIGEM",
+              "body": "Em hora a combinar localmente, transporte ao aeroporto de Recife. Formalidades de embarque e partida com destino a Portugalx\\x\\. Chegada e fim dos nossos serviços."
+            }
+          ],
+          "included": "Voo TAP Lisboa / Recife / Lisboa em classe “T BASIC com direito a 1 bagagem de porão de 23kg; transporte aeroporto/ hotel/ aeroporto com assistência local; 7 noites de alojamento no hotel e regime selecionado; Taxas de aeroportos, segurança e combustível (valor indicativo 336,00 euros) sujeitas a reconfirmação e alterações legais)); Seguro Multiviagens.",
+          "notIncluded": "Taxa turística de carater opcional cobrada pelo hotel no ato de check-out, com valor estabelecido pela unidade hoteleira por quarto e por noite. Outros que não mencionados no programa e extras de caráter pessoal."
+        }
       },
       "source": {
         "file": "00047103.pdf",
-        "hash": "79f4b4f374db"
+        "hash": "79f4b4f374db",
+        "page": 22
       }
     },
     {
@@ -2382,11 +2813,30 @@
             "nights": 7,
             "board": "TI"
           }
-        ]
+        ],
+        "program": {
+          "days": [
+            {
+              "header": "1º DIA – CIDADE DE ORIGEM / MACEIÓ",
+              "body": "Comparência no aeroporto 3 horas antes da partida. Formalidades de embarque e partida com destino a Maceió. Acolhimento à chegada, transporte para o hotel escolhido e alojamento."
+            },
+            {
+              "header": "2º AO 7º DIA – MACEIÓ, MARAGOGI, BARRA DE SÃO MIGUEL, IPIOCA, SÃO MIGUEL DOS MILAGRES E BARRA DE SANTO ANTÓNIO",
+              "body": "Dias livres para atividades a gosto pessoal. Maceió é cidade, mas é também praia: Pajuçara, Ponta Verde e Jatiúca são apenas algumas das muitas praias da capital de Alagoas, considerado o litoral mais bonito do Nordeste. A orla costeira é protegida por recifes que tornam o mar, azul e esverdeado, calmo e próprio para banhos. Com tempo e com vontade de explorar as praias fora da cidade, a norte, há a incontornável Maragogi, com os seus recifes de coral, bancos de areia e as Galés, o maior conjunto de piscinas naturais de Alagoas. Em direção a sul, destaque para a Praia do Francês, a Copacabana de Maceió. Logo a seguir a Barra de São Miguel, um verdadeiro aquário de águas mornas. Alojamento no hotel e regime alimentar selecionado."
+            },
+            {
+              "header": "8º E 9º DIAS – MACEIÓ / CIDADE DE ORIGEM",
+              "body": "Em hora a combinar localmente, transporte para o aeroporto. Formalidades de embarque e partida com destino a Portugal. Chegada e fim dos nossos serviços."
+            }
+          ],
+          "included": "Voo TAP Lisboa/ Maceió/ Lisboa em classe “T” BASIC com direito a 1 bagagem de porão de 23kg; transporte aeroporto/ hotel/ aeroporto com assistência local; 7 noites de alojamento no hotel e regime selecionado; Taxas de aeroportos, segurança e combustível (valor indicativo 336,00 euros) sujeitas a reconfirmação e alterações legais)); Seguro Multiviagens.",
+          "notIncluded": "Taxa turística de carater opcional cobrada pelo hotel no ato de check-out, com valor estabelecido pela unidade hoteleira por quarto e por noite. Outros que não mencionados no programa e extras de caráter pessoal. P"
+        }
       },
       "source": {
         "file": "00047103.pdf",
-        "hash": "79f4b4f374db"
+        "hash": "79f4b4f374db",
+        "page": 31
       }
     },
     {
@@ -2490,11 +2940,30 @@
             "nights": 7,
             "board": "APA"
           }
-        ]
+        ],
+        "program": {
+          "days": [
+            {
+              "header": "1º DIA – CIDADE DE ORIGEM / NATAL",
+              "body": "Comparência no aeroporto 3 horas antes da partida. Formalidades de embarque e partida com destino a Natal. Acolhimento à chegada, transporte ao hotel escolhido e alojamento."
+            },
+            {
+              "header": "2º AO 7º DIA – NATAL OU PIPA OU TOUROS",
+              "body": "Dias livres para desfrutar das maravilhosas praias e todo o ambiente especial que se vive no Nordeste Brasileiro. Sol e mar são sinónimos de Natal, por isso é chamada de noiva do sol. Ainda tem as riquezas culturais, a hospitalidade do seu povo, a culinária, os monumentos e suas belas praias que sopram uma brisa que refresca a alma de quem mora e de quem visita. Com ou sem emoção? Esta pergunta nascida da imaginação dos bugueiros das dunas de Genipabu tornou-se o lema de Natal, onde todos os programas (desde “esquibunda” ao passeio de camelo...) têm versões mais ou menos emocionantes. Natal é o destino ideal para quem gosta de férias animadas, um passeio diferente todos os dias, quer alugando carro quer... seguindo o buggy mais próximo. Pipa é uma das mais civilizadas e bonitas aldeias de praia de todo o Nordeste. É também um dos locais com maior concentração de bons restaurantes do Rio Grande do Norte. Mas Pipa é muito mais que isso. É um litoral feito de praias e baías perfeitamente desenhadas, em meia-lua, (desde Tibau do Sul a Pipa), ou de falésias e dunas. Se durante a alta temporada, Pipa ganha animação, até pelos visitantes que vêm de Natal passar o dia, (90 km por estrada ou 50 de buggy pela praia), o resto do ano é um lugar tranquilo e paradisíaco. E o difícil, mesmo, vai ser quando chegar a altura de deixar a “sua” Pousada e regressar a casa. Alojamento no hotel selecionado no regime alimentar escolhido."
+            },
+            {
+              "header": "8º E 9º DIAS – NATAL / CIDADE DE ORIGEM",
+              "body": "Em hora a combinar localmente, transporte ao aeroporto. Formalidades de embarque e partida com destino a Portugal. Chegada e fim dos nossos serviços."
+            }
+          ],
+          "included": "Voo TAP Lisboa/ Natal/ Lisboa em classe “T” BASIC com direito a 1 bagagem de porão de 23kg; transporte aeroporto/ hotel/ aeroporto com assistência local; 7 noites de alojamento no hotel e regime escolhido; Taxas de aeroportos, segurança e combustível (valor indicativo 336,00 euros) sujeitas a reconfirmação e alterações legais); Seguro Multiviagens.",
+          "notIncluded": "Taxa turística de carater opcional cobrada pelo hotel no ato de check-out, com valor estabelecido pela unidade hoteleira por quarto e por noite. Outros que não mencionados no programa e extras de caráter pessoal."
+        }
       },
       "source": {
         "file": "00047103.pdf",
-        "hash": "79f4b4f374db"
+        "hash": "79f4b4f374db",
+        "page": 16
       }
     },
     {
@@ -2606,11 +3075,30 @@
             "nights": 7,
             "board": "TI"
           }
-        ]
+        ],
+        "program": {
+          "days": [
+            {
+              "header": "1º DIA – CIDADE DE ORIGEM / RECIFE",
+              "body": "Comparência no aeroporto 3 horas antes da partida. Formalidades de embarque e partida com destino a Recife. Acolhimento à chegada, transporte ao hotel escolhido e alojamento."
+            },
+            {
+              "header": "2º AO 7º DIA – RECIFE OU PORTO DE GALINHAS OU CABO DE SANTO AGOSTINHO OU SERRAMBI",
+              "body": "Dias livres para desfrutar das maravilhosas praias e todo o ambiente especial que se vive no Nordeste Brasileiro. Recife é uma cidade que vale a pena descobrir. Primeiro, porque talvez tenha a mais bonita praia citadina - Boa Viagem - com águas verdes e recifes de corais que formam piscinas naturais na maré baixa. Segundo, porque não tem um, mas dois centros históricos: um Holandês (Recife Antigo) e outro bem Português - Olinda. Para além disso, somente Salvador tem, no Nordeste, uma cena cultural comparável. Convencido? Venha daí. Com o sol a nascer bem cedo, e a sombra dos prédios a começar pelas duas da tarde, a praia em Recife começa bem cedo. Se gosta de acordar mais tarde, a alternativa é mesmo ir até ao Cabo de Santo Agostino ou Serrambi. Alojamento no hotel selecionado no regime alimentar escolhido."
+            },
+            {
+              "header": "8º E 9º DIAS – RECIFE / CIDADE DE ORIGEM",
+              "body": "Em hora a combinar localmente, transporte ao aeroporto. Formalidades de embarque e partida com destino a Portugal. Chegada e fim dos nossos serviços."
+            }
+          ],
+          "included": "Voo TAP TAP Lisboa / Recife / Lisboa em classe “T” BASIC com direito a 1 bagagem de porão de 23kg; transporte aeroporto/ hotel/ aeroporto com assistência local; 7 noites de alojamento no hotel e regime selecionado; Taxas de aeroportos, segurança e combustível (valor indicativo 336,00 euros) sujeitas a reconfirmação e alterações legais)); Seguro Multiviagens.",
+          "notIncluded": "Taxa turística de carater opcional cobrada pelo hotel no ato de check-out, com valor estabelecido pela unidade hoteleira por quarto e por noite. Outros que não mencionados no programa e extras de caráter pessoal. PARTIDAS COM A TAP"
+        }
       },
       "source": {
         "file": "00047103.pdf",
-        "hash": "79f4b4f374db"
+        "hash": "79f4b4f374db",
+        "page": 26
       }
     },
     {
@@ -2825,11 +3313,30 @@
             "nights": 7,
             "board": "APA"
           }
-        ]
+        ],
+        "program": {
+          "days": [
+            {
+              "header": "1º DIA – CIDADE DE ORIGEM / RIO DE JANEIRO",
+              "body": "Comparência no aeroporto 3 horas antes da partida. Formalidades de embarque e partida com destino ao Rio de Janeiro. Acolhimento à chegada, transporte ao hotel escolhido e alojamento."
+            },
+            {
+              "header": "2º AO 7º DIA – RIO DE JANEIRO",
+              "body": "Dias livres para explorar aquela que é conhecida como a Cidade Maravilhosa e todo o ambiente especial que ali se vive. Nenhuma cidade do mundo possui a beleza do Rio de Janeiro. Praias deslumbrantes e montanhas majestosas formam esta metrópole movimentada e única. É uma cidade moderna e cosmopolita, na qual o visitante se sente imediatamente em casa. No Rio, a beleza renasce todas as manhãs com o sol revelando o panorama desta cidade especial, aninhada entre o mar e as montanhas. Por isto, é conhecida por “Cidade Maravilhosa” – título perfeito para um lugar extraordinário. O Rio, cidade alegre e descontraída, é fácil de amar. Venha você também amar o Rio. Como sempre acontece, será amor à primeira vista. Alojamento no hotel selecionado no regime alimentar escolhido."
+            },
+            {
+              "header": "8º E 9º DIAS – RIO DE JANEIRO / CIDADE DE ORIGEM",
+              "body": "Em hora a combinar localmente, transporte ao aeroporto. Formalidades de embarque e partida com destino a Lisboa. Chegada e fim dos nossos serviços."
+            }
+          ],
+          "included": "Voo TAP Lisboa/ Rio de Janeiro / Lisboa em classe “T” BASIC com direito a 1 bagagem de porão de 23k; transporte aeroporto/ hotel/ aeroporto com assistência local; 7 noites de alojamento no hotel e regime selecionado; Taxas de aeroportos, segurança e combustível ((valor indicativo 336,00 euros )sujeitas a reconfirmação e alterações legais); Seguro Multiviagens.",
+          "notIncluded": "Outros que não mencionados no programa e extras de caráter pessoal. NOTAS Preços válidos para um mínimo de 2 pessoas. Suplemento transfere para 1 passageiro, por favor consulte-nos. / Dado o elevado número de eventos realizados no Rio de Janeiro, os preços apresentados poderão sofrer alterações em períodos específicos, por favor consulte-nos"
+        }
       },
       "source": {
         "file": "00047103.pdf",
-        "hash": "79f4b4f374db"
+        "hash": "79f4b4f374db",
+        "page": 48
       }
     },
     {
@@ -2871,7 +3378,41 @@
             "day": "7º Dia",
             "route": "FOZ DO IGUAÇU / CIDADE DE ORIGEM P"
           }
-        ]
+        ],
+        "program": {
+          "days": [
+            {
+              "header": "1º DIA – CIDADE DE ORIGEM / RIO DE JANEIRO",
+              "body": "Comparência no aeroporto 3 horas antes da partida. Formalidades de embarque e partida com destino a Rio de Janeiro. Acolhimento à chegada, transporte privado sem guia para o hotel escolhido e alojamento."
+            },
+            {
+              "header": "2º DIA – RIO DE JANEIRO RIO DE JANEIRO E FOZ DO IGUAÇU RIO DE JANEIRO E FOZ DO IGUAÇU",
+              "body": "Excursões Incluídas 7 NOITES Pequeno-almoço no hotel. O passeio mais completo, a experiência mais emocionante. Deixe-se guiar por todas as belezas da cidade apreciando o impressionante passeio de teleférico (bondinho) entre os Morros da Urca e Pão de Açúcar, e ainda a histórica viagem de comboio (trem) que, desde a época do império brasileiro, atravessa a floresta da Tijuca dando acesso ao Corcovado onde está localizada a estátua do Cristo Redentor, uma das sete maravilhas do mundo moderno. Este city tour inclui também um passeio panorâmico pela zona costeira carioca, centro histórico, e ainda passagem pela Catedral Metropolitana, Escadaria Selarón, Maracanã e Sambódromo. O almoço será realizado numa deliciosa churrascaria rodízio com um buffet completo de pratos quentes e saladas de cozinha tradicional brasileira. Alojamento no hotel e regime alimentar selecionado no Rio de Janeiro."
+            },
+            {
+              "header": "3º DIA – RIO DE JANEIRO",
+              "body": "Pequeno-almoço no hotel e dias livres para descobrir a cidade maravilhosa. Alojamento no hotel e regime alimentar selecionado no Rio de Janeiro."
+            },
+            {
+              "header": "4º DIA – RIO DE JANEIRO / FOZ DO IGUAÇU",
+              "body": "Pequeno-almoço no hotel. Em hora a combinar localmente, transporte privado para o aeroporto de Rio de Janeiro. Formalidades de embarque e partida com destino a Foz do Iguaçu. Acolhimento à chegada, transporte partilhado para o hotel escolhido e alojamento."
+            },
+            {
+              "header": "5º DIA – FOZ DO IGUAÇU",
+              "body": "Pequeno-almoço no hotel e saída em direção ao centro de visitantes do parque nacional de Iguaçu (lado brasileiro). Um passeio pela vegetação exuberante em direção ás cataratas oferece uma vista de mais de 240 quedas de água. Pelo caminho poderemos observar a Garganta do Diabo que é a mais impressionante de todas as cataratas e marca a fronteira entre a Argentina e o Brasil. Através de um elevador panorâmico subimos pela face da catarata para uma vista superior deslumbrante. No regresso, visita a um centro de artesanato. Alojamento no hotel e regime alimentar selecionado em Foz do Iguaçu."
+            },
+            {
+              "header": "6º DIA – FOZ DO IGUAÇU",
+              "body": "Pequeno-almoço no hotel e saída em direção ao parque nacional de Iguazú (lado argentino) passando pela ponte Tancredo Neves e a sua vista deslumbrante do rio Iguaçu. Visite as plataformas pedonais superiores que proporcionam uma visão diferente das cataratas, com uma maior proximidade das mesmas e da natureza rica em orquídeas, bromélias, aves e animais selvagens. Destacamos o miradouro suspenso na Garganta del Diablo, a maior das cataratas. Alojamento no hotel e regime alimentar selecionado em Foz do Iguaçu."
+            },
+            {
+              "header": "7º E 8º DIAS – FOZ DO IGUAÇU / CIDADE DE ORIGEM",
+              "body": "Em hora a combinar localmente, transporte para o aeroporto de Foz do Iguaçu. Formalidades de embarque e partida com destino a Portugal. Chegada e fim dos nossos serviços."
+            }
+          ],
+          "included": "Voos TAP Lisboa / Rio de Janeiro / São Paulo / Lisboa em classe “G e voo Azul Rio de Jnaeiro / Foz do Iguaçu EM CLASE “Y” com direito a 1 peça de bagagem de porão; transporte privado aeroporto Rio de Janeiro / hotel / aeroporto Rio de Janeiro com assistência local; 4 noites de alojamento no Rio de Janeiro em regime de alojamento e pequeno-almoço; Excursão de dia inteiro em serviço regular ao Corcovado (subida em trem) e ao Pão de Açúcar com almoço incluído sem bebidas; transporte regular aeroporto Foz do Iguaçu / hotel / aeroporto Foz do Iguaçu com assistência local; 3 noites de alojamento em Foz Do Iguaçu ou similar em regime de alojamento e pequenoalmoço; Excursão de meio dia em serviço regular ás cataratas do lado brasileiro e do lado argentino; Taxas de aeroportos, segurança e combustível (valor indicativo 579,00 euros) sujeitas a reconfirmação e alterações legais); Seguro Multiviagens.",
+          "notIncluded": "Taxa turística de carater opcional cobrada pelo hotel no ato de check-out, com valor estabelecido pela unidade hoteleira por quarto e por noite; Gratificações, refeições e excursões não mencionadas; Outros que não mencionados no programa e extras de caráter pessoal. NOTAS: Preços válidos para um mínimo de 2 pessoas. Suplemento transfere para 1 passageiro, por favor consulte-nos"
+        }
       },
       "source": {
         "file": "00047103.pdf",
@@ -2914,7 +3455,37 @@
             "day": "6º Dia",
             "route": "CRUZEIRO AMAZÓNIA / CIDADE DE ORIGEM A"
           }
-        ]
+        ],
+        "program": {
+          "days": [
+            {
+              "header": "1º DIA – CIDADE DE ORIGEM / MANAUS",
+              "body": "Comparência no aeroporto 3 horas antes da partida. Formalidades de embarque e partida com destino a Florianópolis. Acolhimento à chegada, transporte ao hotel escolhido e alojamento"
+            },
+            {
+              "header": "2º DIA – MANAUS",
+              "body": "Dias livres para explorar a cidade. Manaus, conhecida como o coração da Amazónia, é um destino fascinante para quem procura natureza em estado puro, cultura vibrante e experiências únicas no meio da maior floresta tropical do mundo. Rodeada por rios imponentes e uma biodiversidade incomparável, a cidade oferece uma ligação autêntica à selva, onde cada passeio se transforma numa verdadeira aventura."
+            },
+            {
+              "header": "3º DIA – MANAUS / CRUZEIRO AMAZÓNIA",
+              "body": "Em horário a combinar localmente, transfer para o Porto de Manaus para check-in no Cruzeiro na Amazónia. Início da navegação pelo rio Solimões. Apresentação das atividades a serem realizadas no dia seguinte. Jantar buffet a bordo. Alojamento"
+            },
+            {
+              "header": "4º DIA – CRUZEIRO AMAZÓNIA",
+              "body": "Após pequeno-almoço, saída para expedição matinal - embarque numa lancha rápida para visitar a casa da família do Sr. Álvaro, caboclos locais na região do Lago Janauacá. Conheça o seu modo de vida, costumes e plantações. Durante a expedição, terá a oportunidade de visitar o milenário pé de Jupurá, onde poderá observar as colmeias de abelhas endémicas sem ferrão e a produção de mel. Também terá oportunidade de adquirir produtos como mel regional e própolis. Almoço a bordo. Saída para expedição da tarde que consiste na pesca de piranhas, pexio típico desta região, ou saída em lancha rápida pela região de Manaquiri para observação da fauna e flora locais. Jantar buffet a bordo. Alojamento."
+            },
+            {
+              "header": "5º DIA – CRUZEIRO AMAZÓNIA",
+              "body": "Após pequeno-almoço, saída para expedição matinal com lancha rápida ou trilha pela selva da região Manacapuré. Almoço buffet a bordo. Após almoço, saída para expedição da tarde, um relaxante passeio de barco para visitar a casa flutuante Vitória-Régia, com oportunidade para conhecer o artesanato local e realizar um pequeno passeio pedestre pela região do Lago Janauari. Jantar buffet a bordo. Alojamento."
+            },
+            {
+              "header": "6º DIA – CRUZEIRO AMAZÓNIA / CIDADE DE ORIGEM",
+              "body": "Admire o nascer do sol no encontro de águas dos rios Solimões e Negro. Após pequeno-almoço, chegada ao Porto de Manaus para desembarque. Em hora a combinar localmente, transporte ao aeroporto. Formalidades de embarque e partida com destino à cidade de origem. Chegada e fim dos nossos serviços."
+            }
+          ],
+          "included": "Voo TAP Lisboa/Manaus/Lisboa em classe “T” Basic com direito a 1 bagagem de porão de 23kg; transporte aeroporto/ hotel/aeroporto com assistência local; 2 noites de alojamento em Manaus no regime de alojamento e pequeno-almoço; 3 noites de alojamento no Cruzeiro Iberostar Grand Amazon Expedition em regime de tudo incluído. Taxas de aeroporto, segurança e combustível (valor indicativo 336,00 euros) sujeitas a reconfirmação e alterações legais; seguro de viagem.",
+          "notIncluded": "Outros que não mencionados no programa e extras de caráter pessoal"
+        }
       },
       "source": {
         "file": "00047103.pdf",
@@ -3066,11 +3637,30 @@
             "nights": 7,
             "board": "TI"
           }
-        ]
+        ],
+        "program": {
+          "days": [
+            {
+              "header": "1º DIA – CIDADE DE ORIGEM / SALVADOR",
+              "body": "Comparência no aeroporto 3 horas antes da partida. Formalidades de embarque e partida com destino a Salvador. Acolhimento à chegada, transporte ao hotel escolhido e alojamento."
+            },
+            {
+              "header": "2º AO 7º DIA – SALVADOR OU PRAIA DO FORTE OU GUARAJUBA OU COSTA DO SAUÍPE OU RESERVA DE IMBASSAÍ",
+              "body": "Dias livres para desfrutar das maravilhosas praias e todo o ambiente especial que se vive no Nordeste Brasileiro. Recife é uma cidade que vale a pena descobrir. Por isso se diz que um Verão aqui vale por doze meses. Não sendo uma cidade fácil, porque não obedece às regras urbanísticas mais usuais, Salvador foi crescendo e é hoje um conjunto de vários bairros (Cidade Alta, Cidade baixa, Campo Grande, Vitoria...), muitas vezes distantes entre si. Existem duas maneiras de descobrir os 40 km de Salvador pela Orla, junto ao mar, desde Itapoã, a Norte, até ao Porto da Barra ou cruzando a cidade pelas novas estradas e indo diretamente aos bairros mais engraçados: Rio Vermelho, Barra, Vitoria, Bonfim. Diz-se que Salvador é a única cidade do Brasil, onde os Brasileiros quase se sentem visitantes. Isto porque com a sua mistura de raças, religiões, arquiteturas e cores, Salvador é muito mais que SALVADOR, PRAIA DO FORTE, GUARAJUBA, COSTA DO SAUÍPE, RESERVA DE IMBASSAÍ 9 DIAS | 7 NOITES uma Cidade: É um conjunto de experiências para os sentidos. E, claro, não se esqueça que tem o Carnaval e passagem de anos mais animados do Brasil. Pode igualmente optar pelas deslumbrantes praias da linha costeira da Praia do Forte, com antigas Vilas de pescadores, descobertas por visitantes de mochila às costas na procura de locais exóticos. Muitas das praias do Brasil começaram assim a ser famosas. A Praia do Forte não. Primeiro graças a um empresário Paulista de origem alemã, nos anos 70, que comprou e protegeu toda a área. Depois, graças ao Projeto Tamar de preservação das Tartarugas Marinhas que aí se instalou nos anos 80. Hoje, da antiga e pequena Vila pouco resta, (a Igreja é uma das exceções) e toda a área foi urbanizada, surgiram restaurantes e lojas, desde Havaianas a boutiques de marca, numa demonstração que é possível fazer conviver urbanismo e projetos ecológicos. Para além disso, a praia continua com águas claras e alguns pontos protegidos por recifes, e o projeto Tamar merece efetivamente uma visita. Tudo isto faz da Praia do Forte um destino muito à parte no Nordeste Brasileiro. Alojamento no hotel selecionado no regime alimentar escolhido."
+            },
+            {
+              "header": "8º E 9º DIAS – SALVADOR / CIDADE DE ORIGEM",
+              "body": "Em hora a combinar localmente, transporte ao aeroporto. Formalidades de embarque e partida com destino a Portugal. Chegada e fim dos nossos serviços. Taxa turística de carater opcional cobrada pelo hotel no ato de check-out, com valor estabelecido pela unidade hoteleira por quarto e por noite. Outros que não"
+            }
+          ],
+          "included": "Voo TAP Lisboa/ Salvador / Lisboa em classe “T” BASIC com direito a 1 bagagem de porão de 23kg; transporte aeroporto/ hotel/ aeroporto com assistência local; 7 noites de alojamento no hotel e regime selecionado; Taxas de aeroportos, segurança e combustível ((valor indicativo 336,00 euros ) sujeitas a reconfirmação e alterações legais); Seguro Multiviagens.",
+          "notIncluded": ""
+        }
       },
       "source": {
         "file": "00047103.pdf",
-        "hash": "79f4b4f374db"
+        "hash": "79f4b4f374db",
+        "page": 39
       }
     },
     {
@@ -3314,11 +3904,30 @@
             "nights": 4,
             "board": "APA"
           }
-        ]
+        ],
+        "program": {
+          "days": [
+            {
+              "header": "1º DIA - CIDADE DE ORIGEM / ABU DHABI",
+              "body": "Comparência no aeroporto com 3 horas de antecedência para formalidades de embarque. Partida em voo com destino ao Abu Dhabi Chegada, assistência e transporte para o hotel para alojamento."
+            },
+            {
+              "header": "2º AO 4º DIA - ABU DHABI (Nº DE NOITES PODERÁ SER VARIÁVEL)",
+              "body": "Estadia no hotel e regime escolhido. Dia livre para desfrutar do destino."
+            },
+            {
+              "header": "5º DIA - ABU DHABI / CIDADE DE ORIGEM OU EXTENSÕES",
+              "body": "Em hora a determinar localmente saída para o aeroporto internacional do Abu Dhabi para formalidades de embarque e partida em direção à cidade de origem. Chegada à cidade de origem (ou proximo destino) e fim dos nossos serviços. NOTAS: Preços válidos para um mínimo de 2 pessoas. Combinados com a programação do Indico e, Asia, com circuitos disponíveis online, para outros combinados favor consulte-nos. Dispomos também condições especiais para viagens de Lua de Mel e famílias. Voo Etihad Airways para o percurso Lisboa / Abu Dhabi / Lisboa em classe “V”- com direito a bagagem de porão; Transporte partilhado aeroporto/hotel/aeroporto; 4 noites de alojamento em quarto indicados em Abu Dhabi Taxas de aeroporto, segurança e combustível – 252,00€ (sujeitas a reconfirmação e alterações legais) e Seguro Multiviagens."
+            }
+          ],
+          "included": "",
+          "notIncluded": "Gratificações, extras de carácter pessoal e quaisquer outros não mencionados no programa. VOOS ETIHAD AIRWAYS PARTIDAS DIÁRIOS À PARTIDA DE LISBOA"
+        }
       },
       "source": {
         "file": "00047318.pdf",
-        "hash": "c5e8fdaf75a6"
+        "hash": "c5e8fdaf75a6",
+        "page": 36
       }
     },
     {
@@ -3500,11 +4109,30 @@
             "nights": 5,
             "board": "TI"
           }
-        ]
+        ],
+        "program": {
+          "days": [
+            {
+              "header": "1º DIA – CIDADE DE ORIGEM / AMESTERDÃO / ARUBA",
+              "body": "Comparência no aeroporto 3 horas antes da hora da partida. Formalidades de embarque e partida em voo KLM com destino a Aruba, via Amesterdão. Chegada, assistência e transporte partilhado para o hotel escolhido. Alojamento."
+            },
+            {
+              "header": "2º AO 5º DIA - ARUBA",
+              "body": "Dias livres para conhecer a Ilha de Aruba com diversas atividades disponíveis."
+            },
+            {
+              "header": "6º E 7º DIAS - ARUBA / AMESTERDÃO / CIDADE DE ORIGEM",
+              "body": "Em hora a determinar localmente saída para o aeroporto internacional de Aruba para formalidades de embarque e partida em voo KLM com direção à cidade de origem via Amesterdão. Chegada à cidade de origem e fim dos nossos serviços. Preços válidos para um mínimo de 2 pessoas. Suplemento de transfere privado consulte-nos. Combinados com Curacao e Nova Iorque, Especial Lua de Mel, outros destinos nas Américas disponíveis online, para outros combinados favor consulte-nos. VOOS KLM PARTIDAS DIÁRIAS À PARTIDA DE LISBOA E PORTO"
+            }
+          ],
+          "included": "Voos KLM Lisboa ou Porto / Amsterdão / Aruba / Amesterdão / Lisboa ou Porto em classe económica “K” (classe promocional - sem direito a mala de porão); transporte partilhado aeroporto / hotel / aeroporto com assistência local; 5 noites de alojamento no hotel e regime indicados; Taxas de aeroportos, segurança e combustível (490,00 euros,sujeitas a reconfirmação e alterações legais) e Seguro multiviagens.",
+          "notIncluded": "Taxas hoteleiras locais; Gratificações obrigatórias nos serviços e outros que não mencionados no programa e extras de carácter pessoal."
+        }
       },
       "source": {
         "file": "00047251.pdf",
-        "hash": "1d8d35e86c83"
+        "hash": "1d8d35e86c83",
+        "page": 6
       }
     },
     {
@@ -3672,11 +4300,26 @@
             "nights": 4,
             "board": "SA"
           }
-        ]
+        ],
+        "program": {
+          "days": [
+            {
+              "header": "2º AO 5º DIA – NASSAU",
+              "body": "Estadia no hotel e regime escolhido. Dias livres para desfrutar das maravilhosas praias, verdadeiros paraísos naturais de areias finas e águas cristalinas, cuja temperatura média é de 26ºC e da animação nos hotéis. Pode igualmente optar por realizar uma extensão a Havana. Alojamento no hotel escolhido."
+            },
+            {
+              "header": "6º E 7º DIAS – NASSAU / MIAMI / CIDADE DE ORIGEM",
+              "body": "Pequeno-almoço no hotel. Manhã livre. Em hora a informar localmente, transporte partilhado para o aeroporto de Nassau. Após as formalidades de embarque saída em voo American Airlines com destino a Miami e continuação em voo TAP até à cidade de origem. Noite a bordo. Chegada e fim da Viagem. Preços válidos para um mínimo de 2 pessoas. Combinados com Miami e Nova Iorque, Especial Lua de Mel, outros destinos nas Américas disponíveis online, para outros combinados favor consulte-nos. VOOS TAP PARTIDAS DIÁRIAS À PARTIDA DE LISBOA E PORTO"
+            }
+          ],
+          "included": "Voos Tap Lisboa ou Porto / Miami / Lisboa ou Porto em classe “T” - com direito a mala de porão; Voo American Airlines Miami / Nassau / Miami em classe eonómica com direito a mala de porão; transporte partilhado aeroporto/ hotel/ aeroporto com assistência local; 5 noites de alojamento em quarto hotel e regime escolhido nas Bahamas; Taxas de aeroportos, segurança e combustível (316,00 Euros sujeitas a reconfirmação e alterações legais); Seguro multiviagens.",
+          "notIncluded": "Visto ESTA; taxas locais; gratificações; Extras de carácter pessoal."
+        }
       },
       "source": {
         "file": "00047251.pdf",
-        "hash": "1d8d35e86c83"
+        "hash": "1d8d35e86c83",
+        "page": 23
       }
     },
     {
@@ -3759,11 +4402,30 @@
             "nights": 7,
             "board": "TI"
           }
-        ]
+        ],
+        "program": {
+          "days": [
+            {
+              "header": "1º DIA - CIDADE DE ORIGEM / BOA VISTA",
+              "body": "Comparência no aeroporto três horas antes da partida. Formalidades de embarque e partida para Cabo Verde. Após pouco mais de três horas e meia de voo, chegada e assistência pelos delegados Solférias. Transporte para o hotel escolhido e alojamento."
+            },
+            {
+              "header": "2º AO 7º DIA - BOA VISTA",
+              "body": "Dias Livres. À semelhança da ilha do Sal, na Ilha da Boavista o visitante encontrará praias que podem ser consideradas das melhores do mundo, propícias por excelência à prática de desportos aquáticos ou simplesmente a relaxantes dias de praia. De entre as muitas praias da Boavista destaca-se a do Curralinho ao sul da ilha, também conhecida por Santa Mónica, com quase 10 km de extensão, sendo a maior praia do arquipélago, oferecendolhe a experiência de se sentir único(a) numa praia isolada e deserta. Na ilha das dunas e tamareiras, pode o visitante desfrutar de passeios, puro lazer, do inevitável convívio com a morna e a descoberta de tradições profundamente enraizadas numa população acolhedora. Consulta as"
+            },
+            {
+              "header": "8º DIA - BOA VISTA / CIDADE DE ORIGEM",
+              "body": "À hora previamente indicada, partida para o aeroporto. Formalidades de embarque assistidas pelos delegados Solférias. Regresso a Lisboa e fim dos nossos serviços. Voo TAP Lisboa/Boavista/Lisboa em classe “G” com direito a 1PC de bagagem com o máximo de 23 Kg; transporte aeroporto/ hotel/ aeroporto com assistência local; 7 noites de alojamento no hotel e regime escolhidos; taxas de aeroportos, segurança e combustível à partida de Lisboa (sujeitas a reconfirmação e alterações legais); Seguro multiviagens; Taxa de Segurança Aeroportuária (obrigatório) para dados de passaporte enviados até 5 dias úteis antes do início da viagem."
+            }
+          ],
+          "included": "",
+          "notIncluded": "Taxa turística (valor indicativo de 2,50 euros por pessoa e noite), aplicável a maiores de 16 anos, até ao máximo de 10 noites consecutivas, paga localmente nos hotéis. Outros que não mencionados no programa e extras de caráter pessoal. VOOS TAP: PARTIDAS DE LISBOA AOS SÁBADOS E VOOS ESPECIAIS VERÃO: PARTIDAS DO PORTO AOS"
+        }
       },
       "source": {
         "file": "00047091.pdf",
-        "hash": "97757250ce97"
+        "hash": "97757250ce97",
+        "page": 8
       }
     },
     {
@@ -4091,11 +4753,30 @@
             "nights": 5,
             "board": "APA"
           }
-        ]
+        ],
+        "program": {
+          "days": [
+            {
+              "header": "1º DIA – CIDADE DE ORIGEM / MADRID / BOGOTÁ / CARTAGENA DAS INDIAS",
+              "body": "Comparência no aeroporto 3 horas antes da hora da partida. Formalidades de embarque e partida em voo Iberia com destino a Cartagena, via Madrid e Bogotá. Chegada, assistência e transporte partilhado para o hotel escolhido. Alojamento"
+            },
+            {
+              "header": "2º AO 5º DIA – CARTAGENA DAS INDIAS",
+              "body": "Estadia no hotel e regime escolhido. Dias livres para desfrutar desta maravilhosa cidade e praias e efetuar algumas excursões."
+            },
+            {
+              "header": "6º E 7º DIAS – CARTAGENA DAS INDIAS / BOGOTÁ / MADRID / CIDADE DE ORIGEM",
+              "body": "Pequeno-almoço no hotel. Manhã livre. Em hora a informar localmente, transporte partilhado para o aeroporto de Cartagena. Após as formalidades de embarque saída em voo Iberia com destino à cidade de origem via Bogotá e Madrid. Noite a bordo. Chegada e fim da Viagem. VOOS IBERIA PARTIDAS DIÁRIAS À PARTIDA DE LISBOA E PORTO Preços válidos para um mínimo de 2 pessoas. Combinados com Barú, San Andrés e Bogotá outras cidades na Colômbia, com circuitos, varios destinos nas Caraíbas, Especial Lua de Mel, outros destinos nas Américas disponíveis online, para outros combinados favor consulte-nos."
+            }
+          ],
+          "included": "Voos Iberia Lisboa ou Porto / Madrid / Bogotá / Cartagena / Bogotá / Madrid / Lisboa ou Porto em classe “S + V” - com direito a mala de porão; transporte partilhado aeroporto/hotel/ aeroporto com assistência local; 5 noites de alojamento em quarto hotel e regime escolhido em Cartagena; Taxas de aeroportos, segurança e combustível (518,00 Euros sujeitas a reconfirmação e alterações legais); Seguro multiviagens",
+          "notIncluded": "Taxas locais; gratificações; extras de carácter pessoal e quaisquer outros não mencionados no programa."
+        }
       },
       "source": {
         "file": "00047251.pdf",
-        "hash": "1d8d35e86c83"
+        "hash": "1d8d35e86c83",
+        "page": 168
       }
     },
     {
@@ -4433,11 +5114,30 @@
             "nights": 8,
             "board": "APA+MP"
           }
-        ]
+        ],
+        "program": {
+          "days": [
+            {
+              "header": "1º DIA – CIDADE DE ORIGEM / MADRID / SAN JOSÉ",
+              "body": "Comparência no aeroporto 3 horas antes da hora da partida. Formalidades de embarque e partida em voo Iberia com destino a San José, via Madrid. Chegada, assistência e transporte partilhado para o hotel escolhido. Alojamento"
+            },
+            {
+              "header": "2º AO 5º DIA – GUANACASTE OU MANUEL ANTÓNIO",
+              "body": "Estadia no hotel e regime escolhido. Dias livres para desfrutar destas maravilhosas praias e efetuar algumas excursões."
+            },
+            {
+              "header": "6º E 7º DIAS – SAN JOSÉ / MADRID / CIDADE DE ORIGEM",
+              "body": "Pequeno-almoço no hotel. Manhã livre. Em hora a informar localmente, transporte partilhado para o aeroporto de San José. Após as formalidades de embarque saída em voo Iberia com destino à cidade de origem via Madrid. Noite a bordo. Chegada e fim da Viagem. VOOS IBERIA PARTIDAS DIÁRIAS À PARTIDA DE LISBOA E PORTO Preços válidos para um mínimo de 2 pessoas. Combinados com San José, Arenal, Tortuguero ou Monteverde outras cidades na Costa Rica, com circuitos, Fly & Drive varios destinos nas Caraíbas, Especial Lua de Mel, outros destinos nas Américas disponíveis online, para outros combinados favor consulte-nos."
+            }
+          ],
+          "included": "Voos Iberia Lisboa ou Porto / Madrid / San José / Madrid / Lisboa ou Porto em classe “L + O” - com direito a mala de porão; transporte partilhado aeroporto/hotel/ aeroporto com assistência local; 5 noites de alojamento em quarto hotel e regime escolhido em Guanacaste ou Manuel António; Taxas de aeroportos, segurança e combustível (390,00 Euros sujeitas a reconfirmação e alterações legais); Seguro multiviagens",
+          "notIncluded": "Taxas locais; gratificações; extras de carácter pessoal e quaisquer outros não mencionados no programa."
+        }
       },
       "source": {
         "file": "00047251.pdf",
-        "hash": "1d8d35e86c83"
+        "hash": "1d8d35e86c83",
+        "page": 184
       }
     },
     {
@@ -4577,11 +5277,30 @@
             "nights": 5,
             "board": "TI"
           }
-        ]
+        ],
+        "program": {
+          "days": [
+            {
+              "header": "1º DIA – CIDADE DE ORIGEM / AMESTERDÃO / CURAÇAO",
+              "body": "Comparência no aeroporto 3 horas antes da hora da partida. Formalidades de embarque e partida em voo KLM com destino a Curaçao, via Amesterdão. Chegada, assistência e transporte partilhado para o hotel escolhido. Alojamento."
+            },
+            {
+              "header": "2º AO 5º DIA - ILHA DE CURAÇAO",
+              "body": "Dias livres para conhecer a Ilha de Curaçao com diversas atividades disponíveis."
+            },
+            {
+              "header": "6º E 7º DIAS - CURAÇAO / AMESTERDÃO / CIDADE DE ORIGEM",
+              "body": "Em hora a determinar localmente saída para o aeroporto internacional de Curaçao para formalidades de embarque e partida em voo KLM em direção à cidade de origem via Amesterdão. Chegada à cidade de origem e fim dos nossos serviços Preços válidos para um mínimo de 2 pessoas. Combinados com Aruba e Nova Iorque, Especial Lua de Mel, outros destinos nas Américas disponíveis online, para outros combinados favor consulte-nos. VOOS KLM PARTIDAS DIÁRIAS À PARTIDA DE LISBOA E PORTO"
+            }
+          ],
+          "included": "Voos KLM para o percurso Lisboa ou Porto / Amesterdão / Curaçao / Amesterdão / Lisboa ou Porto em classe económica “L+R” - sem bagagem de porão; 5 noites de alojamento no hotel e regime escolhidos; transporte partilhado aeroporto/hotel/aeroporto; taxas de aeroporto, segurança e combustível – 465,00€ (sujeitas a reconfirmação e alterações legais) e Seguro Multiviagens Silver.",
+          "notIncluded": "Taxas locais; gratificações; extras de carácter pessoal e quaisquer outros não mencionados no programa."
+        }
       },
       "source": {
         "file": "00047251.pdf",
-        "hash": "1d8d35e86c83"
+        "hash": "1d8d35e86c83",
+        "page": 15
       }
     },
     {
@@ -4629,11 +5348,13 @@
             "nights": null,
             "board": null
           }
-        ]
+        ],
+        "program": null
       },
       "source": {
         "file": "00044569.pdf",
-        "hash": "af9c1b14e5df"
+        "hash": "af9c1b14e5df",
+        "page": null
       }
     },
     {
@@ -5165,11 +5886,30 @@
             "nights": 4,
             "board": "APA"
           }
-        ]
+        ],
+        "program": {
+          "days": [
+            {
+              "header": "1º DIA - CIDADE DE ORIGEM / DUBAI",
+              "body": "Comparência no aeroporto com 3 horas de antecedência para formalidades de embarque. Partida em voo com destino ao Dubai. Chegada, assistência e transporte para o hotel para alojamento."
+            },
+            {
+              "header": "2º AO 4º DIA - DUBAI (Nº DE NOITES PODERÁ SER VARIÁVEL)",
+              "body": "Estadia no hotel e regime escolhido. Dia livre para desfrutar do destino."
+            },
+            {
+              "header": "5º DIA - DUBAI / CIDADE DE ORIGEM OU EXTENSÕES",
+              "body": "Em hora a determinar localmente saída para o aeroporto internacional do Dubai para formalidades de embarque e partida em direção à cidade de origem. Chegada à cidade de origem (ou proximo destino) e fim dos nossos serviços. NOTAS: Preços válidos para um mínimo de 2 pessoas. Gratificações, extras de carácter pessoal e quaisquer outros não mencionados no programa. VOOS EMIRATES PARTIDAS DIÁRIOS À PARTIDA DE LISBOA E PORTO"
+            }
+          ],
+          "included": "Voo Emirates para o percurso Lisboa ou Porto / Dubai / Lisboa ou Porto em classe “L”- com direito a bagagem de porão; Transporte partilhado aeroporto/hotel/aeroporto; 4 noites de alojamento em quarto indicados; Taxas de aeroporto, segurança e combustível – 226,00€ (sujeitas a reconfirmação e alterações legais) e Seguro Multiviagens.",
+          "notIncluded": "Combinados Dubai e Ras Al Khaimah / com a programação do Indico, Asia e alguns destinos em Africa, com circuitos disponíveis online, para outros combinados favor consulte-nos. Dispomos também condições especiais para viagens de Lua de Mel e famílias."
+        }
       },
       "source": {
         "file": "00047318.pdf",
-        "hash": "c5e8fdaf75a6"
+        "hash": "c5e8fdaf75a6",
+        "page": 6
       }
     },
     {
@@ -7037,11 +7777,30 @@
             "nights": null,
             "board": null
           }
-        ]
+        ],
+        "program": {
+          "days": [
+            {
+              "header": "1º DIA – CIDADE DE ORIGEM / FRANKFURT / NOVA IORQUE",
+              "body": "Comparência no aeroporto 3horas antes da hora da partida. Formalidades de embarque e partida em voo United Airlines com destino a Nova Iorque, via Frankfurt. Chegada, assistência e transporte partilhado para o hotel escolhido. Alojamento"
+            },
+            {
+              "header": "2º AO 4º DIA – NOVA IORQUE",
+              "body": "Estadia no hotel e regime escolhido. Dias livres para desfrutar desta maravilhosa cidade e efetuar algumas excursões."
+            },
+            {
+              "header": "5º E 6º DIAS – NOVA IORQUE / CIDADE DE ORIGEM",
+              "body": "Pequeno-almoço no hotel. Manhã livre. Em hora a informar localmente, transporte partilhado para o aeroporto de Nova Iorque. Após as formalidades de embarque saída em voo United Airlines com destino à cidade de origem. Noite a bordo. Chegada e fim da Viagem. VOOS UNITED AIRLINES PARTIDAS DIÁRIAS À PARTIDA DE LISBOA E PORTO Preços válidos para um mínimo de 2 pessoas. Combinados Descubra Nova Iorque, Nova iorque com Musical, com Cataratas do Niagara, com circuitos, varios destinos nas Caraíbas, Especial Lua de Mel, outros destinos nas Américas disponíveis online, para outros combinados favor consulte-nos."
+            }
+          ],
+          "included": "Voos United Airlines Lisboa ou Porto / Frankfurt / Nova Iorque / Lisboa ou Porto em classe “K” - sem direito a mala de porão; transporte partilhado aeroporto/hotel/ aeroporto com assistência local; 4 noites de alojamento em quarto hotel e regime escolhido em Nova Iorque; Taxas de aeroportos, segurança e combustível (442,00 Euros sujeitas a reconfirmação e alterações legais); Seguro multiviagens",
+          "notIncluded": "Visto ESTA; taxas locais; facillity fees; gratificações; Extras de carácter pessoal e quaisquer outros não mencionados no programa."
+        }
       },
       "source": {
         "file": "00047251.pdf",
-        "hash": "1d8d35e86c83"
+        "hash": "1d8d35e86c83",
+        "page": 84
       }
     },
     {
@@ -7067,11 +7826,30 @@
             "nights": 3,
             "board": "APA"
           }
-        ]
+        ],
+        "program": {
+          "days": [
+            {
+              "header": "1º DIA - SANTIAGO / FOGO",
+              "body": "À hora previamente fixada localmente, transfere ao aeroporto e embarque em voo doméstico com destino à Ilha do Fogo. Chegada e transfere ao hotel escolhido. Alojamento. Resto do dia livre."
+            },
+            {
+              "header": "2º E 3º DIA - FOGO",
+              "body": "Um dos principais atrativos para quem visita Cabo Verde é a variedade de paisagens que as diversas ilhas proporcionam. O Fogo, com o seu imponente vulcão de quase 3.000 metros de altitude, é o expoente máximo da espetacularidade. Poderá visitar Chã das Caldeiras, a 1.750 metros de altitude, cenário das últimas erupções, em 1951 e 1995, e onde se situa a aldeia mais alta do arquipélago; é possível escalar a partir daqui os derradeiros 1000 metros, tarefa para umas 4 horas de esforço muscular! Pode, se pretender, prolongar a sua excursão aos Mosteiros, no extremo oposto da ilha, por uma estrada pitoresca que sulca a lava expelida pelo vulcão em 1951, entre a cratera e o mar. A cidade de S. Filipe, com os seus sobrados senhoriais, evoca o passado de uma ilha orgulhosa, povoada por gente distinta que pagou por vezes com o exílio atitudes de discordância com os poderes instituídos em Lisboa."
+            },
+            {
+              "header": "4º DIA - FOGO / SANTIAGO",
+              "body": "À hora previamente marcada localmente, transfere ao aeroporto e embarque em voo doméstico com destino à ilha de Santiago."
+            }
+          ],
+          "included": "Voos CVSky Santiago/Fogo/Santiago em classe Y (ligações internacionais TAP); transporte aeroporto/ hotel / aeroporto com assistência local; 3 noites de alojamento no hotel e regime escolhidos; Taxas de aeroportos, segurança e combustível à partida de Santiago (sujeitas a reconfirmação e alterações legais).",
+          "notIncluded": "Taxa turística (valor indicativo de 2,50 euros por pessoa e noite), aplicável a maiores de 16 anos, até ao máximo de 10 noites consecutivas, paga localmente nos hotéis. Outros que não mencionados no programa e extras de caráter pessoal."
+        }
       },
       "source": {
         "file": "00047091.pdf",
-        "hash": "97757250ce97"
+        "hash": "97757250ce97",
+        "page": 45
       }
     },
     {
@@ -7171,11 +7949,30 @@
             "nights": null,
             "board": null
           }
-        ]
+        ],
+        "program": {
+          "days": [
+            {
+              "header": "1º DIA - CIDADE DE ORIGEM / IBIZA / FORMENTERA",
+              "body": "Comparência no aeroporto 2 horas antes da hora de partida. Formalidades de embarque e partida com destino a Ibiza. Transporte aeroporto / hotel com assistência e Ferry Ibiza / Formentera. Acolhimento à chegada, transporte ao hotel/apartamento escolhido e alojamento."
+            },
+            {
+              "header": "2º AO 7º DIA - IBIZA / FORMENTERA",
+              "body": "Estadia no hotel/apartamento, no regime alimentar escolhidos. Dias livres para desfrutar do destino."
+            },
+            {
+              "header": "8º DIA - IBIZA / CIDADE DE ORIGEM",
+              "body": "Após o pequeno-almoço e em horário a combinar localmente, transporte para o aeroporto de Ibiza. Chegada e embarque no voo de regresso. Fim dos nossos serviços. Outros que não mencionados no programa e extras de caráter pessoal. Taxas Turísticas (Sujeita a IVA): De maio a outubro, Hotéis 5* e 4* superior - 4,00€; Hotéis 4* e 3* superior - 3,00€; Hotéis 3*, 2* e 1* - 2,00€; Hotéis rurais, Agroturismo - 2,00€ por noite e pessoa. De novembro a abril: Hotéis 5* e 4* superior - 1,00€; Hotéis 4* e 3* superior - 0,75€; Hotéis 3*, 2* e 1* - 0,50€, Hotéis rurais, Agroturismo - 0,50€ O pagamento é efetuado diretamente na Unidade de alojamento."
+            }
+          ],
+          "included": "Voos TAP Lisboa / Ibiza / Lisboa em classe “U” sem bagagem de porão; transporte aeroporto / hotel / aeroporto com assistência local e ferry Ibiza / Formentera / Ibiza , 7 noites de alojamento no hotel e regime escolhido, taxas de aeroportos, segurança e combustível (valor indicativo de 111,44€, sujeitas a reconfirmação e alterações legais) e seguro de viagem.",
+          "notIncluded": ""
+        }
       },
       "source": {
         "file": "00047073.pdf",
-        "hash": "4f139bbbd275"
+        "hash": "4f139bbbd275",
+        "page": 32
       }
     },
     {
@@ -7358,11 +8155,30 @@
             "nights": 7,
             "board": "APA"
           }
-        ]
+        ],
+        "program": {
+          "days": [
+            {
+              "header": "1º DIA - CIDADE DE ORIGEM / FUERTEVENTURA",
+              "body": "Comparência no aeroporto duas horas antes da hora de partida. Formalidades de embarque e partida com destino a Fuerteventura. Acolhimento à chegada, transporte ao hotel/apartamento e alojamento."
+            },
+            {
+              "header": "2º DIA AO 7º DIA - CALETA DE FUSTE OU CORRALEJO OU COSTA CALMA OU JANDÍA OU MORRO JABLE OU PLAYA BLANCA",
+              "body": "Estadia no hotel / apartamento, no regime alimentar escolhido. Dias livres. Ilha dotada dos mais extensos areais brancos do arquipélago das Canárias, com cerca de 150 praias onde pode desfrutar do sol. Constituída por pequenas cidades rurais, compostas por antigas casas de pedra e capelas antigas, paisagens contrastantes com a costa plana e praias de perder a vista. Existem muitos pontos onde pode desfrutar dos ventos alísios, que incentivam ótimas condições para a prática de desportos como o windsurf, e que ajudam a suportar as altas temperaturas no Verão. Grandes dunas de areia, praias desertas e povoações rurais, estas são as principais características da ilha."
+            },
+            {
+              "header": "8º DIA - FUERTEVENTURA / CIDADE DE ORIGEM",
+              "body": "Após o pequeno-almoço e em horário a combinar localmente, transporte para o aeroporto de Fuerteventura. Chegada e embarque no voo de regresso. Fim dos nossos serviços."
+            }
+          ],
+          "included": "Voo Iberia Lisboa / Fuerteventura / Lisboa (via Madrid) em classe “Q”, com direito a bagagem de porão; transporte aeroporto / hotel / aeroporto; 7 noites de alojamento no hotel e regime escolhido, taxas de aeroportos, segurança e combustível (valor indicativo de 56,55€, sujeitas a reconfirmação e alterações legais) e seguro de viagem.",
+          "notIncluded": "Outros que não mencionados no programa e extras de caráter pessoal. VOOS IBERIA"
+        }
       },
       "source": {
         "file": "00047319.pdf",
-        "hash": "d673f60fb9a9"
+        "hash": "d673f60fb9a9",
+        "page": 29
       }
     },
     {
@@ -7425,11 +8241,30 @@
             "nights": 7,
             "board": "TI"
           }
-        ]
+        ],
+        "program": {
+          "days": [
+            {
+              "header": "1º DIA – CIDADE DE ORIGEM / BANJUL",
+              "body": "Comparência no aeroporto três horas antes da partida para formalidades de embarque. Saída em voos regulares com destino a Banjul. Chegada, acolhimento e transporte para o hotel escolhido. Resto de dia livre. Alojamento."
+            },
+            {
+              "header": "2º AO 7º DIA - GÂMBIA",
+              "body": "Dias livres para explorar o país. Quer escolha passear, observar as centenas de espécies de pássaros que habitam este território, descobrir as pequenas aldeias espalhadas por este país rodeado pelo Senegal, ou simplesmente dedicar-se à praia, poderá fazê-lo longe de multidões e do turismo saturado."
+            },
+            {
+              "header": "8º DIA - BANJUL / CIDADE DE ORIGEM",
+              "body": "Em horário a combinar localmente, transporte para o aeroporto. Chegada e embarque em voo com destino a Portugal. Chegada e fim dos nossos serviços"
+            }
+          ],
+          "included": "VVoo TAP Lisboa / Banjul / Lisboa em classe económica “T”; transporte aeroporto / hotel / aeroporto com assistência local; 7 noites de alojamento no hotel e regime selecionados; Taxas de aeroporto, segurança e combustível (357,00 Euros sujeitas a reconfirmação e alterações legais); Seguro de Viagem",
+          "notIncluded": "Taxa de entrada e taxa de saída (paga no aeroporto); Outros que não mencionados e extras de caráter pessoal."
+        }
       },
       "source": {
         "file": "00047089.pdf",
-        "hash": "e9fb35275ae1"
+        "hash": "e9fb35275ae1",
+        "page": 65
       }
     },
     {
@@ -7808,11 +8643,30 @@
             "nights": 7,
             "board": "APA"
           }
-        ]
+        ],
+        "program": {
+          "days": [
+            {
+              "header": "1º DIA - CIDADE DE ORIGEM / GRAN CANÁRIA",
+              "body": "Comparência no aeroporto 2 horas antes da hora de partida. Formalidades de embarque e partida com destino a Gran Canária. Acolhimento à chegada, transporte ao hotel / apartamento escolhido e alojamento."
+            },
+            {
+              "header": "2º DIA AO 7º DIA - PLAYA DEL INGLES OU MASPALOMAS OU PUERTO RICO OU LAS PALMAS DE GRAN CANÁRIA",
+              "body": "Estadia no hotel / apartamento, no regime alimentar escolhidos. Dias livres. Com uma rede de infra-estruturas turísticas rica e diversificada, a ilha é famosa pelo seu clima ameno durante todo ano, permitindo desfrutar de um conjunto de praias, umas mais familiares, outras mais tranquilas, ou até as mais cosmopolitas. Destaque ainda para a panóplia de restaurantes que servem a ilha, com uma vasta culinária, de pratos típicos e mariscos. Durante o dia, aproveite para desfrutar das praias ou da oferta comercial da ilha, com preços bastante atrativos. À noite, não perca uma grande variedade de espaços de animação noturna. Gran Canária é sinónimo de diversão, pelo que encontrará programas diários durante toda a semana."
+            },
+            {
+              "header": "8º DIA - GRAN CANÁRIA / CIDADE DE ORIGEM",
+              "body": "Outros que não mencionados no programa e extras de caráter pessoal. Após o pequeno-almoço e em horário a combinar localmente, transporte para o aeroporto da Gran Canária. Chegada e embarque no voo de regresso. Fim dos nossos serviços. Taxas Turísticas: Unidades Hoteleiras em Mógan 0,15€ por noite e pessoa. O pagamento é efetuado diretamente na Unidade de alojamento."
+            }
+          ],
+          "included": "Voos TAP Lisboa / Gran Canária / Lisboa em classe “X” sem bagagem de porão; transporte aeroporto / hotel / aeroporto com assistência local, 7 noites de alojamento no hotel e regime escolhido, taxas de aeroportos, segurança e combustível (valor indicativo de 67€, sujeitas a reconfirmação e alterações legais) e seguro de viagem.",
+          "notIncluded": ""
+        }
       },
       "source": {
         "file": "00047319.pdf",
-        "hash": "d673f60fb9a9"
+        "hash": "d673f60fb9a9",
+        "page": 7
       }
     },
     {
@@ -8009,11 +8863,30 @@
             "nights": 7,
             "board": "TI"
           }
-        ]
+        ],
+        "program": {
+          "days": [
+            {
+              "header": "1º DIA - CIDADE DE ORIGEM / IBIZA",
+              "body": "Comparência no aeroporto 2 horas antes da hora de partida. Formalidades de embarque e partida com destino a Menorca. Acolhimento à chegada, transporte ao hotel / apartamento escolhido e alojamento."
+            },
+            {
+              "header": "2º AO 7º DIA - IBIZA",
+              "body": "Estadia no hotel / apartamento, no regime alimentar escolhidos. Dias livres para desfrutar do destino."
+            },
+            {
+              "header": "8º DIA - IBIZA / CIDADE DE ORIGEM",
+              "body": "Após o pequeno-almoço e em horário a combinar localmente, transporte para o aeroporto de Ibiza. Chegada e embarque no voo de regresso. Fim dos nossos serviços."
+            }
+          ],
+          "included": "Voos TAP Lisboa / Ibiza / Lisboa em classe “U” sem bagagem de porão; transporte aeroporto / hotel / aeroporto com assistência local, 7 noites de alojamento no hotel e regime escolhido, taxas de aeroportos, segurança e combustível (valor indicativo de 111,44€, sujeitas a reconfirmação e alterações legais) e seguro de viagem.",
+          "notIncluded": "Outros que não mencionados no programa e extras de caráter pessoal. Taxas Turísticas (Sujeita a IVA): De maio a outubro, Hotéis 5* e 4* superior - 4,00€; Hotéis 4* e 3* superior - 3,00€; Hotéis 3*, 2* e 1* - 2,00€; Hotéis rurais, Agroturismo - 2,00€ por noite e pessoa. De novembro a abril: Hotéis 5* e 4* superior - 1,00€; Hotéis 4* e 3* superior - 0,75€; Hotéis 3*, 2* e 1* - 0,50€, Hotéis rurais, Agroturismo - 0,50€ O pagamento é efetuado diretamente na Unidade de alojamento."
+        }
       },
       "source": {
         "file": "00047073.pdf",
-        "hash": "4f139bbbd275"
+        "hash": "4f139bbbd275",
+        "page": 24
       }
     },
     {
@@ -8133,11 +9006,30 @@
             "nights": 7,
             "board": "TI"
           }
-        ]
+        ],
+        "program": {
+          "days": [
+            {
+              "header": "1º DIA - CIDADE DE ORIGEM / LANZAROTE",
+              "body": "Comparência no aeroporto duas horas antes da hora de partida. Formalidades de embarque e partida com destino a Fuerteventura (voo via Madrid). Acolhimento à chegada, transporte ao hotel/apartamento e alojamento."
+            },
+            {
+              "header": "2º DIA AO 7º DIA - ARRECIFE, COSTA TEGUISE, PLAYA BLANCA, PUERTO CALERO, PUERTO DEL CARMEN, LOS POCILLOS E MATAGORDA",
+              "body": "Estadia no hotel / apartamento, no regime alimentar escolhido. Dias livres. Ilha que oferece praias variadas, desde enseadas de areia dourada como Papagayo até faixas mais selvagens como Famara, e dezenas de areais onde pode desfrutar do sol. Pequenas vilas rurais, com casas de pedra e capelas antigas, contrastam com a costa aberta, criando paisagens de grande encanto. Os ventos alísios proporcionam condições excelentes para windsurf e kitesurf e ajudam a amenizar as temperaturas de verão. Entre dunas, praias mais desertas e povoações tradicionais, Lanzarote combina descanso, aventura e autenticidade."
+            },
+            {
+              "header": "8º DIA - LANZAROTE / CIDADE DE ORIGEM",
+              "body": "Após o pequeno-almoço e em horário a combinar localmente, transporte para o aeroporto de Lanzarote. Chegada e embarque no voo de regresso. Fim dos nossos serviços."
+            }
+          ],
+          "included": "Voo Iberia Lisboa / Lanzarote / Lisboa (via Madrid) em classe “A”, com direito a bagagem de porão; transporte aeroporto / hotel / aeroporto; 7 noites de alojamento no hotel e regime escolhido, taxas de aeroportos, segurança e combustível (valor indicativo de 63,78€, sujeitas a reconfirmação e alterações legais) e seguro de viagem.",
+          "notIncluded": "Outros que não mencionados no programa e extras de caráter pessoal. VOOS IBERIA"
+        }
       },
       "source": {
         "file": "00047319.pdf",
-        "hash": "d673f60fb9a9"
+        "hash": "d673f60fb9a9",
+        "page": 36
       }
     },
     {
@@ -8432,11 +9324,30 @@
             "nights": 7,
             "board": "TI"
           }
-        ]
+        ],
+        "program": {
+          "days": [
+            {
+              "header": "1º DIA - CIDADE DE ORIGEM / PALMA DE MAIORCA",
+              "body": "Comparência no aeroporto 2 horas antes da hora de partida. Formalidades de embarque e partida com destino a Palma de Maiorca. Acolhimento à chegada, transporte ao hotel / apartamento escolhido e alojamento."
+            },
+            {
+              "header": "2º AO 7º DIA - MAIORCA",
+              "body": "Estadia no hotel / apartamento, no regime alimentar escolhido.. Dias livres para desfrutar do destino."
+            },
+            {
+              "header": "8º DIA - PALMA DE MAIORCA / CIDADE DE ORIGEM",
+              "body": "Após o pequeno-almoço e em horário a combinar localmente, transporte para o aeroporto de Palma de Maiorca. Chegada e embarque no voo de regresso. Fim dos nossos serviços."
+            }
+          ],
+          "included": "Voos TAP Lisboa / Maiorca / Lisboa em classe “U” sem bagagem de porão; transporte aeroporto / hotel / aeroporto com assistência local, 7 noites de alojamento no hotel e regime escolhido, taxas de aeroportos, segurança e combustível (valor indicativo de 112,31€, sujeitas a reconfirmação e alterações legais) e seguro de viagem.",
+          "notIncluded": "Outros que não mencionados no programa e extras de caráter pessoal. Taxas Turísticas: De maio a outubro, Hotéis 5* e 4* superior - 4,00€; Hotéis 4* e 3* superior - 3,00€; Hotéis 3*, 2* e 1* 2,00€; Hotéis rurais, Agroturismo - 2,00€ por noite e pessoa. De novembro a abril: Hotéis 5* e 4* superior - 1,00€; Hotéis 4* e 3* superior - 0,75€; Hotéis 3*, 2* e 1* - 0,50€, Hotéis rurais, Agroturismo - 0,50€ O pagamento é efetuado diretamente na Unidade de alojamento."
+        }
       },
       "source": {
         "file": "00047073.pdf",
-        "hash": "4f139bbbd275"
+        "hash": "4f139bbbd275",
+        "page": 7
       }
     },
     {
@@ -8919,11 +9830,30 @@
             "nights": 7,
             "board": "APA"
           }
-        ]
+        ],
+        "program": {
+          "days": [
+            {
+              "header": "1º E 2º DIAS – CIDADE DE ORIGEM / ISTAMBUL / MAURÍCIA",
+              "body": "Comparência no aeroporto com 3 horas de antecedência para formalidades de embarque. Partida em voo com destino a Maurícia, via Istambul. Chegada, assistência e transporte para o hotel para alojamento."
+            },
+            {
+              "header": "3º AO 8º DIA - MAURÍCIA",
+              "body": "Estadia no hotel e regime escolhido. Dias livres para desfrutar da praia e do destino."
+            },
+            {
+              "header": "9º E 10º DIAS - MAURÍCIA / ISTAMBUL / CIDADE DE ORIGEM",
+              "body": "Em hora a determinar localmente saída para o aeroporto internacional da Maurícia para formalidades de embarque e partida em direção a Lisboa ou Porto via Istambul. Chegada a Lisboa e fim dos nossos serviços. Combinados Maurícia e Dubai / Maurícia e Istambul / Maurícia e Seicheles / Maurícia e Quênia / Maurícia e Tanzânia disponíveis online, para outros combinados favor consulte-os. Dispomos também online estadias na Maurícia em quartos Múltiplos e condições especiais para viagens de Lua de Mel. NOTAS: Preços válidos para um mínimo de 2 pessoas."
+            }
+          ],
+          "included": "Voo turkish Airlines Lisboa ou Porto / Istambul / Maurícia / Istambul / Lisboa ou Porto em classe económica “W”- com direito a bagagem de porão; transporte partilhado aeroporto / hotel / aeroporto; 7 noites de alojamento no hotel e regime indicado; Taxas de aeroporto, segurança e combustível - 575,00€ (sujeitas a reconfirmação e alterações legais) e Seguro Multiviagens.",
+          "notIncluded": "Taxas locais; gratificações; extras de carácter pessoal e quaisquer outros não mencionados no programa. VOOS TURKISH AIRLINES VOOS DIÁRIOS À PARTIDA DE LISBOA E PORTO"
+        }
       },
       "source": {
         "file": "00047116.pdf",
-        "hash": "b3617624adbb"
+        "hash": "b3617624adbb",
+        "page": 38
       }
     },
     {
@@ -9084,11 +10014,30 @@
             "nights": 7,
             "board": "APA"
           }
-        ]
+        ],
+        "program": {
+          "days": [
+            {
+              "header": "1º DIA - CIDADE DE ORIGEM / MENORCA",
+              "body": "Comparência no aeroporto 2 horas antes da hora de partida. Formalidades de embarque e partida com destino a Menorca. Acolhimento à chegada, transporte ao hotel / apartamento escolhido e alojamento."
+            },
+            {
+              "header": "2º AO 7º DIA - MENORCA",
+              "body": "Estadia no hotel / apartamento, no regime alimentar escolhidos. Dias livres para desfrutar do destino."
+            },
+            {
+              "header": "8º DIA - MENORCA / CIDADE DE ORIGEM",
+              "body": "Após o pequeno-almoço e em horário a combinar localmente, transporte para o aeroporto de Menorca. Chegada e embarque no voo de regresso. Fim dos nossos serviços."
+            }
+          ],
+          "included": "Voos TAP Lisboa / Menorca / Lisboa em classe “L” sem bagagem de porão; transporte aeroporto / hotel / aeroporto com assistência local, 7 noites de alojamento no hotel e regime escolhido, taxas de aeroportos, segurança e combustível (valor indicativo de 119,44€, sujeitas a reconfirmação e alterações legais) e seguro de viagem.",
+          "notIncluded": "Outros que não mencionados no programa e extras de caráter pessoal. Taxas Turísticas (Sujeita a IVA): De maio a outubro, Hotéis 5* e 4* superior - 4,00€; Hotéis 4* e 3* superior - 3,00€; Hotéis 3*, 2* e 1* - 2,00€; Hotéis rurais, Agroturismo - 2,00€ por noite e pessoa. De novembro a abril: Hotéis 5* e 4* superior - 1,00€; Hotéis 4* e 3* superior - 0,75€; Hotéis 3*, 2* e 1* - 0,50€, Hotéis rurais, Agroturismo - 0,50€ O pagamento é efetuado diretamente na Unidade de alojamento."
+        }
       },
       "source": {
         "file": "00047073.pdf",
-        "hash": "4f139bbbd275"
+        "hash": "4f139bbbd275",
+        "page": 17
       }
     },
     {
@@ -9149,11 +10098,30 @@
             "nights": 7,
             "board": "APA"
           }
-        ]
+        ],
+        "program": {
+          "days": [
+            {
+              "header": "1º E 2º DIAS – CIDADE DE ORIGEM / MAPUTO",
+              "body": "Comparência no aeroporto três horas antes da partida para as formalidades de embarque. Saída em voos regular com destino a Maputo. Noite a bordo. Chegada ao aeroporto de Maputo, acolhimento e transporte para o hotel escolhido. Resto de dia livre. Alojamento."
+            },
+            {
+              "header": "3º AO 8º DIA - MAPUTO",
+              "body": "Dia livre para explorar Maputo e a província, ou caso prefira realizar extensões a outras províncias, ou mesmo dar um salto ao país vizinho e deleitar-se com a fauna do Kruger National Parque. Limitada a Norte pela Província de Gaza, a Sul pela África do Sul, a Oeste pela Swazilândia e Leste pelo Índico, a Província de Maputo oferece aos visitantes o turismo urbano na cidade de Maputo, a belíssima capital do País e da Província, com as suas largas avenidas revestidas de acácias rubras e jacarandás, o turismo de sol e mar, nas magníficas praias da costa do Índico, e o turismo de montanha no interior com visitas à reserva especial de Maputo, à barragem dos pequenos Libombos ou à idílica vila da Namaacha. A Baía de Maputo que juntamente com os rios Incomati e Maputo limita a capital, confina em frente, a 40 Km de Maputo, com a Ilha de Inhaca, considerada património biológico da humanidade. Caso opte por ficar na cidade de Maputo não perca a Casa de Ferro, o jardim botânico de Tunduru, a Fortaleza de Nossa Senhora da Conceição, o Mercado Central também conhecido pelo Bazar da Baixa, a Sé Catedral, a Mesquita da Baixa, a Estação Central dos caminhos de ferro, a Casa Amarela, o Museu de História Natural, o Museu Nacional de Arte, o Museu de Geologia, o Museu da Revolução e o Mercado do Peixe. Alojamento."
+            },
+            {
+              "header": "9º DIA – MAPUTO / CIDADE DE ORIGEM",
+              "body": "Após o pequeno-almoço e em horário a combinar localmente, transporte para o aeroporto de Maputo. Chegada e embarque no voo previsto, com destino a Portugal. Chegada a Lisboa e fim dos nossos serviços."
+            }
+          ],
+          "included": "Voo TAP Lisboa/ Maputo/ Lisboa em classe “T” com direito a 23 kg de bagagem; transporte aeroporto/ hotel/ aeroporto com assistência local; 7 noites de alojamento no hotel e regime escolhido; Taxas de aeroportos, segurança e combustível (370,00 Euros, sujeitas a reconfirmação e alterações legais); Seguro de Viagem",
+          "notIncluded": "Outros que não mencionados no programa e extras de caráter pessoal. NOTA: Preços válidos para um mínimo de 2 pessoas."
+        }
       },
       "source": {
         "file": "00047089.pdf",
-        "hash": "e9fb35275ae1"
+        "hash": "e9fb35275ae1",
+        "page": 50
       }
     },
     {
@@ -9186,11 +10154,13 @@
             "nights": 2,
             "board": "APA"
           }
-        ]
+        ],
+        "program": null
       },
       "source": {
         "file": "00044569.pdf",
-        "hash": "af9c1b14e5df"
+        "hash": "af9c1b14e5df",
+        "page": null
       }
     },
     {
@@ -9441,11 +10411,30 @@
             "nights": 4,
             "board": "APA"
           }
-        ]
+        ],
+        "program": {
+          "days": [
+            {
+              "header": "1º DIA - CIDADE DE ORIGEM / ABU DHABI / MASCATE",
+              "body": "Comparência no aeroporto com 3 horas de antecedência para formalidades de embarque. Partida em voo com destino a Mascate via Abu Dhabi. Chegada, assistência e transporte para o hotel para alojamento."
+            },
+            {
+              "header": "2º AO 4º DIA - MASCATE (Nº DE NOITES PODERÁ SER VARIÁVEL)",
+              "body": "Estadia no hotel e regime escolhido. Dia livre para desfrutar do destino."
+            },
+            {
+              "header": "5º E 6º DIA - MASCATE / ABU DHABI / CIDADE DE ORIGEM OU EXTENSÕES",
+              "body": "Em hora a determinar localmente saída para o aeroporto internacional de Mascate para formalidades de embarque e partida em direção à cidade de origem via Abu Dhabi. Chegada à cidade de origem (ou proximo destino) e fim dos nossos serviços. Voo Ethiad Airways para o percurso Lisboa / Abu Dhabi / Mascate / Abu Dhabi / Lisboa em classe “E”- com direito a bagagem de porão; Transporte partilhado aeroporto/hotel/aeroporto; 4 noites de alojamento em quarto indicados em Mascate; Taxas de aeroporto, segurança e combustível – 344,00€ (sujeitas a reconfirmação e alterações legais) e Seguro Multiviagens. NOTAS: Preços válidos para um mínimo de 2 pessoas. Gratificações, extras de carácter pessoal e quaisquer outros não mencionados no programa. VOOS ETIHAD AIRWAYS PARTIDAS DIÁRIOS À PARTIDA DE LISBOA"
+            }
+          ],
+          "included": "",
+          "notIncluded": "Combinados com Abu Dhabi, Dubai, Doha e Istambul e coma programação do Indico e Asia, com circuitos disponíveis online, para outros combinados favor consulte-nos. Dispomos também condições especiais para viagens de Lua de Mel e famílias."
+        }
       },
       "source": {
         "file": "00047318.pdf",
-        "hash": "c5e8fdaf75a6"
+        "hash": "c5e8fdaf75a6",
+        "page": 59
       }
     },
     {
@@ -9464,11 +10453,30 @@
       ],
       "details": {
         "overview": "Descobre o paraíso na Terra, onde as águas cristalinas acariciam praias de areia branca como açúcar e os raios do sol dançam suavemente sobre coqueiros balançando ao vento. Nas Maldivas, cada momento é uma obra-prima da natureza, cada respiração uma sinfonia de serenidade. Deixe-se seduzir pela magia deste arquipélago de sonhos, onde o tempo parece desacelerar para que possa saborear cada instante. Deixe-se envolver pela beleza incomparável das Maldivas e entregue--se a uma experiência que ficará gravada na sua alma para sempre. Venha descobrir um lugar onde a realidade supera os sonhos, venha descobrir as Maldivas. Aqui está bom tempo todo o",
-        "hotels": []
+        "hotels": [],
+        "program": {
+          "days": [
+            {
+              "header": "11º DIA - ISALO / TULEAR / RESERVA DE RENIALA / IFATY OU MADIORANO",
+              "body": "Pequeno-almoço muito cedo e partida rumo ao sul, observando pelo caminho os famosos túmulos Mahafalytúmulos de pedra com estelas funerárias esculpidas ou pintadas com animais, casais, cenas do quotidiano… Quase sempre cobertos com crânios e chifres de zebus– e fotografando os primeiros baobás do sul malgaxe. Antes de chegar a Tulear, faremos um desvio para visitar o Monumento ao Trópico de Capricórnio, obra do artista belga residente em Tulear, Bruno Decorte, pois encontramo-nos no ponto exato onde a linha curva imaginária do Trópico de Capricórnio atravessa a Terra. Aqui será entregue um diploma que comprova a nossa passagem por um dos grandes paralelos do planeta. Após o almoço (livre– não incluído), transfere para a Reserva de Reniala e o seu bosque de baobás. Situada a apenas um quilómetro do Canal de Moçambique e perto da pitoresca aldeia de Ifaty-Mangily, a Reserva de Reniala alberga um ecossistema assombroso, único e estranho, encontrado apenas na região sul de Madagáscar: o bosque espinhoso. Este bosque faz parte dos últimos fragmentos de florestas primárias do sul. Os imponentes arbustos espinhosos são lar de mais de 2.000 espécies de plantas, muitas delas endémicas, incluindo alguns baobás espetaculares (Adansonia rubrostipa), destacando-se um baobá gigante com 13 metros de diâmetro, que os locais chamam carinhosamente de “tetera” devido à sua forma, e que se estima ter 1.500 anos. Aqui também encontramos uma família completa de plantas endémicas, as Didieraceae, bem como Pachypodiums e Euphorbias. Visita a pé de ±1 hora para observar estas árvores endémicas da ilha. Regresso ao hotel. Jantar e alojamento."
+            },
+            {
+              "header": "12º DIA - TULEAR / ANTANANARIVO",
+              "body": "Pequeno-almoço (caso o horário do voo o permita) e, à hora combinada, transfere para o aeroporto de Tulear para embarque no voo de regresso à capital. Chegada a Antananarivo, receção em espanhol e transfere para o hotel. (Caso o voo chegue antes das 12h, oferta do tour “Taná” que consiste numa visita ao mercado de artesanato de La Digue, a maior feira de artesanato da ilha e um dos maiores de África.)"
+            },
+            {
+              "header": "13º DIA - ANTANANARIVO / DUBAI / CIDADE DE ORIGEM",
+              "body": "Pequeno-almoço (caso o horário do voo o permita). Em hora a combinar localmente, transfere para o aeroporto. Formalidades de embarque e partida em voos de regresso a Lisboa ou Porto via Dubai. Fim dos nossos serviços."
+            }
+          ],
+          "included": "Voos Emirates para o percurso Lisboa ou Porto / Dubai / Voos Emirates para o percurso Lisboa / Dubai / Antananarivo /Dubai / Lisboa em classe económica “T” + Voos domésticos Madagáscar Airlines para os percursos Tulear / Antananarivo com direito a bagagem de porão; Circuito (alojamento em categoria Standard, em base regular, com guia em espanhol para um mínimo de 2 participantes) de acordo com o itinerário; taxas de aeroporto, segurança e combustível - 497,00€ (sujeitas a reconfirmação e alterações legais) e Seguro Multiviagens.",
+          "notIncluded": "Visto obrigatório; taxas locais, gratificações, extras de carácter pessoal e quaisquer outros não mencionados no programa."
+        }
       },
       "source": {
         "file": "00047116.pdf",
-        "hash": "b3617624adbb"
+        "hash": "b3617624adbb",
+        "page": 85
       }
     },
     {
@@ -10261,11 +11269,30 @@
             "nights": 7,
             "board": "APA"
           }
-        ]
+        ],
+        "program": {
+          "days": [
+            {
+              "header": "1º E 2º DIA - CIDADE DE ORIGEM / ISTAMBUL / MALÉ",
+              "body": "Comparência no aeroporto com 3 horas de antecedência para formalidades de embarque. Partida em voo com destino a Malé, via Istambul. Chegada, assistência e transporte para o hotel para alojamento."
+            },
+            {
+              "header": "3º AO 8º DIA - MALDIVAS",
+              "body": "Estadia no hotel e regime escolhido. Dias livres para desfrutar da praia e do destino."
+            },
+            {
+              "header": "9º E 10º DIA - MALÉ / ISTAMBUL / CIDADE DE ORIGEM",
+              "body": "Em hora a determinar localmente saída para o aeroporto internacional de Malé para formalidades de embarque e partida em direção a Lisboa ou Porto via Istambul. Chegada a Lisboa e fim dos nossos serviços. Combinados Maldivas e Dubai / Maldivas e Istambul / Maldivas e Abu Dhabi / Maldivas e Sri Lanka / Maldivas e Singapura / Maldivas e Doha disponíveis online, para outros combinados favor consulte-nos. Dispomos também online estadias nas Maldivas em quartos Múltiplos e condições especiais para viagens de Lua de Mel."
+            }
+          ],
+          "included": "Voo turkish Airlines Lisboa ou Porto / Istambul / Malé / Istambul / Lisboa ou Porto em classe económica “W”- com direito a bagagem de porão; transporte partilhado aeroporto / hotel / aeroporto; 7 noites de alojamento no hotel e regime indicado; Taxas de aeroporto, segurança e combustível - 608,00€ (sujeitas a reconfirmação e alterações legais) e Seguro Multiviagens.",
+          "notIncluded": "Taxas locais; gratificações; extras de carácter pessoal e quaisquer outros não mencionados no programa. VOOS TURKISH AIRLINES DIÁRIOS COM PARTIDA DE LISBOA E DO PORTO"
+        }
       },
       "source": {
         "file": "00047116.pdf",
-        "hash": "b3617624adbb"
+        "hash": "b3617624adbb",
+        "page": 6
       }
     },
     {
@@ -10637,11 +11664,30 @@
             "nights": 5,
             "board": "APA"
           }
-        ]
+        ],
+        "program": {
+          "days": [
+            {
+              "header": "1º E 2º DIAS – CIDADE DE ORIGEM / MADRID / ADIS ABEBA / MAHÉ",
+              "body": "Comparência no aeroporto com 3 horas de antecedência para formalidades de embarque. Partida em voo com destino a Mahé, via Madrid e Adis Abeba. Chegada, assistência e transporte para o hotel para alojamento."
+            },
+            {
+              "header": "3º AO 8º DIA - MAHÉ",
+              "body": "Estadia no hotel e regime escolhido. Dias livres para desfrutar da praia e do destino."
+            },
+            {
+              "header": "9º E 10º DIAS - MAHÉ / ADIS ABEBA / ROMA / CIDADE DE ORIGEM",
+              "body": "Em hora a determinar localmente saída em direção ao aeroporto de Mahé para formalidades de embarque e partida em direção a Lisboa via Adis Abeba e Roma. Chegada a Lisboa e fim dos nossos serviços Combinados Mahé e Dubai / Mahé e Istambul / Mahé e Abu Dhabi / Mahé e Maurícia / Mahé e Quênia / Mahé e Praslin / Praslin e Dubai / Praslin e Istambul / Praslin e Abu Dhabi / Praslin e La Digue disponíveis online, para outros combinados favor consulte-nos. Voo Ethiopian Airlines para o percurso Lisboa ou Porto / Madrid / Addis Abeba / Mahé / Addis Abeba / Roma / Lisboa ou Porto em classe econômica “T” - com direito a bagagem de porão; transporte partilhado aeroporto/hotel/aeroporto; 7 noites de alojamento no hotel e regime escolhidos; Taxas de aeroporto, segurança e combustível - 397€ (sujeitas a reconfirmação e alterações legais) e Seguro Multiviagens Dispomos também condições especiais para viagens de Lua de Mel. NOTAS: Preços válidos para um mínimo de 2 pessoas. VOOS ETHIOPIAN AIRLINES VOOS DIÁRIOS À PARTIDA DE LISBOA E PORTO"
+            }
+          ],
+          "included": "",
+          "notIncluded": "Taxas locais; gratificações; extras de carácter pessoal e quaisquer outros não mencionados no programa."
+        }
       },
       "source": {
         "file": "00047116.pdf",
-        "hash": "b3617624adbb"
+        "hash": "b3617624adbb",
+        "page": 58
       }
     },
     {
@@ -10884,11 +11930,30 @@
             "nights": 4,
             "board": "APA"
           }
-        ]
+        ],
+        "program": {
+          "days": [
+            {
+              "header": "1º DIA - CIDADE DE ORIGEM / ABU DHABI / DOHA",
+              "body": "Comparência no aeroporto com 3 horas de antecedência para formalidades de embarque. Partida em voo com destino a Doha via Abu Dhabi. Chegada, assistência e transporte para o hotel para alojamento."
+            },
+            {
+              "header": "2º AO 4º DIA - DOHA (Nº DE NOITES PODERÁ SER VARIÁVEL)",
+              "body": "Estadia no hotel e regime escolhido. Dia livre para desfrutar do destino."
+            },
+            {
+              "header": "5º E 6º DIA - DOHA / ABU DHABI / CIDADE DE ORIGEM OU EXTENSÕES",
+              "body": "Em hora a determinar localmente saída para o aeroporto internacional de Doha para formalidades de embarque e partida em direção à cidade de origem via Abu Dhabi. Chegada à cidade de origem (ou proximo destino) e fim dos nossos serviços. Voo Ethiad Airways para o percurso Lisboa / Abu Dhabi / Doha / Abu Dhabi / Lisboa em classe “U”- com direito a bagagem de porão; Transporte partilhado aeroporto/hotel/aeroporto; 4 noites de alojamento em quarto indicados em Doha; Taxas de aeroporto, segurança e combustível – 349,00€ (sujeitas a reconfirmação e alterações legais) e Seguro Multiviagens. NOTAS: Preços válidos para um mínimo de 2 pessoas. Gratificações, taxa turistica, extras de carácter pessoal e quaisquer outros não mencionados no programa. VOOS ETIHAD AIRWAYS PARTIDAS DIÁRIOS À PARTIDA DE LISBOA"
+            }
+          ],
+          "included": "",
+          "notIncluded": "Combinados com a programação do Indico e Asia, com circuitos disponíveis online, para outros combinados favor consulte-nos. Dispomos também condições especiais para viagens de Lua de Mel e famílias."
+        }
       },
       "source": {
         "file": "00047318.pdf",
-        "hash": "c5e8fdaf75a6"
+        "hash": "c5e8fdaf75a6",
+        "page": 48
       }
     },
     {
@@ -10907,11 +11972,30 @@
       ],
       "details": {
         "overview": "O Quénia fica localizado na África Oriental e tem um clima quente e húmido ao longo da sua costa, no Oceano Índico. Já Nairobi, a capital, tem um clima mais frio e que vai decrescendo à medida que nos aproximamos do Monte Quénia. A grande procura turística foca-se nas imensas reservas de vida selvagem onde pode realizar um safari para observar a natureza viva e pura e descobrir os “Big Five”: leão, leopardo, búfalo, rinoceronte e elefante. Existem vários locais para sentir África e apreciar um deslumbrante pôr-do-sol: Samburu, na zona Norte do Quénia, é uma reserva conhecida pela grande quantidade de elefantes que escolheram esta região para",
-        "hotels": []
+        "hotels": [],
+        "program": {
+          "days": [
+            {
+              "header": "1º DIA - CIDADE DE ORIGEM / NAIROBI",
+              "body": "Comparência no aeroporto três horas antes da partida para as formalidades de embarque. Saída em regular com destino a Nairobi (via cidade Europeia). Chegada a Nairobi, acolhimento e transporte para o hotel. Resto de dia livre. Alojamento no Hotel Safari Park em regime de Alojamento e Pequeno-Almoço"
+            },
+            {
+              "header": "2º DIA - NAIROBI / RESERVA NACIONAL DE MASAI MARA",
+              "body": "Saída de Nairobi após o pequeno-almoço. Partida numa viagem para as terras altas e férteis do Quénia. No caminho, passagem por uma encantadora capela, a impressionante estação de satélite terrestre de Longonot enquanto atravessa o vale até Narok e campos de trigo e cevada, antes de chegar a Masai Mara a tempo para o almoço. Após o almoço, início do primeiro safari, voltando ao lodge enquanto o sol se põe. Alojamento no Mara Sopa Lodge em regime de Pensão Completa."
+            },
+            {
+              "header": "3º DIA - RESERVA NACIONAL DE MASAI MARA",
+              "body": "Após o pequeno-almoço que será servido de manhã cedo, partida para um safari matinal, voltando para o acampamento a meio da manhã. Após o almoço, partida para outro safari e visita à vila de Masai, regressando ao lodge com o pôr-do-sol. Alojamento no Mara Sopa Lodge em regime de Pensão Completa."
+            }
+          ],
+          "included": "Voo Lisboa / Amesterdão / Nairobi / Amesterdão / Lisboa em voos KLM em classe L com direito a 23 kg de bagagem; transporte aeroporto/ hotel/ aeroporto com assistência local; 6 noites de alojamento em regime de pensão completa; programa de acordo com o itinerário indicado; Taxas de aeroporto, segurança e combustivel (valor indicativo de 352,00 euros, sujeitas a reconfirmação e alterações legais); Seguro de Viagem",
+          "notIncluded": "Outros que não mencionados no programa e extras de caráter pessoal"
+        }
       },
       "source": {
         "file": "00047089.pdf",
-        "hash": "e9fb35275ae1"
+        "hash": "e9fb35275ae1",
+        "page": 7
       }
     },
     {
@@ -11044,11 +12128,30 @@
             "nights": 4,
             "board": "APA"
           }
-        ]
+        ],
+        "program": {
+          "days": [
+            {
+              "header": "1º DIA - CIDADE DE ORIGEM / DUBAI / RAS AL KHAIMAH",
+              "body": "Comparência no aeroporto com 3 horas de antecedência para formalidades de embarque. Partida em voo com destino ao Dubai. Chegada, assistência e transporte para o hotel em Ras al Khaimah para alojamento."
+            },
+            {
+              "header": "2º AO 4º DIA - RAS AL KHAIMAH (Nº DE NOITES PODERÁ SER VARIÁVEL)",
+              "body": "Estadia no hotel e regime escolhido. Dia livre para desfrutar do destino."
+            },
+            {
+              "header": "5º DIA - RAS AL KHAIMAH / DUBAI / CIDADE DE ORIGEM OU EXTENSÕES",
+              "body": "Em hora a determinar localmente saída para o aeroporto internacional do Dubai para formalidades de embarque e partida em direção à cidade de origem. Chegada à cidade de origem (ou proximo destino) e fim dos nossos serviços. Voo Emirates para o percurso Lisboa ou Porto / Dubai / Lisboa ou Porto em classe “L”- com direito a bagagem de porão; Transporte partilhado aeroporto/hotel/aeroporto; 4 noites de alojamento em quarto indicados em Ras Al Khaimah; Taxas de aeroporto, segurança e combustível – 226,00€ (sujeitas a reconfirmação e alterações legais) e Seguro Multiviagens. NOTAS: Preços válidos para um mínimo de 2 pessoas. Gratificações, extras de carácter pessoal e quaisquer outros não mencionados no programa. VOOS EMIRATES PARTIDAS DIÁRIOS À PARTIDA DE LISBOA E PORTO"
+            }
+          ],
+          "included": "",
+          "notIncluded": "Combinados Dubai e Ras Al Khaimah / com a programação do Indico, Asia e alguns destinos em Africa, com circuitos disponíveis online, para outros combinados favor consulte-nos. Dispomos também condições especiais para viagens de Lua de Mel e famílias."
+        }
       },
       "source": {
         "file": "00047318.pdf",
-        "hash": "c5e8fdaf75a6"
+        "hash": "c5e8fdaf75a6",
+        "page": 29
       }
     },
     {
@@ -11194,11 +12297,30 @@
             "nights": 7,
             "board": "APA"
           }
-        ]
+        ],
+        "program": {
+          "days": [
+            {
+              "header": "1º DIA - CIDADE DE ORIGEM / SAL",
+              "body": "Comparência no aeroporto três horas antes da partida. Formalidades de embarque e partida para Cabo Verde. Após pouco mais de três horas e meia de voo, chegada e assistência pelos delegados Solférias. Transporte para o hotel escolhido e alojamento. Taxa turística (valor indicativo de 2,50 euros por pessoa e noite), aplicável a maiores de 16 anos, até ao máximo de 10 noites consecutivas, paga localmente nos hotéis. Outros que não mencionados no programa e extras de caráter pessoal."
+            },
+            {
+              "header": "2º AO 7º DIA - SAL VOOS TAP DIÁRIOS COM PARTIDA DE LISBOA",
+              "body": "Estadia em Santa Maria. Dias inteiramente livres. As praias são a principal riqueza natural desta ilha. A praia de Santa Maria possui uma extensão de 8 km de areia fina e dourada com um mar de águas transparentes e de cor azul-turquesa. É nesta praia que se situa a maior parte da oferta hoteleira da ilha. A cidade de Santa Maria que reivindica para si o estatuto de Câmara Municipal, cresceu muito nos últimos anos e dispõe hoje de numerosas lojas e restaurantes, pelo que uma das opções do visitante é agora consagrar longas horas a passear-se, conviver, alimentar-se e fazer compras na cidade. Recorrendo ao nosso recetivo local poderá optar por ocupar parte das suas férias praticando desportos aquáticos, tais como mergulho, pesca, windsurf ou kitesurf ou efetuar uma volta à ilha em excursão organizada tendo desta forma um contacto com a população e modo de vida local ou ainda optar por uma excursão a outra ilha do arquipélago, podendo conhecer um pouco mais da vida cabo-verdiana e constatar os contrastes VOOS CABO VERDE AIRLINES COM PARTIDA DE LISBOA AOS DOMINGOS VOOS ESPECIAIS VERÃO PARTIDAS DE LISBOA AOS DOMINGOS DE 22 DE MARÇO 2026 A 25 DE OUTUBRO 2026 PARTIDAS DO PORTO AOS SÁBADOS DE 21 DE MARÇO 2026 A 24 DE OUTUBRO 2026 PARTIDAS DO PORTO ÀS SEXTAS DE 05 DE JUNHO 2026 A 18 DE SETEMBRO 20256 VOOS ESPECIAIS PÁSCOA MARÇO/ABRIL 2027"
+            },
+            {
+              "header": "8º DIA - SAL / CIDADE DE ORIGEM",
+              "body": "À hora previamente indicada, partida para o aeroporto. Formalidades de embarque assistidas pelos delegados Solférias. Regresso a Lisboa e fim dos nossos serviços."
+            }
+          ],
+          "included": "Voos TAP em classe G com direito a 1 PC de bagagem até 23 kg.; transporte aeroporto/ hotel/ aeroporto com assistência local; 7 noites de alojamento no hotel e regime escolhidos; Taxas de aeroportos, segurança e combustível à partida de Lisboa (sujeitas a reconfirmação e alterações legais); Seguro multiviagens; Taxa de Segurança Aeroportuária (obrigatório) para dados de passaporte enviados até 5 dias úteis antes do início da viagem.",
+          "notIncluded": ""
+        }
       },
       "source": {
         "file": "00047091.pdf",
-        "hash": "97757250ce97"
+        "hash": "97757250ce97",
+        "page": 22
       }
     },
     {
@@ -11273,11 +12395,30 @@
             "nights": 4,
             "board": "APA"
           }
-        ]
+        ],
+        "program": {
+          "days": [
+            {
+              "header": "1º DIA - CIDADE DE ORIGEM / SANTIAGO",
+              "body": "Comparência no aeroporto três horas antes da partida. Formalidades de embarque e partida para Cabo Verde. Após pouco mais de três horas e meia de voo, chegada e assistência pelos delegados Solférias. Transporte para o hotel escolhido e alojamento."
+            },
+            {
+              "header": "2º AO 4º DIA - SANTIAGO",
+              "body": "Dias Livres. Considerada o berço da nação, Santiago é a maior ilha do arquipélago com 991km2. Não deixe de visitar a Cidade Velha, considerada um monumento histórico, a Fortaleza de S. Filipe, construída com pedra oriunda de Portugal, a qual tem uma vista única e, em dia de boa visibilidade, pode dali avistar-se ao longe a Ilha do Fogo. O Pelourinho, datado do séc. XVI e de estilo manuelino, continua intacto a lembrar os tempos em que os escravos ali eram publicamente punidos. O vale que desagua na cidade é rico em vegetação, com destaque para os coqueiros e calabaceiras (embondeiros) imponentes. Outro dos locais obrigatórios de visita é logicamente a cidade da Praia, atual capital, centro administrativo e comercial do país. Chegados ao Norte, depois de passada a Serra da Malagueta, encontramos o Tarrafal. A sua baía, com uma fabulosa praia de areia fina e branca, águas tépidas e cristalinas e vastas sombras de coqueiros é um importante local turístico e piscatório. A vila convida a um passeio pela Praça Central com visita à igreja e ao mercado. Igualmente conhecido por estas paragens é o antigo campo de concentração de presos políticos da era colonial, onde foi construído um pequeno museu que expõe a sua história."
+            },
+            {
+              "header": "5º DIA - SANTIAGO / CIDADE DE ORIGEM",
+              "body": "À hora previamente indicada, partida para o aeroporto. Formalidades de embarque assistidas pelos delegados Solférias. Regresso a Lisboa e fim dos nossos serviços."
+            }
+          ],
+          "included": "Voos TAP Lisboa/Santiago/Lisboa em classe “O” com direito a 1 PC de bagagem até 23 kg.; transporte aeroporto/ hotel/ aeroporto com assistência local; 4 noites de alojamento no hotel e regime escolhidos; Taxas de aeroportos, segurança e combustível à partida de Lisboa (sujeitas a reconfirmação e alterações legais); Seguro multiviagens.",
+          "notIncluded": "Taxa turística (valor indicativo de 2,50 euros por pessoa e noite), aplicável a maiores de 16 anos, até ao máximo de 10 noites consecutivas, paga localmente nos hotéis. Taxa de Segurança Aeroportuária e outros que não mencionados no programa e extras de caráter pessoal. VOOS TAP DIÁRIOS COM PARTIDA DE LISBOA"
+        }
       },
       "source": {
         "file": "00047091.pdf",
-        "hash": "97757250ce97"
+        "hash": "97757250ce97",
+        "page": 38
       }
     },
     {
@@ -11317,11 +12458,13 @@
             "nights": 3,
             "board": "APA"
           }
-        ]
+        ],
+        "program": null
       },
       "source": {
         "file": "00047091.pdf",
-        "hash": "97757250ce97"
+        "hash": "97757250ce97",
+        "page": null
       }
     },
     {
@@ -11447,11 +12590,30 @@
             "nights": 3,
             "board": "APA"
           }
-        ]
+        ],
+        "program": {
+          "days": [
+            {
+              "header": "1º DIA - CIDADE DE ORIGEM / SÃO VICENTE",
+              "body": "Comparência no aeroporto três horas antes da partida. Embarque com destino à ilha de S. Vicente em viagem que durará cerca de quatro horas. Chegada, assistência e transporte ao hotel escolhido."
+            },
+            {
+              "header": "2º AO 7º DIA - SÃO VICENTE",
+              "body": "Dias inteiramente livres. Com uma superfície de 227 km2, S. Vicente é uma ilha com características bastante próprias, que convida o visitante ao lazer e à vida boémia nas suas famosas noites cabo-verdianas. Terra de poetas e artistas das mais variadas expressões, sendo a música uma das fundamentais, o Mindelo deixa recordações únicas em quem a visita e sente o pulsar das suas noites tropicais. Visitando o Fortim do Rei, a construção mais antiga existente no Mindelo (data de 1852), o visitante gozará de uma magnífica vista panorâmica da cidade. Também merecedor da sua visita será o Centro Nacional de Artesanato, um museu vivo que encerra toda a cultura artesanal de Cabo Verde desde os tempos mais remotos. A poucos quilómetros da cidade do Mindelo e em direção a Leste poderá o visitante encontrar diversas praias que fazem o deleite de quem aí queira repousar da agitação das longas noites. Outro local a não perder será a Baía das Gatas, a qual o(a) espera com a sua praia de mar calmo e cristalino e com a sua piscina natural. Em contraste, a Oeste, a praia de S. Pedro, com o mar mais agitado, oferece ótimas condições para a prática de desportos aquáticos como o windsurf, kitesurf, etc… Aconselhamos uma excursão de um ou 2 dias à ilha vizinha de Santo Antão. Voos TAP em classe O com direito a 1 PC de bagagem até 23kg; transporte aeroporto/ hotel/ aeroporto com assistência local; 7 noites de alojamento no hotel e regime escolhidos; Taxas de aeroportos, segurança e combustível à partida de Lisboa (sujeitas a reconfirmação e alterações legais); Seguro multiviagens; Taxa de Segurança Aeroportuária (obrigatório) para dados de passaporte enviados até 5 dias úteis antes do inicio da viagem"
+            },
+            {
+              "header": "4º DIA - SÃO VICENTE / CIDADE DE ORIGEM",
+              "body": "Em hora a determinar localmente, transporte ao aeroporto e partida com destino a Lisboa. Chegada e fim dos nossos serviços."
+            }
+          ],
+          "included": "",
+          "notIncluded": "Taxa turística (valor indicativo de 2,50 euros por pessoa e noite), aplicável a maiores de 16 anos, até ao máximo de 10 noites consecutivas, paga localmente nos hotéis. Outros que não mencionados no programa e extras de caráter pessoal. VOOS TAP DIÁRIOS COM PARTIDA DE LISBOA"
+        }
       },
       "source": {
         "file": "00047091.pdf",
-        "hash": "97757250ce97"
+        "hash": "97757250ce97",
+        "page": 53
       }
     },
     {
@@ -11493,11 +12655,30 @@
             "nights": 5,
             "board": "TI"
           }
-        ]
+        ],
+        "program": {
+          "days": [
+            {
+              "header": "1º DIA – LISBOA OU PORTO / DACARDIASS / SALY, SOMONE, PALMERIN OU POINTE SARÉNE",
+              "body": "Comparência no aeroporto três horas antes da partida para as formalidades de embarque. Saída em voos TAP ou Smatwings com destino a Dacar. Chegada e transporte para o hotel escolhido na região de la Petite Côte ou Pointe Saréne. Alojamento."
+            },
+            {
+              "header": "2º AO 7º DIA - LA PETITE CÔTE (SALY, SOMONE, PALMERIN, POINTE SARÉNE)",
+              "body": "Dias livres. A 80 km a Sul de Dacar, situa-se a zona turística da “pequena costa” (la petite côte) que reúne várias estâncias balneares como Somone, Palmerin , Saly e mais recentemente Pointe Saréne com a abertura do Hotel Riu 5*. Lugares de interesse: as praias e as lojas de artesanato. Várias excursões dãolhe a possibilidade de conhecer o Parque de Bandia, reserva natural, o Lago Rosa, famoso por ser a última etapa do rali Dacar, várias aldeias tradicionais."
+            },
+            {
+              "header": "8º DIA – SALY, SOMONE, PALMERIN OU POINTE SARÉNE / DACAR-DIASS / LISBOA OU PORTO",
+              "body": "Em hora a ser informada localmente, transporte para o aeroporto, formalidades de embarque e partida com destino a Lisboa ou Porto."
+            }
+          ],
+          "included": "Voo Lisboa / Dacar-Diass / Lisboa, em voos TAP em classe “O” com direito a 23kg de bagagem; trasnporte aeroporto / hotel / aeroporto com assistência local; 2 noites de alojamento em Dacar no regime de alojamento e pequenoalmoço e 5 noites em Saly ou Pointe Saréne no regime de tudo incluído; taxas de aeroporto, segurança e combustível (valor indicativo de 418,00 euros, sujeitas e reconfirmação e alterações legais); Seguro de Viagem",
+          "notIncluded": "Outros que não mencionados no programa e extras de caráter pessoal"
+        }
       },
       "source": {
         "file": "00047089.pdf",
-        "hash": "e9fb35275ae1"
+        "hash": "e9fb35275ae1",
+        "page": 28
       }
     },
     {
@@ -11771,11 +12952,30 @@
             "nights": 7,
             "board": "APA"
           }
-        ]
+        ],
+        "program": {
+          "days": [
+            {
+              "header": "1º DIA - CIDADE DE ORIGEM / TENERIFE SUL OU NORTE",
+              "body": "Comparência no aeroporto duas horas antes da hora de partida. Formalidades de embarque e partida com destino a Tenerife Sul ou Norte (voo direto ou via Gran Canária). Acolhimento à chegada, transporte ao hotel / apartamento escolhido e alojamento."
+            },
+            {
+              "header": "2º DIA AO 7º DIA - SANTA CRUZ DE TENERIFE OU COSTA ADEJE OU LOS CRISTIANOS OU PLAYA DE LAS AMERICAS OU PRAIA PARAISO OU PUERTO DE LA CRUZ",
+              "body": "Estadia no hotel / apartamento, no regime alimentar escolhidos. Dias livres. Sendo a maior e mais populosa ilha do arquipélago das Canárias, esta ilha apresenta um clima fantástico durante todo o ano, que permite aproveitar as extensas praias do sul. É uma terra de contrastes, que vai das majestosas praias de areia escura, à paisagem quase lunar do parque Nacional do Teide. Desfrute da possibilidade de fazer desportos aquáticos, visite a próspera e cosmopolita capital, Santa Cruz de Tenerife, ou aproveite para descobrir a flora endémica da ilha. Se viajar na altura de Carnaval, não se esqueça de visitar um dos mais animados carnavais do mundo. Tenerife é um ótimo local para visitar e explorar, sendo que os programas diários de animação fazem desta ilha um local não só de descanso e fruição, como igualmente de diversão."
+            },
+            {
+              "header": "8º DIA - TENERIFE SUL OU NORTE / CIDADE DE ORIGEM",
+              "body": "Após o pequeno-almoço e em horário a combinar localmente, transporte para o aeroporto de Tenerife Sul ou Norte. Chegada e embarque no voo de regresso. Fim dos nossos serviços."
+            }
+          ],
+          "included": "Voos TAP Lisboa / Tenerife Sul / Lisboa em classe “T” sem bagagem de porão; transporte aeroporto / hotel / aeroporto com assistência local, 7 noites de alojamento no hotel e regime escolhido, taxas de aeroportos, segurança e combustível (valor indicativo de 88,31€, sujeitas a reconfirmação e alterações legais) e seguro de viagem.;",
+          "notIncluded": "Outros que não mencionados no programa e extras de caráter pessoal."
+        }
       },
       "source": {
         "file": "00047319.pdf",
-        "hash": "d673f60fb9a9"
+        "hash": "d673f60fb9a9",
+        "page": 20
       }
     },
     {
@@ -11836,11 +13036,26 @@
             "nights": 7,
             "board": "TI"
           }
-        ]
+        ],
+        "program": {
+          "days": [
+            {
+              "header": "1º DIA – CIDADE DE ORIGEM / ZANZIBAR",
+              "body": "Comparência no aeroporto três horas antes da partida para as formalidades de embarque. Saída em voo regular com destino a Zanzibar,. Chegada e acolhimento no aeroporto. Transporte para o hotel. Alojamento. 2º A 7º DIAS – ZANZIBAR Dias inteiramente livres para atividades de caráter pessoal. Zanzibar alberga um interessante encontro da cultura africana e árabe. Visite Stone Town com as suas ruelas e arquitetura de influência árabe. Sinta os aromas a noz-moscada, cravinho e canela. Ou disfrute das suas praias, verdadeiros postais ilustrados, com palmeiras, águas límpidas e recifes de coral."
+            },
+            {
+              "header": "8º DIA – ZANZIBAR / CIDADE DE ORIGEM",
+              "body": "Após o pequeno-almoço, e em horário a acordar localmente, transporte para o aeroporto de Zanzibar. Chegada e embarque no voo previsto, com destino a Portugal. Chegada e fim dos nossos serviços. Visto; Taxa de Seguro; Taxas Turísticas cobradas localmente e outros que não mencionados no programa e extras de caráter pessoal."
+            }
+          ],
+          "included": "Voo Lisboa ou Porto / Istambul / Zanzibar / Istambul / Lisboa ou Porto em classe “V” com direito a 1 peça de bagagem de porão;; transporte aeroporto/hotel/ aeroporto com assistência local; 7 noites de alojamento no hotel e regime indicados; Taxas de aeroporto, segurança e combustível (valor indicativo de 457,00 euros, sujeitas a reconfirmação e alterações legais); Seguro de Viagem",
+          "notIncluded": ""
+        }
       },
       "source": {
         "file": "00047089.pdf",
-        "hash": "e9fb35275ae1"
+        "hash": "e9fb35275ae1",
+        "page": 44
       }
     },
     {
@@ -11915,11 +13130,30 @@
             "nights": null,
             "board": null
           }
-        ]
+        ],
+        "program": {
+          "days": [
+            {
+              "header": "1º DIA - CIDADE DE ORIGEM / ATENAS",
+              "body": "Comparência no aeroporto duas horas antes da partida para formalidades de embarque. Chegada a Atenas, encontro com representante para uma orientação local e assistência no transporte para o hotel. STANLEY, TITANIA HOTEL OU SIMILAR 4* em duplo 4* | CATEGORIA LUXO"
+            },
+            {
+              "header": "2º DIA - ATENAS (VISITA À CIDADE)",
+              "body": "Pequeno-almoço no hotel. Saída para excursão pela cidade de Atenas, passando pelos principais pontos turísticos. Início no Arco de Adriano e, em seguida, visita ao estádio Panathinaiko (conhecido também como Kalimarmaro), construído em 329 a. C., e onde foram realizadas as primeiras olimpíadas da era moderna, em 1896. Continuação para a principal praça da cidade, Sintagma (Constituição). Aqui, pode assistir ao render da guarda, em frente ao Parlamento Grego e ao Túmulo do Soldado Desconhecido, realizado pelos membros da guarda nacional, os evzones, com o seu traje típico. Segue-se tour panorâmica, com passagem pelos prédios neoclássicos de Atenas, como a Faculdade, a Biblioteca e a Academia. Para terminar, visita à Acrópole e ao Partenon, magnífico monumento construído em 447 a. C., durante a época de ouro de Péricles, dedicado à Deusa Atena. Poderá ver ainda o Propileo, o Templo de Atenas, o Erecteion e todas as suas magnificas construções. Aproveite a tarde livre para descobrir o centro de Atenas, nos arredores da Acrópole, passeando pelos bairros de Monastiraki, Plaka e Thissio, e aprecie as agradáveis paisagens da antiga cidade. Alojamento."
+            },
+            {
+              "header": "3º DIA - ATENAS / CIDADE DE ORIGEM",
+              "body": "Pequeno-almoço no hotel. Transporte do hotel para o aeroporto para o seu voo de regresso. ROYAL OLYMPIC, WYNDHAM GRAND ATHENS OU SIMILAR em duplo 4* SUPERIOR OU 5* | CATEGORIA EXECUTIVA"
+            }
+          ],
+          "included": "Voo Lisboa/Atenas/Lisboa com a Aegean em classe económica “T+S”, sem bagagem de porão; transporte aeroporto / hotel / aeroporto com assistência local; 3 noites de alojamento no hotel selecionado em regime de alojamento e pequeno-almoço; city tour regular em Atenas e Acrópole com guia oficial em Espanhol; taxas de Aeroporto, segurança e combustível no valor de 80,40€ (sujeitas a reconfirmação e alterações legais); seguro de viagem.",
+          "notIncluded": "Taxa climática por noite e por quarto a ser paga Diretamente pelo cliente nos hotéis: De abril a outubro: Hotéis 3* - 5,00€; Hotéis 4* - 10,00€; Hotéis 5* - 15,00€; De novembro a março: Hotéis 3* - 1,50€; Hotéis 4* - 3,00€; Hotéis 5* - 4,00. Outros serviços não mencionados no programa e extras de caráter pessoal."
+        }
       },
       "source": {
         "file": "00047083.pdf",
-        "hash": "663578258d06"
+        "hash": "663578258d06",
+        "page": 5
       }
     },
     {
@@ -11949,7 +13183,29 @@
             "day": "4º Dia",
             "route": "KUSADASI"
           }
-        ]
+        ],
+        "program": {
+          "days": [
+            {
+              "header": "1º DIA - CIDADE DE ORIGEM/ ATENAS",
+              "body": "Chegada a Atenas. Pick up do carro no aeroporto. Encontro com representante para uma orientação local. Alojamento."
+            },
+            {
+              "header": "2º DIA - ATENAS (VISITA À CIDADE)",
+              "body": "Pequeno-almoço no hotel. Visita à cidade de Atenas, passando pelos principais pontos turísticos. Início no Arco de Adriano e, em seguida, visita ao estádio Panathinaiko (conhecido também como Kalimarmaro), construído em 329 a.C., e onde foram realizadas as primeiras olimpíadas da era moderna, em 1896. Continuação para a principal praça da cidade, Sintagma (Constituição). Aqui, pode assistir ao render da guarda, em frente ao Parlamento Grego e ao Túmulo do Soldado Desconhecido, realizado pelos membros da guarda nacional, os evzones, com o seu traje típico. Segue-se tour panorâmico, com passagem pelos grandes Neoclássicos de Atenas, como a Faculdade, a Biblioteca e a Academia. Para terminar, visita à Acrópole e ao Partenon, magnífico monumento construído em 447 a.C., durante a época de ouro de Péricles, dedicado à Deusa Atena. Poderá ver ainda o Propileu, o Templo de Atenas, o Erecteion e todas as suas magníficas construções. Aproveite a tarde livre para descobrir o centro de Atenas, nos arredores da Acrópole, passando pelos bairros de Monastiraki, Plaka e Thissio, e aprecie as agradáveis paisagens da antiga cidade. Alojamento. Taxa climática por noite e por quarto a ser paga diretamente pelo cliente nos hotéis: De abril a outubro: Hotéis 3* - 5,00€; Hotéis 4* - 10,00€; Hotéis 5* - 15,00€; De novembro a março: Hotéis 3* - 1,50€; Hotéis 4* - 3,00€; Hotéis 5* - 4,00. Taxa de Desenvolvimento Sustentável do Turismo: Cobrada a todos os turistas de cruzeiro, cobrada com base nos portos de desembarque. De 1 de julho a 30 de setembro: 20€ por pessoa, por cada visita a Santorini e Mykonos; 5€ por pessoa, para todos os outros portos gregos. De 1 a 31 de outubro e de 1 de abril a 31 de maio: 12€ por pessoa, para Santorini e Mykonos; 3€ por pessoa, para todos os outros portos. De 1 de novembro a 31 de março: 4€ por pessoa, para Santorini e Mykonos; 1€ por pessoa, para todos os outros portos. Outros serviços não mencionados no programa e extras de carácter pessoal; Excursões opcionais durante o Cruzeiro. Os hotéis estão sujeitos à disponibilidade existente na altura da reserva. Caso os hotéis indicados estejam completos, poderão ser substituídos por outros hotéis de categoria similar."
+            },
+            {
+              "header": "3º DIA - ATENAS (CRUZEIRO)",
+              "body": "Pequeno-almoço no hotel. Em horário apropriado, transfer do hotel para o porto onde terá o cruzeiro. Navegação noturna. Pensão Completa com bebidas selecionadas a bordo."
+            },
+            {
+              "header": "4º DIA - KUSADASI (CRUZEIRO)",
+              "body": "Pequeno-almoço a bordo. Primeiro destino do dia Kusadasi (Turquia), conhecida pelos locais históricos de Éfeso, casa da Virgem Maria, além de famosas praias e a vista do mar Egeu. O segundo destino é a ilha de Patmos, mundialmente famosa pelo mosteiro de São João e a gruta onde foi escrita a Apocalipse, que ocupa um papel central na religião Cristã. Além da sua importância religiosa, a ilha possui praias maravilhosas e características únicas. Regresso a bordo para navegação noturna. Pensão Completa com bebidas selecionadas a bordo."
+            }
+          ],
+          "included": "",
+          "notIncluded": ""
+        }
       },
       "source": {
         "file": "00047083.pdf",
@@ -12171,11 +13427,30 @@
             "nights": 4,
             "board": "APA"
           }
-        ]
+        ],
+        "program": {
+          "days": [
+            {
+              "header": "1º DIA - CIDADE DE ORIGEM / MALTA",
+              "body": "Comparência no aeroporto duas horas antes da partida para as formalidades de embarque. Saída com destino a Malta. Chegada ao aeroporto do Funchal, acolhimento e transporte para o hotel escolhido. Alojamento."
+            },
+            {
+              "header": "2º E 7º DIAS - MALTA",
+              "body": "Estadia no hotel e regime escolhido. Dias livres para desfrutar do destino."
+            },
+            {
+              "header": "8º DIA - MALTA / CIDADE DE ORIGEM",
+              "body": "Após o pequeno-almoço e em horário a combinar localmente, transporte para o aeroporto de Malta. Chegada e embarque no voo de regresso. Fim dos nossos serviços."
+            }
+          ],
+          "included": "Voos TAP Lisboa / Funchal / Lisboa em classe “T” sem bagagem de porão, transporte aeroporto / hotel / aeroporto com assistência local, 2 noites de alojamento no hotel e regime indicados, taxas de aeroporto, segurança e combustível (valor indicativo: 42,72€, sujeitas a reconfirmação e alterações legais) e seguro de viagem.",
+          "notIncluded": "Outros que não mencionados no programa e extras de caráter pessoal. Taxas de conservação e preservação locais, pagas localmente nos hotéis (0,50€ por pessoa e noite – máximo 5,00€ por pessoa, aplicável a maiores de 18 anos inclusive);"
+        }
       },
       "source": {
         "file": "00047081.pdf",
-        "hash": "02dae5d10f0b"
+        "hash": "02dae5d10f0b",
+        "page": 6
       }
     },
     {
@@ -12328,11 +13603,30 @@
             "nights": null,
             "board": null
           }
-        ]
+        ],
+        "program": {
+          "days": [
+            {
+              "header": "1º DIA - CIDADE DE ORIGEM / FAIAL",
+              "body": "Comparência no aeroporto duas horas antes da partida para as formalidades de embarque. Saída em voos com destino à Horta. Chegada ao aeroporto da Horta, acolhimento e transporte para o hotel escolhido. Alojamento."
+            },
+            {
+              "header": "2º DIA - FAIAL",
+              "body": "Dia livre para explorar a ilha do Faial, com as suas paisagens bucólicas, os mistérios das grutas vulcânicas, os pitorescos moinhos e a colorida marina da Horta, alguns dos pontos fortes desta ilha. Não deixe de visitar também a Ponta dos Capelinhos (espelho da força da natureza) e a ex-líbris da ilha, a Caldeira, ladeada por hortênsias azuis."
+            },
+            {
+              "header": "3º DIA - FAIAL / CIDADE DE ORIGEM",
+              "body": "Após o pequeno-almoço e em horário a combinar localmente, transporte para o aeroporto da Horta. Chegada e embarque no voo de regresso. Fim dos nossos serviços. Voos SATA Lisboa / Horta / Lisboa em classe “X” sem bagagem de porão, transporte aeroporto / hotel / aeroporto com assistência local, 2 noites de alojamento no hotel e regime escolhido, taxas de aeroportos, segurança e combustível (valor indicativo de 34,90€, sujeitas a reconfirmação e alterações legais) e seguro de viagem. Outros que não mencionados no programa e extras de caráter pessoal."
+            }
+          ],
+          "included": "",
+          "notIncluded": ""
+        }
       },
       "source": {
         "file": "00047077.pdf",
-        "hash": "11da84955cf3"
+        "hash": "11da84955cf3",
+        "page": 24
       }
     },
     {
@@ -12374,7 +13668,41 @@
             "day": "7º Dia",
             "route": "FAIAL / CIDADE DE ORIGEM D"
           }
-        ]
+        ],
+        "program": {
+          "days": [
+            {
+              "header": "1º DIA - CIDADE DE ORIGEM / PICO",
+              "body": ""
+            },
+            {
+              "header": "2º DIA – PICO",
+              "body": ""
+            },
+            {
+              "header": "3º DIA – PICO / SÃO JORGE",
+              "body": "Após pequeno-almoço e em horário a combinar localmente, transporte para o cais. Chegada e embarque para transporte em barco inter-ilhas Pico / São Jorge."
+            },
+            {
+              "header": "4º DIA – SÃO JORGE",
+              "body": "Dia livre para explorar a ilha de São Jorge, com as suas paisagens e magnífico queijo. Para descobrir as suas Fajãs, ideais para caminhadas e parte do Património da Biosfera da UNESCO. HOTEL CARAVELAS 4* + HOTEL SÃO JORGE GARDEN 3* + AZORIS FAIAL GARDEN 4* PICO SÃO JORGE FAIAL"
+            },
+            {
+              "header": "5º DIA – SÃO JORGE / FAIAL",
+              "body": "Comparência no aeroporto duas horas antes da partida para as formalidades de embarque. Saída com destino ao Pico. Chegada ao aeroporto do Pico, acolhimento e transporte para o hotel escolhido. Alojamento. Após pequeno-almoço e em horário a combinar localmente, transporte para o cais de São Jorge. Chegada e embarque para transporte em barco inter-ilhas São Jorge / Faial."
+            },
+            {
+              "header": "6º DIA – FAIAL",
+              "body": "Dia livre para explorar a ilha do Pico. Não perca as grutas, as extensas vinhas, o Museu do Vinho e os museus que retratam a antiga tradição da caça à baleia. Dia livre para explorar a ilha do Faial, com as suas paisagens bucólicas, os mistérios das grutas vulcânicas, os pitorescos moinhos e a colorida marina da Horta são alguns dos pontos fortes desta ilha. Não deixe de visitar também a Ponta dos Capelinhos (espelho da força da natureza) e a ex-libris da ilha a Caldeira ladeada por hortênsias azuis."
+            },
+            {
+              "header": "7º DIA – FAIAL / CIDADE DE ORIGEM",
+              "body": "Após o pequeno-almoço e em horário a combinar localmente, transporte para o aeroporto da Horta. Chegada e embarque no voo de regresso. Fim dos nossos serviços. Voos SATA Lisboa / Pico / Horta / Lisboa em classe “O+V” sem bagagem de porão, transporte aeroporto / hotel / aeroporto e cais / hotel / cais com assistência local; transporte em barco inter-ilhas Pico » São Jorge e São Jorge » Faial, 6 noites de alojamento nos hotéis e regimes selecionados: 2 noites no Pico, 2 noites em São Jorge e 2 noites no Faial, taxas de aeroporto, segurança e combustível (valor indicativo de 34,90€, sujeitas a reconfirmação e alterações legais) e seguro de viagem. Outros que não mencionados no programa e extras de caráter pessoal."
+            }
+          ],
+          "included": "",
+          "notIncluded": ""
+        }
       },
       "source": {
         "file": "00047077.pdf",
@@ -12646,11 +13974,30 @@
             "nights": 3,
             "board": "MP"
           }
-        ]
+        ],
+        "program": {
+          "days": [
+            {
+              "header": "1º DIA - CIDADE DE ORIGEM / FUNCHAL",
+              "body": "Comparência no aeroporto duas horas antes da partida para as formalidades de embarque. Saída com destino ao Funchal. Chegada ao aeroporto do Funchal, acolhimento e transporte para o hotel escolhido. Alojamento."
+            },
+            {
+              "header": "2º DIA - FUNCHAL",
+              "body": "A ilha da Madeira, pela sua riqueza cultural, ambiental e gastronómica, é um destino obrigatório. Aproveite estes dias para (re)descobrir o Jardim do Atlântico, passear pelas ruas do Funchal, apreciar as florestas de Laurissilva através dos trilhos das levadas, ou simplesmente, aproveite para relaxar ao som das ondas do mar."
+            },
+            {
+              "header": "3º DIA - FUNCHAL / CIDADE DE ORIGEM",
+              "body": "Após o pequeno-almoço e em horário a combinar localmente, transporte para o aeroporto do Funchal. Chegada e embarque no voo de regresso. Fim dos nossos serviços."
+            }
+          ],
+          "included": "Voos TAP Lisboa / Funchal / Lisboa em classe “T” sem bagagem de porão, transporte aeroporto / hotel / aeroporto com assistência local, 2 noites de alojamento no hotel e regime indicados, taxas de aeroporto, segurança e combustível (valor indicativo: 42,72€, sujeitas a reconfirmação e alterações legais) e seguro de viagem.",
+          "notIncluded": "Outros que não mencionados no programa e extras de caráter pessoal. ECOTAXA: 2€ por pessoa (maiores de 13 anos) e por noite, até um máximo de 7 noites consecutivas (pagamento direto na unidade de alojamento). VOOS DIÁRIOS TAP, À PARTIDA DE LISBOA OU PORTO"
+        }
       },
       "source": {
         "file": "00047071.pdf",
-        "hash": "ccc3849bf389"
+        "hash": "ccc3849bf389",
+        "page": 7
       }
     },
     {
@@ -12684,7 +14031,33 @@
             "day": "5º Dia",
             "route": "QUINTA"
           }
-        ]
+        ],
+        "program": {
+          "days": [
+            {
+              "header": "1º DIA - DOMINGO - CIDADE DE ORIGEM / FUNCHAL",
+              "body": ""
+            },
+            {
+              "header": "2º DIA - SEGUNDA - EIRA DO SERRADO / CRISTO REI",
+              "body": "Pequeno-almoço no hotel. Manhã livre para atividades de caráter pessoal. Durante a tarde, a excursão inicia-se com uma subida até aos 355 metros de altitude. A primeira paragem será no Pico dos Barcelos onde poderá desfrutar de uma vista panorâmica sobre o Funchal. Desde aqui, a subida continua até ao imponente miradouro da Eira do Serrado que oferece uma vista ímpar sobre o Curral das Freiras. A última paragem do dia será no miradouro do Cristo Rei onde se ergue uma imponente estátua de 14 metros num promontório que se ergue sobre o Atlântico. Regresso ao Hotel."
+            },
+            {
+              "header": "3º DIA - TERÇA - PICO DO AREEIRO / SANTANA / BAÍA D’ABRA / MACHICO",
+              "body": "Comparência no aeroporto com 2 horas de antecedência para formalidades de embarque. Partida com destino ao Funchal. Entrega de 1 bilhete por pessoa para os seguintes serviços: Hop-on Hop-off City Sightseeing Linha Azul e Bilhete de Teleférico para o Monte (um sentido). Chegada e acolhimento. Transfere para o Hotel. Check-in e tarde livre. Neste dia inteiro de excursão, após o pequeno-almoço buffet no hotel, saída em direção à zona leste da ilha. Iniciamos com uma subida em direção ao Poiso e a primeira paragem será no Pico do Arieiro (1818m) onde admiraremos as magníficas paisagens que cobrem grande parte da ilha. A excursão segue até ao Ribeiro Frio, local famoso pelos seus jardins com plantas endêmicas. Desde aqui atravessaremos São Roque do Faial, uma das zonas mais interessantes da ilha devido à grande diversidade de culturas, até chegarmos a Santana - conhecida pelas famosas casas típicas feitas de palha. Paragem para almoço (não incluído). Regresso ao Funchal passando pelo Porto da Cruz, Portela e Pico do Facho (vistas de cortar a respiração sobre a Ponta de São Lourenço). Regresso ao Hotel."
+            },
+            {
+              "header": "4º DIA - QUARTA - PORTO MONIZ / TÍPICA",
+              "body": "Após o pequeno-almoço no hotel, saída em direção a Câmara de Lobos. Esta vila piscatória, “casa” da Poncha Madeirense, deve o seu nome ao facto de, no passado, aqui existirem muitos lobos marinhos. Segue-se para a Ribeira Brava, uma das mais antigas localidades da Madeira. Possibilidade de visita à Igreja local e ao mercado. Prosseguimos em direção a Porto Moniz, através do planalto mais alto da ilha: Paul da Serra, a 1500 metros de altitude, com passagem por Canhas, Ponta do Sol, Fanal e Santa do Porto Moniz. Chegada a Porto Moniz, vila piscatória que tem como principal atração as piscinas naturais, de rocha de lava, que o mar preenche com águas cristalinas. Após o almoço (não incluído), atravessaremos a magnífica Costa Norte até São Vicente seguindo uma paragem no topo da Encumeada (de onde se avista o mar de ambos os lados). A última paragem será no miradouro do Cabo Girão que oferece uma vista de cortar a respiração sobre o mar, Câmara de Lobos e o Funchal. Chegada ao hotel. Pelas 19h30, saída do Hotel para jantar em restaurante típico, onde será servida a famosa “espetada madeirense” (bebidas selecionadas incluídas). Não é garantido o espetáculo de folclore. Regresso ao hotel pelas 22h30. Pequeno-almoço no hotel. Manhã livre para atividades de caráter pessoal. Em hora a combinar localmente, transporte para o aeroporto. Chegada e embarque no voo de regresso. Fim do programa."
+            },
+            {
+              "header": "5º DIA - QUINTA - FUNCHAL / CIDADE DE ORIGEM",
+              "body": ""
+            }
+          ],
+          "included": "Voos TAP Lisboa / Funchal / Lisboa em classe “U+T” sem bagagem de porão, transporte aeroporto / hotel / aeroporto com assistência local, 4 noites de alojamento no hotel e regime indicados, taxas de aeroporto, segurança e combustível (valor indicativo: 52,72€, sujeitas a reconfirmação e alterações legais) e seguro de viagem.",
+          "notIncluded": "Outros que não mencionados no programa e extras de caráter pessoal. ECOTAXA: 2€ por pessoa (maiores de 13 anos) e por noite, até um máximo de 7 noites consecutivas. (pagamento direto na unidade de alojamento). “Circuito À Descoberta da Madeira”: 1. Os tours do presente circuito são efetuados em serviço regular, partilhado com outros clientes. Os tours são efetuados em serviço exclusivo a partir de um mínimo de 6 participantes pagantes. 2. Os tours previstos no presente circuito estão sujeitos a eventuais alterações e/ou atrasos devido a imprevistos de última hora operacionais ou de força maior. 3. Os suplementos de entradas não estão incluídos."
+        }
       },
       "source": {
         "file": "00047071.pdf",
@@ -12723,7 +14096,33 @@
             "day": "5º Dia",
             "route": "QUINTA"
           }
-        ]
+        ],
+        "program": {
+          "days": [
+            {
+              "header": "1º DIA - DOMINGO - CIDADE DE ORIGEM / FUNCHAL",
+              "body": ""
+            },
+            {
+              "header": "2º DIA - SEGUNDA - EIRA DO SERRADO / CRISTO REI",
+              "body": "Pequeno-almoço no hotel. Manhã livre para atividades de caráter pessoal. Durante a tarde, a excursão inicia-se com uma subida até aos 355 metros de altitude. A primeira paragem será no Pico dos Barcelos onde poderá desfrutar de uma vista panorâmica sobre o Funchal. Desde aqui, a subida continua até ao imponente miradouro da Eira do Serrado que oferece uma vista ímpar sobre o Curral das Freiras. A última paragem do dia será no miradouro do Cristo Rei onde se ergue uma imponente estátua de 14 metros num promontório que se ergue sobre o Atlântico. Regresso ao Hotel e jantar."
+            },
+            {
+              "header": "3º DIA - TERÇA - PICO DO AREEIRO / SANTANA / BAÍA D’ABRA / MACHICO",
+              "body": "Comparência no aeroporto com 2 horas de antecedência para formalidades de embarque. Partida com destino ao Funchal. Entrega de 1 bilhete por pessoa para os seguintes serviços: - Hop-on Hop-off City Sightseeing Linha Azul; Bilhete de Teleférico para o Monte (um sentido). Chegada e acolhimento. Transfere para o Hotel. Check-in e almoço (bebidas não incluídas). Tarde Livre. Jantar no Hotel (bebidas não incluídas) e alojamento. Neste dia inteiro de excursão, após o pequeno-almoço buffet no hotel, saída do Hotel em direção à zona leste da ilha. Iniciamos com uma subida em direção ao Poiso e a primeira paragem será no Pico do Arieiro (1818m) onde admiraremos as magníficas paisagens que cobrem grande parte da ilha. A excursão segue até ao Ribeiro Frio, local famoso pelos seus jardins com plantas endêmicas. Desde aqui atravessaremos São Roque do Faial, uma das zonas mais interessantes da ilha devido à grande diversidade de culturas, até chegarmos a Santana - conhecida pelas famosas casas típicas feitas de palha. Paragem para almoço. Regresso ao Funchal passando pelo Porto da Cruz, Portela e Pico do Facho (vistas de cortar a respiração sobre a Ponta de São Lourenço). Regresso ao Hotel e jantar."
+            },
+            {
+              "header": "4º DIA - QUARTA - PORTO MONIZ / TÍPICA",
+              "body": "Pós pequeno-almoço no hotel, saída em direção a Câmara de Lobos. Esta vila piscatória, “casa” da Poncha Madeirense, deve o seu nome ao facto de, no passado, aqui existirem muitos lobos marinhos. Segue-se para a Ribeira Brava, uma das mais antigas localidades da Madeira. Possibilidade de visita à Igreja local e ao mercado. Prosseguimos em direção a Porto Moniz, através do planalto mais alto da ilha: Paul da Serra, a 1500 metros de altitude, com passagem por Canhas, Ponta do Sol, Fanal e Santa do Porto Moniz. Chegada a Porto Moniz, vila piscatória que tem como principal atração as piscinas naturais, de rocha de lava, que o mar preenche com águas cristalinas. Após o almoço (bebidas selecionadas incluídas), atravessaremos a magnífica Costa Norte até São Vicente seguindo uma paragem no topo da Encumeada (de onde se avista o mar de ambos os lados). A última paragem será no miradouro do Cabo Girão que oferece uma vista de cortar a respiração sobre o mar, Câmara de Lobos e o Funchal. Chegada ao hotel. Pelas 19h30, saída do Hotel para jantar em restaurante típico, onde será servida a famosa “espetada madeirense” (bebidas selecionadas incluídas). Não é garantido o espetáculo de folclore). Regresso ao hotel pelas 22h30 e alojamento. Pequeno-almoço no hotel. Manhã livre para atividades de caráter pessoal. Em hora a combinar localmente, transporte para o aeroporto. Chegada e embarque no voo de regresso. Fim dos nossos serviços."
+            },
+            {
+              "header": "5º DIA - QUINTA - FUNCHAL / CIDADE DE ORIGEM",
+              "body": ""
+            }
+          ],
+          "included": "Voos TAP Lisboa / Funchal / Lisboa em classe “U+T” sem bagagem de porão, transporte aeroporto / hotel / aeroporto com assistência local, 4 noites de alojamento no hotel e regime indicados, taxas de aeroporto, segurança e combustível (valor indicativo: 52,72€, sujeitas a reconfirmação e alterações legais) e seguro de viagem.",
+          "notIncluded": "Outros que não mencionados no programa e extras de caráter pessoal. ECOTAXA: 2€ por pessoa (maiores de 13 anos) e por noite, até um máximo de 7 noites consecutivas (pagamento direto na unidade de alojamento). “Circuito À Descoberta da Madeira - Pensão Completa”: 1. Os tours do presente circuito são efetuados em serviço regular, partilhado com outros clientes. Os tours são efetuados em serviço exclusivo a partir de um mínimo de 6 participantes pagantes. 2. Os tours previstos no presente circuito estão sujeitos a eventuais alterações e/ou atrasos devido a imprevistos de última hora operacionais ou de força maior. 3. Os suplementos de entradas não estão incluídos."
+        }
       },
       "source": {
         "file": "00047071.pdf",
@@ -12826,11 +14225,30 @@
             "nights": 7,
             "board": "APA"
           }
-        ]
+        ],
+        "program": {
+          "days": [
+            {
+              "header": "1º DIA - CIDADE DE ORIGEM / PORTO SANTO",
+              "body": "Comparência no aeroporto duas horas antes da partida para as formalidades de embarque. Saída em voos TAP com destino ao Porto Santo. Chegada ao aeroporto de Porto Santo, acolhimento e transporte para o hotel escolhido. Alojamento."
+            },
+            {
+              "header": "2º DIA AO 7º DIA - PORTO SANTO",
+              "body": "A ilha de Porto Santo é rodeada por um imenso mar, límpido e cálido. A praia de areia fina tem qualidades terapêuticas. Sinta o ar puro da montanha ou relaxe no campo de golfe ou ténis. À noite, descubra a rica gastronomia da ilha, na qual o peixe ocupa lugar de destaque."
+            },
+            {
+              "header": "8º DIA - PORTO SANTO / CIDADE DE ORIGEM",
+              "body": "Após o pequeno-almoço e em horário a combinar localmente, transporte para o aeroporto de Porto Santo. Chegada e embarque no voo previsto, com destino a Lisboa. Chegada a Lisboa e fim dos nossos serviços."
+            }
+          ],
+          "included": "Voo Lisboa / Porto Santo / Lisboa ou Porto / Porto Santo / Porto em voos especial TAP e voos especial Air Horizont em classe “S” com direito a uma peça de 20 kg de bagagem de porão (uma peça até 6kg de bagagem de mão), transporte aeroporto / hotel / aeroporto com assistência local, 7 noites de alojamento no hotel e regime escolhido, taxas de aeroporto, segurança e combustível (valor indicativo: 95€, sujeitas a reconfirmação e alterações legais) e seguro de viagem.",
+          "notIncluded": "Outros que não mencionados no programa e extras de caráter pessoal. NOTAS: Preços válidos para um mínimo de 2 pessoas. VOOS ESPECIAIS TAP COM PARTIDAS DE LISBOA E DO PORTO DE 01/06/2026 A 05/10/2026 ÀS SEGUNDAS VOOS ESPECIAIS DA AIR HORIZONT PARTIDAS DO PORTO DE 01/06/2026 A 05/10/2026 ÀS SEGUNDAS"
+        }
       },
       "source": {
         "file": "00047071.pdf",
-        "hash": "ccc3849bf389"
+        "hash": "ccc3849bf389",
+        "page": 25
       }
     },
     {
@@ -13033,11 +14451,30 @@
             "nights": 2,
             "board": "SA"
           }
-        ]
+        ],
+        "program": {
+          "days": [
+            {
+              "header": "1º DIA - CIDADE DE ORIGEM / SÃO MIGUEL",
+              "body": "Comparência no aeroporto duas horas antes da partida para as formalidades de embarque. Saída com destino a Ponta Delgada. Chegada ao aeroporto de Ponta Delgada, acolhimento e transporte para o hotel escolhido. Alojamento."
+            },
+            {
+              "header": "2º DIA - SÃO MIGUEL",
+              "body": "Dia livre para explorar a ilha de São Miguel, a maior do arquipélago dos Açores, marcada pela paisagem verdejante e pelas maravilhosas lagoas das Sete Cidades, Furnas e Fogo. Não perca também o centenário Jardim do Parque Botânico Terra Nostra, as ribeiras de água quente do Vale das Furnas, a Vila da Lagoa, Nordeste, Caloura, Mosteiros e Povoação. Perca-se também pelas ruas da marítima Ponta Delgada, com os seus monumentos, museus e igrejas."
+            },
+            {
+              "header": "3º DIA - SÃO MIGUEL / CIDADE DE ORIGEM",
+              "body": "Após o pequeno-almoço e em horário a combinar localmente, transporte para o aeroporto de Ponta Delgada. Chegada e embarque no voo de regresso. Fim dos nossos serviços."
+            }
+          ],
+          "included": "Voos SATA Lisboa / Ponta Delgada / Lisboa em classe “X” sem bagagem de porão transporte aeroporto / hotel / aeroporto com assistência local, 2 noites de alojamento no hotel e regime escolhido, taxas de aeroportos, segurança e combustível (valor indicativo de 67€, sujeitas a reconfirmação e alterações legais) e seguro de viagem.",
+          "notIncluded": "Outros que não mencionados no programa e extras de caráter pessoal. Taxas Turísticas: Unidades Hoteleiras em Lagoa, Povoação, Vila Franca do Campo, Ribeira Grande, Ponta Delgada e Nordeste: 2,00€ por pessoa (maiores de 13 anos) e por noite, até um máximo de 3 noites consecutivas (pagamento direto na unidade de alojamento)."
+        }
       },
       "source": {
         "file": "00047077.pdf",
-        "hash": "11da84955cf3"
+        "hash": "11da84955cf3",
+        "page": 6
       }
     },
     {
@@ -13126,11 +14563,30 @@
             "nights": 2,
             "board": "APA"
           }
-        ]
+        ],
+        "program": {
+          "days": [
+            {
+              "header": "1º DIA - CIDADE DE ORIGEM / TERCEIRA",
+              "body": "Comparência no aeroporto duas horas antes da partida para as formalidades de embarque. Saída com destino à Terceira. Chegada ao aeroporto das Lajes, acolhimento e transporte para o hotel escolhido. Alojamento."
+            },
+            {
+              "header": "2º DIA - TERCEIRA",
+              "body": "Dia livre para explorar a Ilha da Terceira, marcada pelo centro histórico de Angra do Heroísmo, Cidade Património Mundial da Unesco. Os quadriculados campos verdes povoados de vacas leiteiras são um cartão postal desta ilha, marcada pela história e pelos monumentos, mas também pelas serras, pelos campos floridos, pelas peculiares piscinas naturais e pelos tradicionais “Impérios”, devotados ao culto do Espírito Santo."
+            },
+            {
+              "header": "3º DIA - TERCEIRA / CIDADE DE ORIGEM",
+              "body": "Após o pequeno-almoço e em horário a combinar localmente, transporte para o aeroporto das Lajes. Chegada e embarque no voo de regresso. Fim dos nossos serviços."
+            }
+          ],
+          "included": "Voos SATA Lisboa / Terceira / Lisboa em classe “O” sem bagagem de porão, transporte aeroporto/ hotel/aeroporto com assistência local, 2 noites de alojamento no hotel e regime escolhido, taxas de aeroportos, segurança e combustível (valor indicativo de 44,79€, sujeitas a reconfirmação e alterações legais) e seguro de viagem.",
+          "notIncluded": "Outros que não mencionados no programa e extras de caráter pessoal."
+        }
       },
       "source": {
         "file": "00047077.pdf",
-        "hash": "11da84955cf3"
+        "hash": "11da84955cf3",
+        "page": 17
       }
     }
   ]

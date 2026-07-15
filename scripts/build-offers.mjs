@@ -8,6 +8,7 @@
 import { readdirSync, writeFileSync } from "node:fs"
 import { resolve, join } from "node:path"
 import { analyze, regionOf } from "./lib/solferias.mjs"
+import { pdfPageText, parseProgram } from "./lib/verbatim.mjs"
 
 const PDF_DIR = resolve("partner-pdfs")
 const OUT = resolve("src/data/solferias-offers.json")
@@ -23,8 +24,10 @@ const push = (o) => { if (o.slug && !seen.has(o.slug)) { seen.add(o.slug); offer
 
 for (const f of pdfs) {
   let r
-  try { r = await analyze(join(PDF_DIR, f)) } catch (e) { console.log(`erro ${f}: ${e.message}`); continue }
+  const abs = join(PDF_DIR, f)
+  try { r = await analyze(abs) } catch (e) { console.log(`erro ${f}: ${e.message}`); continue }
   const { country, region, file, hash, overview } = r.meta
+  const verbatim = (page) => (page ? parseProgram(pdfPageText(abs, page)) : null)
 
   // ESTADIA — áreas com preço e hotéis (alta confiança estrutural)
   for (const a of r.areas) {
@@ -46,8 +49,8 @@ for (const f of pdfs) {
       hotels: a.hotels,
       nights: a.nights || null,
       boards: a.boards,
-      details: { overview, hotels: hotelsList },
-      source: { file, hash },
+      details: { overview, hotels: hotelsList, program: verbatim(a.programPage) },
+      source: { file, hash, page: a.programPage },
     })
   }
   // CIRCUITOS — só alta confiança
@@ -60,7 +63,7 @@ for (const f of pdfs) {
       country, region,
       nights: p.feat.nights || null,
       priceFrom: null,
-      details: { overview, routes: p.routes || [] },
+      details: { overview, routes: p.routes || [], program: verbatim(p.page) },
       source: { file, hash, page: p.page },
     })
   }

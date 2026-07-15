@@ -3,8 +3,8 @@ import Layout from "../../layouts/Layout.astro"
 import Header from "../../components/Header.astro"
 import Footer from "../../components/Footer.astro"
 import OfferCard from "../../components/OfferCard.astro"
-import { offers, offerImage, boardLabel } from "../../data/offers"
-import { Calendar, BedDouble, Utensils, MapPin, Phone, Plane, Check, Star } from "lucide-react"
+import { offers, offerImage, boardLabel, splitServices } from "../../data/offers"
+import { Calendar, BedDouble, Utensils, MapPin, Phone, Plane, Check, X, Star } from "lucide-react"
 
 export function getStaticPaths() {
   return offers.map((offer) => ({ params: { slug: offer.slug }, props: { offer } }))
@@ -12,16 +12,11 @@ export function getStaticPaths() {
 const { offer } = Astro.props
 const d = offer.details ?? {}
 const hotels = d.hotels ?? []
-const routes = d.routes ?? []
+const prog = d.program ?? null
+const days = prog?.days ?? []
+const included = splitServices(prog?.included)
+const notIncluded = splitServices(prog?.notIncluded)
 const related = offers.filter((o) => o.region === offer.region && o.slug !== offer.slug).slice(0, 3)
-
-const included = [
-  "Voos ida e volta com taxas incluídas",
-  "Transferes aeroporto / hotel / aeroporto",
-  offer.nights ? `${offer.nights} noites de alojamento no hotel escolhido` : "Alojamento no hotel escolhido",
-  offer.boards?.length ? `Regime de ${offer.boards.map(boardLabel).join(" / ")}` : null,
-  "Seguro de viagem",
-].filter(Boolean)
 
 const pageTitle = `${offer.destino}, ${offer.country} | GPTur`
 const desc = `${offer.destino} (${offer.country}) — ${offer.type === "circuito" ? "circuito" : "estadia"}${offer.priceFrom ? `, desde ${offer.priceFrom}€ por pessoa` : ""}. Reserve com a GPTur.`
@@ -63,41 +58,54 @@ const jsonLd = {
         <div>
           {d.overview && <p class="text-[0.98rem] leading-relaxed text-foreground/85">{d.overview}</p>}
 
-          <!-- Inclui -->
-          <div class="my-8 rounded-xl border border-border bg-cream p-6">
-            <h2 class="font-display text-2xl text-ink">O que inclui</h2>
-            <ul class="mt-4 grid gap-2.5 sm:grid-cols-2">
-              {included.map((item) => (
-                <li class="flex gap-2.5 text-sm text-foreground/80">
-                  <Check size={18} className="mt-0.5 shrink-0 text-primary" /><span>{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <!-- Circuito: itinerário -->
-          {offer.type === "circuito" && routes.length > 0 && (
+          <!-- Itinerário / programa (verbatim) -->
+          {days.length > 0 && (
             <div class="mt-10">
-              <h2 class="mb-6 font-display text-3xl text-ink">Itinerário</h2>
+              <h2 class="mb-6 font-display text-3xl text-ink">Programa</h2>
               <ol class="space-y-0">
-                {routes.map((r, i) => (
-                  <li class="relative flex gap-5 pb-7 last:pb-0">
-                    {i < routes.length - 1 && <span class="absolute left-[19px] top-10 h-full w-px bg-border" />}
+                {days.map((day, i) => (
+                  <li class="relative flex gap-5 pb-8 last:pb-0">
+                    {i < days.length - 1 && <span class="absolute left-[19px] top-11 h-full w-px bg-border" />}
                     <span class="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-teal-50 text-xs font-bold text-primary ring-1 ring-teal-200">{i + 1}</span>
-                    <div class="pt-1.5">
-                      <p class="eyebrow text-[0.62rem] text-gold-500">{r.day}</p>
-                      <h4 class="mt-0.5 font-display text-lg text-ink">{r.route}</h4>
+                    <div class="pt-1">
+                      <h4 class="font-display text-lg leading-snug text-ink">{day.header}</h4>
+                      {day.body && <p class="mt-1.5 text-sm leading-relaxed text-muted-foreground">{day.body}</p>}
                     </div>
                   </li>
                 ))}
               </ol>
-              <p class="mt-4 text-sm text-muted-foreground">Descrição detalhada de cada dia e datas de partida sob consulta.</p>
+            </div>
+          )}
+
+          <!-- Serviços incluídos / não incluídos (verbatim) -->
+          {(included.length > 0 || notIncluded.length > 0) && (
+            <div class="mt-10 grid gap-8 sm:grid-cols-2">
+              {included.length > 0 && (
+                <div>
+                  <h3 class="font-display text-xl text-ink">Serviços incluídos</h3>
+                  <ul class="mt-4 space-y-2.5">
+                    {included.map((s) => (
+                      <li class="flex gap-2.5 text-sm text-foreground/80"><Check size={17} className="mt-0.5 shrink-0 text-primary" /><span>{s}</span></li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+              {notIncluded.length > 0 && (
+                <div>
+                  <h3 class="font-display text-xl text-ink">Não incluído</h3>
+                  <ul class="mt-4 space-y-2.5">
+                    {notIncluded.map((s) => (
+                      <li class="flex gap-2.5 text-sm text-muted-foreground"><X size={17} className="mt-0.5 shrink-0 text-muted-foreground" /><span>{s}</span></li>
+                    ))}
+                  </ul>
+                </div>
+              )}
             </div>
           )}
 
           <!-- Estadia: tabela de hotéis -->
           {offer.type === "estadia" && hotels.length > 0 && (
-            <div class="mt-10">
+            <div class="mt-12">
               <h2 class="mb-1 font-display text-3xl text-ink">Hotéis à escolha</h2>
               <p class="mb-5 text-sm text-muted-foreground">Preços indicativos por pessoa em quarto duplo.</p>
               <div class="overflow-hidden rounded-xl border border-border">
@@ -129,7 +137,7 @@ const jsonLd = {
           )}
 
           <p class="mt-8 rounded-lg border border-border bg-cream p-5 text-sm text-muted-foreground">
-            Preços e disponibilidade por data sob consulta — a nossa equipa envia-lhe a proposta completa à medida.
+            Datas de partida e disponibilidade sob consulta — a nossa equipa envia-lhe a proposta completa à medida.
           </p>
         </div>
 

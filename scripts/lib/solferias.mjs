@@ -172,7 +172,7 @@ export async function analyze(absPath) {
   let area = null, exc = 0, rent = 0, overview = null
   const bucket = () => {
     const key = area || "(sem secção)"
-    if (!areas.has(key)) areas.set(key, { name: key, hotels: 0, prices: [], boards: new Set(), nights: null, list: [] })
+    if (!areas.has(key)) areas.set(key, { name: key, hotels: 0, prices: [], boards: new Set(), nights: null, list: [], programPage: null })
     return areas.get(key)
   }
   for (const { p, c } of seq) {
@@ -181,7 +181,7 @@ export async function analyze(absPath) {
     else if (c.kind === "guia" && !overview) overview = cleanGuide(p.text, country)
     else if (c.kind === "programa") {
       programs.push({ page: p.n, area, type: c.type, conf: c.conf, boosted: !!c.boosted, feat: c.feat, routes: c.type === "circuito" ? dayRoutes(p.text) : [] })
-      if (c.type === "estadia") { const b = bucket(); if (!b.nights) b.nights = c.nights }
+      if (c.type === "estadia") { const b = bucket(); if (!b.nights) b.nights = c.nights; if (!b.programPage) b.programPage = p.n }
     } else if (c.kind === "hotéis") {
       const b = bucket(); b.hotels += c.rows; b.prices.push(...c.prices); c.boards.forEach((x) => b.boards.add(x))
       b.list.push(...hotelRows(p.text))
@@ -195,6 +195,7 @@ export async function analyze(absPath) {
     priceTo: a.prices.length ? Math.max(...a.prices) : null,
     boards: [...a.boards],
     list: a.list.filter((h) => h.name && h.name.length > 3),
+    programPage: a.programPage,
   }))
 
   return {

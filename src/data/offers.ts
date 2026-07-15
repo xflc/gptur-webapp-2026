@@ -7,11 +7,28 @@ export interface HotelRow {
   nights: number | null
   board: string | null
 }
+export interface ProgramDay {
+  header: string
+  body: string
+}
+export interface OfferProgram {
+  days: ProgramDay[]
+  included: string
+  notIncluded: string
+}
 export interface OfferDetails {
   overview?: string | null
   hotels?: HotelRow[]
   routes?: { day: string; route: string }[]
+  program?: OfferProgram | null
 }
+
+// divide um texto de serviços (separado por ; ou .) em itens de lista
+export const splitServices = (s?: string) =>
+  (s || "")
+    .split(/;|(?<=\.)\s+(?=[A-ZÀ-Ú])/)
+    .map((x) => x.replace(/^[\s;.]+|[\s;]+$/g, "").trim())
+    .filter((x) => x.length > 2)
 export interface Offer {
   slug: string
   type: "estadia" | "circuito"
