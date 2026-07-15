@@ -1,6 +1,6 @@
 ---
 import TripFinder from "./TripFinder.tsx"
-import { regions, months } from "../data/trips"
+import { offerRegions } from "../data/offers"
 ---
 
 <section id="identidade" class="bg-white py-20">
@@ -51,7 +51,7 @@ import { regions, months } from "../data/trips"
     </div>
 
     <div class="lg:pt-2">
-      <TripFinder client:load regions={regions} months={months} />
+      <TripFinder client:load regions={offerRegions} />
     </div>
   </div>
 </section>

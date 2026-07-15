@@ -31,7 +31,7 @@ import { offers, offerRegions } from "../data/offers"
 
         <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3" id="grid">
           {offers.map((o) => (
-            <div class="offer-item" data-region={o.region}>
+            <div class="offer-item" data-region={o.region} data-type={o.type} data-price={o.priceFrom ?? ""}>
               <OfferCard offer={o} />
             </div>
           ))}
@@ -49,18 +49,37 @@ import { offers, offerRegions } from "../data/offers"
   const empty = document.getElementById("empty")
   const on = ["border-primary", "bg-primary", "text-primary-foreground"]
   const off = ["border-border", "text-foreground/80"]
-  chips.forEach((chip) =>
-    chip.addEventListener("click", () => {
-      chips.forEach((c) => { c.classList.remove(...on); c.classList.add(...off) })
-      chip.classList.remove(...off); chip.classList.add(...on)
-      const r = chip.dataset.region
-      let vis = 0
-      items.forEach((it) => {
-        const m = r === "all" || it.dataset.region === r
-        it.classList.toggle("hidden", !m)
-        if (m) vis++
-      })
-      empty?.classList.toggle("hidden", vis > 0)
+
+  // filtros vindos do finder da homepage (?regiao=&tipo=&max=)
+  const params = new URLSearchParams(location.search)
+  let region = params.get("regiao") || "all"
+  const type = params.get("tipo") || ""
+  const max = Number(params.get("max")) || Infinity
+
+  function apply() {
+    chips.forEach((c) => {
+      const active = c.dataset.region === region
+      c.classList.toggle("border-primary", active)
+      c.classList.toggle("bg-primary", active)
+      c.classList.toggle("text-primary-foreground", active)
+      c.classList.toggle("border-border", !active)
+      c.classList.toggle("text-foreground/80", !active)
     })
+    let vis = 0
+    items.forEach((it) => {
+      const price = Number(it.dataset.price) || 0
+      const m =
+        (region === "all" || it.dataset.region === region) &&
+        (!type || it.dataset.type === type) &&
+        (max === Infinity || (price > 0 && price <= max))
+      it.classList.toggle("hidden", !m)
+      if (m) vis++
+    })
+    empty?.classList.toggle("hidden", vis > 0)
+  }
+
+  chips.forEach((chip) =>
+    chip.addEventListener("click", () => { region = chip.dataset.region!; apply() })
   )
+  apply() // aplica filtros iniciais (do finder ou nenhum)
 </script>

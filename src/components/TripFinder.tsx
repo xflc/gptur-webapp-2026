@@ -4,24 +4,23 @@ import { Button } from "@/components/ui/button"
 
 interface Props {
   regions: string[]
-  months: string[]
 }
 
 const selectClass =
   "h-11 w-full rounded-md border border-input bg-white px-3 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
 
-export default function TripFinder({ regions, months }: Props) {
+export default function TripFinder({ regions }: Props) {
   const [region, setRegion] = useState("")
-  const [month, setMonth] = useState("")
-  const [budget, setBudget] = useState(8000)
+  const [type, setType] = useState("")
+  const [budget, setBudget] = useState(6000)
 
   const submit = (e: React.FormEvent) => {
     e.preventDefault()
     const params = new URLSearchParams()
     if (region) params.set("regiao", region)
-    if (month) params.set("mes", month)
-    params.set("orcamento", String(budget))
-    window.location.hash = `ofertas?${params.toString()}`
+    if (type) params.set("tipo", type)
+    if (budget < 12000) params.set("max", String(budget))
+    window.location.href = `/catalogo?${params.toString()}`
   }
 
   return (
@@ -32,7 +31,7 @@ export default function TripFinder({ regions, months }: Props) {
     >
       <h3 className="font-display text-2xl text-primary">Encontre aqui a sua viagem</h3>
       <p className="mt-1 text-sm text-muted-foreground">
-        Filtre por destino, época e orçamento.
+        Filtre por destino, tipo e orçamento.
       </p>
 
       <div className="mt-5 space-y-4">
@@ -47,19 +46,18 @@ export default function TripFinder({ regions, months }: Props) {
         </label>
 
         <label className="block">
-          <span className="eyebrow mb-1.5 block text-[0.65rem] text-muted-foreground">Mês da viagem</span>
-          <select className={selectClass} value={month} onChange={(e) => setMonth(e.target.value)}>
-            <option value="">Qualquer mês</option>
-            {months.map((m) => (
-              <option key={m} value={m}>{m}</option>
-            ))}
+          <span className="eyebrow mb-1.5 block text-[0.65rem] text-muted-foreground">Tipo de viagem</span>
+          <select className={selectClass} value={type} onChange={(e) => setType(e.target.value)}>
+            <option value="">Todas</option>
+            <option value="estadia">Estadia / praia</option>
+            <option value="circuito">Circuito</option>
           </select>
         </label>
 
         <label className="block">
           <span className="eyebrow mb-1.5 flex items-center justify-between text-[0.65rem] text-muted-foreground">
             <span>Orçamento até</span>
-            <span className="text-primary">{budget.toLocaleString("pt-PT")} €</span>
+            <span className="text-primary">{budget >= 12000 ? "sem limite" : `${budget.toLocaleString("pt-PT")} €`}</span>
           </span>
           <input
             type="range"
