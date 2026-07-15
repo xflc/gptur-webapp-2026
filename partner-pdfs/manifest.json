@@ -1,0 +1,218 @@
+{
+  "00047251.pdf": {
+    "region": "América",
+    "countries": [
+      "Antígua",
+      "Aruba",
+      "Bahamas",
+      "Barbados",
+      "Colômbia",
+      "Costa Rica",
+      "Curaçao",
+      "Grenada",
+      "Jamaica",
+      "México",
+      "República Dominicana",
+      "Saint Vicent",
+      "Santa Lúcia"
+    ],
+    "primaryCountry": "América"
+  },
+  "00047077.pdf": {
+    "region": "Portugal",
+    "countries": [
+      "Faial",
+      "Pico",
+      "Santa Maria",
+      "São Jorge",
+      "São Miguel",
+      "Terceira"
+    ],
+    "primaryCountry": "Portugal"
+  },
+  "00047085.pdf": {
+    "region": "África",
+    "countries": [
+      "Egito"
+    ],
+    "primaryCountry": "Egito"
+  },
+  "00047089.pdf": {
+    "region": "África",
+    "countries": [
+      "Gâmbia",
+      "Moçambique",
+      "Quénia",
+      "Saïdia",
+      "São Tomé e Príncipe",
+      "Senegal",
+      "Tanzânia",
+      "Zanzibar"
+    ],
+    "primaryCountry": "África"
+  },
+  "00047078.pdf": {
+    "region": "África",
+    "countries": [
+      "Marrocos"
+    ],
+    "primaryCountry": "Marrocos"
+  },
+  "00047087.pdf": {
+    "region": "África",
+    "countries": [
+      "Tunísia"
+    ],
+    "primaryCountry": "Tunísia"
+  },
+  "00047318.pdf": {
+    "region": "Ásia",
+    "countries": [
+      "China",
+      "Dubai",
+      "Indónesia",
+      "Japão",
+      "Malásia",
+      "Omã",
+      "Qatar",
+      "Singapura",
+      "Sri Lanka",
+      "Tailândia",
+      "Turquia",
+      "Vietname"
+    ],
+    "primaryCountry": "Ásia"
+  },
+  "00047103.pdf": {
+    "region": "América",
+    "countries": [
+      "Belo Horizonte",
+      "Florianópolis",
+      "Fortaleza",
+      "João Pessoa",
+      "Maceió",
+      "Manaus",
+      "Natal",
+      "Porto Seguro",
+      "Recife",
+      "Rio de Janeiro",
+      "Salvador",
+      "São Luis"
+    ],
+    "primaryCountry": "América"
+  },
+  "00047091.pdf": {
+    "region": "África",
+    "countries": [
+      "Ilha da Boavista",
+      "Ilha de S. Vicente",
+      "Ilha de Santiago",
+      "Ilha do Sal"
+    ],
+    "primaryCountry": "África"
+  },
+  "00047074.pdf": {
+    "region": "Parques Temáticos",
+    "countries": [
+      "Disneyland® Paris"
+    ],
+    "primaryCountry": "Disneyland® Paris"
+  },
+  "00047308.pdf": {
+    "region": "Europa",
+    "countries": [
+      "Futuroscope"
+    ],
+    "primaryCountry": "Futuroscope"
+  },
+  "00047083.pdf": {
+    "region": "Europa",
+    "countries": [
+      "Grécia"
+    ],
+    "primaryCountry": "Grécia"
+  },
+  "00047234.pdf": {
+    "region": "Europa",
+    "countries": [
+      "Isla Mágica®"
+    ],
+    "primaryCountry": "Isla Mágica®"
+  },
+  "00047081.pdf": {
+    "region": "Europa",
+    "countries": [
+      "Malta"
+    ],
+    "primaryCountry": "Malta"
+  },
+  "00047278.pdf": {
+    "region": "Europa",
+    "countries": [
+      "Parc Asterix"
+    ],
+    "primaryCountry": "Parc Asterix"
+  },
+  "00044197.pdf": {
+    "region": "Europa",
+    "countries": [
+      "Parque Warner™"
+    ],
+    "primaryCountry": "Parque Warner™"
+  },
+  "00047073.pdf": {
+    "region": "Europa",
+    "countries": [
+      "Formentera",
+      "Ibiza",
+      "Maiorca",
+      "Menorca"
+    ],
+    "primaryCountry": "Europa"
+  },
+  "00047319.pdf": {
+    "region": "Europa",
+    "countries": [
+      "Gran Canária"
+    ],
+    "primaryCountry": "Gran Canária"
+  },
+  "00047116.pdf": {
+    "region": "Ilhas Idílicas",
+    "countries": [
+      "Madagáscar",
+      "Maldivas",
+      "Maurícia",
+      "Polinésia Francesa",
+      "Seicheles"
+    ],
+    "primaryCountry": "Ilhas Idílicas"
+  },
+  "00047071.pdf": {
+    "region": "Portugal",
+    "countries": [
+      "Funchal",
+      "Porto Santo"
+    ],
+    "primaryCountry": "Portugal"
+  },
+  "00047233.pdf": {
+    "region": "Portugal",
+    "countries": [
+      "Alentejo",
+      "Centro",
+      "Lisboa",
+      "Norte",
+      "Porto",
+      "Vale do Tejo"
+    ],
+    "primaryCountry": "Portugal"
+  },
+  "00044569.pdf": {
+    "region": "Portugal",
+    "countries": [
+      "Algarve"
+    ],
+    "primaryCountry": "Algarve"
+  }
+}

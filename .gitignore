@@ -25,5 +25,5 @@ dist-ssr
 *.sln
 *.sw?
 
-# Partner source PDFs (local only)
-partner-pdfs/
+# Partner source PDFs (local only) — but keep the manifest tracked
+partner-pdfs/*.pdf
