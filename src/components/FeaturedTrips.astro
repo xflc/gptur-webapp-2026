@@ -1,26 +1,32 @@
 ---
-import { trips } from "../data/trips"
-import TripCard from "./TripCard.astro"
+import { offers } from "../data/offers"
+import OfferCard from "./OfferCard.astro"
 
-const featured = trips.filter((t) => t.featured)
+// destaque: uma seleção variada por região (até 2 por região), com preço
+const featured = []
+for (const o of offers) {
+  if (!o.priceFrom) continue
+  if (featured.filter((x) => x.region === o.region).length < 2) featured.push(o)
+  if (featured.length >= 9) break
+}
 ---
 
 <section id="ofertas" class="bg-cream py-20">
   <div class="mx-auto max-w-7xl px-5 lg:px-8">
     <div class="mb-10 flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end">
       <div>
-        <span class="eyebrow text-gold-500">Ofertas e sugestões</span>
+        <span class="eyebrow text-gold-500">Ofertas em destaque</span>
         <h2 class="mt-2 font-display text-4xl text-ink">Viagens em destaque</h2>
       </div>
       <a
-        href="#contactos"
+        href="/catalogo"
         class="eyebrow border-b border-primary pb-1 text-[0.7rem] text-primary transition-colors hover:border-teal-800 hover:text-teal-800"
-        >Peça a sua viagem à medida →</a
+        >Ver catálogo completo →</a
       >
     </div>
 
     <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-      {featured.map((trip) => <TripCard trip={trip} />)}
+      {featured.map((offer) => <OfferCard offer={offer} />)}
     </div>
   </div>
 </section>

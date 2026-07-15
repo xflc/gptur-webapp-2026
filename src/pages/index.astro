@@ -9,13 +9,20 @@ import Testimonials from "../components/Testimonials.astro"
 import Newsletter from "../components/Newsletter.astro"
 import DestinationsIndex from "../components/DestinationsIndex.astro"
 import Footer from "../components/Footer.astro"
-import { trips } from "../data/trips"
+import { offers, offerImage } from "../data/offers"
 
-const slides = trips.slice(0, 4).map((t) => ({
-  title: t.title,
-  dates: t.dates,
-  image: t.image,
-  tagline: t.tagline,
+// slides do hero: ofertas reais com preço, uma por região, com boa descrição
+const heroPick = []
+for (const o of offers) {
+  if (!o.priceFrom) continue
+  if (!heroPick.some((x) => x.region === o.region)) heroPick.push(o)
+  if (heroPick.length >= 5) break
+}
+const slides = heroPick.map((o) => ({
+  title: o.destino,
+  dates: [o.country, o.nights ? `${o.nights} noites` : null, o.priceFrom ? `desde ${o.priceFrom}€` : null].filter(Boolean).join(" · "),
+  image: offerImage(o.slug),
+  tagline: (o.details?.overview || `${o.type === "circuito" ? "Circuito" : "Estadia"} em ${o.destino}, ${o.country}.`).slice(0, 120),
 }))
 ---
 
