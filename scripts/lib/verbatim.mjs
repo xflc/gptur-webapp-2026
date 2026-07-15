@@ -48,9 +48,13 @@ export function parseProgram(raw) {
     cur.body.push(l)
   }
 
+  return finalize(days, included, notIncluded)
+}
+
+const dayNum = (h) => { const m = h.match(/(\d{1,2})/); return m ? +m[1] : 999 }
+
+function finalize(days, included, notIncluded) {
   const clean = (arr) => arr.join(" ").replace(/\s+/g, " ").trim()
-  // dedupe + ordena por número do dia (layouts multi-coluna baralham a ordem)
-  const dayNum = (h) => { const m = h.match(/(\d{1,2})/); return m ? +m[1] : 999 }
   const byNum = new Map()
   for (const d of days) {
     const n = dayNum(d.header)
@@ -62,4 +66,21 @@ export function parseProgram(raw) {
     included: clean(included),
     notIncluded: clean(notIncluded),
   }
+}
+
+// Extrai o programa completo, estendendo para a página seguinte quando o
+// circuito continua (dia máximo da 1ª página < total "N Dias"), e limita
+// pelos dias reais do programa (evita puxar o programa seguinte).
+export function extractProgram(file, page) {
+  if (!page) return null
+  const t1 = pdfPageText(file, page, 0)
+  const dias = (t1.match(/(\d{1,2})\s*Dias/i) || [])[1]
+  let prog = parseProgram(t1)
+  const maxLead = (p) => Math.max(0, ...p.days.map((d) => dayNum(d.header)).filter((n) => n < 900))
+  if (dias && maxLead(prog) < +dias) {
+    const prog2 = parseProgram(pdfPageText(file, page, 1))
+    if (prog2.days.length > prog.days.length) prog = prog2
+  }
+  if (dias) prog.days = prog.days.filter((d) => dayNum(d.header) <= +dias)
+  return prog
 }

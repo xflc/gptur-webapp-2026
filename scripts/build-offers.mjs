@@ -8,7 +8,7 @@
 import { readdirSync, writeFileSync } from "node:fs"
 import { resolve, join } from "node:path"
 import { analyze, regionOf } from "./lib/solferias.mjs"
-import { pdfPageText, parseProgram } from "./lib/verbatim.mjs"
+import { extractProgram } from "./lib/verbatim.mjs"
 
 const PDF_DIR = resolve("partner-pdfs")
 const OUT = resolve("src/data/solferias-offers.json")
@@ -27,7 +27,7 @@ for (const f of pdfs) {
   const abs = join(PDF_DIR, f)
   try { r = await analyze(abs) } catch (e) { console.log(`erro ${f}: ${e.message}`); continue }
   const { country, region, file, hash, overview } = r.meta
-  const verbatim = (page) => (page ? parseProgram(pdfPageText(abs, page)) : null)
+  const verbatim = (page) => extractProgram(abs, page)
 
   // ESTADIA — áreas com preço e hotéis (alta confiança estrutural)
   for (const a of r.areas) {
