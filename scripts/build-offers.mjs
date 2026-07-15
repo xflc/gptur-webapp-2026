@@ -5,7 +5,7 @@
  * circuitos com preço) e escreve src/data/solferias-offers.json.
  * Uso: npm run build:offers
  */
-import { readdirSync, writeFileSync } from "node:fs"
+import { readdirSync, writeFileSync, readFileSync } from "node:fs"
 import { resolve, join } from "node:path"
 import { analyze, regionOf } from "./lib/solferias.mjs"
 import { extractProgram } from "./lib/verbatim.mjs"
@@ -18,6 +18,8 @@ const slugify = (s) =>
     .replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "").slice(0, 60)
 
 const pdfs = readdirSync(PDF_DIR).filter((f) => f.toLowerCase().endsWith(".pdf"))
+let manifest = {}
+try { manifest = JSON.parse(readFileSync(join(PDF_DIR, "manifest.json"), "utf8")) } catch { console.log("(sem manifest.json — usa país/região do parse do PDF)") }
 const offers = []
 const seen = new Set()
 const push = (o) => { if (o.slug && !seen.has(o.slug)) { seen.add(o.slug); offers.push(o) } }
@@ -26,7 +28,11 @@ for (const f of pdfs) {
   let r
   const abs = join(PDF_DIR, f)
   try { r = await analyze(abs) } catch (e) { console.log(`erro ${f}: ${e.message}`); continue }
-  const { country, region, file, hash, overview } = r.meta
+  const { file, hash, overview } = r.meta
+  // país/região do manifesto (fonte autoritativa: o site), com fallback ao parse do PDF
+  const man = manifest[file]
+  const region = man?.region || r.meta.region
+  const country = man?.primaryCountry || r.meta.country
   const verbatim = (page) => extractProgram(abs, page)
 
   // ESTADIA — áreas com preço e hotéis (alta confiança estrutural)
