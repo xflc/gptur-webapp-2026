@@ -1,5 +1,5 @@
 ---
-import { MapPin, Phone, Mail, Clock } from "lucide-react"
+import { MapPin, Phone, Smartphone, Mail, Clock } from "lucide-react"
 
 const destinos = [
   { label: "China Clássica", href: "/viagens/china-classica" },
@@ -41,7 +41,15 @@ const info = [
         <div class="mt-4 space-y-3 text-sm text-white/60">
           <p class="flex items-start gap-2">
             <Phone size={15} className="mt-0.5 shrink-0 text-gold-300" />
-            <span>Fixo: +351 217 530 021<br />Móvel: +351 913 813 584 · +351 912 283 835</span>
+            <span>+351 217 530 021</span>
+          </p>
+          <p class="flex items-start gap-2">
+            <Smartphone size={15} className="mt-0.5 shrink-0 text-gold-300" />
+            <span>+351 913 813 584</span>
+          </p>
+          <p class="flex items-start gap-2">
+            <Smartphone size={15} className="mt-0.5 shrink-0 text-gold-300" />
+            <span>+351 912 283 835</span>
           </p>
           <p class="flex items-start gap-2">
             <Mail size={15} className="mt-0.5 shrink-0 text-gold-300" />

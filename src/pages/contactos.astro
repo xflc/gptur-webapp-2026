@@ -3,7 +3,7 @@ import Layout from "../layouts/Layout.astro"
 import Header from "../components/Header.astro"
 import Footer from "../components/Footer.astro"
 import PageBanner from "../components/PageBanner.astro"
-import { Phone, Mail, MapPin, Clock } from "lucide-react"
+import { Phone, Smartphone, Mail, MapPin, Clock } from "lucide-react"
 ---
 
 <Layout
@@ -28,16 +28,16 @@ import { Phone, Mail, MapPin, Clock } from "lucide-react"
             <div class="mt-3 space-y-3">
               <a href="tel:+351217530021" class="flex items-center gap-3 text-foreground hover:text-primary">
                 <Phone size={18} className="shrink-0 text-primary" />
-                <span><strong>Fixo:</strong> +351 217 530 021</span>
+                <span><strong class="text-muted-foreground">Fixo</strong> · +351 217 530 021</span>
               </a>
-              <p class="flex items-center gap-3 text-foreground">
-                <Phone size={18} className="shrink-0 text-primary" />
-                <span>
-                  <strong>Móvel:</strong>
-                  <a href="tel:+351913813584" class="hover:text-primary">+351 913 813 584</a> ·
-                  <a href="tel:+351912283835" class="hover:text-primary">+351 912 283 835</a>
-                </span>
-              </p>
+              <a href="tel:+351913813584" class="flex items-center gap-3 text-foreground hover:text-primary">
+                <Smartphone size={18} className="shrink-0 text-primary" />
+                <span>+351 913 813 584</span>
+              </a>
+              <a href="tel:+351912283835" class="flex items-center gap-3 text-foreground hover:text-primary">
+                <Smartphone size={18} className="shrink-0 text-primary" />
+                <span>+351 912 283 835</span>
+              </a>
             </div>
           </div>
 
