@@ -30,14 +30,14 @@ import { Phone, Mail, MapPin, Clock } from "lucide-react"
                 <Phone size={18} className="shrink-0 text-primary" />
                 <span><strong>Fixo:</strong> +351 217 530 021</span>
               </a>
-              <a href="tel:+351913813584" class="flex items-center gap-3 text-foreground hover:text-primary">
+              <p class="flex items-center gap-3 text-foreground">
                 <Phone size={18} className="shrink-0 text-primary" />
-                <span><strong>Móvel:</strong> +351 913 813 584</span>
-              </a>
-              <a href="tel:+351912283835" class="flex items-center gap-3 text-foreground hover:text-primary">
-                <Phone size={18} className="shrink-0 text-primary" />
-                <span><strong>Móvel:</strong> +351 912 283 835</span>
-              </a>
+                <span>
+                  <strong>Móvel:</strong>
+                  <a href="tel:+351913813584" class="hover:text-primary">+351 913 813 584</a> ·
+                  <a href="tel:+351912283835" class="hover:text-primary">+351 912 283 835</a>
+                </span>
+              </p>
             </div>
           </div>
 
