@@ -1,0 +1,37 @@
+---
+import Layout from "../layouts/Layout.astro"
+import Header from "../components/Header.astro"
+import Footer from "../components/Footer.astro"
+import PageBanner from "../components/PageBanner.astro"
+import TripCard from "../components/TripCard.astro"
+import { trips } from "../data/trips"
+---
+
+<Layout
+  title="Arquivo | GPTur · Companhia das Viagens"
+  description="Arquivo de programas — exemplos e circuitos culturais anteriores da GPTur."
+>
+  <Header />
+  <main>
+    <PageBanner
+      eyebrow="Programas anteriores"
+      title="Arquivo"
+      subtitle="Uma amostra de circuitos culturais de edições anteriores, guardada para referência e inspiração. Para as viagens à venda, consulte o catálogo."
+      crumb="Arquivo"
+    />
+
+    <section class="bg-white py-12">
+      <div class="mx-auto max-w-7xl px-5 lg:px-8">
+        <div class="mb-8 rounded-lg border border-border bg-cream p-4 text-sm text-muted-foreground">
+          Estes programas são <strong class="text-foreground">exemplos de arquivo</strong> e podem não estar
+          disponíveis para reserva. Para viagens atuais, veja o
+          <a href="/catalogo" class="text-primary underline-offset-2 hover:underline">Catálogo de Viagens</a>.
+        </div>
+        <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {trips.map((trip) => <TripCard trip={trip} />)}
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>
