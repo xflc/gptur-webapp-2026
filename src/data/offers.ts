@@ -49,7 +49,7 @@ export const offersGeneratedAt: string = data.generatedAt
 
 export const offerRegions: string[] = [...new Set(offers.map((o) => o.region))].sort()
 
-export const offerImage = (seed: string) => `https://picsum.photos/seed/sf-${seed}/1200/800`
+export const offerImage = (slug: string) => `/destinos/${slug}.jpg`
 
 const BOARD: Record<string, string> = {
   SA: "Só Alojamento",
