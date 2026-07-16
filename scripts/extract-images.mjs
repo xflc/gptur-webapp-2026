@@ -35,7 +35,8 @@ async function bestImageInRange(pdf, page) {
     try {
       const m = await sharp(p).metadata()
       if (!m.width || !m.height) continue
-      if (m.width < 1000 || m.width < m.height * 1.2) continue // grande + horizontal
+      // fotos de destino são full-bleed grandes (~1900px+); fotos de hotel ≤~1024px → excluir
+      if (m.width < 1400 || m.width < m.height * 1.2) continue
       const area = m.width * m.height
       if (!best || area > best.area) best = { path: p, area }
     } catch {}

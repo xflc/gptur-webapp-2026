@@ -88,9 +88,9 @@
     "source": "00047085.pdf"
   },
   "africa-mocambique": {
-    "by": "Solférias",
-    "license": "© Solférias (brochura)",
-    "source": "00047089.pdf"
+    "by": "Rod Waddington",
+    "license": "CC BY-SA 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Mozambique_Channel_(27725917143).jpg"
   },
   "tunisia-monastir": {
     "by": "Solférias",
@@ -98,9 +98,9 @@
     "source": "00047087.pdf"
   },
   "africa-quenia": {
-    "by": "Solférias",
-    "license": "© Solférias (brochura)",
-    "source": "00047089.pdf"
+    "by": "TTTNIS",
+    "license": "CC0",
+    "source": "https://commons.wikimedia.org/wiki/File:1971_Datsun_240Z_East_African_Safari_Rally.jpg"
   },
   "marrocos-saidia": {
     "by": "Solférias",
@@ -184,8 +184,9 @@
   },
   "america-fortaleza-circuito-13": {
     "by": "Solférias",
-    "license": "© Solférias (parceiro)",
-    "source": "brochura 00047103.pdf p.13"
+    "license": "© Solférias (brochura)",
+    "source": "00047103.pdf",
+    "reusedFrom": "america-fortaleza"
   },
   "america-joao-pessoa": {
     "by": "Solférias",
@@ -211,12 +212,13 @@
     "by": "Solférias",
     "license": "© Solférias (brochura)",
     "source": "00047103.pdf",
-    "reusedFrom": "america-rio-de-janeiro-circuito-57"
+    "reusedFrom": "america-rio-de-janeiro-circuito-59"
   },
   "america-rio-de-janeiro-circuito-57": {
     "by": "Solférias",
     "license": "© Solférias (brochura)",
-    "source": "00047103.pdf"
+    "source": "00047103.pdf",
+    "reusedFrom": "america-rio-de-janeiro-circuito-59"
   },
   "america-rio-de-janeiro-circuito-59": {
     "by": "Solférias",
@@ -229,9 +231,9 @@
     "source": "00047103.pdf"
   },
   "asia-abu-dhabi": {
-    "by": "Solférias",
-    "license": "© Solférias (brochura)",
-    "source": "00047318.pdf"
+    "by": "Guilhem Vellut from Annecy, France",
+    "license": "CC BY 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Sheikh_Zayed_Grand_Mosque_@_Abu_Dhabi_(15856602738).jpg"
   },
   "asia-dubai": {
     "by": "Diliff",
@@ -239,19 +241,19 @@
     "source": "https://commons.wikimedia.org/wiki/File:Hong_Kong_Skyline_Panorama_-_Dec_2008.jpg"
   },
   "asia-oma": {
-    "by": "Solférias",
-    "license": "© Solférias (brochura)",
-    "source": "00047318.pdf"
+    "by": "Reda Kerbush",
+    "license": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Al_Khanjar,_Bait_al_Zubair_Museum,_Oman_1.jpg"
   },
   "asia-qatar": {
-    "by": "Solférias",
-    "license": "© Solférias (brochura)",
-    "source": "00047318.pdf"
+    "by": "Sebbe xy",
+    "license": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Doha_skyline0001.JPG"
   },
   "asia-ras-al-khaimah": {
-    "by": "Solférias",
-    "license": "© Solférias (brochura)",
-    "source": "00047318.pdf"
+    "by": "Didier Descouens",
+    "license": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Limule(dD).jpg"
   },
   "grecia-atenas": {
     "by": "Solférias",
@@ -259,9 +261,9 @@
     "source": "00047083.pdf"
   },
   "grecia-especial-cruzeiros-circuito-28": {
-    "by": "Solférias",
-    "license": "© Solférias (brochura)",
-    "source": "00047083.pdf"
+    "by": "C messier",
+    "license": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:%CE%9F%CE%AF%CE%B1_0379-Pano.jpg"
   },
   "europa-formentera": {
     "by": "Solférias",
@@ -309,9 +311,9 @@
     "source": "00047319.pdf"
   },
   "ilhas-idilicas-mauricia": {
-    "by": "Solférias",
-    "license": "© Solférias (brochura)",
-    "source": "00047116.pdf"
+    "by": "MauriceBer",
+    "license": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:L%27%C3%8Ele_Coco_Beach_in_Cargados_Carajos_Saint_Brandon_Mauritius,_one_of_the_Thirteen_Islands_of_Raphael_Fishing_Company.jpg"
   },
   "ilhas-idilicas-play-madagascar": {
     "by": "Rod Waddington",
@@ -324,9 +326,9 @@
     "source": "https://commons.wikimedia.org/wiki/File:Bell-Boeing_MV-22B_168339_HMX-1_FDK_MD1.jpg"
   },
   "ilhas-idilicas-play-seicheles": {
-    "by": "Solférias",
-    "license": "© Solférias (brochura)",
-    "source": "00047116.pdf"
+    "by": "flowcomm",
+    "license": "CC BY 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Seychelles_-_23507452490.jpg"
   },
   "algarve-de-alvor-a-portimao-13": {
     "by": "Notafly",
@@ -341,12 +343,14 @@
   "portugal-faial-circuito-34": {
     "by": "Solférias",
     "license": "© Solférias (brochura)",
-    "source": "00047077.pdf"
+    "source": "00047077.pdf",
+    "reusedFrom": "portugal-faial"
   },
   "portugal-madeira": {
     "by": "Solférias",
     "license": "© Solférias (brochura)",
-    "source": "00047071.pdf"
+    "source": "00047071.pdf",
+    "reusedFrom": "portugal-madeira-circuito-16"
   },
   "portugal-madeira-circuito-16": {
     "by": "Solférias",
@@ -356,7 +360,8 @@
   "portugal-madeira-circuito-17": {
     "by": "Solférias",
     "license": "© Solférias (brochura)",
-    "source": "00047071.pdf"
+    "source": "00047071.pdf",
+    "reusedFrom": "portugal-madeira-circuito-16"
   },
   "algarve-momentos-75": {
     "by": "Joseolgon",
