@@ -8,7 +8,7 @@
  * Uso: npm run extract:images            (todas)
  *      node scripts/extract-images.mjs egito   (só slugs que contêm "egito")
  */
-import { readFileSync, writeFileSync, existsSync, mkdirSync, readdirSync, rmSync } from "node:fs"
+import { readFileSync, writeFileSync, existsSync, mkdirSync, readdirSync, rmSync, copyFileSync } from "node:fs"
 import { resolve, join } from "node:path"
 import { execFileSync } from "node:child_process"
 import sharp from "sharp"
@@ -58,5 +58,22 @@ for (const o of offers) {
   console.log(`🖼️  ${o.destino.slice(0, 20).padEnd(20)} ${o.source.file} p${o.source.page}`)
 }
 rmSync(TMP, { recursive: true, force: true })
+
+// Reutilização por destino: ofertas sem foto do PDF herdam a de outra
+// oferta com o MESMO destino que tenha foto da brochura (ex.: Cairo).
+const isSolferias = (slug) => /Solférias/i.test(credits[slug]?.license || "")
+const heroByDestino = {}
+for (const o of offers) if (isSolferias(o.slug)) heroByDestino[o.destino] ??= o.slug
+let reused = 0
+for (const o of offers) {
+  if (filter && !o.slug.includes(filter)) continue
+  if (isSolferias(o.slug)) continue // já tem a sua própria
+  const srcSlug = heroByDestino[o.destino]
+  if (!srcSlug) continue
+  copyFileSync(join(OUT, `${srcSlug}.jpg`), join(OUT, `${o.slug}.jpg`))
+  credits[o.slug] = { by: "Solférias", license: "© Solférias (brochura)", source: credits[srcSlug]?.source, reusedFrom: srcSlug }
+  reused++
+  console.log(`↻   ${o.destino.slice(0, 20).padEnd(20)} reutiliza ${srcSlug}`)
+}
 writeFileSync(creditsPath, JSON.stringify(credits, null, 2))
-console.log(`\nFIM · extraídas:${ok} · sem foto:${miss}`)
+console.log(`\nFIM · extraídas:${ok} · reutilizadas:${reused} · ainda sem foto do PDF:${miss - reused}`)

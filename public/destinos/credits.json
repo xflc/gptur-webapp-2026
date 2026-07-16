@@ -15,19 +15,22 @@
     "source": "00047085.pdf"
   },
   "egito-cairo-circuito-26": {
-    "by": "Marc Ryckaert",
-    "license": "CC BY-SA 4.0",
-    "source": "https://commons.wikimedia.org/wiki/File:Luxor_Temple_R15.jpg"
+    "by": "Solférias",
+    "license": "© Solférias (brochura)",
+    "source": "00047085.pdf",
+    "reusedFrom": "egito-cairo-circuito-25"
   },
   "egito-cairo-circuito-27": {
-    "by": "kallerna",
-    "license": "CC BY-SA 3.0",
-    "source": "https://commons.wikimedia.org/wiki/File:Sphinx_and_the_Great_Pyramid_of_Giza_panorama.jpg"
+    "by": "Solférias",
+    "license": "© Solférias (brochura)",
+    "source": "00047085.pdf",
+    "reusedFrom": "egito-cairo-circuito-25"
   },
   "egito-cairo-circuito-28": {
-    "by": "PantheraLeo1359531",
-    "license": "CC BY-SA 4.0",
-    "source": "https://commons.wikimedia.org/wiki/File:Mengergang_20191209_360.png"
+    "by": "Solférias",
+    "license": "© Solférias (brochura)",
+    "source": "00047085.pdf",
+    "reusedFrom": "egito-cairo-circuito-25"
   },
   "marrocos-casablanca": {
     "by": "User:Diego Delso, Ghazalyegane",
@@ -205,9 +208,10 @@
     "source": "00047103.pdf"
   },
   "america-rio-de-janeiro": {
-    "by": "Wilfredor",
-    "license": "CC0",
-    "source": "https://commons.wikimedia.org/wiki/File:Copacabana,_Rio_de_Janeiro.jpg"
+    "by": "Solférias",
+    "license": "© Solférias (brochura)",
+    "source": "00047103.pdf",
+    "reusedFrom": "america-rio-de-janeiro-circuito-57"
   },
   "america-rio-de-janeiro-circuito-57": {
     "by": "Solférias",
