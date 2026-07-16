@@ -26,38 +26,38 @@ const trips = [
   {
     year: 2026,
     title: "Viagem às raízes de Santo Inácio",
-    partner: "Ponto SJ",
+    tag: "Espanha",
     dates: "14–18 fev",
-    people: "54 peregrinos",
+    people: "54 viajantes",
     route: "Loiola · Manresa · Montserrat · Barcelona",
     dir: "santo-inacio",
     blurb:
-      "Quarta viagem que organizámos para o Ponto SJ: 54 peregrinos seguiram os passos de Santo Inácio de Loiola, dos cenários fundadores da espiritualidade inaciana à Sagrada Família.",
+      "Uma viagem por Espanha seguindo os passos de Santo Inácio de Loiola — de Loiola a Manresa e Montserrat, até à Sagrada Família em Barcelona. 54 viajantes, entre história, arte e as paisagens do País Basco e da Catalunha.",
     testimonials: [
       {
         quote:
-          "Foram cinco dias em que rezámos, caminhámos e partilhámos como comunidade. De Loiola, onde tudo começou para Inácio, até à gruta de Manresa e ao silêncio de Montserrat, cada lugar deixou de ser um ponto no mapa para se tornar parte da nossa própria história. Voltámos a casa mais leves e mais unidos — e gratos pela forma cuidada como tudo foi preparado.",
-        author: "Maria J.",
-        role: "peregrina",
+          "Foram cinco dias a caminhar e a partilhar em grupo. De Loiola a Manresa e Montserrat, cada lugar deixou de ser um ponto no mapa para se tornar parte da nossa própria história. Voltámos mais leves e mais unidos — e gratos pela forma cuidada como tudo foi preparado.",
+        author: "Testemunho de exemplo",
+        role: "substituir",
       },
       {
         quote:
-          "Nunca tinha viajado com um grupo tão grande e receava a logística. No fim, só tive de me deixar guiar: transferes, hotéis, horários, celebrações — estava tudo pensado ao pormenor, o que nos deixou totalmente livres para viver a experiência.",
-        author: "António R.",
-        role: "peregrino",
+          "Nunca tinha viajado com um grupo tão grande e receava a logística. No fim, só tive de me deixar guiar: transferes, hotéis, horários — estava tudo pensado ao pormenor, o que nos deixou livres para viver a experiência.",
+        author: "Testemunho de exemplo",
+        role: "substituir",
       },
     ],
   },
   {
     year: 2022,
     title: "Da Roma eterna para o mundo de hoje",
-    partner: "Ponto SJ",
+    tag: "Itália",
     dates: "4–9 out",
     people: "52 viajantes",
     route: "Roma · Vaticano · Gesù",
     dir: "da-roma-eterna",
     blurb:
-      "A primeira viagem que organizámos para o Ponto SJ: 52 viajantes rumaram a Roma numa “viagem em forma de conversa” — do Coliseu ao Vaticano e à Igreja do Gesù, entre a beleza da arte, encontros com convidados como o Cardeal Michael Czerny e momentos de comunidade e eucaristia.",
+      "A primeira viagem de grupo que organizámos: 52 viajantes rumaram a Roma para uma “viagem em forma de conversa” — do Coliseu ao Vaticano e à Igreja do Gesù, entre a beleza da arte, encontros com convidados e o convívio do grupo.",
     testimonials: [
       {
         quote:
@@ -67,7 +67,7 @@ const trips = [
       },
       {
         quote:
-          "Foi a primeira viagem do Ponto SJ e ficou marcada em todos nós: cinco dias entre a beleza da Cidade Eterna e a fé partilhada em comunidade, sem termos de nos preocupar com nada da organização.",
+          "Foi a primeira viagem de grupo que organizaram e ficou marcada em todos nós: cinco dias entre a beleza da Cidade Eterna e a companhia do grupo, sem termos de nos preocupar com nada da organização.",
         author: "Testemunho de exemplo",
         role: "substituir",
       },
@@ -91,14 +91,14 @@ const years = [...new Set(trips.map((t) => t.year))].sort((a, b) => b - a)
 
 <Layout
   title="Grupos | GPTur · Companhia das Viagens"
-  description="Viagens de grupo organizadas pela GPTur — peregrinações e viagens temáticas à medida, ano a ano, com testemunhos de quem viajou connosco."
+  description="Viagens de grupo organizadas pela GPTur — viagens temáticas e culturais à medida, ano a ano, com testemunhos de quem viajou connosco."
 >
   <Header />
   <main>
     <PageBanner
       eyebrow="Viagens que organizámos"
       title="Grupos"
-      subtitle="Organizamos viagens de grupo de ponta a ponta — peregrinações, viagens temáticas e culturais. Ano a ano, um percurso de comunidades que viajaram connosco."
+      subtitle="Organizamos viagens de grupo de ponta a ponta — viagens temáticas e culturais desenhadas à medida. Ano a ano, um percurso de grupos que viajaram connosco."
       crumb="Grupos"
     />
 
@@ -139,7 +139,7 @@ const years = [...new Set(trips.map((t) => t.year))].sort((a, b) => b - a)
                         </div>
 
                         <div class="p-6 lg:p-7">
-                          <span class="eyebrow text-[0.62rem] text-gold-500">{t.partner}</span>
+                          <span class="eyebrow text-[0.62rem] text-gold-500">{t.tag}</span>
                           <h3 class="mt-1 font-display text-2xl leading-tight text-ink">{t.title}</h3>
                           <div class="mt-3 flex flex-wrap gap-x-4 gap-y-1.5 text-xs text-muted-foreground">
                             <span class="flex items-center gap-1.5"><CalendarDays size={13} className="text-primary" /> {t.dates}</span>
