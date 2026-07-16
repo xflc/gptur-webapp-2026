@@ -1,0 +1,166 @@
+---
+import Layout from "../layouts/Layout.astro"
+import Header from "../components/Header.astro"
+import Footer from "../components/Footer.astro"
+import PageBanner from "../components/PageBanner.astro"
+import { MapPin, CalendarDays, Users, Quote } from "lucide-react"
+
+// Viagens de grupo, mais recentes primeiro. A timeline agrupa por ano.
+// Para adicionar uma viagem: nova entrada com year, cover, gallery e testemunhos.
+// (sample: true → entrada de exemplo, mostra o selo "Exemplo" — substituir.)
+const trips = [
+  {
+    year: 2026,
+    title: "Viagem às raízes de Santo Inácio",
+    partner: "Ponto SJ",
+    dates: "14–18 fev",
+    people: "54 peregrinos",
+    route: "Loiola · Manresa · Montserrat · Barcelona",
+    cover: "/groups/santo-inacio/1.jpg",
+    blurb:
+      "Quarta viagem que organizámos para o Ponto SJ: 54 peregrinos seguiram os passos de Santo Inácio de Loiola, dos cenários fundadores da espiritualidade inaciana à Sagrada Família.",
+    gallery: [1, 2, 3, 4, 5, 6].map((n) => `/groups/santo-inacio/${n}.jpg`),
+    testimonials: [
+      { quote: "De Loiola a Montserrat, cada lugar tornou-se oração. Voltámos diferentes.", author: "Maria J., peregrina" },
+      { quote: "Tudo tratado ao pormenor — só tivemos de nos deixar guiar.", author: "António R., peregrino" },
+    ],
+  },
+  {
+    year: 2025,
+    title: "Roma & Assis",
+    partner: "Ponto SJ",
+    dates: "abril",
+    people: "48 peregrinos",
+    route: "Roma · Assis · Loreto",
+    cover: "/groups/_exemplo/roma-assis.jpg",
+    blurb: "Peregrinação pelos passos de São Francisco e ao coração da Igreja, no Jubileu.",
+    gallery: [],
+    sample: true,
+    testimonials: [
+      { quote: "Uma semana a caminhar com São Francisco. Inesquecível.", author: "Testemunho de exemplo" },
+    ],
+  },
+  {
+    year: 2024,
+    title: "Terra Santa",
+    partner: "Ponto SJ",
+    dates: "setembro",
+    people: "40 peregrinos",
+    route: "Jerusalém · Nazaré · Galileia",
+    cover: "/groups/_exemplo/terra-santa.jpg",
+    blurb: "Ler o Evangelho nos próprios lugares onde aconteceu, em comunidade.",
+    gallery: [],
+    sample: true,
+    testimonials: [
+      { quote: "Ler o Evangelho nos próprios lugares muda tudo.", author: "Testemunho de exemplo" },
+    ],
+  },
+]
+
+const years = [...new Set(trips.map((t) => t.year))].sort((a, b) => b - a)
+---
+
+<Layout
+  title="Grupos | GPTur · Companhia das Viagens"
+  description="Viagens de grupo organizadas pela GPTur — peregrinações e viagens temáticas à medida, ano a ano, com testemunhos de quem viajou connosco."
+>
+  <Header />
+  <main>
+    <PageBanner
+      eyebrow="Viagens que organizámos"
+      title="Grupos"
+      subtitle="Organizamos viagens de grupo de ponta a ponta — peregrinações, viagens temáticas e culturais. Ano a ano, um percurso de comunidades que viajaram connosco."
+      crumb="Grupos"
+    />
+
+    <section class="bg-white py-14">
+      <div class="mx-auto max-w-5xl px-5 lg:px-8">
+        {
+          years.map((year) => (
+            <div class="mb-10">
+              <div class="mb-5 flex items-center gap-4">
+                <span class="font-display text-3xl text-ink">{year}</span>
+                <span class="h-px flex-1 bg-border" />
+              </div>
+
+              <div class="space-y-5 border-l-2 border-border pl-6 sm:pl-8">
+                {trips
+                  .filter((t) => t.year === year)
+                  .map((t) => (
+                    <article class="relative rounded-xl border border-border bg-white p-4 shadow-sm">
+                      <span class="absolute -left-[calc(1.5rem+7px)] top-6 h-3 w-3 rounded-full border-2 border-white bg-primary sm:-left-[calc(2rem+7px)]" />
+                      <div class="grid gap-5 sm:grid-cols-[220px_1fr]">
+                        <div class="relative">
+                          <img
+                            src={t.cover}
+                            alt={t.title}
+                            class="aspect-[4/3] w-full rounded-lg object-cover"
+                            loading="lazy"
+                          />
+                          {t.sample && (
+                            <span class="absolute left-2 top-2 rounded bg-black/60 px-2 py-0.5 text-[0.6rem] uppercase tracking-widest text-white">
+                              Exemplo
+                            </span>
+                          )}
+                        </div>
+
+                        <div>
+                          <span class="eyebrow text-[0.62rem] text-gold-500">{t.partner}</span>
+                          <h3 class="mt-1 font-display text-2xl leading-tight text-ink">{t.title}</h3>
+                          <div class="mt-2 flex flex-wrap gap-x-4 gap-y-1 text-xs text-muted-foreground">
+                            <span class="flex items-center gap-1.5"><CalendarDays size={13} className="text-primary" /> {t.dates}</span>
+                            <span class="flex items-center gap-1.5"><Users size={13} className="text-primary" /> {t.people}</span>
+                            <span class="flex items-center gap-1.5"><MapPin size={13} className="text-primary" /> {t.route}</span>
+                          </div>
+                          <p class="mt-3 text-sm leading-relaxed text-foreground/80">{t.blurb}</p>
+
+                          {t.gallery.length > 0 && (
+                            <div class="mt-3 flex flex-wrap gap-2">
+                              {t.gallery.map((img) => (
+                                <a href={img} target="_blank" rel="noopener" class="block overflow-hidden rounded">
+                                  <img src={img} alt={t.title} class="h-12 w-16 object-cover transition-transform duration-300 hover:scale-110" loading="lazy" />
+                                </a>
+                              ))}
+                            </div>
+                          )}
+
+                          {t.testimonials?.length > 0 && (
+                            <div class="mt-4 grid gap-3 sm:grid-cols-2">
+                              {t.testimonials.map((tt) => (
+                                <blockquote class="rounded-lg bg-cream p-3">
+                                  <Quote size={14} className="text-gold-400" />
+                                  <p class="mt-1 text-sm italic leading-snug text-foreground/85">{tt.quote}</p>
+                                  <footer class="mt-1.5 text-xs text-muted-foreground">— {tt.author}</footer>
+                                </blockquote>
+                              ))}
+                            </div>
+                          )}
+                        </div>
+                      </div>
+                    </article>
+                  ))}
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </section>
+
+    <section class="bg-teal-800 py-14 text-white">
+      <div class="mx-auto flex max-w-4xl flex-col items-center gap-6 px-5 text-center lg:flex-row lg:justify-between lg:text-left lg:px-8">
+        <div>
+          <h2 class="font-display text-2xl text-white sm:text-3xl">Quer organizar uma viagem de grupo?</h2>
+          <p class="mt-2 text-white/80">
+            Comunidades, paróquias, escolas ou empresas — desenhamos o programa consigo, do primeiro contacto ao regresso.
+          </p>
+        </div>
+        <a
+          href="/contactos"
+          class="flex h-12 shrink-0 items-center justify-center rounded-md bg-accent px-6 text-sm font-semibold uppercase tracking-widest text-accent-foreground transition-colors hover:bg-gold-400"
+          >Falar connosco</a
+        >
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>
