@@ -4,6 +4,20 @@ import Header from "../components/Header.astro"
 import Footer from "../components/Footer.astro"
 import PageBanner from "../components/PageBanner.astro"
 import { MapPin, CalendarDays, Users } from "lucide-react"
+import { readdirSync } from "node:fs"
+import { resolve } from "node:path"
+
+// todas as fotos de uma pasta public/groups/<dir> (ordem numérica: 1,2,…,10)
+const listImages = (dir: string) => {
+  try {
+    return readdirSync(resolve("public/groups", dir))
+      .filter((f) => /\.(jpe?g|png)$/i.test(f))
+      .sort((a, b) => a.localeCompare(b, undefined, { numeric: true }))
+      .map((f) => `/groups/${dir}/${f}`)
+  } catch {
+    return []
+  }
+}
 
 // Viagens de grupo, mais recentes primeiro. A timeline agrupa por ano.
 // Para adicionar uma viagem: nova entrada com year, cover, gallery e testemunhos.
@@ -16,10 +30,9 @@ const trips = [
     dates: "14–18 fev",
     people: "54 peregrinos",
     route: "Loiola · Manresa · Montserrat · Barcelona",
-    cover: "/groups/santo-inacio/1.jpg",
+    dir: "santo-inacio",
     blurb:
       "Quarta viagem que organizámos para o Ponto SJ: 54 peregrinos seguiram os passos de Santo Inácio de Loiola, dos cenários fundadores da espiritualidade inaciana à Sagrada Família.",
-    gallery: [2, 3, 4, 5, 6].map((n) => `/groups/santo-inacio/${n}.jpg`),
     testimonials: [
       {
         quote:
@@ -77,10 +90,15 @@ const trips = [
   },
 ]
 
-// id + conjunto de imagens (capa + galeria) de cada viagem, para o lightbox
+// Para cada viagem: descobre as imagens (pasta `dir` ou capa única), define
+// capa, as 4 miniaturas do preview e quantas fotos extra existem (+N).
+// O lightbox recebe SEMPRE o conjunto completo (`images`).
 trips.forEach((t, i) => {
   t.id = i
-  t.images = [t.cover, ...t.gallery]
+  t.images = t.dir ? listImages(t.dir) : [t.cover, ...(t.gallery || [])]
+  t.cover = t.images[0]
+  t.thumbs = t.images.slice(1, 5) // até 4 miniaturas
+  t.extra = Math.max(0, t.images.length - 5) // fotos não previstas no preview
 })
 const galleries = trips.map((t) => t.images)
 const years = [...new Set(trips.map((t) => t.year))].sort((a, b) => b - a)
@@ -145,11 +163,14 @@ const years = [...new Set(trips.map((t) => t.year))].sort((a, b) => b - a)
                           </div>
                           <p class="mt-3 text-sm leading-relaxed text-foreground/80">{t.blurb}</p>
 
-                          {t.gallery.length > 0 && (
+                          {t.thumbs.length > 0 && (
                             <div class="mt-4 flex flex-wrap gap-2">
-                              {t.gallery.map((img, gi) => (
-                                <button type="button" class="block cursor-zoom-in overflow-hidden rounded" data-lb data-g={t.id} data-i={gi + 1}>
+                              {t.thumbs.map((img, gi) => (
+                                <button type="button" class="relative block cursor-zoom-in overflow-hidden rounded" data-lb data-g={t.id} data-i={gi + 1}>
                                   <img src={img} alt={t.title} class="h-16 w-24 object-cover transition-transform duration-300 hover:scale-110" loading="lazy" />
+                                  {t.extra > 0 && gi === t.thumbs.length - 1 && (
+                                    <span class="absolute inset-0 grid place-items-center bg-black/55 text-sm font-semibold text-white">+{t.extra}</span>
+                                  )}
                                 </button>
                               ))}
                             </div>
