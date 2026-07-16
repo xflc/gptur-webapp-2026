@@ -24,7 +24,7 @@ const slides = heroPick.map((o) => ({
   dates: [o.country, o.nights ? `${o.nights} noites` : null, o.priceFrom ? `desde ${o.priceFrom}€` : null].filter(Boolean).join(" · "),
   image: offerImage(o.slug),
   href: `/ofertas/${o.slug}`,
-  tagline: (o.details?.overview || `${o.type === "circuito" ? "Circuito" : "Estadia"} em ${o.destino}, ${o.country}.`)
+  tagline: (o.details?.overview || `${o.type === "circuito" ? "Roteiro por" : "Férias em"} ${o.destino}, ${o.country}.`)
     .replace(/\s+/g, " ")
     .trim()
     .slice(0, 300),

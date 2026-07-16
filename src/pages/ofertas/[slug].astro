@@ -3,7 +3,7 @@ import Layout from "../../layouts/Layout.astro"
 import Header from "../../components/Header.astro"
 import Footer from "../../components/Footer.astro"
 import OfferCard from "../../components/OfferCard.astro"
-import { offers, offerImage, boardLabel, splitServices } from "../../data/offers"
+import { offers, offerImage, boardLabel, splitServices, typeLabel } from "../../data/offers"
 import { Calendar, BedDouble, Utensils, MapPin, Phone, Plane, Check, X, Star } from "lucide-react"
 
 export function getStaticPaths() {
@@ -19,7 +19,7 @@ const notIncluded = splitServices(prog?.notIncluded)
 const related = offers.filter((o) => o.region === offer.region && o.slug !== offer.slug).slice(0, 3)
 
 const pageTitle = `${offer.destino}, ${offer.country} | GPTur`
-const desc = `${offer.destino} (${offer.country}) — ${offer.type === "circuito" ? "circuito" : "estadia"}${offer.priceFrom ? `, desde ${offer.priceFrom}€ por pessoa` : ""}. Reserve com a GPTur.`
+const desc = `${offer.destino} (${offer.country}) — ${typeLabel(offer.type).toLowerCase()}${offer.priceFrom ? `, desde ${offer.priceFrom}€ por pessoa` : ""}. Reserve com a GPTur.`
 const jsonLd = {
   "@context": "https://schema.org", "@type": "TouristTrip",
   name: `${offer.destino}, ${offer.country}`, description: desc, image: offerImage(offer.slug),
@@ -43,7 +43,7 @@ const jsonLd = {
             <span class="text-white/90">{offer.destino}</span>
           </nav>
           <div class="flex flex-wrap items-center gap-2">
-            <span class="eyebrow bg-accent px-2.5 py-1 text-[0.6rem] text-accent-foreground">{offer.type === "circuito" ? "Circuito" : "Estadia"}</span>
+            <span class="eyebrow bg-accent px-2.5 py-1 text-[0.6rem] text-accent-foreground">{typeLabel(offer.type)}</span>
             <span class="eyebrow bg-white/15 px-2.5 py-1 text-[0.6rem] text-white backdrop-blur">{offer.region}</span>
           </div>
           <h1 class="mt-3 font-display text-4xl leading-tight text-white sm:text-5xl">{offer.destino}</h1>

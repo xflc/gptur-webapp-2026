@@ -49,8 +49,8 @@ export default function TripFinder({ regions }: Props) {
           <span className="eyebrow mb-1.5 block text-[0.65rem] text-muted-foreground">Tipo de viagem</span>
           <select className={selectClass} value={type} onChange={(e) => setType(e.target.value)}>
             <option value="">Todas</option>
-            <option value="estadia">Estadia / praia</option>
-            <option value="circuito">Circuito</option>
+            <option value="estadia">Destino único</option>
+            <option value="circuito">Roteiro</option>
           </select>
         </label>
 

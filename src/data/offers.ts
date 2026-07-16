@@ -52,6 +52,9 @@ export const offerRegions: string[] = [...new Set(offers.map((o) => o.region))].
 
 export const offerImage = (slug: string) => `/destinos/${slug}.jpg`
 
+// rótulo do tipo de viagem (estadia = fica num destino; circuito = percurso)
+export const typeLabel = (t: string) => (t === "circuito" ? "Roteiro" : "Destino único")
+
 // metadados da imagem (fonte/dimensões) gravados por scripts/extract-images.mjs
 type ImageMeta = { placeholder?: boolean; reusedFrom?: string; w?: number; h?: number }
 const imageMeta = credits as Record<string, ImageMeta>
