@@ -27,3 +27,7 @@ dist-ssr
 
 # Partner source PDFs (local only) — but keep the manifest tracked
 partner-pdfs/*.pdf
+
+# artefactos de auditoria de imagens (locais)
+hero-audit/
+hero-preview/
