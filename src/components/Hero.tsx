@@ -6,6 +6,7 @@ interface Slide {
   title: string
   dates: string
   image: string
+  href: string
   tagline: string
 }
 
@@ -53,8 +54,8 @@ export default function Hero({ slides }: { slides: Slide[] }) {
           </p>
           <p className="mt-4 eyebrow text-white/70">{slides[index].dates}</p>
           <div className="mt-7 flex flex-wrap gap-3">
-            <Button size="lg" onClick={() => (window.location.hash = "#ofertas")}>
-              Ver ofertas
+            <Button size="lg" onClick={() => (window.location.href = slides[index].href)}>
+              Ver oferta
             </Button>
             <Button
               size="lg"
