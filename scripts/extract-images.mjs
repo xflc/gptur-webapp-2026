@@ -99,13 +99,15 @@ function titleOf(t) {
 async function writeHero(srcPath, slug) {
   const buf = await sharp(srcPath).rotate().resize({ width: 1400, height: 1000, fit: "inside", withoutEnlargement: true }).jpeg({ quality: 80, mozjpeg: true }).toBuffer()
   writeFileSync(join(OUT, `${slug}.jpg`), buf)
+  const m = await sharp(buf).metadata()
+  return { w: m.width, h: m.height }
 }
 async function extractImageOnPage(pdf, p, num, slug) {
   rmSync(TMP, { recursive: true, force: true }); mkdirSync(TMP, { recursive: true })
   execFileSync("pdfimages", ["-j", "-p", "-f", String(p), "-l", String(p), pdf, join(TMP, "i")], { stdio: "ignore" })
   const files = readdirSync(TMP).filter((f) => /\.(jpe?g|png)$/i.test(f))
   const match = files.find((f) => new RegExp(`-0*${p}-0*${num}\\.`).test(f)) || files.sort((a, b) => a.localeCompare(b))[num] || files[0]
-  await writeHero(join(TMP, match), slug)
+  return writeHero(join(TMP, match), slug)
 }
 
 // arranque: extração limpa — apaga heroes/Commons antigos das ofertas em foco
@@ -165,8 +167,8 @@ for (const o of offers) {
   if (REJECT.has(o.slug)) { log.push({ slug: o.slug, result: "rejeitado (auditoria)" }); continue }
   if (OVERRIDES[o.slug]) via = "override p" + OVERRIDES[o.slug]
 
-  await extractImageOnPage(pdf, hero.p, hero.num, o.slug)
-  credits[o.slug] = { by: "Solférias", license: "© Solférias (brochura)", source: o.source.file, page: hero.p }
+  const dim = await extractImageOnPage(pdf, hero.p, hero.num, o.slug)
+  credits[o.slug] = { by: "Solférias", license: "© Solférias (brochura)", source: o.source.file, page: hero.p, ...dim }
   heroOf[o.destino] ??= o.slug
   log.push({ slug: o.slug, result: "OK", page: hero.p, via, cov: Math.round(hero.covW * 100) + "%" })
 }

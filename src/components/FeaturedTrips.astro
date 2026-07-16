@@ -1,11 +1,12 @@
 ---
-import { offers } from "../data/offers"
+import { offers, hasHeroImage } from "../data/offers"
 import OfferCard from "./OfferCard.astro"
 
-// destaque: uma seleção variada por região (até 2 por região), com preço
+// destaque: seleção variada por região (até 2 por região), com preço e IMAGEM
+// de qualidade (sem placeholders nem baixa resolução)
 const featured = []
 for (const o of offers) {
-  if (!o.priceFrom) continue
+  if (!o.priceFrom || !hasHeroImage(o.slug)) continue
   if (featured.filter((x) => x.region === o.region).length < 2) featured.push(o)
   if (featured.length >= 9) break
 }
