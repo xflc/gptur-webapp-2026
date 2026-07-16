@@ -49,7 +49,7 @@ export default function Hero({ slides }: { slides: Slide[] }) {
           <h1 className="mt-4 font-display text-4xl leading-tight text-white sm:text-5xl lg:text-6xl">
             {slides[index].title}
           </h1>
-          <p className="mt-3 max-w-md text-base text-white/85">
+          <p className="mt-3 max-w-md text-base text-white/85 line-clamp-3">
             {slides[index].tagline}
           </p>
           <p className="mt-4 eyebrow text-white/70">{slides[index].dates}</p>
