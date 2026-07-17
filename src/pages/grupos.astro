@@ -36,15 +36,8 @@ const trips = [
     testimonials: [
       {
         quote:
-          "Foram cinco dias a caminhar e a partilhar em grupo. De Loiola a Manresa e Montserrat, cada lugar deixou de ser um ponto no mapa para se tornar parte da nossa própria história. Voltámos mais leves, mais unidos e gratos pela forma cuidada como tudo foi preparado.",
-        author: "Testemunho de exemplo",
-        role: "substituir",
-      },
-      {
-        quote:
-          "Nunca tinha viajado com um grupo tão grande e receava a logística. No fim, só tive de me deixar guiar: transferes, hotéis e horários, estava tudo pensado ao pormenor, o que nos deixou livres para viver a experiência.",
-        author: "Testemunho de exemplo",
-        role: "substituir",
+          "Foram dias de fé, reflexão, partilha e momentos inesquecíveis, num lugar de grande beleza. Trouxe comigo recordações muito especiais, amizades fortalecidas e o coração renovado.",
+        author: "Peregrina",
       },
     ],
   },
@@ -61,15 +54,8 @@ const trips = [
     testimonials: [
       {
         quote:
-          "Percorrer estes lugares tornou vivo aquilo que só conhecíamos dos livros. Entre ruínas, mar e boas conversas, foi uma viagem que ligou história e presente de uma forma que não esperava.",
-        author: "Testemunho de exemplo",
-        role: "substituir",
-      },
-      {
-        quote:
-          "Grécia e Turquia num só percurso, com tudo tratado ao pormenor. Só tivemos de aparecer e deixar-nos levar, do primeiro sítio arqueológico ao último pôr do sol no barco.",
-        author: "Testemunho de exemplo",
-        role: "substituir",
+          "O coração abriu-se para acolher toda a beleza da Mãe Natureza, sentiu a paz e a serenidade do acolhimento e viveu a alegria da presença de todos os amigos companheiros. Numa palavra: foi tudo perfeito.",
+        author: "Peregrina",
       },
     ],
   },
@@ -83,20 +69,7 @@ const trips = [
     dir: "da-roma-eterna",
     blurb:
       "A primeira viagem de grupo que organizámos: 52 peregrinos rumaram a Roma para uma “viagem em forma de conversa”, do Coliseu ao Vaticano e à Igreja do Gesù, entre a beleza da arte, a espiritualidade dos lugares e o convívio do grupo.",
-    testimonials: [
-      {
-        quote:
-          "Roma abriu-se a nós não como um museu, mas como uma conversa viva: com a história, com a arte e com os convidados que nos foram cruzando o caminho. Regressei com perguntas melhores do que aquelas com que parti.",
-        author: "Testemunho de exemplo",
-        role: "substituir",
-      },
-      {
-        quote:
-          "Foi a primeira viagem de grupo que organizaram e ficou marcada em todos nós: cinco dias entre a beleza da Cidade Eterna, momentos de recolhimento e a companhia do grupo, sem termos de nos preocupar com nada da organização.",
-        author: "Testemunho de exemplo",
-        role: "substituir",
-      },
-    ],
+    testimonials: [],
   },
 ]
 
@@ -198,7 +171,7 @@ const hasTrips = (y: number) => trips.some((t) => t.year === y)
                       {/* testemunhos: pull-quotes a toda a largura, podem ser um parágrafo */}
                       {t.testimonials?.length > 0 && (
                         <div class="border-t border-border bg-cream/60 px-6 py-6 lg:px-7">
-                          <div class="grid gap-x-10 gap-y-6 md:grid-cols-2">
+                          <div class={`grid gap-x-10 gap-y-6 ${t.testimonials.length > 1 ? "md:grid-cols-2" : "max-w-3xl"}`}>
                             {t.testimonials.map((tt) => (
                               <figure class="relative pl-7">
                                 <span class="absolute -top-2 left-0 font-display text-4xl leading-none text-gold-300" aria-hidden="true">“</span>
