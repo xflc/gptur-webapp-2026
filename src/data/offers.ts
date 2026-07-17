@@ -84,11 +84,12 @@ export const typeLabel = (t: string) => (t === "circuito" ? "Roteiro" : "Destino
 type ImageMeta = { placeholder?: boolean; reusedFrom?: string; w?: number; h?: number }
 const imageMeta = credits as Record<string, ImageMeta>
 
-// imagem digna de hero/destaque: não é placeholder, é horizontal e ≥1250px de
-// largura (Maurícia, a 1250px, é o limite aceitável — abaixo disso exclui-se).
+// imagem digna de hero/destaque: não é placeholder, horizontal e de alta
+// resolução (≥1500px). Exclui heros de brochuras de baixa resolução (Golfo,
+// Ilhas Idílicas), que ficam disponíveis apenas no catálogo.
 export const hasHeroImage = (slug: string) => {
   const c = imageMeta[slug]
-  return !!c && !c.placeholder && (c.w ?? 0) >= 1250 && (c.w ?? 0) >= (c.h ?? 1)
+  return !!c && !c.placeholder && (c.w ?? 0) >= 1500 && (c.w ?? 0) >= (c.h ?? 1)
 }
 
 const BOARD: Record<string, string> = {
