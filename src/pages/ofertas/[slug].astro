@@ -4,7 +4,7 @@ import Header from "../../components/Header.astro"
 import Footer from "../../components/Footer.astro"
 import OfferCard from "../../components/OfferCard.astro"
 import { offers, offerImage, boardLabel, splitServices, typeLabel } from "../../data/offers"
-import { Calendar, BedDouble, Utensils, MapPin, Phone, Plane, Check, X, Star } from "lucide-react"
+import { Calendar, BedDouble, Utensils, MapPin, Phone, Plane, Check, X, Star, Mail, Clipboard } from "lucide-react"
 
 export function getStaticPaths() {
   return offers.map((offer) => ({ params: { slug: offer.slug }, props: { offer } }))
@@ -158,7 +158,24 @@ const jsonLd = {
               </div>
             )}
             <a href={`mailto:altalisboa@gptur.pt,lisboa@gptur.pt?subject=Reserva: ${offer.destino}, ${offer.country}`} class="mt-5 flex h-12 w-full items-center justify-center rounded-md bg-primary text-sm font-semibold uppercase tracking-widest text-primary-foreground transition-colors hover:bg-teal-700">Reservar / Pedir proposta</a>
-            <a href="tel:+351217530021" class="mt-2.5 flex h-11 w-full items-center justify-center gap-2 rounded-md border border-primary text-sm font-semibold text-primary transition-colors hover:bg-primary hover:text-primary-foreground"><Phone size={16} /> 217 530 021</a>
+            <div class="mt-2.5 space-y-2.5">
+              <div class="flex h-11 items-center gap-2 overflow-hidden rounded-md border border-primary pl-3 text-sm font-semibold text-primary">
+                <Phone size={16} className="shrink-0" />
+                <a href="tel:+351217530021" class="flex-1 truncate hover:underline">217 530 021</a>
+                <button type="button" data-copy="+351 217 530 021" aria-label="Copiar telefone" class="js-copy grid h-full w-11 shrink-0 place-items-center border-l border-primary/25 text-primary/70 transition-colors hover:bg-primary hover:text-primary-foreground">
+                  <span class="ico-copy"><Clipboard size={15} /></span>
+                  <span class="ico-done hidden text-primary"><Check size={15} /></span>
+                </button>
+              </div>
+              <div class="flex h-11 items-center gap-2 overflow-hidden rounded-md border border-primary pl-3 text-sm font-semibold text-primary">
+                <Mail size={16} className="shrink-0" />
+                <a href="mailto:altalisboa@gptur.pt" class="flex-1 truncate hover:underline">altalisboa@gptur.pt</a>
+                <button type="button" data-copy="altalisboa@gptur.pt" aria-label="Copiar email" class="js-copy grid h-full w-11 shrink-0 place-items-center border-l border-primary/25 text-primary/70 transition-colors hover:bg-primary hover:text-primary-foreground">
+                  <span class="ico-copy"><Clipboard size={15} /></span>
+                  <span class="ico-done hidden text-primary"><Check size={15} /></span>
+                </button>
+              </div>
+            </div>
           </div>
         </aside>
       </div>
@@ -176,3 +193,23 @@ const jsonLd = {
   <Footer />
   <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
 </Layout>
+
+<script>
+  document.querySelectorAll<HTMLButtonElement>(".js-copy").forEach((btn) => {
+    btn.addEventListener("click", async () => {
+      try {
+        await navigator.clipboard.writeText(btn.dataset.copy || "")
+      } catch {
+        return
+      }
+      const copy = btn.querySelector(".ico-copy")
+      const done = btn.querySelector(".ico-done")
+      copy?.classList.add("hidden")
+      done?.classList.remove("hidden")
+      setTimeout(() => {
+        copy?.classList.remove("hidden")
+        done?.classList.add("hidden")
+      }, 1500)
+    })
+  })
+</script>
