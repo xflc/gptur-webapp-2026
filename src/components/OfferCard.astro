@@ -1,6 +1,6 @@
 ---
 import type { Offer } from "../data/offers"
-import { offerImage, typeLabel } from "../data/offers"
+import { offerThumb, typeLabel } from "../data/offers"
 
 interface Props { offer: Offer }
 const { offer } = Astro.props
@@ -15,7 +15,7 @@ const meta = [
 >
   <div class="relative aspect-[4/3] overflow-hidden">
     <img
-      src={offerImage(offer.slug)}
+      src={offerThumb(offer.slug)}
       alt={offer.destino}
       loading="lazy"
       class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"

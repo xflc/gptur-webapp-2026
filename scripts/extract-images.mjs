@@ -96,10 +96,14 @@ function titleOf(t) {
   return null
 }
 
+// grava 2 variantes: full (hero / página da oferta) + thumb (cartões)
 async function writeHero(srcPath, slug) {
-  const buf = await sharp(srcPath).rotate().resize({ width: 1400, height: 1000, fit: "inside", withoutEnlargement: true }).jpeg({ quality: 80, mozjpeg: true }).toBuffer()
-  writeFileSync(join(OUT, `${slug}.jpg`), buf)
-  const m = await sharp(buf).metadata()
+  const base = sharp(srcPath).rotate()
+  const full = await base.clone().resize({ width: 2000, height: 1400, fit: "inside", withoutEnlargement: true }).jpeg({ quality: 82, mozjpeg: true }).toBuffer()
+  writeFileSync(join(OUT, `${slug}.jpg`), full)
+  const thumb = await base.clone().resize({ width: 800, height: 600, fit: "inside", withoutEnlargement: true }).jpeg({ quality: 72, mozjpeg: true }).toBuffer()
+  writeFileSync(join(OUT, `${slug}-thumb.jpg`), thumb)
+  const m = await sharp(full).metadata()
   return { w: m.width, h: m.height }
 }
 async function extractImageOnPage(pdf, p, num, slug) {
@@ -110,11 +114,13 @@ async function extractImageOnPage(pdf, p, num, slug) {
   return writeHero(join(TMP, match), slug)
 }
 
-// arranque: extração limpa — apaga heroes/Commons antigos das ofertas em foco
+// arranque: extração limpa — apaga heroes/thumbs antigos das ofertas em foco
 for (const o of offers) {
   if (filter && !o.slug.includes(filter)) continue
-  const f = join(OUT, `${o.slug}.jpg`)
-  if (existsSync(f)) unlinkSync(f)
+  for (const f of [`${o.slug}.jpg`, `${o.slug}-thumb.jpg`]) {
+    const p = join(OUT, f)
+    if (existsSync(p)) unlinkSync(p)
+  }
 }
 
 // progresso: uma linha por oferta (visível mesmo através de pipes)
@@ -182,6 +188,7 @@ for (const o of offers) {
   const src = heroOf[o.destino]
   if (!src) continue
   copyFileSync(join(OUT, `${src}.jpg`), join(OUT, `${o.slug}.jpg`))
+  copyFileSync(join(OUT, `${src}-thumb.jpg`), join(OUT, `${o.slug}-thumb.jpg`))
   credits[o.slug] = { ...credits[src], reusedFrom: src }
   reused++
   const r = log.find((x) => x.slug === o.slug); if (r) r.result = "REUTILIZA " + src
@@ -202,6 +209,7 @@ for (const o of noimgOffers) {
   </svg>`
   const buf = await sharp(Buffer.from(svg)).jpeg({ quality: 82 }).toBuffer()
   writeFileSync(join(OUT, `${o.slug}.jpg`), buf)
+  writeFileSync(join(OUT, `${o.slug}-thumb.jpg`), await sharp(buf).resize({ width: 800 }).jpeg({ quality: 72 }).toBuffer())
   credits[o.slug] = { placeholder: true }
 }
 

@@ -51,6 +51,8 @@ export const offersGeneratedAt: string = data.generatedAt
 export const offerRegions: string[] = [...new Set(offers.map((o) => o.region))].sort()
 
 export const offerImage = (slug: string) => `/destinos/${slug}.jpg`
+// miniatura (cartões); a full fica para o hero e página da oferta
+export const offerThumb = (slug: string) => `/destinos/${slug}-thumb.jpg`
 
 // baralha um array de forma determinística com um seed do dia (YYYYMMDD), para
 // os cartões não aparecerem sempre agrupados pela mesma origem. Muda a cada dia
