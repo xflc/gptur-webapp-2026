@@ -41,8 +41,8 @@ export default function Hero({ slides }: { slides: Slide[] }) {
           <div
             className="absolute inset-0"
             style={{
-              backdropFilter: "blur(7px)",
-              WebkitBackdropFilter: "blur(7px)",
+              backdropFilter: "blur(4px)",
+              WebkitBackdropFilter: "blur(4px)",
             }}
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/30 to-transparent" />
