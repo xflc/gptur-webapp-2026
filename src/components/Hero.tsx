@@ -37,14 +37,6 @@ export default function Hero({ slides }: { slides: Slide[] }) {
             className="h-full w-full object-cover"
             loading={i === 0 ? "eager" : "lazy"}
           />
-          {/* blur uniforme em toda a imagem */}
-          <div
-            className="absolute inset-0"
-            style={{
-              backdropFilter: "blur(4px)",
-              WebkitBackdropFilter: "blur(4px)",
-            }}
-          />
           <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/30 to-transparent" />
         </div>
       ))}
