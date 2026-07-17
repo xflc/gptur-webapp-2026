@@ -11,11 +11,12 @@ import DestinationsIndex from "../components/DestinationsIndex.astro"
 import Footer from "../components/Footer.astro"
 import { offers, offerImage, hasHeroImage } from "../data/offers"
 
-// slides do hero: ofertas reais com preço e IMAGEM de qualidade (sem
-// placeholders nem baixa resolução), uma por região, com boa descrição
+// slides do hero: ofertas reais com preço, IMAGEM de qualidade e DESCRIÇÃO
+// própria (sem placeholders, baixa resolução ou texto genérico), uma por região
+const hasOverview = (o) => ((o.details?.overview as string) || "").trim().length >= 40
 const heroPick = []
 for (const o of offers) {
-  if (!o.priceFrom || !hasHeroImage(o.slug)) continue
+  if (!o.priceFrom || !hasHeroImage(o.slug) || !hasOverview(o)) continue
   if (!heroPick.some((x) => x.region === o.region)) heroPick.push(o)
   if (heroPick.length >= 5) break
 }
