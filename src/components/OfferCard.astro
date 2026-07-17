@@ -6,7 +6,6 @@ interface Props { offer: Offer }
 const { offer } = Astro.props
 const meta = [
   offer.nights ? `${offer.nights} noites` : null,
-  offer.hotels ? `${offer.hotels} hotéis` : null,
 ].filter(Boolean).join(" · ")
 ---
 
