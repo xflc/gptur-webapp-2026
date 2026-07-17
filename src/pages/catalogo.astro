@@ -4,7 +4,10 @@ import Header from "../components/Header.astro"
 import Footer from "../components/Footer.astro"
 import PageBanner from "../components/PageBanner.astro"
 import OfferCard from "../components/OfferCard.astro"
-import { offers, offerRegions } from "../data/offers"
+import { offers, offerRegions, shuffleByDay } from "../data/offers"
+
+// ordem baralhada por dia — evita mostrar tudo do mesmo país/origem em bloco
+const catalogo = shuffleByDay(offers)
 ---
 
 <Layout
@@ -30,7 +33,7 @@ import { offers, offerRegions } from "../data/offers"
         </div>
 
         <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3" id="grid">
-          {offers.map((o) => (
+          {catalogo.map((o) => (
             <div class="offer-item" data-region={o.region} data-type={o.type} data-price={o.priceFrom ?? ""}>
               <OfferCard offer={o} />
             </div>

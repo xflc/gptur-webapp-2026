@@ -1,11 +1,12 @@
 ---
-import { offers, hasHeroImage } from "../data/offers"
+import { offers, hasHeroImage, shuffleByDay } from "../data/offers"
 import OfferCard from "./OfferCard.astro"
 
 // destaque: seleção variada por região (até 2 por região), com preço e IMAGEM
-// de qualidade (sem placeholders nem baixa resolução)
+// de qualidade. Baralhada por dia para não repetir sempre as mesmas viagens
+// nem agrupar por origem.
 const featured = []
-for (const o of offers) {
+for (const o of shuffleByDay(offers, 7)) {
   if (!o.priceFrom || !hasHeroImage(o.slug)) continue
   if (featured.filter((x) => x.region === o.region).length < 2) featured.push(o)
   if (featured.length >= 9) break
