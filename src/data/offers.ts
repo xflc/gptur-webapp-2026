@@ -68,6 +68,13 @@ function mulberry32(seed: number) {
 export function shuffleByDay<T>(arr: T[], salt = 0): T[] {
   const d = new Date()
   const seed = (d.getFullYear() * 10000 + (d.getMonth() + 1) * 100 + d.getDate()) + salt
+  return shuffleSeed(arr, seed)
+}
+
+// baralha com uma seed fixa (determinístico, não muda com o dia) — usado para
+// escolher a combinação de destinos do hero. seed 0 = sem baralhar (ordem original).
+export function shuffleSeed<T>(arr: T[], seed: number): T[] {
+  if (!seed) return [...arr]
   const rnd = mulberry32(seed)
   const a = [...arr]
   for (let i = a.length - 1; i > 0; i--) {

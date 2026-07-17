@@ -9,13 +9,14 @@ import Testimonials from "../components/Testimonials.astro"
 import Newsletter from "../components/Newsletter.astro"
 import DestinationsIndex from "../components/DestinationsIndex.astro"
 import Footer from "../components/Footer.astro"
-import { offers, offerImage, hasHeroImage } from "../data/offers"
+import { offers, offerImage, hasHeroImage, shuffleByDay } from "../data/offers"
 
-// slides do hero: ofertas reais com preço, IMAGEM de qualidade e DESCRIÇÃO
-// própria (sem placeholders, baixa resolução ou texto genérico), uma por região
+// slides do hero: uma oferta por região, escolhida ALEATORIAMENTE entre as que
+// têm imagem de qualidade (≥1500px) e descrição própria. A seleção roda a cada
+// dia (seed do dia, recalculada no build) — ninguém escolhe os destinos à mão.
 const hasOverview = (o) => ((o.details?.overview as string) || "").trim().length >= 40
 const heroPick = []
-for (const o of offers) {
+for (const o of shuffleByDay(offers)) {
   if (!o.priceFrom || !hasHeroImage(o.slug) || !hasOverview(o)) continue
   if (!heroPick.some((x) => x.region === o.region)) heroPick.push(o)
   if (heroPick.length >= 5) break
