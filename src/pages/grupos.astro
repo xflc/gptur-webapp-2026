@@ -123,7 +123,7 @@ const years = [...new Set(trips.map((t) => t.year))].sort((a, b) => b - a)
     <PageBanner
       eyebrow="Mais de 20 viagens desde 2022"
       title="Grupos"
-      subtitle="A organização de viagens em grupo acompanha-nos há décadas. Desde 2022, a procura pela nossa experiência cresceu de forma notável, e são já mais de 20 as que concebemos e acompanhámos, do primeiro contacto ao regresso."
+      subtitle="A organização de viagens em grupo acompanha-nos há décadas. Desde 2022, a procura pela nossa experiência cresceu de forma notável, e são já mais de 20 as que concebemos e acompanhámos, do primeiro contacto ao regresso. Aqui ficam algumas delas."
       crumb="Grupos"
     />
 
@@ -211,6 +211,18 @@ const years = [...new Set(trips.map((t) => t.year))].sort((a, b) => b - a)
             </div>
           ))
         }
+
+        {/* remate: sinaliza que a timeline continua com muitas outras viagens */}
+        <div class="border-l-2 border-dashed border-border pl-6 sm:pl-10">
+          <div class="relative">
+            <span class="absolute -left-[calc(1.5rem+6px)] top-1 h-2.5 w-2.5 rounded-full bg-border sm:-left-[calc(2.5rem+6px)]" />
+            <p class="max-w-xl text-sm leading-relaxed text-muted-foreground">
+              …e muitas outras viagens de grupo que organizámos ao longo dos anos.
+              <a href="/contactos" class="font-medium text-primary underline-offset-2 hover:underline">Fale connosco</a>
+              para conhecer o historial completo.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
 
