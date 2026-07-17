@@ -37,14 +37,12 @@ export default function Hero({ slides }: { slides: Slide[] }) {
             className="h-full w-full object-cover"
             loading={i === 0 ? "eager" : "lazy"}
           />
-          {/* blur uniforme atrás do conteúdo; só a aba direita esbate suavemente */}
+          {/* blur uniforme em toda a imagem */}
           <div
             className="absolute inset-0"
             style={{
               backdropFilter: "blur(7px)",
               WebkitBackdropFilter: "blur(7px)",
-              maskImage: "linear-gradient(to right, black 0%, black 45%, transparent 68%)",
-              WebkitMaskImage: "linear-gradient(to right, black 0%, black 45%, transparent 68%)",
             }}
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/30 to-transparent" />
