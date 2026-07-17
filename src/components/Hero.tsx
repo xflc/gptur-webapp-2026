@@ -43,8 +43,8 @@ export default function Hero({ slides }: { slides: Slide[] }) {
             style={{
               backdropFilter: "blur(7px)",
               WebkitBackdropFilter: "blur(7px)",
-              maskImage: "linear-gradient(to right, black 0%, black 45%, transparent 60%)",
-              WebkitMaskImage: "linear-gradient(to right, black 0%, black 45%, transparent 60%)",
+              maskImage: "linear-gradient(to right, black 0%, black 45%, transparent 68%)",
+              WebkitMaskImage: "linear-gradient(to right, black 0%, black 45%, transparent 68%)",
             }}
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/30 to-transparent" />
