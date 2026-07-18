@@ -7,22 +7,18 @@
  * Uso: node scripts/build-catai.mjs            (lista PoC abaixo)
  * Escreve: src/data/catai-offers.json  +  public/destinos/<slug>.jpg (+ -thumb).
  */
-import { writeFileSync } from "node:fs"
+import { writeFileSync, readFileSync } from "node:fs"
 import { resolve } from "node:path"
 import { createHash } from "node:crypto"
 import sharp from "sharp"
 
-// ~16 viagens variadas por região (prova de conceito)
-const SLUGS = [
-  "japao-medieval", "paraisos-da-china", "a-magia-de-bali", "a-descoberta-de-borneu-malaio",
-  "tanzania-safari-marafiki", "a-procura-do-rei-leao", "africa-do-sul-espetacular", "a-rota-masai",
-  "a-descoberta-da-venezuela", "a-descoberta-do-uruguai",
-  "a-descoberta-da-arabia", "estadia-no-dubai",
-  "malta-espetacular", "marrocos-cidades-vermelhas",
-  "a-rota-avatar", "a-descoberta-do-sul-da-tanzania",
-]
-
 const UA = { "User-Agent": "Mozilla/5.0 (gptur-import)" }
+
+// todos os slugs de /viagens/ do sitemap, excluindo colisões com a Solférias
+const solSlugs = new Set(JSON.parse(readFileSync(resolve("src/data/solferias-offers.json"), "utf8")).offers.map((o) => o.slug))
+const sitemap = await (await fetch("https://www.catai.pt/sitemap.xml", { headers: UA })).text()
+const SLUGS = [...new Set([...sitemap.matchAll(/\/viagens\/([a-z0-9-]+)/g)].map((m) => m[1]))].filter((s) => !solSlugs.has(s))
+console.log(`Sitemap: ${SLUGS.length} viagens a importar (colisões com Solférias excluídas)\n`)
 const clean = (s) => (s || "").replace(/<[^>]+>/g, " ").replace(/&nbsp;/g, " ").replace(/&amp;/g, "&").replace(/&#039;|&#39;/g, "'").replace(/&quot;/g, '"').replace(/\s+/g, " ").trim()
 
 const REGION = {
@@ -148,7 +144,6 @@ for (const slug of SLUGS) {
 writeFileSync(resolve("src/data/catai-offers.json"), JSON.stringify({ generatedAt: new Date().toISOString(), offers }, null, 2))
 // funde créditos das imagens Catai no credits.json existente
 const credPath = resolve("public/destinos/credits.json")
-const { readFileSync } = await import("node:fs")
 const existing = JSON.parse(readFileSync(credPath, "utf8"))
 writeFileSync(credPath, JSON.stringify({ ...existing, ...credits }, null, 2))
 console.log(`\nFIM · ${offers.length} viagens → src/data/catai-offers.json · imagens: ${Object.keys(credits).length}`)
