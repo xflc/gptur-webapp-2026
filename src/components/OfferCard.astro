@@ -1,6 +1,6 @@
 ---
 import type { Offer } from "../data/offers"
-import { offerThumb, typeLabel } from "../data/offers"
+import { offerThumb, typeLabel, offerTitle } from "../data/offers"
 
 interface Props { offer: Offer }
 const { offer } = Astro.props
@@ -27,7 +27,7 @@ const meta = [
 
   <div class="flex flex-1 flex-col p-5">
     <p class="eyebrow text-[0.62rem] text-muted-foreground">{offer.country}</p>
-    <h3 class="mt-1 font-display text-2xl leading-snug text-ink">{offer.destino}</h3>
+    <h3 class="mt-1 font-display text-2xl leading-snug text-ink">{offerTitle(offer)}</h3>
     {meta && <p class="mt-1 text-sm text-muted-foreground">{meta}</p>}
 
     <div class="mt-4 flex items-end justify-between border-t border-border pt-4">

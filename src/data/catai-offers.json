@@ -1,0 +1,919 @@
+{
+  "generatedAt": "2026-07-18T11:53:24.900Z",
+  "offers": [
+    {
+      "slug": "japao-medieval",
+      "type": "circuito",
+      "title": "Japão Medieval",
+      "destino": "Japão",
+      "country": "Japão",
+      "region": "Ásia",
+      "priceFrom": 3690,
+      "priceNote": "Preço desde baseado na Etihad Airways, classe U, para viagens de 9 a 23 de fevereiro.",
+      "nights": 10,
+      "details": {
+        "overview": "Um percurso onde poderá sentir o Japão autêntico em Kanazawa, Shirakawago e Takayama e também desfrutar de um onsen no nosso hotel em Gero.",
+        "program": {
+          "days": [
+            {
+              "header": "Dia 1 — PORTUGAL / TÓQUIO",
+              "body": "Partida em voo com destino a Tóquio, pela rota escolhida. Noite a bordo."
+            },
+            {
+              "header": "Dia 2 — TÓQUIO",
+              "body": "Chegada a Tóquio, capital do Japão, a terra da harmonia. Transfer e alojamento."
+            },
+            {
+              "header": "Dia 3 — TOKIO",
+              "body": "Pequeno-almoço. De manhã, visite o Santuário Meiji. Continue para o bairro de Asakusa para visitar o Templo Asakusa Kannon, o templo mais antigo de Tóquio. Passearemos pela zona comercial de Nakamise, cheia de ruas estreitas do período Edo. Terminaremos a visita na Praça do Palácio Imperial e no bairro de Ginza. Tarde livre. Regresso ao hotel por sua conta."
+            },
+            {
+              "header": "Dia 4 — TÓQUIO / HAKONE / TÓQUIO",
+              "body": "Meia pensão. Partida para Hakone, onde faremos um pequeno passeio de barco no belo Lago Ashi. Visita ao Santuário xintoísta Hakone-Jinja, situado nas margens do lago. Almoço. Visita do Museu ao Ar Livre de Hakone, situado nas montanhas de Hakone numa área de mais de 70.000m2, onde estão expostas ao ar livre um total de 120 obras-primas da escultura modernista e contemporânea. Regresso a Tóquio."
+            },
+            {
+              "header": "Dia 5 — TÓQUIO / QUIOTO / NARA / QUIOTO",
+              "body": "Pequeno-almoço. Partida em comboio-bala para Quioto, o coração cultural e espiritual do Japão. Continuação para Nara, onde se pode sentir a atmosfera da antiga cultura japonesa. Visitamos o Templo Todai-ji e o Parque dos Cervos. Regresso a Quioto."
+            },
+            {
+              "header": "Dia 6 — QUIOTO",
+              "body": "Meia pensão. Visita de dia inteiro à cidade: o templo de Sanjusagendo com as suas mais de 1.000 estátuas da deusa Kannon, o santuário de Fushimi Inari com os seus milhares de toris, o templo de Kinkaku-ji mais conhecido como o \"Pavilhão Dourado\". Almoço. Continue para o templo Tenryu-ji com o seu belo jardim japonês, e a bela floresta de bambu em Arashiyama."
+            },
+            {
+              "header": "Dia 7 — QUIOTO",
+              "body": "Pequeno-almoço. Dia livre. Visita opcional de dia inteiro a Hiroshima e à ilha de Miyajima."
+            },
+            {
+              "header": "Dia 8 — QUIOTO / KANAZAWA",
+              "body": "Pequeno-almoço. Partida para Kanazawa, onde visitaremos o colorido mercado Omicho, o bairro de Higashichaya e o Jardim Kenrokuen, um dos mais belos jardins do Japão."
+            },
+            {
+              "header": "Dia 9 — KANAZAWA/SHIRAKAWAGO/TAKAYAMA/GERO",
+              "body": "Pensão completa. Partida para Shirakawago para visitar as belas casas de fazenda, únicas no mundo e património mundial. Continuação para Takayama, onde passearemos pelo bairro histórico de Kamisannomachi com as suas casas da era Edo e visitaremos o Yatai Kaikan, onde estão expostos os carros alegóricos do festival de Takayama. Partida para Gero. Jantar japonês no hotel."
+            },
+            {
+              "header": "Dia 10 — GERO / OSAKA",
+              "body": "Pequeno-almoço. Partida de comboio para Osaka, com mudança de comboio em Nagoya. Chegada a Osaka e visita da cidade: o animado bairro de Dotombori e passearemos pelos arredores do Castelo de Osaka.Alojamento."
+            },
+            {
+              "header": "Dia 11 — OSAKA/PORTUGAL",
+              "body": "Pequeno-almoço. Partida em voo de regresso a Portugal. Chegada."
+            }
+          ],
+          "included": "Voo em linha regular em classe turista (reserva de classes especiais). Alojamento e pequeno almoço. 3 almoços e 1 jantar japonês (bebidas não incluídas). Circuito regular (partilhado com mais clientes) com guias locais/assistência em espanhol. Visitas em autocarro, mini bus ou transporte público/privado com guia em espanhol (dependendo do número de participantes). Transfer de chegada em autocarro/comboio regular, assistência em espanhol no aeroporto. Transfer de partida em autocarro regular sem assistência. Seguro de viagem.",
+          "notIncluded": ""
+        }
+      },
+      "source": {
+        "file": "https://www.catai.pt/viagens/japao-medieval",
+        "hash": "086fca9ba6"
+      }
+    },
+    {
+      "slug": "paraisos-da-china",
+      "type": "circuito",
+      "title": "Paraísos da China",
+      "destino": "China",
+      "country": "China",
+      "region": "Ásia",
+      "priceFrom": 3750,
+      "priceNote": "Preço desde baseado na Lufthansa, classe S, para viajar a 6 Novembro, em hotéis indicados.",
+      "nights": 14,
+      "details": {
+        "overview": "Descubra os recantos mais marcantes da China com esta viagem organizada que lhe apresentamos a seguir. Templos, pagodes, monumentos, museus, fortalezas, palácios, lagos e inúmeros tesouros históricos e culturais que o vão apaixonar e seduzir pela China. Se decidir fazer esta viagem de sonho ao gigante asiático, visitará a Cidade Proibida e o Palácio de verão em Pequim, a Grande Muralha, o Exército",
+        "program": {
+          "days": [
+            {
+              "header": "Dia 1 — PORTUGAL/PEQUIM",
+              "body": "Partida em voo com destino a Pequim, pelo iti- nerário escolhido. Noite a bordo."
+            },
+            {
+              "header": "Dia 2 — PEQUIM",
+              "body": "Chegada. Transfer para o hotel e alojamento."
+            },
+            {
+              "header": "Dia 3 — PEQUIM",
+              "body": "Meia-pensão. Visita à Praça Tian An Men, coração da cidade. Mais tarde, visita à Cidade Proibida, um conjunto arquitetónico com palá- cios e pavilhões onde predomina o vermelho. Almoço. Visita ao Palácio de Verão."
+            },
+            {
+              "header": "Dia 4 — PEQUIM (GRANDE MURALHA)",
+              "body": "Pensão completa. De manhã, partida para a Gran- de Muralha, onde faremos um passeio ao longo desta extensa obra de engenharia. Almoço. No regresso, breve paragem para uma vista pano- râmica das instalações olímpicas, “O Ninho” e “O Cubo”. Jantar de pato lacado."
+            },
+            {
+              "header": "Dia 5 — PEQUIM/XIAN",
+              "body": "Pequeno-almoço. De manhã, visita ao Templo do Céu, uma obra-prima de grande beleza. Al- moço. Partida em comboio de alta velocidade para Xian (cerca de 5 horas), a antiga capital da China há mais de 1000 anos."
+            },
+            {
+              "header": "Dia 6 — XIAN",
+              "body": "Meia-pensão. Hoje, visitamos a grande joia de Xian, o Museu dos Guerreiros e Corcéis de Ter- racota. Almoço. De tarde, visita do Pagode do Ganso Selvagem (sem subida) e, no regresso ao hotel, passeio pelo bairro muçulmano e breve paragem na antiga muralha."
+            },
+            {
+              "header": "Dia 7 — XIAN/GUILIN",
+              "body": "Pequeno-almoço. Partida em voo com destino a Guilin, situada na margem oeste do rio Li."
+            },
+            {
+              "header": "Dia 8 — GUILIN/YANGSHUO/GUILIN",
+              "body": "Meia-pensão. Passeio de barco no rio Li Jiang. Almoço piquenique a bordo. Desembarque em Yangshuo. Tempo livre para passear pela rua oeste com lojas de artesanato local. Regresso a Guilin."
+            },
+            {
+              "header": "Dia 9 — GUILIN/HANGZHOU",
+              "body": "Pequeno-almoço. De manhã, visita às Grutas da Flauta de Junco. À tarde, partida em voo para Hangzhou."
+            },
+            {
+              "header": "Dia 10 — HANGZHOU",
+              "body": "Meia-pensão. Faremos um passeio de barco no lago Oeste. Almoço. Mais tarde, visita ao tem- plo da Alma Oculta e ao Pagode das Seis Har- monias (sem subida)."
+            },
+            {
+              "header": "Dia 11 — HANGZHOU/SUZHOU",
+              "body": "Meia-pensão. Pela manhã, partida de comboio para Suzhou. Almoço. À tarde, visita ao Jardim do Pescador e à Colina do Tigre."
+            },
+            {
+              "header": "Dia 12 — SUZHOU/XANGAI",
+              "body": "Meia-pensão. Partida em comboio de alta ve- locidade para Xangai. Dirigimo-nos à Torre Jin Mao para contemplar espetacular vista pano- râmica do miradouro. Passeio pelo molhe, onde se encontram alguns dos edifícios mais emble- máticos da cidade. Almoço. Durante a tarde, vi- sita ao Templo do Buda de Jade e passeio pelo Centro Histórico."
+            },
+            {
+              "header": "Dia 13 — XANGAI",
+              "body": "Pequeno-almoço. Dia livre."
+            },
+            {
+              "header": "Dia 14 — XANGAI/PORTUGAL",
+              "body": "Partida em voo de regresso a Portugal. Noite a bordo. (Com algumas companhias aéreas, o voo é diurno com chegada a Portugal no mes- mo dia)."
+            },
+            {
+              "header": "Dia 15 — PORTUGAL",
+              "body": "Chegada."
+            }
+          ],
+          "included": "Voo de linha regular turista (reservas em classes especiais). Alojamento e pequeno-almoço. 7 almoços, um dos quais piquenique no dia 8 no barco, e 1 jantar de pato lacado (bebidas não incluídas). Circuito regular (partilhado com outros clientes) com guias em espanhol. Seguro de viagem.",
+          "notIncluded": ""
+        }
+      },
+      "source": {
+        "file": "https://www.catai.pt/viagens/paraisos-da-china",
+        "hash": "8c6a4b0422"
+      }
+    },
+    {
+      "slug": "a-magia-de-bali",
+      "type": "circuito",
+      "title": "A Magia de Bali",
+      "destino": "Indonésia",
+      "country": "Indonésia",
+      "region": "Ásia",
+      "priceFrom": 2035,
+      "priceNote": "Preço desde baseado em voos da Turkish Airlines, classe V, para viajar de 7 a 28 de junho, para o mínimo 2 pessoas em quarto duplo, na categoria B.",
+      "nights": 12,
+      "details": {
+        "overview": "Bali é uma ilha indonésia muito atraente por sua riqueza natural e de grande interesse por seus templos e tradições. Agora, graças à viagem a Bali que apresentamos abaixo, você poderá descobrir seus curiosos templos, admirar seus terraços de arroz, explorar suas montanhas exuberantes e desfrutar de suas praias paradisíacas de areia branca e águas azul-turquesa cristalinas. Com a viagem a Bali que ",
+        "program": {
+          "days": [
+            {
+              "header": "Dia 1 — PORTUGAL/BALI",
+              "body": "Partida em voo com destino Bali, pela rota escolhida. Noite a bordo."
+            },
+            {
+              "header": "Dia 2 — BALI/UBUD",
+              "body": "Chegada a Bali e transfer para o interior da ilha. Chegada a Ubud."
+            },
+            {
+              "header": "Dia 3 — UBUD",
+              "body": "Pequeno-almoço. Dia livre."
+            },
+            {
+              "header": "Dia 4 — UBUD/SIDEMEN",
+              "body": "Meia pensão. Pela manhã, saída para os arrozais de Tegalalang, um dos mais conhecidos da ilha e também o mais bonito, onde poderemos passear e desfrutar das belas vistas das plantações e como não, subir num baloiço para voar sobre os arrozais. A continuação, dirigimo-nos ao Templo de Goa Gajah e às cataratas de Katulampo. Almoço num restaurante. Continuação para Sidemen."
+            },
+            {
+              "header": "Dia 5 — SIDEMEN",
+              "body": "Pequeno-almoço. Dia livre para desfrutar da zona."
+            },
+            {
+              "header": "Dia 6 — SIDEMEN/NUSA PENIDA",
+              "body": "Pequeno-almoço. Transfer ao sul da ilha com o nosso chofer e partida em ferry para Nusa Penida. Chegada e transfer ao hotel para deixar as malas e realizar uma visita panorâmica da ilha; Kelingking Beach, Broken Beach e Angel Billabong."
+            },
+            {
+              "header": "Dia 7 — NUSA PENIDA",
+              "body": "Meia pensão. Dedicaremos a manhã a desfrutar da água e realizar snorkeling em Manta Bay, Gamat Bay e Crystal Bay. Almoço piquenique."
+            },
+            {
+              "header": "Dia 8 — NUSA PENIDA",
+              "body": "Pequeno-almoço. Dia livre para conhecer em liberdade este paraíso, com as suas falésias e miradouros ou mergulhar por estas águas e ver a fauna marinha."
+            },
+            {
+              "header": "Dia 9 — NUSA PENIDA/BALI",
+              "body": "Pequeno-almoço. Partida em ferry para Bali."
+            },
+            {
+              "header": "Dia 10 — BALI",
+              "body": "Meia pensão. Manhã livre. Pela tarde, visitaremos o centro de reabilitação de tartarugas marinhas de Serangan, o monumento mais alto da ilha, Garuda Wisnu Kencana e o Templo de Uluwatu, onde poderemos desfrutar das danças Kecak, ao passo que admiramos o pôr-do-sol. Jantar à base de peixe na praia de Jimbaran."
+            },
+            {
+              "header": "Dia 11 — BALI",
+              "body": "Pequeno-almoço. Dia livre."
+            },
+            {
+              "header": "Dia 12 — BALI/PORTUGAL",
+              "body": "Pequeno-almoço. Partida em voo de regresso a Portugal. Noite a bordo."
+            },
+            {
+              "header": "Dia 13 — PORTUGAL",
+              "body": "Chegada."
+            }
+          ],
+          "included": "Voo de linha regular, classe turista (reservas em classes especiais). Alojamento e pequeno-almoço. 2 almoços e 1 jantar (bebidas não incluídas). Transfers exclusivos em Ubud e Bali com chofer. Visitas em Ubud, Bali e Sidemen com guia em espanhol, exclusivo para clientes da Catai. Em Nusa Penida e Gili serão com motorista em inglês, em Gili em cidomo (transporte local puxado por cavalos). Em Nusa Penida, equipamento para snorkeling. Seguro de viagem.",
+          "notIncluded": ""
+        }
+      },
+      "source": {
+        "file": "https://www.catai.pt/viagens/a-magia-de-bali",
+        "hash": "b1aa614f6e"
+      }
+    },
+    {
+      "slug": "a-descoberta-de-borneu-malaio",
+      "type": "circuito",
+      "title": "À Descoberta De Bornéu Malaio",
+      "destino": "Malásia",
+      "country": "Malásia",
+      "region": "Ásia",
+      "priceFrom": 3670,
+      "priceNote": "Preço desde baseado na Turkish Airlines, classe P, para viagens de 2 de fevereiro a 15 de junho.",
+      "nights": 9,
+      "details": {
+        "overview": "Desfrute de uma viagem inesquecível pela Malásia, onde poderá conhecer a fascinante Kuala Lumpur com os seus arranha-céus de tirar o fôlego e as famosas Torres Petronas, símbolo da cidade, para continuar com um passeio completo pela deslumbrante floresta tropical, onde iremos visitar um acampamento de orangotangos, descobrir a sua flora e fauna e acordar com os sons da natureza ao nascer do sol.",
+        "program": {
+          "days": [
+            {
+              "header": "Dia 1 — PORTUGAL/KUALA LUMPUR",
+              "body": "Partida em voo com destino a Kuala Lumpur, pela rota escolhida. Noite a bordo."
+            },
+            {
+              "header": "Dia 2 — KUALA LUMPUR",
+              "body": "Chegada a Kuala Lumpur, conhecida como a cidade das Torres Petronas."
+            },
+            {
+              "header": "Dia 3 — KUALA LUMPUR / KUCHING",
+              "body": "Pequeno-almoço. Partida em voo para Kuching. Visita da cidade à tarde, começando com uma paragem na famosa estátua do gato, que está ligada ao próprio nome da cidade: a palavra malaia \"Kuching\" significa gato, seguindo-se o templo mais antigo da cidade, Tua Pek Kong, o museu de história chinesa e depois a cidade velha, uma fascinante coleção de ruelas e lojas de especiarias e tecidos que nos darão uma melhor compreensão deste lugar. Passaremos pela mesquita, pelos correios, pela orla marítima e pelos edifícios coloniais brancos da época dos rajás que simbolizam um passado rico."
+            },
+            {
+              "header": "Dia 4 — KUCHING",
+              "body": "Pequeno-almoço. Partida de manhã para Semenggoh. Viajaremos durante pouco mais de meia hora antes de chegarmos ao nosso destino, conhecido por ser o melhor local em Sarawak para ver orangotangos semisselvagens que foram resgatados do cativeiro e treinados para sobreviver na reserva florestal circundante. Os animais reabilitados vagueiam livremente na floresta tropical e regressam na altura da alimentação. Faremos um passeio a pé de 20 minutos pelos jardins etnobotânicos com a sua coleção única de plantas da floresta tropical. No final desta experiência, regressaremos ao hotel para descansar. De tarde, seguiremos para Anah Rais, uma pequena aldeia situada a cerca de 45 minutos de Kuching. Esta é a oportunidade de conhecer a tribo indígena Bidayuh na sua casa comunal tradicional e ter um vislumbre de uma cultura diferente. O ponto central da aldeia é uma casa tradicional grande e bem preservada que alberga dezenas de famílias. Esta visita guiada apresenta aos visitantes a utilização única do bambu na casa comunal e o estilo de vida agrícola tradicional."
+            },
+            {
+              "header": "Dia 5 — KUCHING (P N BAKO)",
+              "body": "Meia pensão. Partida para descobrir a rica biodiversidade animal e vegetal do Parque Nacional de Bako, um tesouro botânico com 25 tipos diferentes de vegetação e 7 ecossistemas diferentes que caracterizam a floresta tropical. Existem numerosas espécies de aves, cobras e macacos, como os proboscídeos e os macacos de cauda longa, bem como javalis, veados, esquilos e lagartos. Uma viagem de 90 minutos de carro e de barco tradicional a partir de Kuching leva-o ao Parque Nacional de Bako, situado na pequena península de Muara Tebas, na foz do rio Sarawak. À chegada, pode entrar no parque por um dos trilhos no interior do parque para observar a flora e a fauna interessantes: estão bem sinalizados e demarcados e não há risco de se perder (pode escolher os percursos diretamente com o guia de acordo com as suas necessidades e condição física). Almoço no parque."
+            },
+            {
+              "header": "Dia 6 — KUCHING / KOTA KINABALU",
+              "body": "Pequeno-almoço. Partida em voo para Kota Kinabalu, chegada e transfer para o hotel. De tarde, visita noturna da cidade, com o seu mercado onde se podem comprar algumas lembranças da cidade. Jantar num restaurante local"
+            },
+            {
+              "header": "Dia 7 — KOTA KINABALU/SANDAKAN/ABAI",
+              "body": "Pensão completa. Voo de manhã cedo para Sandakan, onde passaremos os próximos dias de aventura. À chegada, iremos almoçar ao maior santuário de reabilitação de orangotangos do mundo, Sepilok. Seguimos depois para o Centro de Conservação dos Ursos de Bornéu, que tem como objetivo salvaguardar os raros ursos que são caçados pela sua preciosa bílis, de acordo com a medicina tradicional, antes de nos transferirmos de barco para um cruzeiro através dos mangais até ao Abai Jungle Lodge, nas margens do rio Kinabatangan. Depois do almoço, regressamos ao barco para seguir os macacos probóscides e outros animais selvagens locais. Mas é ao anoitecer que a atmosfera se torna ainda mais mágica, pois o leito do rio é iluminado por mil pequenas luzes que emanam dos pirilampos. Depois do jantar, o dia termina com um passeio noturno pela selva."
+            },
+            {
+              "header": "Dia 8 — ABAI / SUKAU",
+              "body": "Pensão completa. Acorde com os sons da natureza ao nascer do sol. Embarque num cruzeiro fluvial até ao Lago Pitas para observar a vida selvagem e dirija-se à Plataforma da Selva de Abai para tomar o pequeno-almoço rodeado pela natureza, continuando depois de barco até Sukau. Após o almoço, cruzeiro ao longo do rio Menanggul, um pequeno afluente do Kinabatangan, em busca de orangotangos selvagens, macacos de nariz arrebitado, elefantes pigmeus e outros animais selvagens. Regresso ao lodge para jantar."
+            },
+            {
+              "header": "Dia 9 — SUKAU/SANDAKAN/PORTUGAL",
+              "body": "Meia pensão. Apreciaremos o nascer do sol e tomaremos o pequeno-almoço rodeados pela natureza, antes de seguirmos para Sandakan, no caminho faremos uma paragem para almoço num restaurante local antes de chegarmos ao aeroporto. Partida em voo com destino a Portugal. Noite a bordo."
+            },
+            {
+              "header": "Dia 10 — PORTUGAL",
+              "body": "Chegada."
+            }
+          ],
+          "included": "Voo de linha regular, classe económica (reservas em classes especiais). Alojamento e pequeno-almoço. 3 almoços e 2 jantares (bebidas não incluídas). Circuito regular com guia ou tradutor em espanhol. Transferes do aeroporto/hotel/aeroporto com motorista de língua inglesa. Seguro de viagem. Opção Langkawi: transferes regulares com motorista de língua inglesa.",
+          "notIncluded": ""
+        }
+      },
+      "source": {
+        "file": "https://www.catai.pt/viagens/a-descoberta-de-borneu-malaio",
+        "hash": "7d509176e9"
+      }
+    },
+    {
+      "slug": "tanzania-safari-marafiki",
+      "type": "circuito",
+      "title": "Tanzânia, Safari Marafiki",
+      "destino": "Tanzânia",
+      "country": "Tanzânia",
+      "region": "África",
+      "priceFrom": 3820,
+      "nights": 7,
+      "details": {
+        "overview": "Gnus, girafas, zebras, crocodilos, hipopótamos, leões, chitas, elefantes, rinocerontes e muitos outros animais selvagens dão-lhe as boas-vindas à África. A seguir, apresentamos-lhe uma espetacular viagem de 8 dias pela Tanzânia. Desfrute da emoção de fazer os melhores safaris de África e descubra verdadeiras jóias da natureza, como a cratera de Ngorongoro, Serengeti, Lago Manyara, Arusha ou Tarang",
+        "program": {
+          "days": [
+            {
+              "header": "Dia 1 — PORTUGAL / KILIMANJARO",
+              "body": "Partida em voo com destino ao Kilimanjaro, pela rota escolhida. Noite a bordo."
+            },
+            {
+              "header": "Dia 2 — KILIMANJARO / ARUSHA / P. N. TARANGIRE",
+              "body": "Chegada e transfer para Arusha. Partida por estrada para o Parque Nacional de Tarangire. Esta zona é muito popular entre os elefantes e os leões, sobretudo de junho a setembro. Para além da vida selvagem da zona, podemos também apreciar as florestas de baobás. Almoço. Safari à tarde. Regresso ao alojamento à hora marcada. Jantar no acampamento."
+            },
+            {
+              "header": "Dia 3 — P. N. TARANGIRE / P. N. MANYARA / KARATU",
+              "body": "Pensão completa. Partida para o Parque Nacional do Lago Manyara, uma floresta tropical de ficus gigantes e árvores de tamarindo. Durante o safari, veremos elefantes, búfalos, girafas, gnus, zebras, bem como várias espécies de primatas. Piquenique- almoço. Continuação para Karatu. Jantar no lodge."
+            },
+            {
+              "header": "Dia 4 — KARATU / P. N. SERENGETI",
+              "body": "Pensão completa. De manhã cedo, safari para o interior da cratera de Ngorongoro. Esta gigantesca caldeira vulcânica alberga a maior concentração permanente de vida selvagem em África. Piquenique-almoço. Depois do safari, partida para as planícies do Serengeti. Jantar no acampamento."
+            },
+            {
+              "header": "Dia 5 — P. N. SERENGETI",
+              "body": "Pensão completa. Dia dedicado à exploração do Parque Nacional do Serengeti, palco anual de um dos espetáculos mundiais: a Grande Migração. Cerca de um milhão de gnus e zebras deslocam-se no Serengeti e no Masai Mara. Girafas, elefantes, chitas, leopardos, crocodilos e hipopótamos também podem ser encontrados. Almoço e jantar no acampamento."
+            },
+            {
+              "header": "Dia 6 — P. N. SERENGETI / KARATU",
+              "body": "Pensão completa. Hoje desfrutaremos do nosso último safari no parque. Almoço no alojamento e partida para Karatu. Jantar no lodge."
+            },
+            {
+              "header": "Dia 7 — KARATU/ARUSHA/PORTUGAL",
+              "body": "Meia pensão. Após o pequeno-almoço, viagem de regresso a Arusha. Almoço. Transfer para o aeroporto de Kilimanjaro para o voo de regresso a Portugal. Noite a bordo."
+            },
+            {
+              "header": "Dia 8 — PORTUGAL",
+              "body": "Chegada."
+            }
+          ],
+          "included": "Voo de linha regular, classe turística (reservas em classes especiais). Alojamento e pequeno-almoço. 6 almoços e 5 jantares (bebidas não incluídas). Transporte em veículos 4x4 durante o safari com janela garantida (ocupação máxima de 7 pessoas por veículo). Safari regular. Condutor / guia espanhol durante todo o safari. Todas as taxas de entrada nos parques especificados no itinerário. Água no veículo durante o safari e garrafa de metal. Seguro especial Flying Doctors. Seguro de viagem.",
+          "notIncluded": ""
+        }
+      },
+      "source": {
+        "file": "https://www.catai.pt/viagens/tanzania-safari-marafiki",
+        "hash": "908c6abf4e"
+      }
+    },
+    {
+      "slug": "a-procura-do-rei-leao",
+      "type": "circuito",
+      "title": "À procura do Rei Leão",
+      "destino": "Quénia",
+      "country": "Quénia",
+      "region": "África",
+      "priceFrom": 2415,
+      "priceNote": "Preço desde baseado na Qatar Airways, classe O (tarifa dinâmica), para viagens de 20 de maio a 17 junho, nos hotéis / lodge / camp indicados.",
+      "nights": 7,
+      "details": {
+        "overview": "Está à procura de uma viagem para fazer um safari e ficar rodeado de animais selvagens? Está com sorte. Agora, com o circuito organizado no Quénia que preparámos para si, poderá viver uma verdadeira aventura rodeado de leões, leopardos, rinocerontes, elefantes, búfalos, gnus, antílopes, zebras, gazelas e muitos outros animais. Com esta viagem ao Quénia, fará um safari na montanha Aberdare, no lago",
+        "program": {
+          "days": [
+            {
+              "header": "Dia 1 — PORTUGAL /NAIRÓBI",
+              "body": "Partida em voo com destino a Nairobi, pela rota escolhida. Noite a bordo."
+            },
+            {
+              "header": "Dia 2 — NAIROBI / P. N. ABERDARE",
+              "body": "Chegada e partida por estrada para o parque de Aberdare. Depois do almoço, subiremos a uma das colinas das montanhas de Aberdare. Tarde livre. Teremos a oportunidade de observar elefantes, búfalos e outras espécies a partir das plataformas de observação do lodge. Jantar no lodge."
+            },
+            {
+              "header": "Dia 3 — P. N. DE ABERDARE / P. N. DO LAGO NAKURU OU LAGO NAIVASHA",
+              "body": "Pensão completa. Partida por estrada através do Grande Vale do Rift até ao Lago Nakuru. Almoço num lodge do Lago Nakuru. À tarde, safari fotográfico nas margens do Lago Nakuru, onde vivem as duas espécies de rinocerontes. Jantar no lodge."
+            },
+            {
+              "header": "Dia 4 — P. N. LAGO NAKURU OU LAGO NAIVASHA / R. N. MASAI MARA",
+              "body": "Pensão completa. Partimos para a terra dos míticos guerreiros Masai. Safari fotográfico através das vastas planícies do Masai Mara, onde encontraremos grandes manadas de gnus, zebras, antílopes e gazelas vigiadas de perto pelos grandes predadores. Almoço e jantar no lodge / acampamento."
+            },
+            {
+              "header": "Dia 5 — R. N. MASAI MARA",
+              "body": "Pensão completa. Dia dedicado à observação de animais selvagens nesta reserva do Quénia. Durante o safari, teremos a oportunidade de ver elefantes, girafas, leões, leopardos, chitas, hienas, chacais e centenas de impalas. O Masai Mara é o cenário da lendária migração dos gnus que atravessam o rio Mara a partir das planícies do Serengeti, na Tanzânia, um dos maiores espetáculos naturais do mundo. Almoço e jantar no lodge/acampamento."
+            },
+            {
+              "header": "Dia 6 — R. N. MASAI MARA / NAIROBI",
+              "body": "Pequeno-almoço. Pela manhã, partida por estrada para Nairobi. Chegada e tempo livre para as últimas compras. Jantar no restaurante Carnivore, especializado em carnes exóticas."
+            },
+            {
+              "header": "Dia 7 — NAIROBI / PORTUGAL",
+              "body": "Pequeno-almoço. Tempo livre. À hora prevista, transfer para o aeroporto e voo de regresso a Portugal. Noite a bordo."
+            },
+            {
+              "header": "Dia 8 — PORTUGAL",
+              "body": "Chegada."
+            }
+          ],
+          "included": "Voo de linha regular, classe económica (reserva em classe especial). Alojamento e pequeno-almoço. 4 almoços e 4 jantares (bebidas não incluídas). Transporte em veículos 4x4 durante o safari com janela garantida (ocupação máxima de 7 pessoas por veículo). Safari exclusivo para clientes CATAI. Condutor/guia em espanhol durante todo o safari. Todas as taxas de entrada nos parques especificados no itinerário. Chapéu para o safari. Água no veículo durante o safari e garrafa de metal. Seguro de viagem.",
+          "notIncluded": ""
+        }
+      },
+      "source": {
+        "file": "https://www.catai.pt/viagens/a-procura-do-rei-leao",
+        "hash": "1637ef62c4"
+      }
+    },
+    {
+      "slug": "africa-do-sul-espetacular",
+      "type": "circuito",
+      "title": "África Do Sul Espetacular",
+      "destino": "África do Sul",
+      "country": "África do Sul",
+      "region": "África",
+      "priceFrom": 2350,
+      "priceNote": "Preço desde baseado na KLM, classe R (tarifas dinâmicas), para viagens de 13 de abril a 22 de junho, em hotéis / lodges indicados.",
+      "nights": 5,
+      "details": {
+        "overview": "Visitar uma Reserva Privada nos arredores do Parque Nacional Kruger oferece-nos outra alternativa de safári. Ao percorrer o seu interior nos seus veículos 4x4 abertos, desfrutaremos de uma experiência de safári incomparável. E terminaremos o nosso programa com alguns dias livres na Cidade do Cabo, onde poderemos desfrutar de todos os atrativos que a cidade e os seus arredores nos oferecem.",
+        "program": {
+          "days": [
+            {
+              "header": "Dia 1 — PORTUGAL/JOANESBURGO",
+              "body": "Partida em voo com destino a Joanesburgo, pelo itinerário escolhido. Chegada e alojamento."
+            },
+            {
+              "header": "Dia 2 — JOANESBURGO / MPUMALANGA / ÁREA KRUGER (RESERVA PRIVADA)",
+              "body": "Meia pensão. De manhã cedo, começamos a nossa viagem para a área do Parque Nacional Kruger. Para lá chegar, atravessamos a província de Mpumalanga, que significa \"o lugar onde o sol nasce\". A paisagem que nos espera hoje é incrivelmente bela. Chegaremos a lugares mágicos como o Bourke's Luck Potholes no Blyde River Canyon, o desfiladeiro mais profundo do mundo. Depois deste percurso deslumbrante, chegamos à tarde ao nosso destino. É altura de descansar da viagem e recarregar baterias. Jantar no lodge."
+            },
+            {
+              "header": "Dia 3 — ÁREA KRUGER (RESERVA PRIVADA)",
+              "body": "Pensão completa. Encontramo-nos na nossa reserva privada na zona de Kruger. Acordamos cedo para a primeira das nossas atividades. Espera-nos um dia de safari no interior da nossa reserva privada. O Kruger é um dos poucos sítios na África do Sul onde se podem ver os \"Big 5\". Partimos de manhã cedo, que é quando os animais, juntamente com a hora do pôr do sol, estão mais ativos. A vegetação deste parque é também surpreendente. Elefantes, leões, leopardos, búfalos e rinocerontes, entre muitos outros animais, cruzam o nosso caminho. O nosso guia conta-nos alguns dos segredos desta maravilha natural. Jantar no lodge."
+            },
+            {
+              "header": "Dia 4 — ÁREA KRUGER / JOANESBURGO / CIDADE DO CABO",
+              "body": "Meia pensão. Aproveitamos o último momento, e esta manhã temos a oportunidade de fazer mais um safari, partimos novamente em busca dos animais que aqui vivem. À hora marcada, deixamos a nossa reserva privada de caça no Kruger e, com um piquenique, continuamos a nossa viagem até Joanesburgo. Hoje temos duas opções, ou optamos por regressar por estrada a Joanesburgo ou voamos do Kruger para a Cidade do Cabo (consultar preço neste último caso). No caso do regresso a Joanesburgo por estrada, apanharemos o voo para a Cidade do Cabo. À chegada, transfer para o hotel."
+            },
+            {
+              "header": "Dia 7 — CIDADE DO CABO/PORTUGAL",
+              "body": "Pequeno-almoço. Temos dois dias livres para relaxar e conhecer a cidade. Mas a Cidade do Cabo, para além das suas belezas naturais como as suas praias, tem também uma imensa riqueza cultural que mistura o europeu e o africano. É-nos oferecida a possibilidade de diferentes excursões opcionais. Há opções tão boas como visitar a Península da Boa Esperança, uma visita a uma vinha com prova de vinhos, passeios de barco, caminhadas ou simplesmente percorrer os seus museus e galerias de arte."
+            },
+            {
+              "header": "Dia 8 — PORTUGAL",
+              "body": "Pequeno-almoço. Resto do dia livre até à partida em voo de regresso a Portugal. Noite a bordo."
+            }
+          ],
+          "included": "Voo de linha regular, classe turística (reservas em classes especiais). Alojamento e pequeno-almoço. 2 jantares (bebidas não incluídas) e 2 almoços (um deles piquenique). Transferes em Joanesburgo e na Cidade do Cabo com motorista/guia em espanhol. Transporte em carro, minivan ou autocarro (consoante o número de participantes) com guia/acompanhante em espanhol. Safaris em 4x4 no interior da nossa reserva privada na zona do Kruger. Visitas turísticas em Mpumalanga sujeitas à disponibilidade de tempo e às condições climatéricas. Seguro de viagem. Opção Cataratas Vitória: Transferes, visitas das cataratas em espanhol, cruzeiro no rio Zambeze com guia em inglês. Entrada nos parques. Opção Cataratas Vitória e Chobe: 1 almoço. Transferes de ida e volta, visita das Cataratas, safari em 4x4 e de barco no PN de Chobe com guia espanhol. Cruzeiro ao pôr do sol no rio Zambeze em inglês. Taxas de ent",
+          "notIncluded": ""
+        }
+      },
+      "source": {
+        "file": "https://www.catai.pt/viagens/africa-do-sul-espetacular",
+        "hash": "75b211f2cd"
+      }
+    },
+    {
+      "slug": "a-rota-masai",
+      "type": "circuito",
+      "title": "A Rota Masai",
+      "destino": "Quénia",
+      "country": "Quénia",
+      "region": "África",
+      "priceFrom": 3390,
+      "priceNote": "Preço desde baseado na Qatar Airways, classe O (tarifa dinâmica), para viagens de 7 de abril a 26 de maio, em lodges / camps, categoria C.",
+      "nights": 9,
+      "details": {
+        "overview": "Quer fotografar animais selvagens, gosta de fazer safaris, então parabéns! Então tem a maravilhosa oportunidade de viajar para o Quénia e ficar rodeado de animais selvagens como leões, chitas, rinocerontes, elefantes, gnus, gazelas, antílopes e zebras. Durante um safari, descobrirá também os melhores parques nacionais e reservas naturais do país: as montanhas de Aberdare, o lago Nakuru, as planíci",
+        "program": {
+          "days": [
+            {
+              "header": "Dia 1 — PORTUGAL / NAIRÓBI",
+              "body": "Partida em voo com destino a Nairobi, pela rota escolhida. Chegada e transfer para o hotel. Alojamento."
+            },
+            {
+              "header": "Dia 2 — NAIROBI / R. N. SAMBURU",
+              "body": "Pensão completa. Viagem para norte até à reserva de caça de Samburu. Chegada ao lodge para almoço. À tarde, safari fotográfico neste parque de savana semiárida em redor do rio Ewaso Nyiro. A sua principal atração são, sem dúvida, os animais endémicos do norte do Quénia, como a zebra de Grevy, o órix de beisa e o gerenuk. Jantar no lodge."
+            },
+            {
+              "header": "Dia 3 — R. N. SAMBURU / P. N. ABERDARE",
+              "body": "Pensão completa. Partida por estrada para o Parque Nacional de Aberdare. Após o almoço, subida a uma das colinas das montanhas de Aberdare. Tarde livre onde terá a oportunidade de observar elefantes, búfalos e outras espécies como rinocerontes pretos e brancos a partir das plataformas de observação do lodge. Jantar no lodge."
+            },
+            {
+              "header": "Dia 4 — P. N. ABERDARE / P. N. LAGO NAKURU OU LAGO NAIVASHA",
+              "body": "Pensão completa. Partida por estrada para o Grande Vale do Rift até ao Lago Nakuru. Almoço num lodge do Lago Nakuru. À tarde, safari fotográfico nas margens do Lago Nakuru, onde vivem as duas espécies de rinocerontes. Depois do safari, viagem até ao nosso alojamento. Jantar no lodge."
+            },
+            {
+              "header": "Dia 5 — P. N. LAGO NAKURU OU LAGO NAIVASHA / R. N. MASAI MARA",
+              "body": "Pensão completa. Viagem até à terra dos míticos guerreiros Masai. Safari fotográfico pelas vastas planícies de Masai Mara, onde encontraremos grandes manadas de gnus, zebras, antílopes e gazelas, vigiados de perto pelos grandes predadores. Almoço e jantar no lodge/acampamento."
+            },
+            {
+              "header": "Dia 6 — R. N. MASAI MARA",
+              "body": "Pensão completa. Dia dedicado à observação de animais selvagens na reserva do Quénia. O Masai Mara é o cenário da lendária migração dos gnus que atravessam o rio Mara a partir das planícies do Serengeti na Tanzânia, um dos maiores espetáculos naturais do mundo. Almoço e jantar no lodge/acampamento."
+            },
+            {
+              "header": "Dia 7 — MASAI MARA/NAIRÓBI",
+              "body": "Pequeno-almoço. Pela manhã, saída por estrada até Nairóbi. Chegada ao meio-dia e tempo livre à sua disposição pela tarde."
+            },
+            {
+              "header": "Dia 8 — NAIROBI / P. N. AMBOSELI",
+              "body": "Pensão completa. Partida por estrada para Amboseli. Este parque oferece as imagens mais clássicas do Quénia, com a montanha Kilimanjaro a dominar as planícies, proporcionando um cenário incrível para a vida selvagem do parque. À tarde, safari fotográfico pelo parque. Almoço e jantar no lodge."
+            },
+            {
+              "header": "Dia 9 — P. N. AMBOSELI / NAIROBI / PORTUGAL",
+              "body": "Pequeno-almoço. De manhã cedo, viagem de regresso a Nairobi. Chegada e partida à hora prevista para o voo de regresso a Portugal. Noite a bordo."
+            },
+            {
+              "header": "Dia 10 — PORTUGAL",
+              "body": "Chegada"
+            }
+          ],
+          "included": "Voo de linha regular, classe económica (reservas em classes especiais). Alojamento e pequeno-almoço. 6 almoços e 6 jantares (bebidas não incluídas). Transporte em veículos 4x4 durante o safari com janela garantida (ocupação máxima de 7 pessoas por veículo). Safari exclusivo para clientes CATAI. Condutor/guia em espanhol durante todo o safari. Todas as taxas de entrada nos parques especificados no itinerário. Chapéu para o safari. Água no veículo durante o safari e garrafa de metal. Seguro de viagem.",
+          "notIncluded": ""
+        }
+      },
+      "source": {
+        "file": "https://www.catai.pt/viagens/a-rota-masai",
+        "hash": "8e143817b8"
+      }
+    },
+    {
+      "slug": "a-descoberta-do-uruguai",
+      "type": "circuito",
+      "title": "À Descoberta Do Uruguai",
+      "destino": "Uruguai",
+      "country": "Uruguai",
+      "region": "América",
+      "priceFrom": 2965,
+      "priceNote": "Preço desde baseado na Air Europa, classe Z, para viagens de 10 de abril a 30 de maio, em hotéis de categoria C.",
+      "nights": 11,
+      "details": {
+        "overview": "Este programa permite-nos desfrutar de lugares como Montevideu, a capital cosmopolita; Colonia del Sacramento, cujo centro é Património da Humanidade; o ambiente e as praias de Punta del Este.",
+        "program": {
+          "days": [
+            {
+              "header": "Dia 1 — PORTUGAL / MONTEVIDEO",
+              "body": "Partida em voo com destino a Montevideu. Noite a bordo."
+            },
+            {
+              "header": "Dia 2 — MONTEVIDEO",
+              "body": "Chegada de manhã cedo, transfer para o hotel e Alojamento imediato. Pequeno-almoço. Hoje desfrutaremos de uma visita completa à capital mais austral da América. A sua costa, com magníficas praias, está situada nas margens do Rio da Prata, onde uma excelente baía forma um porto natural de águas profundas. Neste passeio panorâmico observaremos os principais pontos turísticos da cidade: Praça da Independência, Torre Executiva, sede do Poder Executivo, Palácio Salvo, Teatro Solís, Mercado do Porto, Mercado Agrícola, Palácio Legislativo, Obelisco aos Constituintes, Estádio Centenário e muito mais. Um circuito guiado pelos principais e pitorescos bairros da cidade. Regresso pelo passeio das Nações Unidas, com paragem na Praça Virgílio para observar uma das mais belas vistas panorâmicas da cidade e da sua costa. No regresso, podemos optar por ficar no centro comercial Punta Carretas, situado num dos bairros mais bonitos de Montevideu, ou regressar ao hotel. Alojamento."
+            },
+            {
+              "header": "Dia 3 — MONTEVIDEO (NAS PEGADAS DO CAMINHO DO VINHO)",
+              "body": "Pequeno-almoço. Hoje vamos descobrir a cultura do vinho. Visitaremos uma das adegas mais importantes de Montevideo: Bouza. Aqui desfrutaremos de visitas às plantações e provaremos os seus excelentes vinhos acompanhados por um prato de queijos e carnes frias. Também poderemos admirar a coleção de carros clássicos dentro da propriedade. No final do passeio, regresso ao hotel e resto da tarde livre."
+            },
+            {
+              "header": "Dia 4 — MONTEVIDEO (NOITE DE MILONGAS)",
+              "body": "Meia pensão. Dia livre para continuar a descobrir Montevideu. À noite, iremos a El Milongon para desfrutar de uma noite cheia de ritmos e cultura locais. Jantar. Ao longo do espetáculo, desfilarão no palco figuras conhecidas e emblemáticas da cultura popular nas suas diferentes manifestações: candombe, tango, milonga e danças folclóricas, enquanto se desfruta da gastronomia típica e se prova a qualidade dos vinhos."
+            },
+            {
+              "header": "Dia 5 — MONTEVIDEO/PUNTA DEL ESTE",
+              "body": "Pequeno-almoço. Partida para Punta del Este. No caminho, faremos uma parada pitoresca em Piriápolis para recarregar as baterias no Cerro San Antonio e desfrutar de vistas únicas. Continuando para leste, em Punta Ballena visitaremos uma das joias arquitetónicas e artísticas da América do Sul: Casapueblo (entrada não incluída). Continuaremos até Barra de Maldonado, onde atravessaremos a sua ponte ondulante e regressaremos à península pela orla da praia Brava."
+            },
+            {
+              "header": "Dia 6 — PUNTA DEL ESTE",
+              "body": "Pequeno-almoço. Passeio de bicicleta com guia local, fazendo paragens nos pontos mais emblemáticos de Punta del Este. Resto do dia livre."
+            },
+            {
+              "header": "Dia 7 — PUNTA DEL ESTE (JOSÉ IGNACIO)",
+              "body": "Pequeno-almoço. É hora de continuar a descobrir o leste uruguaio e as suas vastas praias. É a vez de José Ignacio. Nesta visita percorreremos a costa atlântica em direção ao leste de Maldonado, passando por galerias de arte e museus até chegarmos ao balneário mais oriental da costa, que combina a atrativa sensação de paz gerada pela maravilhosa paisagem costeira do Oceano Atlântico com a exclusividade e o luxo daqueles (celebridades, entre outros) que escolhem este lugar para o seu descanso. Regresso a Punta del Este."
+            },
+            {
+              "header": "Dia 8 — PUNTA DEL ESTE/MONTEVIDEO",
+              "body": "Pequeno-almoço. Transfer para Montevideu. Resto do dia livre."
+            },
+            {
+              "header": "Dia 9 — MONTEVIDEO / COLONIA DEL SACRAMENTO",
+              "body": "Pequeno-almoço. Um passeio cultural pela história da conquista e colonização no Rio da Prata. Descubra os encantos da única cidade de origem portuguesa no território da Banda Oriental, hoje República Oriental do Uruguai. O passeio permite observar, ao longo do percurso, a produção agrícola, pecuária e industrial, os nossos cartões de visita na economia mundial. Situa-se na margem norte do Rio da Prata, a 177 quilómetros de Montevidéu e a 45 quilómetros em linha reta de Buenos Aires. O seu bairro histórico foi declarado pela UNESCO Património Histórico da Humanidade em dezembro de 1995. O seu traçado urbano de origem portuguesa contrasta com o modelo estabelecido pela Lei espanhola sobre as Índias Ocidentais. Caracteriza-se pelas inconfundíveis muralhas e bastiões defensivos. Visitará ainda a Rambla Costanera, o Real de San Carlos com a sua antiga Plaza de Toros, a Igreja de San Benito e os bairros residenciais da cidade. Realizará um passeio a pé absolutamente diferente e exclusivo de interesse cultural para conhecer e desfrutar da magia deste ambiente. Após o término desta experiência, será levado ao seu hotel em Colônia."
+            },
+            {
+              "header": "Dia 10 — COLONIA DEL SACRAMENTO (CIDADE VELHA)",
+              "body": "Meia pensão. Neste dia podemos continuar a desfrutar desta cidade mágica e saborear um delicioso almoço num restaurante típico do centro histórico. Tarde livre."
+            },
+            {
+              "header": "Dia 11 — COLONIA DEL SACRAMENTO / MONTEVIDEO / PORTUGAL",
+              "body": "Pequeno-almoço. Transfer para Montevideu. Partida em voo de regresso a Portugal. Noite a bordo."
+            },
+            {
+              "header": "Dia 12 — PORTUGAL",
+              "body": "Chegada."
+            }
+          ],
+          "included": "Voo de linha regular, classe económica (reserva em classes especiais). Alojamento e pequeno-almoço. 1 almoço e 1 jantar (bebidas não incluídas). Transferes em serviço privado, esceto o transfer de Montevideu para Colonia que será em serviço regular. Excursões e visitas em serviço regular com guias locais em espanhol. Seguro de viagem.",
+          "notIncluded": ""
+        }
+      },
+      "source": {
+        "file": "https://www.catai.pt/viagens/a-descoberta-do-uruguai",
+        "hash": "d9acedf3c6"
+      }
+    },
+    {
+      "slug": "a-descoberta-da-arabia",
+      "type": "circuito",
+      "title": "À Descoberta da Arábia",
+      "destino": "Arábia Saudita",
+      "country": "Arábia Saudita",
+      "region": "Ásia",
+      "priceFrom": 3520,
+      "priceNote": "Preço desde baseado na Saudia, classe V, para viagens de 26 de junho a 11 de dezembro, para um mínimo de 2 pessoas.",
+      "nights": 9,
+      "details": {
+        "overview": "Descubra as paisagens extraordinárias e os tesouros escondidos da Arábia Saudita. Em Riade, descobrirá joias históricas escondidas em palácios antigos e uma cidade movimentada com múltiplas experiências. Al Ula , no meio do deserto, na região noroeste do país, poderá realizar a sua fantasia de ser um intrépido arqueólogo. Jeddah, com o seu impressionante passeio à beira-mar, ou Medina, uma das cid",
+        "program": {
+          "days": [
+            {
+              "header": "Dia 1 — PORTUGAL / JEDDAH",
+              "body": "Partida em voo com destino a Jeddah. Chegada e assistência do nosso pessoal. Transfer para o hotel e alojamento."
+            },
+            {
+              "header": "Dia 2 — JEDDAH",
+              "body": "Pequeno-almoço e manhã livre. Ao fim do dia, passeio pelo centro histórico, mais conhecido por Al-Balad, Património Mundial da UNESCO, com o seu impressionante conjunto de ruelas medievais e casas de coral e varandas de madeira."
+            },
+            {
+              "header": "Dia 3 — JEDDAH",
+              "body": "Pequeno-almoço. Dia dedicado a conhecer Jeddah. Esta cidade vai surpreendê-lo pelos seus contrastes. Atualmente, uma grande parte da cidade está a ser reconstruída para a transformar numa grande megalópole mundial. Entre outros, destaca-se a Torre de Jeddah, que será o edifício mais alto do mundo, com mais de mil metros de altura. Seguiremos a Corniche, com as suas belas vistas, as suas mesquitas junto ao mar e as suas zonas de lazer. Vemos a Fonte do Rei Fahd, a mais alta do mundo no seu género, os seus jactos de água atingem mais de 300 metros de altura. Paragem no movimentado e pitoresco mercado do peixe. Incluindo a entrada na \"Cidade Internacional de Tabeyat\", um complexo arquitetónico de grande beleza com os seus museus de história e etnografia. Visita de novo ao centro histórico, entrando por Bab Makkah - o portão mais importante de Jedah. Visita ao interior da elegante casa de Beit Sallum, atualmente um museu. Tempo livre. De tarde, visitas à Mesquita Al Rahma, mais conhecida como a mesquita flutuante, pois está construída nas margens do Mar Vermelho com pilares sobre a água. Apreciaremos também a animada marina, muito próxima das pistas onde se realiza o circuito de Fórmula 1. Regresso ao hotel."
+            },
+            {
+              "header": "Dia 4 — JEDDAH / MEDINA",
+              "body": "Meia pensão. Partida para o interior da Arábia, grandes autoestradas através de desertos e montanhas conduzem-nos à cidade santa de MEDINA, \"a cidade luminosa\". Tempo livre. Encontramo-nos num destino histórico imponente, uma das duas cidades mais sagradas do Islão, destino de milhões de peregrinos todos os anos e uma cidade proibida aos não muçulmanos até muito recentemente. É um local sagrado, pelo que é necessário respeitar os seus habitantes e crenças e vestir-se de forma adequada. Percorreremos a imensa Mesquita do Profeta (Al Masjid an Nabawi), uma espantosa e luminosa mesquita de 10 minaretes com capacidade para um milhão de visitantes, construída pelo próprio Profeta e local onde está sepultado. Visitamos a colina de UHUD, onde as forças do Profeta se defrontaram com as tropas de Meca. Percorremos a sua vasta esplanada e subimos a colina, mas lembramo-nos de o fazer em silêncio e de respeitar as centenas de peregrinos que nos vão rodear. Na Mesquita de Quba, no ano 622, o Profeta e os seus seguidores lançaram a primeira pedra daquela que seria a primeira mesquita da história. A partir daqui, caminharemos até ao jardim e ao poço de Ethiq, onde as diferentes tribos da região saíram para saudar e dar água ao Profeta e aos seus companheiros que acabavam de chegar a Medina depois da perseguição em Meca. À noite, voltaremos a sair da mesquita Al Masjid para sentir a emoção de ver os milhares de pessoas que entram à hora da oração e ver as iluminações. Jantar num restaurante. Transfer para o hotel."
+            },
+            {
+              "header": "Dia 5 — MEDINA / AL ULA",
+              "body": "Meia pensão. Viajamos para uma das regiões desérticas mais belas do mundo. Dadan é um sítio arqueológico localizado na região de Al Ula, na Arábia Saudita, que oferece uma visão fascinante do passado antigo da região. A antiga cidade de Dadan, capital dos reinos de Dadan e Lihyan, é uma das descobertas arqueológicas mais importantes em Al Ula. Esta cidade histórica foi construída durante o século IX a.C. com pedras disponíveis no vale do oásis e abriga mais de doze tumbas esculpidas com grande habilidade e criatividade nas falésias de pedra vermelha. Entre paisagens desérticas impressionantes, continuaremos em direção a um dos locais mais espetaculares do mundo, a região e o oásis de Al-Ula, um autêntico museu ao ar livre rodeado pela natureza, onde se encontram formações rochosas, canyons e ravinas que competem com os majestosos tesouros esculpidos pelos seus antigos habitantes. Após a chegada, iremos à Rocha do Elefante, «Jabal Al Fil», um impressionante fenómeno geomorfológico (rocha de 52 metros de altura em forma de elefante). Jantar. Alojamento."
+            },
+            {
+              "header": "Dia 6 — AL ULA / TABUK",
+              "body": "Pensão completa. Na região de Al-Ula, visitaremos o sítio arqueológico da cultura nabateia e Património Mundial da UNESCO de HEGRA (Madain Saleh), \"a outra Petra\" que nos surpreenderá com os seus túmulos esculpidos na rocha num ambiente desértico cheio de mistério. Almoço. Tempo livre para passear e desfrutar das suas ruas comerciais e do seu magnífico Oásis. No início da tarde continuação para Tabuk, uma cidade com mais de meio milhão de habitantes, capital de província ativa e uma das cidades mais antigas do país. Jantar e transfer para o hotel."
+            },
+            {
+              "header": "Dia 7 — TABUK / RIADE",
+              "body": "Pequeno-almoço. Transfer cedo para o aeroporto para apanhar o voo para Riade. Chegada e partida do aeroporto para uma visita à impressionante capital da Arábia Saudita. Visita ao Museu Nacional, o maior museu do país, onde aprenderemos sobre a história, cultura e arte do Reino. Continuação para a Fortaleza de Masmak, a antiga fortaleza da cidade, cujo interior nos permite compreender a incrível mudança que ocorreu nesta cidade durante o último século. Tempo livre para passear pelo bairro com os seus souks e vida comercial. No final da tarde, visitaremos a Mesquita Al Rajhi, a maior mesquita de Riade, com a sua arquitetura de estilo andaluz, assistiremos a uma oração e teremos uma introdução ao Islão que certamente nos ensinará algo sobre esta religião. Para terminar o dia, transfer e entrada no Riyadh Boulevard, onde se surpreenderá com a sua vida e atividade, as atrações, os numerosos restaurantes com especialidades de muitos países, os seus espetáculos ao vivo e, especialmente, o espetáculo das fontes coloridas. Tempo livre para desfrutar deste local. Transfer para o hotel."
+            },
+            {
+              "header": "Dia 8 — RIADE",
+              "body": "Pequeno-almoço. Dïa Livre. Possibilidade de realizar visitas opcionais em Riade. Alojamento."
+            },
+            {
+              "header": "Dia 9 — RIADE / JEDDAH",
+              "body": "Pequeno-almoço. Na hora prevista traslado ao aeroporto para apanhar o voo com destino a Jeddah. Chegada, traslado ao hotel e alojamento."
+            },
+            {
+              "header": "Dia 10 — JEDDAH / PORTUGAL",
+              "body": "Pequeno-almoço. Transfer para o aeroporto e partida do voo de regresso a Portugal. Chegada."
+            }
+          ],
+          "included": "Voo de linha regular, classe económica (reservas em classes especiais). Alojamento e pequeno-almoço. 3 jantares e 1 almoço. Transferes e visitas em circuito regular (partilhado com outros clientes) com guia em espanhol. Voos domésticos Tabuk-Riyadh e Riyadh-Jeddah. Seguro de viagem.",
+          "notIncluded": ""
+        }
+      },
+      "source": {
+        "file": "https://www.catai.pt/viagens/a-descoberta-da-arabia",
+        "hash": "49219eb662"
+      }
+    },
+    {
+      "slug": "estadia-no-dubai",
+      "type": "estadia",
+      "title": "Estadia no Dubai",
+      "destino": "Emirados Árabes Unidos",
+      "country": "Emirados Árabes Unidos",
+      "region": "Ásia",
+      "priceFrom": 980,
+      "nights": 0,
+      "details": {
+        "overview": "Virado para o mar e rodeado de deserto, o Dubai é uma cidade muito atraente pela sua arquitetura ultra-moderna. A paisagem urbana parece saída de um filme de ficção científica. Os seus arranha-céus imponentes, galerias de arte, restaurantes gourmet luxuosos, centros comerciais, uma vasta gama de instalações de lazer, ilhas artificiais, vistas nocturnas de cortar a respiração e praias de areia dour",
+        "program": {
+          "days": [
+            {
+              "header": "Dia 1 — PORTUGAL/DUBAI",
+              "body": "Partida em voo direto com destino ao Dubai. Chegada e alojamento."
+            }
+          ],
+          "included": "Voo de linha regular, classe económica (reservas em classes especiais). Estadia no Dubai: Estadia no hotel e regime selecionados. Transfers regulares com chofer em inglês aeroporto/hotel/aeroporto. Seguro de viagem.",
+          "notIncluded": ""
+        }
+      },
+      "source": {
+        "file": "https://www.catai.pt/viagens/estadia-no-dubai",
+        "hash": "4fa55d1153"
+      }
+    },
+    {
+      "slug": "malta-espetacular",
+      "type": "circuito",
+      "title": "Malta Espetacular",
+      "destino": "Malta",
+      "country": "Malta",
+      "region": "Europa",
+      "priceFrom": 1295,
+      "priceNote": "Preço desde baseado na Swiss, classe T, para viagens em abril em hotel de categoria C.",
+      "nights": 7,
+      "details": {
+        "overview": "Situada no coração do Mediterrâneo, Malta é uma ilha atraente, conhecida pelas suas fortalezas e templos. É um lugar de sonho onde as muralhas se erguem sobre as águas azuis do mar, uma verdadeira maravilha. Também possui belas praias mediterrânicas. Neste pacote turístico, visitará a capital, Valeta, com as suas ruas encantadoras, fortalezas, igrejas, palácios e porto, a cidade medieval de Mdina,",
+        "program": {
+          "days": [
+            {
+              "header": "Dia 1 — PORTUGAL / MALTA",
+              "body": "Partida em voo (opcional) para Malta. Chegada, receção e transfer para o hotel. Dependendo da hora de chegada, tempo livre para conhecer a ilha. Alojamento."
+            },
+            {
+              "header": "Dia 2 — MALTA / LA VALETA / MALTA",
+              "body": "Pequeno-almoço. Chegada ao ponto de encontro e início da excursão de meio dia à capital da ilha, percorrendo as vibrantes ruas de Valletta, permitindo-lhe descobrir o encanto e a beleza desta cidade fortificada construída pelos Cavaleiros de São João em 1566. A Ordem dos Cavaleiros governou as ilhas durante 268 anos, deixando um legado cultural único de que Valeta é o principal exemplo. Começamos por visitar os Jardins de Upper Barracca, de onde admiramos a vista panorâmica do Grande Porto. Continuamos para a Co-catedral de São João e o Oratório, que contém pinturas de Caravaggio, tapeçarias flamengas e o museu da igreja. Esta co- catedral tem os pavimentos de mármore mais excecionais do mundo. Descendo a Rua da República, passamos pelo Palácio dos Grão-Mestres e pela Praça de São Jorge, recentemente restaurada, antes de terminarmos com o espetáculo audiovisual “Malta Experience”, onde aprenderemos um pouco mais sobre a história de Malta ao longo dos séculos, que podemos reviver aqui."
+            },
+            {
+              "header": "Dia 3 — MALTA / MDINA / MALTA",
+              "body": "Meia pensão. Chegada ao ponto de encontro para uma excursão de dia inteiro à parte central de Malta, dominada pela fortaleza medieval de Mdina, a antiga capital de Malta. As suas ruas estreitas, que remontam à época medieval, conduzem-nos aos imponentes baluartes que oferecem vistas magníficas sobre a ilha. Percorrendo as suas ruas, descobrimos diferentes estilos arquitetónicos nos seus edifícios, como o esculonormano e o barroco, todos de grande importância. O tempo não passa na “Cidade Silenciosa”, que é como um paraíso para os produtores de cinema. Saindo de Mdina pela Porta Grega, paramos para visitar as catacumbas cristãs de Rabat, antes de nos dirigirmos para as falésias de Dingli. Almoço e visita dos Jardins de Santo António, situados perto do Palácio Presidencial, que podemos admirar do exterior. Teremos a oportunidade de visitar o centro de artesanato de Ta Qali e, para terminar, vamos surpreender-vos com a igreja de Mosta, com uma das maiores cúpulas da Europa."
+            },
+            {
+              "header": "Dia 4 — MALTA",
+              "body": "Pequeno-almoço. Dia livre no qual sugerimos que visitem a aldeia do Popeye ou o Hipogeu por vossa conta. Alojamento"
+            },
+            {
+              "header": "Dia 5 — MALTA / GOZO / MALTA",
+              "body": "Meia pensão. Chegada ao ponto de encontro para uma excursão de dia inteiro à ilha de Gozo. Após uma curta travessia de 20 minutos, atracamos no porto de Mgarr, que dá imediatamente a Gozo aquele toque único. O seu guia levá-lo-á aos templos megalíticos de Ggantija, os edifícios mais antigos do mundo. Diz-se que são mais antigos do que as pirâmides do Egito. Segue-se uma visita à Cidadela de Victoria e à Gruta de Xlendi. Gozo é conhecida pelo seu artesanato, especialmente rendas e rendas de bilros. As visitas a esta ilha não podem deixar de ficar impressionadas com o verde das suas paisagens, a sua serenidade e a grande diferença em relação à ilha maior de Malta. Almoço durante a excursão. Regresso a Malta."
+            },
+            {
+              "header": "Dia 6 — MALTA / HAGAR QIM / MARSAXLOKK / MALTA",
+              "body": "Meia pensão. Chegada ao ponto de encontro para uma visita de um dia inteiro a uma das mais antigas pedreiras de Malta, transformada numa atração para turistas e habitantes locais, que conta de forma viva uma das principais indústrias da ilha: a utilização de calcário na construção. Um ofício que remonta a milhares de anos no passado. A magia da antiguidade de Malta pode ser vivida em Hagar Qim, o principal sítio pré-histórico da ilha, com vistas inigualáveis sobre a vasta extensão do Mar Mediterrâneo e o ilhéu de Filfla. Daqui seguimos para Wied iz-Zurrieq, onde se pode fazer um passeio de barco pela Gruta Azul, conhecida pelas suas águas cristalinas (o preço deste passeio de barco não está incluído, pois está sujeito às condições climatéricas). Depois do almoço, passamos pelas vinhas até ao pitoresco porto de pesca de Marsaxlokk. Aqui terá tempo para passear pelo mercado típico ao longo do passeio marítimo. Para terminar, visitaremos a gruta pré-histórica de Ghar Dalam, onde os arqueólogos descobriram provas suficientes que indicam que Malta fez parte do continente europeu."
+            },
+            {
+              "header": "Dia 7 — MALTA",
+              "body": "Pequeno-almoço. Dia livre para atividades pessoais. Alojamento."
+            },
+            {
+              "header": "Dia 8 — MALTA / PORTUGAL",
+              "body": "Pequeno-almoço. Dependendo do horário do voo, tempo livre para visitas ou compras de última hora. Transfer para o aeroporto para embarcar no voo opcional de regresso a Portugal. Chegada."
+            }
+          ],
+          "included": "Voo regular de avião (opcional), classe económica (reservas em classes especiais). Hotel indicado na categoria selecionada. Quartos standard. Alojamento, pequeno-almoço e 3 almoços (bebidas não incluídas). Transferes regulares. Visitas regulares conforme especificado. Seguro de viagem.",
+          "notIncluded": ""
+        }
+      },
+      "source": {
+        "file": "https://www.catai.pt/viagens/malta-espetacular",
+        "hash": "f7ee6cb025"
+      }
+    },
+    {
+      "slug": "marrocos-cidades-vermelhas",
+      "type": "circuito",
+      "title": "Marrocos, Cidades Vermelhas",
+      "destino": "Marrocos",
+      "country": "Marrocos",
+      "region": "África",
+      "priceFrom": 985,
+      "priceNote": "Preço desde baseado na Iberia, classe A, para viajar entre 8 de janeiro e 31 de outubro, em hotéis de categoria C e para um mínimo de 4 pessoas.",
+      "nights": 7,
+      "details": {
+        "overview": "Deixe-se levar pelo encanto marroquino com esta viagem organizada em que mesquitas, ruas mágicas, monumentos, fortalezas, palmeirais, paisagens desérticas, aldeias berberes e cidades imperiais esperam por si. Visitará a medina de Marraquexe e sentirá a sua magia, visitará a aldeia de Ouarzazate, entrará no Vale do Dades e nas Gargantas do Todra...¡a não perder!",
+        "program": {
+          "days": [
+            {
+              "header": "Dia 1 — PORTUGAL / MARRAKECH",
+              "body": "Partida em voo para Marrakech. Chegada e transfer para o hotel. Jantar* e alojamento."
+            },
+            {
+              "header": "Dia 2 — MARRAKECH",
+              "body": "Meia pensão. Partida para uma visita à cidade de Marrakech, começando pela Mesquita de Koutubia, chamada a Mesquita dos livreiros e o seu majestoso minarete de Koutubia, torre gémea da Giralda de Sevilha e os Túmulos dos Saadies, dinastia que engrandeceu esta cidade. A visita termina num lugar mágico, a Praça Jemaa el Fna (Assembleia do Povo), declarada Património da Humanidade. Tempo livre. Jantar no hotel. (exceto para a CAT C. que é em APA)"
+            },
+            {
+              "header": "Dia 3 — MARRAKECH / OUARZAZATE / VALE DO DADES (355 KM)",
+              "body": "Meia pensão. Partida para o Alto Atlas. O percurso muda a paisagem pouco a pouco, sem que nos apercebamos. Do verde forte dos vales, ao vermelho ocre do Col de Tizi N´ Tichka até chegarmos a Ouarzazate. Tempo livre para almoço (não incluído). Continuamos pela rota dos Mil Kasbahs, onde a partir do veículo poderá admirar a beleza do \"Palmeiral de Skoura\" até chegar a Kelaa da Mguna (Vale das rosas). A rota dos Kasbahs, no sul do Alto Atlas, é um percurso através de uma série de fortalezas construídas em adobe com torres com ameias e ornamentos em tijolo cru que constituem, por vezes, autênticas aldeias fortificadas. Chegada ao vale do rio Dades. Jantar no hotel."
+            },
+            {
+              "header": "Dia 4 — VALE DO DADES / GARGANTAS DEL TODRA / DESERTO (298 KM)",
+              "body": "Meia pensão. Partida cedo para um dos locais naturais mais bonitos da viagem, as Gargantas do Todra, onde, para passar a montanha, o rio construiu através da erosão um desfiladeiro estreito com paredes verticais de mais de 300 metros de altura. Entraremos no desfiladeiro para admirar a sua beleza espetacular. De seguida, partimos para o deserto. A estrada torna-se cada vez mais difícil e as aldeias que atravessamos tornam-se cada vez mais autênticas até entrarmos no domínio do povo do deserto, o povo Amazigh, mais conhecido entre nós como \"Berberes\". Chegada a Erfoud, continuamos para Merzouga (Erg Chebi). Possibilidade de fazer uma excursão de camelo para ver o pôr do sol nas dunas. Jantar no hotel."
+            },
+            {
+              "header": "Dia 5 — DESIERTO / AL NIF / NKOB / AGDAZ / OUARZAZATE (365 KM)",
+              "body": "Meia pensão. Depois do pequeno-almoço, partimos para Rissani, situada num palmeiral a 22 km de Erfoud. É uma pequena cidade atrativa, tanto pela sua envolvente como pela sua história, e tem vários monumentos interessantes, um mercado muito movimentado e uma zona utilizada como parque de estacionamento de burros, onde também se compram e vendem burros. É considerada a herdeira da mítica Sijilmasa, a primeira capital de Marrocos e berço da família real do país. De seguida, iremos para Al Nif, onde no caminho poderemos ver manadas de camelos selvagens e uma impressionante paisagem em forma de crescente. Chegaremos a Agdez, onde faremos uma paragem para apreciar a beleza do palmeiral de Draa. Continuação para Ouarzazate. Jantar no hotel."
+            },
+            {
+              "header": "Dia 6 — OUARZAZATE / AIT BEN HADOU / MARRAKECH (213 KM)",
+              "body": "Meia pensão. Ouarzazate, chamada a pérola do sul, e partida para visitar o Kasbah Taurirt. Foi outrora a residência do Paxá de Marrakech e está construída em adobe com torres com ameias. Visitará as antigas salas do Glaoui \"Pacha\", a sala de jantar e a sala dos favoritos, que ainda conservam a sua decoração em estuque pintado e os tetos em madeira de cedro. Continuação para o Kasbah de Ait Ben Hadou, Património Mundial da UNESCO. Jantar no hotel. (exceto para a CAT C. que é em APA)"
+            },
+            {
+              "header": "Dia 7 — MARRAKECH",
+              "body": "Meia pensão. Dia livre para desfrutar desta maravilhosa cidade. Jantar no hotel."
+            },
+            {
+              "header": "Dia 8 — MARRAKECH / PORTUGAL",
+              "body": "Transfer e partida em voo de regresso a Portugal. Chegada."
+            }
+          ],
+          "included": "Voo de linha regular, classe económica (reservas em classes especiais). Alojamento e pequeno-almoço. 7 jantares (bebidas não incluídas). Na Cat C, o alojamento em Marrakech será em regime de alojamento e pequeno-almoço; consulte os suplementos para os jantares. Transfers e visitas em circuito regular (compartilhado com mais clientes) com guia local em espanhol. Seguro de viagem.",
+          "notIncluded": ""
+        }
+      },
+      "source": {
+        "file": "https://www.catai.pt/viagens/marrocos-cidades-vermelhas",
+        "hash": "6e6fbd9d8b"
+      }
+    },
+    {
+      "slug": "a-rota-avatar",
+      "type": "circuito",
+      "title": "A Rota Avatar",
+      "destino": "China",
+      "country": "China",
+      "region": "Ásia",
+      "priceFrom": 3885,
+      "priceNote": "Preço desde baseado em voos da Turkish Airlines, classe V, para viajar no dia 30 de junhio.",
+      "nights": 11,
+      "details": {
+        "overview": "É uma fusão entre o presente e a história. A cidade tem três mil anos de idade, embora só tenha existido durante mil anos como capital imperial ou rea",
+        "program": {
+          "days": [
+            {
+              "header": "Dia 1 — PORTUGAL/PEQUIM",
+              "body": "Partida em voo com destino a Pequim, pela rota escolhida. Noite a bordo."
+            },
+            {
+              "header": "Dia 2 — PEQUIM",
+              "body": "Chegada. Resto do dia livre. Alojamento."
+            },
+            {
+              "header": "Dia 3 — PEQUIM",
+              "body": "Meia Pensão. Visita da Praça de Tian An Men, coração da cidade. Mais tarde visitaremos a Cidade Proibida, conjunto arquitetónico, onde predomina a cor vermelha, com mais de 9.000 quartos, onde decorria a vida do imperador. Almoço. Também visitaremos o Palácio de Verão."
+            },
+            {
+              "header": "Dia 4 — PEQUIM/GRANDE MURALHA/PEQUIM",
+              "body": "Pensão completa. Pela manhã, visita da Grande Muralha. Almoço. De regresso, faremos uma panorâmica pelas instalações olímpicas. Jantar de pato à Pequim."
+            },
+            {
+              "header": "Dia 5 — PEQUIM/XIAM",
+              "body": "Pequeno-almoço. Pela manhã visitamos o Templo do Céu. Partida em comboio de alta velocidade (5h aprox.) para Xiam, antiga capital da China."
+            },
+            {
+              "header": "Dia 6 — XIAM",
+              "body": "Meia pensão. Hoje visitamos a grande joia de Xiam, o seu Exército de Terracota do Imperador Qin (com 2.000 anos de antiguidade). Almoço. Regressamos à parte antiga de Xiam, onde visitaremos o Pagode do Ganso Selvagem (sem subir e terminaremos dando um passeio pelo animado bairro muçulmano)."
+            },
+            {
+              "header": "Dia 7 — XIAM/ZHANGJIAJIE",
+              "body": "Pequeno-almoço. Partida no a Zhangjiajie, Parque Nacional Património da Humanidade."
+            },
+            {
+              "header": "Dia 8 — ZHANGJIAJIE",
+              "body": "Meia pensão. Dia completo de vista a este mágico Parque Nacional. Subimos ao elevador Bailong considerado o mais alto do mundo, com uma altura de 326 m, que oferece umas vistas espetaculares. A Reserva Natural Yuanjiajie, onde se encontra a montanha Aleluya, que fizeram de protótipo para o filme Avatar e a Montanha Tianzi. Almoço piquenique."
+            },
+            {
+              "header": "Dia 9 — ZHANGJIAJIE/XANGAI",
+              "body": "Meia pensão. Continuamos com a visita do parque: A Montanha Tianmen, no cume encontram-se os Caminhos de Vidro ladeando a montanha. Almoço. Partida no voo a Xangai, o maior porto da China."
+            },
+            {
+              "header": "Dia 10 — XANGAI",
+              "body": "Meia pensão. Visita do Jardim do Mandarim Yuyuan. Almoço. Pela tarde, visita do Templo do Buda de Jade e passeio pelo molhe."
+            },
+            {
+              "header": "Dia 11 — XANGAI/PORTUGAL",
+              "body": "Partida em voo de regresso a Portugal. Noite a bordo. (Com algumas companhias aéreas, o voo é diurno e chega a Portugal nesse mesmo dia)."
+            },
+            {
+              "header": "Dia 12 — PORTUGAL",
+              "body": "Chegada."
+            }
+          ],
+          "included": "Voo de linha regular, classe económica (reservas em classes especiais). Alojamento e pequeno-almoço. 5 almoços, 1 almoço piquenique e 1 jantar de pato à Pequim (bebidas não incluídas). Circuito regular (compartido com mais clientes) com guias em espanhol exceto em Zhangjiajie que será em inglês. Opção Guilin: 5 almoços, 1 almoço piquenique em Zhangjiajie e 1 almoço piquenique no barco. 1 jantar de pato à Pequim em restaurantes locais chineses (bebidas não incluídas). Seguro de viagem.",
+          "notIncluded": ""
+        }
+      },
+      "source": {
+        "file": "https://www.catai.pt/viagens/a-rota-avatar",
+        "hash": "350ef30824"
+      }
+    },
+    {
+      "slug": "a-descoberta-do-sul-da-tanzania",
+      "type": "circuito",
+      "title": "À descoberta do Sul da Tanzânia",
+      "destino": "Tanzânia",
+      "country": "Tanzânia",
+      "region": "África",
+      "priceFrom": 5475,
+      "priceNote": "Preço desde baseado na Turkish Airlines, classe V (tarifa dinâmica), para viagens entre 1 e 22 de junho, em lodges / acampamentos, categoria B.",
+      "nights": 6,
+      "details": {
+        "overview": "Ideal para os mais aventureiros e amantes da natureza. Oferecemos-lhe um circuito organizado na Tanzânia onde visitará o Parque Nacional de Nyerere e o Parque Nacional de Ruaha. Nyerere é o maior parque nacional do país e é habitado por elefantes, leões, gnus, zebras e girafas, entre muitos outros animais selvagens. Ruaha, por outro lado, oferece colinas ondulantes, florestas de baobás e vastas pl",
+        "program": {
+          "days": [
+            {
+              "header": "Dia 1 — PORTUGAL / DAR ES SALAAM",
+              "body": "Partida em voo com destino a Dar Es Salaam, pela rota escolhida. Chegada e transfer para o hotel. Alojamento."
+            },
+            {
+              "header": "Dia 2 — DAR ES SALAAM / PARQUE NACIONAL NYERERE (SELOUS)",
+              "body": "Pensão completa. Transfer para o aeroporto para o voo de partida para o Parque Nacional Nyerere, anteriormente conhecido como Reserva Selous. Chegada ao aeródromo e receção pelo pessoal do alojamento. Transfer para o acampamento. Almoço. À tarde, primeiro safari no Parque Nacional, o maior da Tanzânia. Jantar no acampamento."
+            },
+            {
+              "header": "Dia 3 — PARQUE NACIONAL NYERERE (SELOUS)",
+              "body": "Pensão completa. Hoje teremos dois safaris no Parque Nacional, um de manhã e outro à tarde. O Parque Nacional Nyerere foi criado em 2019 e faz parte da antiga Reserva Selous. Situado no sudeste da Tanzânia, oferece uma paisagem diferente e bonita. A vida selvagem inclui um grande número de elefantes na área, bem como leões, girafas, gnus, zebras e muitas outras espécies. Almoço e jantar no acampamento."
+            },
+            {
+              "header": "Dia 4 — PARQUE NACIONAL NYERERE (SELOUS) / PARQUE NACIONAL DE RUAHA",
+              "body": "Pensão completa. Transfer para o aeródromo para o voo de partida para o Parque Nacional de Ruaha. Chegada à pista de aterragem e encontro com o pessoal do alojamento. Almoço. À tarde, primeiro safari no Parque Nacional. Jantar no lodge / acampamento."
+            },
+            {
+              "header": "Dia 5 — PARQUE NACIONAL DE RUAHA",
+              "body": "Pensão completa. Dia dedicado a desfrutar deste parque, com dois safaris, um de manhã e outro à tarde. Ruaha oferece um cenário espetacular, incluindo colinas ondulantes, vastas planícies e florestas de baobás. É a casa de 10.000 elefantes e é um excelente parque para avistar predadores: leões, chitas, leopardos e, embora mais difícil de avistar, cães selvagens. Outros animais incluem o búfalo, a zebra, a impala, a girafa e a palanca negra. Para os amantes de aves, a Ruaha alberga mais de 500 espécies diferentes de aves e, ao longo das margens do rio, é fácil avistar garças, guarda-rios, calaus e muitas outras espécies. Almoço e jantar no lodge / acampamento."
+            },
+            {
+              "header": "Dia 6 — PARQUE NACIONAL DE RUAHA / DAR ES SALAAM / PORTUGAL",
+              "body": "Pequeno-almoço. À hora prevista, transfer para o aeródromo para embarque em voo com destino a Dar es Salaam. Chegada e transfer para o aeroporto internacional. Partida em voo de regresso a Portugal. Noite a bordo."
+            },
+            {
+              "header": "Dia 7 — PORTUGAL",
+              "body": "Chegada."
+            }
+          ],
+          "included": "Voos de linha regular, em classe turista (reservas em classe especial). Voo em avião ligeiro para os voos Dar Es Salaam / Nyerere / Ruaha / Dar Es Salaam, serviço regular. Alojamento e pequeno-almoço. 4 almoços e 4 jantares (bebidas não incluídas). Transferes em inglês, em serviço regular. Safaris em 4x4 aberto com motorista/guia em inglês, em veículo partilhado com outros clientes. Todas as taxas de entrada nos parques especificados no itinerário. Seguro especial Flying Doctors durante o safari. Seguro de viagem.",
+          "notIncluded": ""
+        }
+      },
+      "source": {
+        "file": "https://www.catai.pt/viagens/a-descoberta-do-sul-da-tanzania",
+        "hash": "cb6a8aa1b7"
+      }
+    }
+  ]
+}

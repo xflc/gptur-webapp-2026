@@ -1,4 +1,5 @@
 import data from "./solferias-offers.json"
+import catai from "./catai-offers.json"
 import credits from "../../public/destinos/credits.json"
 
 export interface HotelRow {
@@ -33,11 +34,13 @@ export const splitServices = (s?: string) =>
 export interface Offer {
   slug: string
   type: "estadia" | "circuito"
-  destino: string
+  title?: string // nome do produto/circuito (ex.: "Japão Medieval"); Solférias: ausente
+  destino: string // destino oficial (cidade na Solférias, país na Catai)
   country: string
   region: string
   priceFrom: number | null
   priceTo?: number | null
+  priceNote?: string // nota do preço "desde" (ex.: companhia/datas base) — Catai
   hotels?: number
   nights?: number | null
   boards?: string[]
@@ -45,7 +48,7 @@ export interface Offer {
   source: { file: string; hash: string; page?: number }
 }
 
-export const offers: Offer[] = (data.offers as Offer[])
+export const offers: Offer[] = [...(data.offers as Offer[]), ...(catai.offers as Offer[])]
 export const offersGeneratedAt: string = data.generatedAt
 
 export const offerRegions: string[] = [...new Set(offers.map((o) => o.region))].sort()
@@ -86,6 +89,12 @@ export function shuffleSeed<T>(arr: T[], seed: number): T[] {
 
 // rótulo do tipo de viagem (estadia = fica num destino; circuito = percurso)
 export const typeLabel = (t: string) => (t === "circuito" ? "Roteiro" : "Destino único")
+
+// título a mostrar (nome do circuito, ou o destino se não houver nome de produto)
+export const offerTitle = (o: Offer) => o.title || o.destino
+// localização (destino + país, sem repetir quando são iguais)
+export const offerLocation = (o: Offer) =>
+  [...new Set([o.destino, o.country].filter(Boolean))].join(", ")
 
 // metadados da imagem (fonte/dimensões) gravados por scripts/extract-images.mjs
 type ImageMeta = { placeholder?: boolean; reusedFrom?: string; w?: number; h?: number }

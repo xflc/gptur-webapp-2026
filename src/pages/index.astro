@@ -9,7 +9,7 @@ import Testimonials from "../components/Testimonials.astro"
 import Newsletter from "../components/Newsletter.astro"
 import DestinationsIndex from "../components/DestinationsIndex.astro"
 import Footer from "../components/Footer.astro"
-import { offers, offerImage, hasHeroImage, shuffleByDay } from "../data/offers"
+import { offers, offerImage, hasHeroImage, shuffleByDay, offerTitle } from "../data/offers"
 
 // slides do hero: uma oferta por região, escolhida ALEATORIAMENTE entre as que
 // têm imagem de qualidade (≥1500px) e descrição própria. A seleção roda a cada
@@ -22,7 +22,7 @@ for (const o of shuffleByDay(offers)) {
   if (heroPick.length >= 5) break
 }
 const slides = heroPick.map((o) => ({
-  title: o.destino,
+  title: offerTitle(o),
   dates: [o.country, o.nights ? `${o.nights} noites` : null, o.priceFrom ? `desde ${o.priceFrom}€` : null].filter(Boolean).join(" · "),
   image: offerImage(o.slug),
   href: `/ofertas/${o.slug}`,
