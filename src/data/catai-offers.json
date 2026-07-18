@@ -579,54 +579,6 @@
       }
     },
     {
-      "slug": "abu-dhabi-em-familia",
-      "type": "circuito",
-      "title": "Abu Dhabi em Família",
-      "destino": "Emirados Árabes Unidos",
-      "country": "Emirados Árabes Unidos",
-      "region": "Ásia",
-      "priceFrom": 2525,
-      "priceNote": "Preço desde baseado na Etihad, classe E, para viagens de 1 de junho a 14 de setembro,ocupação dupla, categoria C.",
-      "nights": 5,
-      "details": {
-        "overview": "Que melhor maneira de desfrutar das atrações de Abu Dhabi do que com toda a família, jovens e adultos. Sem dúvida, uma experiência familiar inesquecível que não esquecerá... reserve já as suas próximas férias!",
-        "program": {
-          "days": [
-            {
-              "header": "Dia 1 — PORTUGAL / ABU DHABI",
-              "body": "Partida em voo com destino a Abu Dhabi, pela rota escolhida. Chegada, transfer para o hotel e alojamento."
-            },
-            {
-              "header": "Dia 2 — ABU DHABI / SAFARI EM JIPE",
-              "body": "Meia pensão. De manhã, visitaremos Abu Dhabi, a cidade mais rica do mundo. A nossa visita inclui uma paragem na famosa Mesquita Sheikh Zayed, a terceira maior do mundo. Em seguida, entraremos na cidade, veremos os palácios dos xeques e pararemos em frente ao majestoso Emirates Palace Hotel. Visitaremos a Heritage Village, um museu ao ar livre, que nos dará uma visão do passado deste país e do seu povo. À tarde, recolha na receção do hotel e partida em 4x4 para o deserto. Nesta excursão, sentirá a emoção de conduzir sobre grandes dunas, desfrutando de uma paisagem de cortar a respiração. À noite, dirigir-nos-emos ao acampamento beduíno onde poderemos desfrutar de um passeio de camelo, fazer uma tatuagem de hena ou vestirmo-nos de Emiratis. Durante o jantar de churrasco, assistiremos a diferentes espetáculos. Regresso a Abu Dhabi."
-            },
-            {
-              "header": "Dia 3 — ABU DHABI / WARNES BROS E FERRARI WORLD ABU DHABI",
-              "body": "Pequeno-almoço. Pela manhã, transfer para Yas Island, onde poderá desfrutar dos parques temáticos Warner Bros Abu Dhabi e Ferrari World Abu Dhabi. Ao longo do dia, poderá combinar estes dois parques cobertos, com bilhetes combinados. À tarde, regresso ao hotel."
-            },
-            {
-              "header": "Dia 4 — ABU DHABI / FALCON HOSPITAL / SEAWORLD / QASR AL WATAN",
-              "body": "Pequeno-almoço. Visita matinal ao hospital de falcões, onde teremos a oportunidade de aprender mais sobre estes animais tão importantes nos Emirados. Aprenderemos sobre o tipo de alimentação, cuidados, tipos de falcões, etc. e desfrutaremos de um espetáculo de falcoaria. Continuação para o Seaworld Abu Dhabi. Prepare-se para explorar o primeiro parque temático Seaworld da região. Embarque numa viagem de cortar a respiração desde os polos até aos trópicos. Aprenda sobre a majestosa e diversificada vida marinha enquanto viaja pelos nossos 8 reinos oceânicos, inspire-se e desfrute de um entretenimento fascinante. O nosso Centro de Tratamento de Animais é um ambiente dinâmico onde pode observar e interagir com os nossos veterinários e a equipa de especialistas marinhos que cuidam de todos os animais 24 horas por dia. Com mais de 100 experiências e apresentações com animais, incluindo encontros íntimos com animais e expedições, em breve terá a oportunidade de conhecer o incrível Um Oceano que nos liga a todos. À tarde, visitaremos o impressionante Palácio Qasr Al Watan de Abu Dhabi, com as várias salas onde se realizam reuniões do Governo dos Emirados ou grandes celebrações. Apreciaremos o espetáculo de som e luz que se realiza à noite."
-            },
-            {
-              "header": "Dia 5 — ABU DHABI VISITA AO OBSERVATÓRIO 300 + YAS WATERWORLD ABU DHABI",
-              "body": "Pequeno-almoço. De manhã, dirigimo-nos às Etihad Towers para subirmos ao observatório no 74º andar, de onde poderemos ver perfeitamente a cidade de Abu Dhabi. De seguida, desfrutaremos do parque aquático Yas Waterworld, o maior parque aquático do Emirado de Abu Dhabi. Regresso ao hotel."
-            },
-            {
-              "header": "Dia 6 — ABU DHABI/ PORTUGAL",
-              "body": "Transfer para o aeroporto. Partida em voo de regresso a Portugal. Chegada."
-            }
-          ],
-          "included": "Voo regula, classe económica (reserva em classes especiais). Alojamento e pequeno-almoço. Transferes privados com motorista em inglês. Visitas turísticas regulares a Abu Dhabi com guia em espanhol. Entradas nos parques: Ferrari World, Warner Bros, Seaworld Abu Dhabi, Yas Waterworld. Entrada no Palácio Qasr Al Watan e no Observatório 300 do Conrad Etihad Towers. Visita ao Hospital Falcon. Safari no deserto com jantar numa base regular com motorista em inglês. Seguro de viagem.",
-          "notIncluded": ""
-        }
-      },
-      "source": {
-        "file": "https://www.catai.pt/viagens/abu-dhabi-em-familia",
-        "hash": "eaddd578d7"
-      }
-    },
-    {
       "slug": "africa-do-sul-romantica-e-mauricia",
       "type": "circuito",
       "title": "África do Sul Romântica e Maurícia",
@@ -3095,6 +3047,74 @@
       "source": {
         "file": "https://www.catai.pt/viagens/croacia-a-terra-de-1000-ilhas",
         "hash": "2478d6d9bb"
+      }
+    },
+    {
+      "slug": "japao-medieval",
+      "type": "circuito",
+      "title": "Japão Medieval",
+      "destino": "Japão",
+      "country": "Japão",
+      "region": "Ásia",
+      "priceFrom": 3690,
+      "priceNote": "Preço desde baseado na Etihad Airways, classe U, para viagens de 9 a 23 de fevereiro.",
+      "nights": 10,
+      "details": {
+        "overview": "Um percurso onde poderá sentir o Japão autêntico em Kanazawa, Shirakawago e Takayama e também desfrutar de um onsen no nosso hotel em Gero.",
+        "program": {
+          "days": [
+            {
+              "header": "Dia 1 — PORTUGAL / TÓQUIO",
+              "body": "Partida em voo com destino a Tóquio, pela rota escolhida. Noite a bordo."
+            },
+            {
+              "header": "Dia 2 — TÓQUIO",
+              "body": "Chegada a Tóquio, capital do Japão, a terra da harmonia. Transfer e alojamento."
+            },
+            {
+              "header": "Dia 3 — TOKIO",
+              "body": "Pequeno-almoço. De manhã, visite o Santuário Meiji. Continue para o bairro de Asakusa para visitar o Templo Asakusa Kannon, o templo mais antigo de Tóquio. Passearemos pela zona comercial de Nakamise, cheia de ruas estreitas do período Edo. Terminaremos a visita na Praça do Palácio Imperial e no bairro de Ginza. Tarde livre. Regresso ao hotel por sua conta."
+            },
+            {
+              "header": "Dia 4 — TÓQUIO / HAKONE / TÓQUIO",
+              "body": "Meia pensão. Partida para Hakone, onde faremos um pequeno passeio de barco no belo Lago Ashi. Visita ao Santuário xintoísta Hakone-Jinja, situado nas margens do lago. Almoço. Visita do Museu ao Ar Livre de Hakone, situado nas montanhas de Hakone numa área de mais de 70.000m2, onde estão expostas ao ar livre um total de 120 obras-primas da escultura modernista e contemporânea. Regresso a Tóquio."
+            },
+            {
+              "header": "Dia 5 — TÓQUIO / QUIOTO / NARA / QUIOTO",
+              "body": "Pequeno-almoço. Partida em comboio-bala para Quioto, o coração cultural e espiritual do Japão. Continuação para Nara, onde se pode sentir a atmosfera da antiga cultura japonesa. Visitamos o Templo Todai-ji e o Parque dos Cervos. Regresso a Quioto."
+            },
+            {
+              "header": "Dia 6 — QUIOTO",
+              "body": "Meia pensão. Visita de dia inteiro à cidade: o templo de Sanjusagendo com as suas mais de 1.000 estátuas da deusa Kannon, o santuário de Fushimi Inari com os seus milhares de toris, o templo de Kinkaku-ji mais conhecido como o \"Pavilhão Dourado\". Almoço. Continue para o templo Tenryu-ji com o seu belo jardim japonês, e a bela floresta de bambu em Arashiyama."
+            },
+            {
+              "header": "Dia 7 — QUIOTO",
+              "body": "Pequeno-almoço. Dia livre. Visita opcional de dia inteiro a Hiroshima e à ilha de Miyajima."
+            },
+            {
+              "header": "Dia 8 — QUIOTO / KANAZAWA",
+              "body": "Pequeno-almoço. Partida para Kanazawa, onde visitaremos o colorido mercado Omicho, o bairro de Higashichaya e o Jardim Kenrokuen, um dos mais belos jardins do Japão."
+            },
+            {
+              "header": "Dia 9 — KANAZAWA/SHIRAKAWAGO/TAKAYAMA/GERO",
+              "body": "Pensão completa. Partida para Shirakawago para visitar as belas casas de fazenda, únicas no mundo e património mundial. Continuação para Takayama, onde passearemos pelo bairro histórico de Kamisannomachi com as suas casas da era Edo e visitaremos o Yatai Kaikan, onde estão expostos os carros alegóricos do festival de Takayama. Partida para Gero. Jantar japonês no hotel."
+            },
+            {
+              "header": "Dia 10 — GERO / OSAKA",
+              "body": "Pequeno-almoço. Partida de comboio para Osaka, com mudança de comboio em Nagoya. Chegada a Osaka e visita da cidade: o animado bairro de Dotombori e passearemos pelos arredores do Castelo de Osaka.Alojamento."
+            },
+            {
+              "header": "Dia 11 — OSAKA/PORTUGAL",
+              "body": "Pequeno-almoço. Partida em voo de regresso a Portugal. Chegada."
+            }
+          ],
+          "included": "Voo em linha regular em classe turista (reserva de classes especiais). Alojamento e pequeno almoço. 3 almoços e 1 jantar japonês (bebidas não incluídas). Circuito regular (partilhado com mais clientes) com guias locais/assistência em espanhol. Visitas em autocarro, mini bus ou transporte público/privado com guia em espanhol (dependendo do número de participantes). Transfer de chegada em autocarro/comboio regular, assistência em espanhol no aeroporto. Transfer de partida em autocarro regular sem assistência. Seguro de viagem.",
+          "notIncluded": ""
+        }
+      },
+      "source": {
+        "file": "https://www.catai.pt/viagens/japao-medieval",
+        "hash": "086fca9ba6"
       }
     }
   ]
