@@ -31,3 +31,6 @@ partner-pdfs/*.pdf
 # artefactos de auditoria de imagens (locais)
 hero-audit/
 hero-preview/
+
+# imagens Catai não usadas (até haver alojamento externo)
+/media/
