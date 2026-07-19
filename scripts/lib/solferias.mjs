@@ -65,11 +65,41 @@ const cleanName = (s) =>
     .replace(/^\d+\s+/, "")                    // nº de página que vaza ("8 ORQUÍDEA")
     .replace(/^(SA|APA|MP|PC|TI)(\s*\+\s*(SA|APA|MP|PC|TI))?\s+/i, "") // código de regime que vaza
     .trim()
-function hotelRows(t) {
-  const names = [...t.matchAll(RE_HOTEL)].map((m) => ({ name: cleanName(m[1]), stars: +m[2] }))
-  const offs = [...t.matchAll(RE_OFFER)].map((m) => ({ nights: +m[1], board: m[2].replace(/\s+/g, "") }))
-  const prices = intPrices(t)
-  return names.map((n, i) => ({ ...n, price: prices[i] ?? null, nights: offs[i]?.nights ?? null, board: offs[i]?.board ?? null }))
+// --- extração geométrica da tabela de hotéis (usa posições x,y) ---
+const RE_HOTEL_STAR = /^(.+?)\s+([1-5])\s*\*$/            // item terminado em "N*"
+const RE_NIGHTS_ITEM = /^(\d+)\s*NOITES\s*\|\s*([A-Z]{2,3}(?:\s*\+\s*[A-Z]{2,3})*)/i
+const RE_PRICE_ITEM = /^(\d{3,4})\s*€?$/
+// para cada hotel, o preço/noites estão na MESMA linha (|Δy| pequeno) e à
+// direita, dentro da sua coluna (Δx até ~470) → emparelhamento fiável.
+function hotelRows(page) {
+  const items = page.items || []
+  if (!items.length) return []
+  const prices = items.filter((it) => RE_PRICE_ITEM.test(it.s) && +it.s.match(RE_PRICE_ITEM)[1] >= 150 && +it.s.match(RE_PRICE_ITEM)[1] <= 9999)
+    .map((it) => ({ ...it, v: +it.s.match(RE_PRICE_ITEM)[1] }))
+  const nights = items.filter((it) => RE_NIGHTS_ITEM.test(it.s)).map((it) => ({ ...it, m: it.s.match(RE_NIGHTS_ITEM) }))
+  const near = (cs, h) => cs.filter((c) => Math.abs(c.y - h.y) <= 22 && c.x > h.x && c.x < h.x + 470).sort((a, b) => a.x - b.x)[0]
+  return items.filter((it) => RE_HOTEL_STAR.test(it.s)).map((h) => {
+    const nm = h.s.match(RE_HOTEL_STAR)
+    // nome multi-linha: junta linhas acima na mesma coluna (x±14, y logo acima)
+    const above = items
+      .filter((it) => Math.abs(it.x - h.x) <= 14 && it.y > h.y && it.y <= h.y + 42 && /[A-ZÀ-Ú]/.test(it.s) && !RE_PRICE_ITEM.test(it.s) && !RE_NIGHTS_ITEM.test(it.s) && !/www\.|\.(com|net|pt)/i.test(it.s))
+      .sort((a, b) => a.y - b.y)
+    const name = (above.map((a) => a.s).join(" ") + " " + nm[1]).trim()
+    const p = near(prices, h), nn = near(nights, h)
+    return { name: cleanName(name), stars: +nm[2], price: p ? p.v : null, nights: nn ? +nn.m[1] : null, board: nn ? nn.m[2].replace(/\s+/g, "") : null }
+  })
+}
+// preço da área = hotel mais barato COM as noites da oferta. Se todos os hotéis
+// forem de duração diferente (ex.: segmentos de 2 noites numa estadia de 7),
+// não há "desde" fiável → null ("sob consulta").
+function priceRange(list, nights) {
+  const priced = list.filter((h) => h.price)
+  if (!priced.length) return { from: null, to: null }
+  const match = nights ? priced.filter((h) => h.nights == null || h.nights === nights) : priced
+  const hasOtherDur = nights && priced.some((h) => h.nights && h.nights !== nights)
+  const pool = match.length ? match : hasOtherDur ? [] : priced
+  const ps = pool.map((h) => h.price)
+  return { from: ps.length ? Math.min(...ps) : null, to: ps.length ? Math.max(...ps) : null }
 }
 const RE_DAYHEAD = /(\d{1,2})\s*º\s*(?:E\s*\d{1,2}\s*º\s*)?DIAS?\s*[-–]\s*([A-ZÀ-Ú][A-ZÀ-Ú '’\/]{2,55})/g
 function dayRoutes(t) {
@@ -137,7 +167,12 @@ export async function extractPages(bytes) {
   for (let i = 1; i <= doc.numPages; i++) {
     const page = await doc.getPage(i)
     const content = await page.getTextContent()
-    pages.push({ n: i, text: content.items.map((it) => it.str).join(" ").replace(/\s+/g, " ").trim() })
+    // itens com posição (x,y) — necessários para parsear a tabela de hotéis
+    // por geometria (2 colunas, que o texto linear baralha).
+    const items = content.items
+      .filter((it) => it.str.trim())
+      .map((it) => ({ s: it.str.trim(), x: Math.round(it.transform[4]), y: Math.round(it.transform[5]) }))
+    pages.push({ n: i, text: content.items.map((it) => it.str).join(" ").replace(/\s+/g, " ").trim(), items })
   }
   return pages
 }
@@ -184,19 +219,16 @@ export async function analyze(absPath) {
       if (c.type === "estadia") { const b = bucket(); if (!b.nights) b.nights = c.nights; if (!b.programPage) b.programPage = p.n }
     } else if (c.kind === "hotéis") {
       const b = bucket(); b.hotels += c.rows; b.prices.push(...c.prices); c.boards.forEach((x) => b.boards.add(x))
-      b.list.push(...hotelRows(p.text))
+      b.list.push(...hotelRows(p))
     } else if (c.kind === "excursões") exc += c.n
     else if (c.kind === "rent-a-car") rent++
   }
 
-  const areaList = [...areas.values()].map((a) => ({
-    name: a.name, hotels: a.hotels, nights: a.nights,
-    priceFrom: a.prices.length ? Math.min(...a.prices) : null,
-    priceTo: a.prices.length ? Math.max(...a.prices) : null,
-    boards: [...a.boards],
-    list: a.list.filter((h) => h.name && h.name.length > 3),
-    programPage: a.programPage,
-  }))
+  const areaList = [...areas.values()].map((a) => {
+    const list = a.list.filter((h) => h.name && h.name.length > 3)
+    const { from, to } = priceRange(list, a.nights)
+    return { name: a.name, hotels: a.hotels, nights: a.nights, priceFrom: from, priceTo: to, boards: [...a.boards], list, programPage: a.programPage }
+  })
 
   return {
     meta: { file: absPath.split("/").pop(), hash, operator, rnavt, country, region: regionOf(country), pages: pages.length, overview },

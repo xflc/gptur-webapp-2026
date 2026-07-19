@@ -20,15 +20,18 @@ const slugify = (s) =>
 const pdfs = readdirSync(PDF_DIR).filter((f) => f.toLowerCase().endsWith(".pdf"))
 let manifest = {}
 try { manifest = JSON.parse(readFileSync(join(PDF_DIR, "manifest.json"), "utf8")) } catch { console.log("(sem manifest.json — usa país/região do parse do PDF)") }
-// Estadias cujo "preço mais barato" da tabela de hotéis não é fiável (páginas
-// multi-ilha/multi-duração com segmentos curtos e sobretaxas que o parser
-// linear não consegue associar) → mostrar "sob consulta" em vez de valor errado.
-const PRICE_UNRELIABLE = new Set(["ilhas-idilicas-play-seicheles", "america-rio-de-janeiro"])
+// Estadias reais sem preço 7-noites derivável (páginas multi-segmento) →
+// mantêm-se como "sob consulta". Só estas passam sem preço; áreas novas sem
+// preço (ex.: cruzeiros "Momentos") ficam de fora.
+const KEEP_NO_PRICE = new Set(["africa-quenia", "grecia-atenas", "ilhas-idilicas-play-madagascar"])
+// Estadias cujo preço extraído é um segmento curto (deteção de noites falhou na
+// página) e portanto enganador → forçar "sob consulta".
+const FORCE_NO_PRICE = new Set(["america-rio-de-janeiro"])
 
 const offers = []
 const seen = new Set()
 const push = (o) => {
-  if (PRICE_UNRELIABLE.has(o.slug)) { o.priceFrom = null; o.priceTo = null }
+  if (FORCE_NO_PRICE.has(o.slug)) { o.priceFrom = null; o.priceTo = null }
   if (o.slug && !seen.has(o.slug)) { seen.add(o.slug); offers.push(o) }
 }
 
@@ -45,7 +48,9 @@ for (const f of pdfs) {
 
   // ESTADIA — áreas com preço e hotéis (alta confiança estrutural)
   for (const a of r.areas) {
-    if (!a.hotels || !a.priceFrom || a.name.startsWith("(")) continue
+    if (!a.hotels || a.name.startsWith("(")) continue
+    const slug = slugify(`${country}-${a.name}`)
+    if (!a.priceFrom && !KEEP_NO_PRICE.has(slug)) continue // sem preço fiável e não é estadia estabelecida → fora
     // dedup da lista de hotéis por nome, mantendo o mais barato
     const byName = new Map()
     for (const h of a.list) {
@@ -54,7 +59,7 @@ for (const f of pdfs) {
     }
     const hotelsList = [...byName.values()].sort((x, y) => (x.price ?? 9e9) - (y.price ?? 9e9))
     push({
-      slug: slugify(`${country}-${a.name}`),
+      slug,
       type: "estadia",
       destino: a.name,
       country, region,
