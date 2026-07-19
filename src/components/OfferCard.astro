@@ -12,7 +12,7 @@ const meta = [
 <article
   class="group flex flex-col overflow-hidden rounded-xl border border-border bg-card shadow-sm transition-shadow hover:shadow-md"
 >
-  <div class="relative aspect-[4/3] overflow-hidden">
+  <a href={`/ofertas/${offer.slug}`} class="relative block aspect-[4/3] overflow-hidden" aria-label={offerTitle(offer)}>
     <img
       src={offerThumb(offer.slug)}
       alt={offer.destino}
@@ -23,7 +23,7 @@ const meta = [
       {typeLabel(offer.type)}
     </span>
     <span class="eyebrow absolute right-3 top-3 bg-cream/90 px-2.5 py-1 text-[0.6rem] text-primary">{offer.region}</span>
-  </div>
+  </a>
 
   <div class="flex flex-1 flex-col p-5">
     <p class="eyebrow text-[0.62rem] text-muted-foreground">{offer.country}</p>
