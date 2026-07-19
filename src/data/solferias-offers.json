@@ -7275,8 +7275,8 @@
       "destino": "Rio de Janeiro",
       "country": "América",
       "region": "América",
-      "priceFrom": 374,
-      "priceTo": 3791,
+      "priceFrom": null,
+      "priceTo": null,
       "hotels": 34,
       "nights": 7,
       "boards": [
@@ -13027,8 +13027,8 @@
       "destino": "Play Seicheles",
       "country": "Ilhas Idílicas",
       "region": "Ilhas Idílicas",
-      "priceFrom": 280,
-      "priceTo": 9688,
+      "priceFrom": null,
+      "priceTo": null,
       "hotels": 59,
       "nights": 7,
       "boards": [

@@ -20,9 +20,17 @@ const slugify = (s) =>
 const pdfs = readdirSync(PDF_DIR).filter((f) => f.toLowerCase().endsWith(".pdf"))
 let manifest = {}
 try { manifest = JSON.parse(readFileSync(join(PDF_DIR, "manifest.json"), "utf8")) } catch { console.log("(sem manifest.json — usa país/região do parse do PDF)") }
+// Estadias cujo "preço mais barato" da tabela de hotéis não é fiável (páginas
+// multi-ilha/multi-duração com segmentos curtos e sobretaxas que o parser
+// linear não consegue associar) → mostrar "sob consulta" em vez de valor errado.
+const PRICE_UNRELIABLE = new Set(["ilhas-idilicas-play-seicheles", "america-rio-de-janeiro"])
+
 const offers = []
 const seen = new Set()
-const push = (o) => { if (o.slug && !seen.has(o.slug)) { seen.add(o.slug); offers.push(o) } }
+const push = (o) => {
+  if (PRICE_UNRELIABLE.has(o.slug)) { o.priceFrom = null; o.priceTo = null }
+  if (o.slug && !seen.has(o.slug)) { seen.add(o.slug); offers.push(o) }
+}
 
 for (const f of pdfs) {
   let r
