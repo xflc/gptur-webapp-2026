@@ -24,7 +24,7 @@ const jsonLd = {
   "@context": "https://schema.org", "@type": "TouristTrip",
   name: offerTitle(offer), description: desc, image: offerImage(offer.slug),
   ...(offer.priceFrom ? { offers: { "@type": "Offer", price: offer.priceFrom, priceCurrency: "EUR" } } : {}),
-  provider: { "@type": "TravelAgency", name: "GPTur — Companhia das Viagens" },
+  provider: { "@type": "TravelAgency", name: "GPTur" },
 }
 ---
 

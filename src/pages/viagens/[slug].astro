@@ -20,7 +20,7 @@ const related = trips
   .filter((t) => t.region === trip.region && t.slug !== trip.slug)
   .slice(0, 3)
 
-const pageTitle = `${trip.title} | GPTur · Companhia das Viagens`
+const pageTitle = `${trip.title} | GPTur`
 const pageDesc = trip.tagline
 
 const jsonLd = {
@@ -38,7 +38,7 @@ const jsonLd = {
   },
   provider: {
     "@type": "TravelAgency",
-    name: "GPTur — Companhia das Viagens",
+    name: "GPTur",
     url: "https://www.gptur.pt",
   },
 }
