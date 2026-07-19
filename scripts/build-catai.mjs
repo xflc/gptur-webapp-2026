@@ -58,7 +58,10 @@ function parseTrip(url, html) {
   const heads = [...html.matchAll(/>\s*Dia\s+(\d+)\s*<\/span>\s*<span[^>]*>([^<]+)<\/span>/gi)]
   const descs = [...html.matchAll(/-description"[^>]*>\s*<p[^>]*>([\s\S]*?)<\/p>/gi)].map((m) => clean(m[1]))
   const days = heads.map((m, idx) => ({ header: `Dia ${m[1]} — ${clean(m[2])}`, body: descs[idx] || "" }))
-  const nights = days.length ? days.length - 1 : null
+  // duração = maior número de dia (o itinerário agrupa intervalos, ex.: "Dia 10 a 12",
+  // por isso o nº de itens não corresponde aos dias); noites = dias − 1.
+  const maxDay = heads.length ? Math.max(...heads.map((m) => +m[1])) : 0
+  const nights = maxDay ? maxDay - 1 : null
 
   // 4) overview: a descrição do circuito está no bloco product-resume — escolhe o
   //    <p> mais descritivo (ignora o título e a nota de "extensões"). Fallback: itinerário.
