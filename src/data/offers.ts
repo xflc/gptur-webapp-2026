@@ -90,6 +90,9 @@ export function shuffleSeed<T>(arr: T[], seed: number): T[] {
 // rótulo do tipo de viagem (estadia = fica num destino; circuito = percurso)
 export const typeLabel = (t: string) => (t === "circuito" ? "Roteiro" : "Destino único")
 
+// operador turístico da oferta (pela origem dos dados)
+export const offerOperator = (o: Offer) => (/catai/i.test(o.source?.file || "") ? "Catai" : "Solférias")
+
 // título a mostrar (nome do circuito, ou o destino se não houver nome de produto)
 export const offerTitle = (o: Offer) => o.title || o.destino
 // localização (destino + país, sem repetir quando são iguais)

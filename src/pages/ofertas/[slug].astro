@@ -3,7 +3,7 @@ import Layout from "../../layouts/Layout.astro"
 import Header from "../../components/Header.astro"
 import Footer from "../../components/Footer.astro"
 import OfferCard from "../../components/OfferCard.astro"
-import { offers, offerImage, boardLabel, splitServices, typeLabel, offerTitle, offerLocation } from "../../data/offers"
+import { offers, offerImage, boardLabel, splitServices, typeLabel, offerTitle, offerLocation, offerOperator } from "../../data/offers"
 import { Calendar, BedDouble, Utensils, MapPin, Phone, Plane, Check, X, Star, Mail, Clipboard } from "lucide-react"
 
 export function getStaticPaths() {
@@ -175,6 +175,7 @@ const jsonLd = {
                 </button>
               </div>
             </div>
+            <p class="mt-4 text-center text-[0.6rem] text-muted-foreground/70">Operador turístico: {offerOperator(offer)}</p>
           </div>
         </aside>
       </div>
