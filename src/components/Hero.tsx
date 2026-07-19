@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { ChevronLeft, ChevronRight } from "lucide-react"
+import { ChevronLeft, ChevronRight, Pause, Play } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 interface Slide {
@@ -12,14 +12,16 @@ interface Slide {
 
 export default function Hero({ slides }: { slides: Slide[] }) {
   const [index, setIndex] = useState(0)
+  const [paused, setPaused] = useState(false)
   const count = slides.length
 
   const go = (n: number) => setIndex((n + count) % count)
 
   useEffect(() => {
+    if (paused) return
     const id = setInterval(() => setIndex((i) => (i + 1) % count), 6000)
     return () => clearInterval(id)
-  }, [count])
+  }, [count, paused])
 
   return (
     <section id="inicio" className="relative h-[68vh] min-h-[460px] w-full overflow-hidden bg-ink">
@@ -84,17 +86,26 @@ export default function Hero({ slides }: { slides: Slide[] }) {
         <ChevronRight />
       </button>
 
-      <div className="absolute bottom-5 left-1/2 z-20 flex -translate-x-1/2 gap-2">
-        {slides.map((s, i) => (
-          <button
-            key={s.title}
-            onClick={() => go(i)}
-            aria-label={`Ir para ${s.title}`}
-            className={`h-2.5 rounded-full transition-all ${
-              i === index ? "w-7 bg-white" : "w-2.5 bg-white/50"
-            }`}
-          />
-        ))}
+      <div className="absolute bottom-5 left-1/2 z-20 flex -translate-x-1/2 items-center gap-3">
+        <button
+          onClick={() => setPaused((p) => !p)}
+          aria-label={paused ? "Retomar" : "Pausar"}
+          className="grid h-6 w-6 place-items-center rounded-full bg-white/25 text-white backdrop-blur transition hover:bg-white/40"
+        >
+          {paused ? <Play size={13} /> : <Pause size={13} />}
+        </button>
+        <div className="flex items-center gap-2">
+          {slides.map((s, i) => (
+            <button
+              key={s.title}
+              onClick={() => go(i)}
+              aria-label={`Ir para ${s.title}`}
+              className={`h-2.5 rounded-full transition-all ${
+                i === index ? "w-7 bg-white" : "w-2.5 bg-white/50"
+              }`}
+            />
+          ))}
+        </div>
       </div>
     </section>
   )
