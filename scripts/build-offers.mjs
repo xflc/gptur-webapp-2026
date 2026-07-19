@@ -68,7 +68,7 @@ for (const f of pdfs) {
       hotels: a.hotels,
       nights: a.nights || null,
       boards: a.boards,
-      details: { overview, hotels: hotelsList, program: verbatim(a.programPage) },
+      details: { overview: a.overview || overview, hotels: hotelsList, program: verbatim(a.programPage) },
       source: { file, hash, page: a.programPage },
     })
   }
@@ -82,7 +82,7 @@ for (const f of pdfs) {
       country, region,
       nights: p.feat.nights || null,
       priceFrom: null,
-      details: { overview, routes: p.routes || [], program: verbatim(p.page) },
+      details: { overview: p.overview || overview, routes: p.routes || [], program: verbatim(p.page) },
       source: { file, hash, page: p.page },
     })
   }

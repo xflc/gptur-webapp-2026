@@ -17,7 +17,7 @@ const RE_EXC_PRICE = /(\d{2,3})\s*€\s*Pre[çc]o\s+[Ii]ndicativo/gi
 const RE_RENTACAR = /Rent\s*-?\s*a\s*-?\s*Car|Pre[çc]o por dia/i
 const RE_EXCURSOES = /Excurs[õo]es\b/i
 const RE_FLIGHTS = /\bvoos?\b|classe\s*["“][A-Z]/i
-const RE_GUIDE = /Sobre [oa] |MOEDA:/i
+const RE_GUIDE = /Sobre [oa] |MOEDA:|^A VISITAR /i
 const RE_LEGAL = /CONDI[ÇC][ÕO]ES GERAIS|Decreto-\s*Lei|insolv[êe]ncia/i
 const RE_FOOTER = /www\.\w|RNAVT|@\w+\.\w/
 
@@ -114,6 +114,15 @@ function cleanGuide(t, country) {
     s = s.split(". ").filter((x) => !/Algarv|Monchique|Albufeira|Sagres|Vicentina|Quarteira/i.test(x)).join(". ")
   return s.replace(/\s+/g, " ").slice(0, 650).trim()
 }
+// uma intro de destino é prosa: rejeita fragmentos de tabela/voos/preços que às vezes
+// caem na caixa-guia, para não ficarem como "descrição" de uma secção.
+function looksLikeIntro(s) {
+  if (!s || s.length < 120) return false
+  if (/^\s*(\d|Voos?\b|Pre[çc]o\b|Apartamento\b)/i.test(s)) return false
+  if (/[1-5]\s?\*/.test(s.slice(0, 90))) return false // página de hotel (classificação em estrelas)
+  if (/^[A-ZÀ-Ú][A-ZÀ-Ú0-9&.\-]+\s+[A-ZÀ-Ú&]/.test(s)) return false // começa com nome de hotel em maiúsculas
+  return (s.match(/\d/g) || []).length / s.length < 0.12
+}
 
 function scoreProgram(t) {
   const dur = t.match(RE_DUR)
@@ -205,6 +214,7 @@ export async function analyze(absPath) {
   const areas = new Map()
   const programs = []
   let area = null, exc = 0, rent = 0, overview = null
+  const areaOverview = new Map() // guia por secção (divisória) — evita repetir a intro de um país noutro
   const bucket = () => {
     const key = area || "(sem secção)"
     if (!areas.has(key)) areas.set(key, { name: key, hotels: 0, prices: [], boards: new Set(), nights: null, list: [], programPage: null })
@@ -213,9 +223,18 @@ export async function analyze(absPath) {
   for (const { p, c } of seq) {
     kinds[c.kind] = (kinds[c.kind] || 0) + 1
     if (c.kind === "divisória") area = c.title
-    else if (c.kind === "guia" && !overview) overview = cleanGuide(p.text, country)
+    else if (c.kind === "guia") {
+      const g = cleanGuide(p.text, country)
+      if (looksLikeIntro(g)) {
+        if (!overview) overview = g // fallback ao nível do ficheiro (PDF de destino único)
+        // só páginas com título de destino no topo ("Sobre X" / "A VISITAR") viram intro
+        // de secção; assim uma página de hotel não é confundida com a descrição da área.
+        const heading = /^\s*(SOBRE\s|A\s+VISITAR\b)/i.test(p.text)
+        if (heading && area && !areaOverview.has(area)) areaOverview.set(area, g)
+      }
+    }
     else if (c.kind === "programa") {
-      programs.push({ page: p.n, area, type: c.type, conf: c.conf, boosted: !!c.boosted, feat: c.feat, routes: c.type === "circuito" ? dayRoutes(p.text) : [] })
+      programs.push({ page: p.n, area, overview: area ? areaOverview.get(area) || null : null, type: c.type, conf: c.conf, boosted: !!c.boosted, feat: c.feat, routes: c.type === "circuito" ? dayRoutes(p.text) : [] })
       if (c.type === "estadia") { const b = bucket(); if (!b.nights) b.nights = c.nights; if (!b.programPage) b.programPage = p.n }
     } else if (c.kind === "hotéis") {
       const b = bucket(); b.hotels += c.rows; b.prices.push(...c.prices); c.boards.forEach((x) => b.boards.add(x))
@@ -227,7 +246,7 @@ export async function analyze(absPath) {
   const areaList = [...areas.values()].map((a) => {
     const list = a.list.filter((h) => h.name && h.name.length > 3)
     const { from, to } = priceRange(list, a.nights)
-    return { name: a.name, hotels: a.hotels, nights: a.nights, priceFrom: from, priceTo: to, boards: [...a.boards], list, programPage: a.programPage }
+    return { name: a.name, hotels: a.hotels, nights: a.nights, priceFrom: from, priceTo: to, boards: [...a.boards], list, programPage: a.programPage, overview: areaOverview.get(a.name) || null }
   })
 
   return {
