@@ -22,10 +22,23 @@ function mulberry32(seed: number) {
     return ((t ^ (t >>> 14)) >>> 0) / 4294967296
   }
 }
-// baralha pela seed do dia (YYYYMMDD) e escolhe uma oferta por região (até 5)
-function pickForToday(pool: Slide[]): Slide[] {
+// seed do dia (YYYYMMDD). Override para dev: ?heroDay=20260725 no URL ou
+// localStorage.setItem("heroDay","20260725") — permite pré-visualizar outro dia.
+function daySeed(): number {
+  try {
+    const raw =
+      new URLSearchParams(window.location.search).get("heroDay") ||
+      window.localStorage.getItem("heroDay")
+    if (raw && /^\d{8}$/.test(raw)) return +raw
+  } catch {
+    /* SSR / sem window */
+  }
   const d = new Date()
-  const rnd = mulberry32(d.getFullYear() * 10000 + (d.getMonth() + 1) * 100 + d.getDate())
+  return d.getFullYear() * 10000 + (d.getMonth() + 1) * 100 + d.getDate()
+}
+// baralha pela seed dada e escolhe uma oferta por região (até 5)
+function pickForSeed(pool: Slide[], seed: number): Slide[] {
+  const rnd = mulberry32(seed)
   const a = [...pool]
   for (let i = a.length - 1; i > 0; i--) {
     const j = Math.floor(rnd() * (i + 1))
@@ -51,10 +64,22 @@ export default function Hero({ slides, pool }: { slides: Slide[]; pool?: Slide[]
 
   useEffect(() => {
     if (!pool || pool.length === 0) return
-    const today = pickForToday(pool)
+    const show = (seed: number) => {
+      setActive(pickForSeed(pool, seed))
+      setIndex(0)
+    }
+    const today = pickForSeed(pool, daySeed())
     if (today.length && today.some((s, i) => s.href !== active[i]?.href)) {
       setActive(today)
       setIndex(0)
+    }
+    // API de dev (consola): gpturHero.day(20260725) pré-visualiza esse dia;
+    // gpturHero.today() volta a hoje; gpturHero.list(20260725) lista sem aplicar.
+    ;(window as any).gpturHero = {
+      day: (s: number) => show(s),
+      today: () => show(daySeed()),
+      list: (s: number) => pickForSeed(pool, s).map((x) => x.title),
+      pool,
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
