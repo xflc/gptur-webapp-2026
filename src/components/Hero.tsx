@@ -3,6 +3,7 @@ import { ChevronLeft, ChevronRight, Pause, Play } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 interface Slide {
+  region?: string
   title: string
   dates: string
   image: string
@@ -10,12 +11,53 @@ interface Slide {
   tagline: string
 }
 
-export default function Hero({ slides }: { slides: Slide[] }) {
+// PRNG determinístico (igual ao de offers.ts) para escolher a seleção do dia no
+// browser — num site estático a data do build ficaria congelada, por isso a
+// rotação diária tem de correr no cliente com a data real de quem visita.
+function mulberry32(seed: number) {
+  return () => {
+    seed = (seed + 0x6d2b79f5) | 0
+    let t = Math.imul(seed ^ (seed >>> 15), 1 | seed)
+    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296
+  }
+}
+// baralha pela seed do dia (YYYYMMDD) e escolhe uma oferta por região (até 5)
+function pickForToday(pool: Slide[]): Slide[] {
+  const d = new Date()
+  const rnd = mulberry32(d.getFullYear() * 10000 + (d.getMonth() + 1) * 100 + d.getDate())
+  const a = [...pool]
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(rnd() * (i + 1))
+    ;[a[i], a[j]] = [a[j], a[i]]
+  }
+  const out: Slide[] = []
+  for (const s of a) {
+    if (!out.some((x) => x.region === s.region)) out.push(s)
+    if (out.length >= 5) break
+  }
+  return out
+}
+
+export default function Hero({ slides, pool }: { slides: Slide[]; pool?: Slide[] }) {
+  // arranca com a seleção do build (SSR, sem flash de hidratação) e, depois de
+  // montar, troca para a seleção do dia calculada com a data real do browser.
+  const [active, setActive] = useState<Slide[]>(slides)
   const [index, setIndex] = useState(0)
   const [paused, setPaused] = useState(false)
-  const count = slides.length
+  const count = active.length
 
   const go = (n: number) => setIndex((n + count) % count)
+
+  useEffect(() => {
+    if (!pool || pool.length === 0) return
+    const today = pickForToday(pool)
+    if (today.length && today.some((s, i) => s.href !== active[i]?.href)) {
+      setActive(today)
+      setIndex(0)
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 
   useEffect(() => {
     if (paused) return
@@ -25,7 +67,7 @@ export default function Hero({ slides }: { slides: Slide[] }) {
 
   return (
     <section id="inicio" className="relative h-[68vh] min-h-[460px] w-full overflow-hidden bg-ink">
-      {slides.map((slide, i) => (
+      {active.map((slide, i) => (
         <div
           key={slide.title}
           className={`absolute inset-0 transition-opacity duration-700 ${
@@ -49,14 +91,14 @@ export default function Hero({ slides }: { slides: Slide[] }) {
             Marque a próxima viagem connosco
           </span>
           <h1 className="mt-4 line-clamp-2 font-display text-4xl leading-tight text-white sm:text-5xl lg:text-6xl">
-            {slides[index].title}
+            {active[index].title}
           </h1>
           <p className="mt-3 max-w-md text-base text-white/85 line-clamp-3">
-            {slides[index].tagline}
+            {active[index].tagline}
           </p>
-          <p className="mt-4 eyebrow text-white/70">{slides[index].dates}</p>
+          <p className="mt-4 eyebrow text-white/70">{active[index].dates}</p>
           <div className="mt-7 flex flex-wrap gap-3">
-            <Button size="lg" onClick={() => (window.location.href = slides[index].href)}>
+            <Button size="lg" onClick={() => (window.location.href = active[index].href)}>
               Ver oferta
             </Button>
             <Button
@@ -95,7 +137,7 @@ export default function Hero({ slides }: { slides: Slide[] }) {
           {paused ? <Play size={13} /> : <Pause size={13} />}
         </button>
         <div className="flex items-center gap-2">
-          {slides.map((s, i) => (
+          {active.map((s, i) => (
             <button
               key={s.title}
               onClick={() => go(i)}
