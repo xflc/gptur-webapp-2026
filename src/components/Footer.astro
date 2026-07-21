@@ -1,14 +1,6 @@
 ---
 import { MapPin, Phone, Smartphone, Mail, Clock } from "lucide-react"
 
-const destinos = [
-  { label: "China Clássica", href: "/viagens/china-classica" },
-  { label: "Istambul", href: "/viagens/istambul-dois-continentes" },
-  { label: "Marrocos", href: "/viagens/marrocos-1000-kasbahs" },
-  { label: "Itália Clássica", href: "/viagens/italia-classica" },
-  { label: "Circuito Açoriano", href: "/viagens/circuito-acoriano" },
-  { label: "Ver catálogo completo", href: "/catalogo" },
-]
 const info = [
   { label: "A nossa identidade", href: "/identidade" },
   { label: "Circuitos à medida", href: "/circuitos-a-medida" },
@@ -22,7 +14,7 @@ const info = [
 
 <footer id="contactos" class="bg-ink text-white/80">
   <div class="mx-auto max-w-7xl px-5 py-16 lg:px-8">
-    <div class="grid gap-10 lg:grid-cols-4">
+    <div class="grid gap-10 lg:grid-cols-3">
       <div>
         <img
           src="/gptur-logo-white.png"
@@ -65,19 +57,6 @@ const info = [
             <span>R. Helena Vaz da Silva, 11<br />1750-405 Lisboa · Portugal</span>
           </p>
         </div>
-      </div>
-
-      <div>
-        <h3 class="eyebrow text-[0.65rem] text-white">Destinos</h3>
-        <ul class="mt-4 space-y-2 text-sm">
-          {
-            destinos.map((l) => (
-              <li>
-                <a href={l.href} class="text-white/60 transition-colors hover:text-white">{l.label}</a>
-              </li>
-            ))
-          }
-        </ul>
       </div>
 
       <div>
