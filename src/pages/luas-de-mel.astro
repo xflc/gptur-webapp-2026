@@ -64,24 +64,22 @@ const galleries = trips.map((t) => t.images)
     <PageBanner
       eyebrow="Momentos a dois"
       title="Luas de Mel"
-      subtitle="A viagem que fica para a vida merece ser pensada ao pormenor. Aqui ficam dois casais que a viveram connosco."
+      subtitle="A viagem mais importante não se improvisa. A lua de mel é, para muitos casais, a que menos apetece passar a comparar voos ou a resolver imprevistos a meio do mundo, e é aí que uma agência faz a diferença: na GPTur, desde 1979, desenhamos o roteiro à vossa medida, conseguimos as melhores condições e ficamos ao vosso lado durante toda a viagem."
       crumb="Luas de Mel"
     />
 
-    <!-- Pitch: porquê uma agência, porquê a GPTur -->
-    <section class="bg-white pt-14">
-      <div class="mx-auto max-w-3xl px-5 lg:px-8">
-        <span class="eyebrow text-[0.62rem] text-gold-500">Porquê com uma agência</span>
-        <h2 class="mt-2 font-display text-2xl leading-snug text-ink sm:text-3xl">A viagem mais importante não se improvisa</h2>
-        <p class="mt-5 text-[1rem] leading-relaxed text-foreground/80">
-          A lua de mel é, para muitos casais, a viagem mais importante das suas vidas, e a que menos apetece passar a comparar voos ou a resolver imprevistos a meio do mundo. Uma agência trata disso por vocês. Na GPTur, desde 1979, desenhamos o roteiro à vossa medida, conseguimos as melhores condições e ficamos ao vosso lado durante toda a viagem. É a diferença entre reservar uma viagem e ser acompanhado numa.
-        </p>
-      </div>
-    </section>
-
     <!-- Luas de mel -->
     <section class="bg-white py-14">
-      <div class="mx-auto max-w-5xl space-y-10 px-5 lg:px-8">
+      <div class="mx-auto max-w-5xl px-5 lg:px-8">
+        <div class="mb-10">
+          <span class="eyebrow text-[0.62rem] text-gold-500">Histórias reais</span>
+          <h2 class="mt-2 font-display text-2xl leading-snug text-ink sm:text-3xl">Casais que viajaram connosco</h2>
+          <p class="mt-3 max-w-2xl text-[0.98rem] leading-relaxed text-muted-foreground">
+            Dois exemplos recentes, entre as muitas luas de mel que ajudámos a desenhar ao longo dos anos, de escapadelas tranquilas a grandes viagens de vários destinos.
+          </p>
+        </div>
+
+        <div class="space-y-10">
         {trips.map((t) => (
           <article class="overflow-hidden rounded-2xl border border-border bg-white shadow-sm">
             <div class="grid sm:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)]">
@@ -129,6 +127,13 @@ const galleries = trips.map((t) => t.images)
             </figure>
           </article>
         ))}
+        </div>
+
+        <p class="mt-10 max-w-2xl text-sm leading-relaxed text-muted-foreground">
+          Estas são apenas duas. Ao longo de mais de quatro décadas, ajudámos muitos casais a começar a vida a dois em viagem.
+          <a href="/contactos" class="font-medium text-primary underline-offset-2 hover:underline">Falem connosco</a>
+          e desenhamos a vossa.
+        </p>
       </div>
     </section>
 
