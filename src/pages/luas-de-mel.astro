@@ -3,7 +3,7 @@ import Layout from "../layouts/Layout.astro"
 import Header from "../components/Header.astro"
 import Footer from "../components/Footer.astro"
 import PageBanner from "../components/PageBanner.astro"
-import { MapPin, Users, Wallet, Sparkles, Clock } from "lucide-react"
+import { MapPin } from "lucide-react"
 import { readdirSync } from "node:fs"
 import { resolve } from "node:path"
 
@@ -30,7 +30,7 @@ const trips = [
     blurb:
       "Quase três semanas de norte a sul: templos e mercados em Banguecoque, um santuário de elefantes em Chiang Mai e o final em cheio nas praias das ilhas do Andamão. Um roteiro desenhado ao pormenor para o ritmo dos dois.",
     quote:
-      "Foram quase três semanas entre Banguecoque, Chiang Mai e as ilhas, com tudo encaixado ao pormenor e por um preço muito mais justo do que esperávamos. Ajustaram o roteiro várias vezes até ficar perfeito e, sempre que precisámos, tínhamos alguém do outro lado a responder. Voltámos a casa a querer marcar já a próxima.",
+      "Foram quase três semanas entre Banguecoque, Chiang Mai e as ilhas, com tudo encaixado ao pormenor e por um preço muito mais justo do que esperávamos. A Rute ajudou-nos imenso a desenhar o roteiro e ajustou-o connosco vezes sem conta até ficar perfeito, e, sempre que precisámos, tínhamos alguém do outro lado a responder. Voltámos a casa a querer marcar já a próxima.",
   },
   {
     couple: "Bernardo e Teresa",
@@ -53,13 +53,6 @@ trips.forEach((t, i) => {
   t.extra = Math.max(0, t.images.length - 5)
 })
 const galleries = trips.map((t) => t.images)
-
-const pillars = [
-  { icon: Users, title: "Proximidade", text: "Uma equipa que vos conhece pelo nome, do primeiro contacto ao regresso." },
-  { icon: Wallet, title: "Preço justo", text: "Acesso direto a operadores de confiança e tarifas cuidadas, sem intermediários a mais." },
-  { icon: Sparkles, title: "100% à medida", text: "Cada roteiro é desenhado para o vosso ritmo, gostos e orçamento." },
-  { icon: Clock, title: "Apoio 24h", text: "Estamos contactáveis a qualquer hora e em qualquer fuso, durante toda a viagem." },
-]
 ---
 
 <Layout
@@ -71,23 +64,22 @@ const pillars = [
     <PageBanner
       eyebrow="Momentos a dois"
       title="Luas de Mel"
-      subtitle="A viagem que fica para a vida merece ser pensada ao pormenor. Desenhamos cada lua de mel de raiz, ao ritmo e ao orçamento do casal, e acompanhamos tudo do primeiro contacto ao regresso. Aqui ficam dois casais que viajaram connosco."
+      subtitle="A viagem que fica para a vida merece ser pensada ao pormenor. Aqui ficam dois casais que a viveram connosco."
       crumb="Luas de Mel"
     />
 
-    <!-- Pilares -->
+    <!-- Pitch: porquê uma agência, porquê a GPTur -->
     <section class="bg-white pt-14">
-      <div class="mx-auto max-w-6xl px-5 lg:px-8">
-        <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {pillars.map((p) => (
-            <div class="rounded-2xl border border-border bg-card p-6">
-              <span class="grid h-11 w-11 place-items-center rounded-full bg-teal-50 text-primary ring-1 ring-teal-100">
-                <p.icon size={20} />
-              </span>
-              <h3 class="mt-4 font-display text-lg text-ink">{p.title}</h3>
-              <p class="mt-1.5 text-sm leading-relaxed text-muted-foreground">{p.text}</p>
-            </div>
-          ))}
+      <div class="mx-auto max-w-3xl px-5 lg:px-8">
+        <span class="eyebrow text-[0.62rem] text-gold-500">Porquê com uma agência</span>
+        <h2 class="mt-2 font-display text-2xl leading-snug text-ink sm:text-3xl">A viagem mais importante não se improvisa</h2>
+        <div class="mt-5 space-y-4 text-[1rem] leading-relaxed text-foreground/80">
+          <p>
+            A lua de mel é, para a maioria dos casais, a viagem mais importante das suas vidas. É também a que menos apetece passar a comparar voos, a decifrar letras miudinhas de hotéis ou a resolver imprevistos a meio do mundo. É aqui que uma agência muda tudo: alguém que já conhece os destinos no terreno, que monta o roteiro inteiro à vossa medida e que trata da logística para que só tenham de aproveitar um ao outro.
+          </p>
+          <p>
+            Na GPTur fazemos isto desde 1979, e sempre da mesma maneira: com um rosto humano do princípio ao fim. Ouvimos o que sonham, ajustamos ao vosso ritmo e ao vosso orçamento, conseguimos as melhores condições junto de quem trabalhamos há décadas e ficamos ao vosso lado durante toda a viagem, a qualquer hora e em qualquer fuso. É a diferença entre reservar uma viagem e ser acompanhado numa.
+          </p>
         </div>
       </div>
     </section>
