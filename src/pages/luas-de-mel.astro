@@ -1,0 +1,229 @@
+---
+import Layout from "../layouts/Layout.astro"
+import Header from "../components/Header.astro"
+import Footer from "../components/Footer.astro"
+import PageBanner from "../components/PageBanner.astro"
+import { MapPin, Users, Wallet, Sparkles, Clock } from "lucide-react"
+import { readdirSync } from "node:fs"
+import { resolve } from "node:path"
+
+// fotos de cada lua de mel em public/honeymoons/<dir> (ordem numérica: 1 = capa)
+const listImages = (dir: string) => {
+  try {
+    return readdirSync(resolve("public/honeymoons", dir))
+      .filter((f) => /\.(jpe?g|png)$/i.test(f))
+      .sort((a, b) => a.localeCompare(b, undefined, { numeric: true }))
+      .map((f) => `/honeymoons/${dir}/${f}`)
+  } catch {
+    return []
+  }
+}
+
+// Luas de mel reais dos nossos clientes (exemplos). Para acrescentar: nova entrada
+// com couple, destino, route, dir (pasta das fotos), blurb e testemunho.
+const trips = [
+  {
+    couple: "Francisco e Madalena",
+    destino: "Tailândia",
+    route: "Banguecoque · Chiang Mai · Phi Phi · Krabi",
+    dir: "tailandia",
+    blurb:
+      "Quase três semanas de norte a sul: templos e mercados em Banguecoque, um santuário de elefantes em Chiang Mai e o final em cheio nas praias das ilhas do Andamão. Um roteiro desenhado ao pormenor para o ritmo dos dois.",
+    quote:
+      "Foram quase três semanas entre Banguecoque, Chiang Mai e as ilhas, com tudo encaixado ao pormenor e por um preço muito mais justo do que esperávamos. Ajustaram o roteiro várias vezes até ficar perfeito e, sempre que precisámos, tínhamos alguém do outro lado a responder. Voltámos a casa a querer marcar já a próxima.",
+  },
+  {
+    couple: "Bernardo e Teresa",
+    destino: "São Tomé e Príncipe",
+    route: "Ilha de São Tomé · Ilha do Príncipe",
+    dir: "sao-tome-principe",
+    blurb:
+      "Uma lua de mel fora do óbvio, nas duas ilhas no coração do Atlântico: floresta tropical, praias de areia dourada e um ritmo tranquilo, longe das multidões. Descoberta a dois, sem preocupações pelo caminho.",
+    quote:
+      "Queríamos uma lua de mel diferente, longe do óbvio, e a GPTur desenhou tudo à nossa medida. Sentimos sempre uma equipa próxima, que nos conhecia pelo nome e esteve contactável a qualquer hora, mesmo com a diferença horária. São Tomé e Príncipe surpreendeu-nos a cada dia, e não tivemos de nos preocupar com nada.",
+  },
+]
+
+// para cada viagem: descobre as fotos, define capa, miniaturas e extra (+N)
+trips.forEach((t, i) => {
+  t.id = i
+  t.images = listImages(t.dir)
+  t.cover = t.images[0]
+  t.thumbs = t.images.slice(1, 5)
+  t.extra = Math.max(0, t.images.length - 5)
+})
+const galleries = trips.map((t) => t.images)
+
+const pillars = [
+  { icon: Users, title: "Proximidade", text: "Uma equipa que vos conhece pelo nome, do primeiro contacto ao regresso." },
+  { icon: Wallet, title: "Preço justo", text: "Acesso direto a operadores de confiança e tarifas cuidadas, sem intermediários a mais." },
+  { icon: Sparkles, title: "100% à medida", text: "Cada roteiro é desenhado para o vosso ritmo, gostos e orçamento." },
+  { icon: Clock, title: "Apoio 24h", text: "Estamos contactáveis a qualquer hora e em qualquer fuso, durante toda a viagem." },
+]
+---
+
+<Layout
+  title="Luas de Mel | GPTur"
+  description="Luas de mel à medida, desenhadas ao pormenor: exemplos reais de casais que viajaram connosco, com proximidade, preço justo, personalização e apoio 24h."
+>
+  <Header />
+  <main>
+    <PageBanner
+      eyebrow="Momentos a dois"
+      title="Luas de Mel"
+      subtitle="A viagem que fica para a vida merece ser pensada ao pormenor. Desenhamos cada lua de mel de raiz, ao ritmo e ao orçamento do casal, e acompanhamos tudo do primeiro contacto ao regresso. Aqui ficam dois casais que viajaram connosco."
+      crumb="Luas de Mel"
+    />
+
+    <!-- Pilares -->
+    <section class="bg-white pt-14">
+      <div class="mx-auto max-w-6xl px-5 lg:px-8">
+        <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          {pillars.map((p) => (
+            <div class="rounded-2xl border border-border bg-card p-6">
+              <span class="grid h-11 w-11 place-items-center rounded-full bg-teal-50 text-primary ring-1 ring-teal-100">
+                <p.icon size={20} />
+              </span>
+              <h3 class="mt-4 font-display text-lg text-ink">{p.title}</h3>
+              <p class="mt-1.5 text-sm leading-relaxed text-muted-foreground">{p.text}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Luas de mel -->
+    <section class="bg-white py-14">
+      <div class="mx-auto max-w-5xl space-y-10 px-5 lg:px-8">
+        {trips.map((t) => (
+          <article class="overflow-hidden rounded-2xl border border-border bg-white shadow-sm">
+            <div class="grid sm:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)]">
+              <div class="relative min-h-[260px]">
+                <img
+                  src={t.cover}
+                  alt={`Lua de mel de ${t.couple} em ${t.destino}`}
+                  class="absolute inset-0 h-full w-full cursor-zoom-in object-cover"
+                  loading="lazy"
+                  data-lb
+                  data-g={t.id}
+                  data-i="0"
+                />
+              </div>
+
+              <div class="p-6 lg:p-8">
+                <span class="eyebrow flex items-center gap-1.5 text-[0.62rem] text-gold-500">
+                  <MapPin size={13} /> {t.destino}
+                </span>
+                <h2 class="mt-2 font-display text-2xl leading-tight text-ink">{t.couple}</h2>
+                <p class="mt-2 text-xs text-muted-foreground">{t.route}</p>
+                <p class="mt-3 text-sm leading-relaxed text-foreground/80">{t.blurb}</p>
+
+                {t.thumbs.length > 0 && (
+                  <div class="mt-4 flex flex-wrap gap-2">
+                    {t.thumbs.map((img, gi) => (
+                      <button type="button" class="relative block cursor-zoom-in overflow-hidden rounded" data-lb data-g={t.id} data-i={gi + 1}>
+                        <img src={img} alt={`${t.destino} — ${t.couple}`} class="h-16 w-24 object-cover transition-transform duration-300 hover:scale-110" loading="lazy" />
+                        {t.extra > 0 && gi === t.thumbs.length - 1 && (
+                          <span class="absolute inset-0 grid place-items-center bg-black/55 text-sm font-semibold text-white">+{t.extra}</span>
+                        )}
+                      </button>
+                    ))}
+                  </div>
+                )}
+              </div>
+            </div>
+
+            <figure class="relative border-t border-border bg-cream/60 px-6 py-6 pl-10 lg:px-8 lg:pl-12">
+              <span class="absolute -top-1 left-6 font-display text-4xl leading-none text-gold-300 lg:left-8" aria-hidden="true">“</span>
+              <blockquote class="max-w-3xl text-[0.95rem] italic leading-relaxed text-foreground/80">{t.quote}</blockquote>
+              <figcaption class="mt-2.5 text-xs text-muted-foreground">
+                <span class="font-semibold not-italic text-foreground/70">{t.couple}</span> · {t.destino}
+              </figcaption>
+            </figure>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="bg-teal-800 py-14 text-white">
+      <div class="mx-auto flex max-w-4xl flex-col items-center gap-6 px-5 text-center lg:flex-row lg:justify-between lg:text-left lg:px-8">
+        <div>
+          <h2 class="font-display text-2xl text-white sm:text-3xl">Vamos planear a vossa lua de mel?</h2>
+          <p class="mt-2 text-white/80">
+            Contem-nos o destino dos sonhos (ou deixem-nos sugerir) e desenhamos tudo à vossa medida, do primeiro contacto ao regresso.
+          </p>
+        </div>
+        <a
+          href="/contactos"
+          class="flex h-12 shrink-0 items-center justify-center rounded-md bg-accent px-6 text-sm font-semibold uppercase tracking-widest text-accent-foreground transition-colors hover:bg-gold-400"
+          >Falar connosco</a
+        >
+      </div>
+    </section>
+
+    <!-- Lightbox: clicar numa foto abre-a; setas ‹ › (e teclado) percorrem a galeria -->
+    <div
+      id="lightbox"
+      class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/90 p-4 select-none"
+      role="dialog"
+      aria-modal="true"
+    >
+      <button id="lb-close" aria-label="Fechar" class="absolute right-4 top-4 grid h-11 w-11 place-items-center rounded-full bg-white/10 text-2xl text-white transition-colors hover:bg-white/20">✕</button>
+      <button id="lb-prev" aria-label="Anterior" class="absolute left-3 top-1/2 grid h-12 w-12 -translate-y-1/2 place-items-center rounded-full bg-white/10 text-3xl text-white transition-colors hover:bg-white/20 sm:left-6">‹</button>
+      <img id="lb-img" src="" alt="" class="max-h-[86vh] max-w-[92vw] rounded-lg object-contain shadow-2xl" />
+      <button id="lb-next" aria-label="Seguinte" class="absolute right-3 top-1/2 grid h-12 w-12 -translate-y-1/2 place-items-center rounded-full bg-white/10 text-3xl text-white transition-colors hover:bg-white/20 sm:right-6">›</button>
+      <div id="lb-count" class="absolute bottom-5 left-1/2 -translate-x-1/2 rounded-full bg-black/50 px-3 py-1 text-xs tracking-widest text-white/80"></div>
+    </div>
+    <script id="lb-data" type="application/json" set:html={JSON.stringify(galleries)} />
+  </main>
+  <Footer />
+</Layout>
+
+<script>
+  const galleries = JSON.parse(document.getElementById("lb-data")!.textContent!)
+  const lb = document.getElementById("lightbox")!
+  const img = document.getElementById("lb-img") as HTMLImageElement
+  const count = document.getElementById("lb-count")!
+  const prev = document.getElementById("lb-prev")!
+  const next = document.getElementById("lb-next")!
+  let g = 0, i = 0
+
+  function render() {
+    const arr = galleries[g]
+    img.src = arr[i]
+    count.textContent = `${i + 1} / ${arr.length}`
+    const multi = arr.length > 1
+    prev.hidden = next.hidden = !multi
+    count.hidden = !multi
+  }
+  function open(gi: number, ii: number) {
+    g = gi; i = ii
+    lb.classList.remove("hidden"); lb.classList.add("flex")
+    document.body.style.overflow = "hidden"
+    render()
+  }
+  function close() {
+    lb.classList.add("hidden"); lb.classList.remove("flex")
+    document.body.style.overflow = ""
+  }
+  function step(d: number) {
+    const arr = galleries[g]
+    i = (i + d + arr.length) % arr.length
+    render()
+  }
+
+  document.querySelectorAll<HTMLElement>("[data-lb]").forEach((el) =>
+    el.addEventListener("click", () => open(Number(el.dataset.g), Number(el.dataset.i)))
+  )
+  document.getElementById("lb-close")!.addEventListener("click", close)
+  prev.addEventListener("click", () => step(-1))
+  next.addEventListener("click", () => step(1))
+  lb.addEventListener("click", (e) => { if (e.target === lb) close() })
+  document.addEventListener("keydown", (e) => {
+    if (lb.classList.contains("hidden")) return
+    if (e.key === "Escape") close()
+    else if (e.key === "ArrowLeft") step(-1)
+    else if (e.key === "ArrowRight") step(1)
+  })
+</script>
