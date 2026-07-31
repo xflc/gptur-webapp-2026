@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react"
-import { FileText, Plus, Copy, Trash2, Download, Upload, Lock, LogOut } from "lucide-react"
+import { FileText, Plus, Copy, Trash2, Download, Upload, Lock, LogOut, FileDown } from "lucide-react"
 import { useStore } from "../../orcamentos/store"
 import { quoteTotals, money } from "../../orcamentos/pricing"
 import { Editor } from "./Editor"
@@ -95,6 +95,7 @@ function Shell({ onLogout }: { onLogout: () => void }) {
           <>
             <header className="flex items-center gap-2 border-b border-border bg-white px-5 py-2.5">
               <h2 className="min-w-0 flex-1 truncate font-display text-xl text-ink">{q.title?.trim() || "Novo orçamento"}</h2>
+              <button onClick={() => window.open(`/orcamentos/imprimir?id=${q.id}`, "_blank")} className="inline-flex items-center gap-1.5 rounded-md bg-primary px-3 py-1.5 text-sm font-semibold text-white transition hover:bg-teal-700"><FileDown size={15} /> Gerar PDF</button>
               <button onClick={() => duplicate(q.id)} title="Duplicar" className="grid h-8 w-8 place-items-center rounded-md text-muted-foreground hover:bg-secondary"><Copy size={16} /></button>
               <button onClick={exportJSON} title="Exportar JSON" className="grid h-8 w-8 place-items-center rounded-md text-muted-foreground hover:bg-secondary"><Download size={16} /></button>
               <button onClick={() => fileRef.current?.click()} title="Importar JSON" className="grid h-8 w-8 place-items-center rounded-md text-muted-foreground hover:bg-secondary"><Upload size={16} /></button>
