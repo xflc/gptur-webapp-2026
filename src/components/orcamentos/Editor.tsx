@@ -93,14 +93,18 @@ function StageEditor({ st, idx, count, rate, pax, renderItem, onReorder }: { st:
   return (
     <section className="rounded-xl border border-border bg-secondary/40 p-4" {...(onReorder ? dropProps(DRAG_STAGE, onReorder) : {})}>
       <div className="mb-3 flex flex-wrap items-end gap-2">
-        {onReorder && <span {...handleProps(DRAG_STAGE, st.id)} title="Arrastar para reordenar a etapa" className="mb-1.5 cursor-grab self-center text-muted-foreground/60 hover:text-primary active:cursor-grabbing"><GripVertical size={16} /></span>}
+        <div className="mb-0.5 flex flex-col items-center self-center text-muted-foreground/60">
+          {onReorder && <span {...handleProps(DRAG_STAGE, st.id)} title="Arrastar para reordenar a etapa" className="cursor-grab hover:text-primary active:cursor-grabbing"><GripVertical size={16} /></span>}
+          <div className="flex flex-col leading-none">
+            <button onClick={() => edit((q) => moveStage(q, st.id, -1))} disabled={idx === 0} title="Subir" className="grid h-4 w-5 place-items-center rounded hover:bg-secondary hover:text-primary disabled:opacity-30"><ChevronUp size={14} /></button>
+            <button onClick={() => edit((q) => moveStage(q, st.id, 1))} disabled={idx === count - 1} title="Descer" className="grid h-4 w-5 place-items-center rounded hover:bg-secondary hover:text-primary disabled:opacity-30"><ChevronDown size={14} /></button>
+          </div>
+        </div>
         <span className="grid h-7 w-7 shrink-0 place-items-center rounded-md bg-primary text-xs font-bold text-white">{idx + 1}</span>
         <Field label="Local" className="min-w-[160px] flex-1"><Text value={st.place} onChange={(v) => patchStage((s) => { s.place = v })} placeholder="Tóquio" /></Field>
         <Field label="Dia início"><Num value={st.dayStart || 0} min={0} onChange={(v) => patchStage((s) => { s.dayStart = v })} className="w-20" /></Field>
         <Field label="Dia fim"><Num value={st.dayEnd || 0} min={0} onChange={(v) => patchStage((s) => { s.dayEnd = v })} className="w-20" /></Field>
         <div className="ml-auto flex items-center gap-0.5">
-          <button onClick={() => edit((q) => moveStage(q, st.id, -1))} disabled={idx === 0} title="Subir" className="grid h-7 w-7 place-items-center rounded text-muted-foreground hover:bg-secondary disabled:opacity-30"><ChevronUp size={15} /></button>
-          <button onClick={() => edit((q) => moveStage(q, st.id, 1))} disabled={idx === count - 1} title="Descer" className="grid h-7 w-7 place-items-center rounded text-muted-foreground hover:bg-secondary disabled:opacity-30"><ChevronDown size={15} /></button>
           <button onClick={() => edit((q) => removeById(q, st.id))} title="Remover etapa" className="grid h-7 w-7 place-items-center rounded text-muted-foreground hover:bg-red-50 hover:text-destructive"><Trash2 size={15} /></button>
         </div>
       </div>

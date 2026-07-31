@@ -25,8 +25,16 @@ export function ServiceRow({
   return (
     <div className={`rounded-lg border p-2.5 ${s.optional ? "border-dashed border-gold-300 bg-gold-50/40" : "border-border bg-white"}`} {...(onReorder ? dropProps(DRAG_ITEM, onReorder) : {})}>
       <div className="flex flex-wrap items-end gap-2">
-        {onReorder && (
-          <span {...handleProps(DRAG_ITEM, s.id)} title="Arrastar para reordenar" className="mb-1.5 cursor-grab self-center text-muted-foreground/60 hover:text-primary active:cursor-grabbing"><GripVertical size={15} /></span>
+        {(onReorder || move) && (
+          <div className="mb-0.5 flex flex-col items-center self-center text-muted-foreground/60">
+            {onReorder && <span {...handleProps(DRAG_ITEM, s.id)} title="Arrastar para reordenar" className="cursor-grab hover:text-primary active:cursor-grabbing"><GripVertical size={15} /></span>}
+            {move && (
+              <div className="flex flex-col leading-none">
+                <button onClick={() => move(-1)} title="Subir" className="grid h-4 w-5 place-items-center rounded hover:bg-secondary hover:text-primary"><ChevronUp size={13} /></button>
+                <button onClick={() => move(1)} title="Descer" className="grid h-4 w-5 place-items-center rounded hover:bg-secondary hover:text-primary"><ChevronDown size={13} /></button>
+              </div>
+            )}
+          </div>
         )}
         <div className="flex min-w-[180px] flex-1 flex-col gap-1">
           <Text value={s.title} onChange={(v) => patch((s) => { s.title = v })} placeholder="Descrição do serviço" />
@@ -43,15 +51,7 @@ export function ServiceRow({
             <div className="text-[0.6rem] uppercase tracking-wider text-muted-foreground">total c/ imp.</div>
             <div className="text-sm font-semibold tabular-nums text-primary">{money(line.pvp)}</div>
           </div>
-          <div className="flex items-center gap-0.5">
-            {move && (
-              <>
-                <button onClick={() => move(-1)} title="Subir" className="grid h-6 w-6 place-items-center rounded text-muted-foreground hover:bg-secondary"><ChevronUp size={14} /></button>
-                <button onClick={() => move(1)} title="Descer" className="grid h-6 w-6 place-items-center rounded text-muted-foreground hover:bg-secondary"><ChevronDown size={14} /></button>
-              </>
-            )}
-            <button onClick={remove} title="Remover" className="grid h-6 w-6 place-items-center rounded text-muted-foreground hover:bg-red-50 hover:text-destructive"><Trash2 size={14} /></button>
-          </div>
+          <button onClick={remove} title="Remover" className="grid h-6 w-6 place-items-center rounded text-muted-foreground hover:bg-red-50 hover:text-destructive"><Trash2 size={14} /></button>
         </div>
       </div>
 
