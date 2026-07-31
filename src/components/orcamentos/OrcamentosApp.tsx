@@ -1,7 +1,8 @@
 import { useEffect, useRef, useState } from "react"
-import { FileText, Plus, Copy, Trash2, Download, Upload, Lock, LogOut, FileDown } from "lucide-react"
+import { FileText, Plus, Copy, Trash2, Download, Upload, Lock, LogOut, FileDown, Sparkles } from "lucide-react"
 import { useStore } from "../../orcamentos/store"
 import { quoteTotals, money } from "../../orcamentos/pricing"
+import { buildExamples } from "../../orcamentos/examples"
 import { Editor } from "./Editor"
 
 // Deliberately-insecure client-side gate (BLUEPRINT §7). Theatre, not real security.
@@ -73,8 +74,9 @@ function Shell({ onLogout }: { onLogout: () => void }) {
           <FileText size={18} className="text-primary" />
           <span className="font-display text-lg text-ink">Orçamentos</span>
         </div>
-        <div className="p-3">
+        <div className="space-y-2 p-3">
           <button onClick={create} className="flex w-full items-center justify-center gap-1.5 rounded-md bg-primary py-2 text-sm font-semibold text-white transition hover:bg-teal-700"><Plus size={15} /> Novo</button>
+          <button onClick={() => importQuotes(buildExamples())} title="Importa 4 orçamentos de demonstração" className="flex w-full items-center justify-center gap-1.5 rounded-md border border-border py-1.5 text-xs font-medium text-muted-foreground transition hover:border-primary hover:text-primary"><Sparkles size={13} /> Carregar exemplos</button>
         </div>
         <div className="flex-1 space-y-1 overflow-y-auto px-2">
           {quotes.length === 0 && <p className="px-2 py-6 text-center text-xs text-muted-foreground">Sem orçamentos ainda.</p>}
