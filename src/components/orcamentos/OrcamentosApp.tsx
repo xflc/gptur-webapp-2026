@@ -76,6 +76,7 @@ function Shell({ onLogout }: { onLogout?: () => void }) {
         <div className="flex items-center gap-2 border-b border-border px-4 py-3.5">
           <FileText size={18} className="text-primary" />
           <span className="font-display text-lg text-ink">Orçamentos</span>
+          <button onClick={() => setSideOpen(false)} title="Ocultar lista" className="ml-auto grid h-8 w-8 place-items-center rounded-md text-muted-foreground hover:bg-secondary"><PanelLeftClose size={18} /></button>
         </div>
         <div className="space-y-2 p-3">
           <button onClick={create} className="flex w-full items-center justify-center gap-1.5 rounded-md bg-primary py-2 text-sm font-semibold text-white transition hover:bg-teal-700"><Plus size={15} /> Novo</button>
@@ -99,9 +100,9 @@ function Shell({ onLogout }: { onLogout?: () => void }) {
       {/* Main */}
       <main className="flex min-w-0 flex-1 flex-col">
         <header className="flex items-center gap-2 border-b border-border bg-white px-4 py-2.5">
-          <button onClick={() => setSideOpen((o) => !o)} title={sideOpen ? "Ocultar lista" : "Mostrar lista"} className="grid h-8 w-8 shrink-0 place-items-center rounded-md text-muted-foreground hover:bg-secondary">
-            {sideOpen ? <PanelLeftClose size={18} /> : <PanelLeftOpen size={18} />}
-          </button>
+          {!sideOpen && (
+            <button onClick={() => setSideOpen(true)} title="Mostrar lista" className="grid h-8 w-8 shrink-0 place-items-center rounded-md text-muted-foreground hover:bg-secondary"><PanelLeftOpen size={18} /></button>
+          )}
           {q ? (
             <>
               <h2 className="min-w-0 flex-1 truncate font-display text-xl text-ink">{q.title?.trim() || "Novo orçamento"}</h2>
