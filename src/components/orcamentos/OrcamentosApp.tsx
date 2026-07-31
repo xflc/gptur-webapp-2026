@@ -10,10 +10,12 @@ const ACCESS_CODE = "gptur1979"
 const AUTH_KEY = "gptur-orcamentos-auth"
 
 export default function OrcamentosApp() {
-  const [authed, setAuthed] = useState(false)
-  useEffect(() => { setAuthed(sessionStorage.getItem(AUTH_KEY) === "1") }, [])
-  if (!authed) return <Login onOk={() => setAuthed(true)} />
-  return <Shell onLogout={() => { sessionStorage.removeItem(AUTH_KEY); setAuthed(false) }} />
+  // Gate de login desativado por agora (código mantido abaixo para reativar depois).
+  const GATE = false
+  const [authed, setAuthed] = useState(!GATE)
+  useEffect(() => { if (GATE) setAuthed(sessionStorage.getItem(AUTH_KEY) === "1") }, [])
+  if (GATE && !authed) return <Login onOk={() => setAuthed(true)} />
+  return <Shell onLogout={GATE ? () => { sessionStorage.removeItem(AUTH_KEY); setAuthed(false) } : undefined} />
 }
 
 function Login({ onOk }: { onOk: () => void }) {
@@ -42,7 +44,7 @@ function Login({ onOk }: { onOk: () => void }) {
   )
 }
 
-function Shell({ onLogout }: { onLogout: () => void }) {
+function Shell({ onLogout }: { onLogout?: () => void }) {
   const { quotes, currentId, create, select, duplicate, remove } = useStore()
   const importQuotes = useStore((s) => s.importQuotes)
   const q = quotes.find((x) => x.id === currentId) ?? null
@@ -86,9 +88,11 @@ function Shell({ onLogout }: { onLogout: () => void }) {
             </button>
           ))}
         </div>
-        <div className="border-t border-border p-3">
-          <button onClick={onLogout} className="flex items-center gap-1.5 text-xs text-muted-foreground hover:text-destructive"><LogOut size={13} /> Sair</button>
-        </div>
+        {onLogout && (
+          <div className="border-t border-border p-3">
+            <button onClick={onLogout} className="flex items-center gap-1.5 text-xs text-muted-foreground hover:text-destructive"><LogOut size={13} /> Sair</button>
+          </div>
+        )}
       </aside>
 
       {/* Main */}

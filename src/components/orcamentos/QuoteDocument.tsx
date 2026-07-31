@@ -2,11 +2,18 @@
 // Self-contained <style> so it renders identically in a preview pane or a print window.
 import { Fragment } from "react"
 import type { Quote, Item, Service, Stage } from "../../orcamentos/model"
-import { CATEGORY_ORDER, categoryLabel, UNITS } from "../../orcamentos/model"
+import { CATEGORY_ORDER, categoryLabel } from "../../orcamentos/model"
 import { quoteTotals, cheapestBranch, lineValue, money, isRealService } from "../../orcamentos/pricing"
 import { branchLabel } from "../../orcamentos/factory"
 
-const unitShort = (u: string) => UNITS.find((x) => x.id === u)?.short || ""
+// coluna de quantidade natural: "3 noites", "4 unidades", "p/ pessoa", "p/ grupo"
+function qtyUnit(s: Service): string {
+  const q = s.qty || 1
+  if (s.unit === "por_noite") return `${q} ${q === 1 ? "noite" : "noites"}`
+  if (s.unit === "por_unidade") return `${q} ${q === 1 ? "unidade" : "unidades"}`
+  const base = s.unit === "por_pessoa" ? "p/ pessoa" : "p/ grupo"
+  return q > 1 ? `${base} · ${q}×` : base
+}
 
 function fmtDate(startDate: string | undefined, day: number | undefined): string | null {
   if (!startDate || !day) return null
@@ -36,7 +43,7 @@ function serviceRow(s: Service, pax: number, extra = false) {
         {extra && <span className="tag tag-extra">opcional</span>}
         {s.description && <span className="sub">{s.description}</span>}
       </td>
-      <td className="qty">{s.qty > 1 ? `${s.qty}× ` : ""}{unitShort(s.unit)}</td>
+      <td className="qty">{qtyUnit(s)}</td>
       <td className="num">{money(line.net)}</td>
       <td className="num strong">{money(line.pvp)}</td>
     </tr>
