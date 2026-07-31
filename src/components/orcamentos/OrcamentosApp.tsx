@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react"
-import { FileText, Plus, Copy, Trash2, Download, Upload, Lock, LogOut, FileDown, Sparkles } from "lucide-react"
+import { FileText, Plus, Copy, Trash2, Download, Upload, Lock, LogOut, FileDown, Sparkles, PanelLeftClose, PanelLeftOpen } from "lucide-react"
 import { useStore } from "../../orcamentos/store"
 import { quoteTotals, money } from "../../orcamentos/pricing"
 import { buildExamples } from "../../orcamentos/examples"
@@ -49,6 +49,7 @@ function Shell({ onLogout }: { onLogout?: () => void }) {
   const importQuotes = useStore((s) => s.importQuotes)
   const q = quotes.find((x) => x.id === currentId) ?? null
   const fileRef = useRef<HTMLInputElement>(null)
+  const [sideOpen, setSideOpen] = useState(true)
 
   useEffect(() => { if (!currentId && quotes.length) select(quotes[0].id) }, [currentId, quotes, select])
 
@@ -71,7 +72,7 @@ function Shell({ onLogout }: { onLogout?: () => void }) {
   return (
     <div className="flex min-h-screen bg-cream text-foreground">
       {/* Sidebar */}
-      <aside className="flex w-60 shrink-0 flex-col border-r border-border bg-white">
+      <aside className={`${sideOpen ? "flex w-60" : "hidden"} shrink-0 flex-col border-r border-border bg-white`}>
         <div className="flex items-center gap-2 border-b border-border px-4 py-3.5">
           <FileText size={18} className="text-primary" />
           <span className="font-display text-lg text-ink">Orçamentos</span>
@@ -97,9 +98,12 @@ function Shell({ onLogout }: { onLogout?: () => void }) {
 
       {/* Main */}
       <main className="flex min-w-0 flex-1 flex-col">
-        {q ? (
-          <>
-            <header className="flex items-center gap-2 border-b border-border bg-white px-5 py-2.5">
+        <header className="flex items-center gap-2 border-b border-border bg-white px-4 py-2.5">
+          <button onClick={() => setSideOpen((o) => !o)} title={sideOpen ? "Ocultar lista" : "Mostrar lista"} className="grid h-8 w-8 shrink-0 place-items-center rounded-md text-muted-foreground hover:bg-secondary">
+            {sideOpen ? <PanelLeftClose size={18} /> : <PanelLeftOpen size={18} />}
+          </button>
+          {q ? (
+            <>
               <h2 className="min-w-0 flex-1 truncate font-display text-xl text-ink">{q.title?.trim() || "Novo orçamento"}</h2>
               <button onClick={() => window.open(`/orcamentos/imprimir?id=${q.id}`, "_blank")} className="inline-flex items-center gap-1.5 rounded-md bg-primary px-3 py-1.5 text-sm font-semibold text-white transition hover:bg-teal-700"><FileDown size={15} /> Gerar PDF</button>
               <button onClick={() => duplicate(q.id)} title="Duplicar" className="grid h-8 w-8 place-items-center rounded-md text-muted-foreground hover:bg-secondary"><Copy size={16} /></button>
@@ -107,7 +111,13 @@ function Shell({ onLogout }: { onLogout?: () => void }) {
               <button onClick={() => fileRef.current?.click()} title="Importar JSON" className="grid h-8 w-8 place-items-center rounded-md text-muted-foreground hover:bg-secondary"><Upload size={16} /></button>
               <input ref={fileRef} type="file" accept="application/json" className="hidden" onChange={onImport} />
               <button onClick={() => { if (confirm("Eliminar este orçamento?")) remove(q.id) }} title="Eliminar" className="grid h-8 w-8 place-items-center rounded-md text-muted-foreground hover:bg-red-50 hover:text-destructive"><Trash2 size={16} /></button>
-            </header>
+            </>
+          ) : (
+            <span className="font-display text-xl text-ink">Orçamentos</span>
+          )}
+        </header>
+        {q ? (
+          <>
             <div className="flex-1 overflow-y-auto p-5"><Editor q={q} /></div>
             <TotalsBar q={q} />
           </>
