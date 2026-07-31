@@ -180,6 +180,8 @@ const CSS = `
 .qdoc { --teal:#2a6b61; --teal-d:#1f4741; --gold:#c1971f; --cream:#f9f7f2; --ink:#26302e; --line:#e2e6df; --muted:#5f6b67;
   font-family:"Manrope",system-ui,sans-serif; color:var(--ink); background:#fff; max-width:820px; margin:0 auto; padding:32px 40px;
   font-size:12.5px; line-height:1.5; }
+/* imprimir fundos/cores (logo em caixa teal, bolinhas dos dias, badges) */
+.qdoc, .qdoc * { -webkit-print-color-adjust:exact; print-color-adjust:exact; }
 .qdoc h2,.qdoc h3 { font-family:"Cormorant Garamond",Georgia,serif; font-weight:600; letter-spacing:-.01em; color:var(--teal-d); }
 .qhead { display:flex; justify-content:space-between; gap:24px; border-bottom:2px solid var(--teal); padding-bottom:16px; margin-bottom:20px; }
 .brand { display:flex; flex-direction:column; gap:10px; align-items:flex-start; }
