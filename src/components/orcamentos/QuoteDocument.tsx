@@ -178,8 +178,8 @@ export function QuoteDocument({ q }: { q: Quote }) {
 
 const CSS = `
 .qdoc { --teal:#2a6b61; --teal-d:#1f4741; --gold:#c1971f; --cream:#f9f7f2; --ink:#26302e; --line:#e2e6df; --muted:#5f6b67;
-  font-family:"Manrope",system-ui,sans-serif; color:var(--ink); background:#fff; max-width:820px; margin:0 auto; padding:32px 40px;
-  font-size:12.5px; line-height:1.5; }
+  font-family:"Manrope",system-ui,sans-serif; color:var(--ink); background:#fff; margin:0 auto; padding:15mm 16mm;
+  font-size:12.5px; line-height:1.5; box-sizing:border-box; }
 /* imprimir fundos/cores (logo em caixa teal, bolinhas dos dias, badges) */
 .qdoc, .qdoc * { -webkit-print-color-adjust:exact; print-color-adjust:exact; }
 .qdoc h2,.qdoc h3 { font-family:"Cormorant Garamond",Georgia,serif; font-weight:600; letter-spacing:-.01em; color:var(--teal-d); }
@@ -231,5 +231,5 @@ tr.branch.included td.num.strong { color:var(--teal); }
 .notes h3 { font-size:15px; margin:0 0 4px; }
 .notes p { white-space:pre-wrap; color:#3a4744; }
 .qfoot { margin-top:24px; padding-top:12px; border-top:1px solid var(--line); text-align:center; font-size:10px; color:var(--muted); }
-@media print { @page { size:A4; margin:14mm; } .qdoc { max-width:none; padding:0; font-size:11.5px; } .block,.totals,.qhead { break-inside:avoid; } }
+@media print { .qdoc { font-size:11.5px; } .block,.totals,.qhead,.stage { break-inside:avoid; } }
 `
