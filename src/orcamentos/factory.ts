@@ -77,3 +77,25 @@ export function moveStage(q: Quote, id: string, dir: -1 | 1) {
   if (i < 0 || j < 0 || j >= q.itinerary.length) return
   ;[q.itinerary[i], q.itinerary[j]] = [q.itinerary[j], q.itinerary[i]]
 }
+
+// drag-and-drop: mover fromId para a posição de toId (dentro da mesma lista)
+export function reorderItem(q: Quote, fromId: string, toId: string) {
+  if (fromId === toId) return
+  for (const list of [q.general, ...q.itinerary.map((s) => s.items)]) {
+    const from = list.findIndex((i) => i.id === fromId)
+    const to = list.findIndex((i) => i.id === toId)
+    if (from < 0 || to < 0) continue
+    const [m] = list.splice(from, 1)
+    list.splice(to, 0, m)
+    return
+  }
+}
+
+export function reorderStage(q: Quote, fromId: string, toId: string) {
+  if (fromId === toId) return
+  const from = q.itinerary.findIndex((s) => s.id === fromId)
+  const to = q.itinerary.findIndex((s) => s.id === toId)
+  if (from < 0 || to < 0) return
+  const [m] = q.itinerary.splice(from, 1)
+  q.itinerary.splice(to, 0, m)
+}

@@ -1,9 +1,9 @@
-import { Plus, Trash2, ChevronUp, ChevronDown, Layers, MapPin, Check } from "lucide-react"
+import { Plus, Trash2, ChevronUp, ChevronDown, Layers, MapPin, Check, GripVertical } from "lucide-react"
 import type { Quote, Item, Stage, Alternative } from "../../orcamentos/model"
-import { newService, newAlternative, newStage, newBranch, updateService, removeById, moveItem, moveStage, branchLabel } from "../../orcamentos/factory"
+import { newService, newAlternative, newStage, newBranch, updateService, removeById, moveItem, moveStage, reorderItem, reorderStage, branchLabel } from "../../orcamentos/factory"
 import { cheapestBranch, money, lineValue } from "../../orcamentos/pricing"
 import { useStore } from "../../orcamentos/store"
-import { Field, Text, Num, Select, Btn } from "./ui"
+import { Field, Text, Num, Select, Btn, handleProps, dropProps, DRAG_ITEM, DRAG_STAGE } from "./ui"
 import { ServiceRow } from "./ServiceRow"
 
 export function Editor({ q }: { q: Quote }) {
@@ -13,9 +13,9 @@ export function Editor({ q }: { q: Quote }) {
 
   const renderItem = (it: Item, addTo: (item: Item) => void) =>
     it.kind === "service" ? (
-      <ServiceRow key={it.id} s={it} rate={rate} pax={pax} patch={(fn) => patchS(it.id, fn)} remove={() => edit((q) => removeById(q, it.id))} move={(d) => edit((q) => moveItem(q, it.id, d))} />
+      <ServiceRow key={it.id} s={it} rate={rate} pax={pax} patch={(fn) => patchS(it.id, fn)} remove={() => edit((q) => removeById(q, it.id))} move={(d) => edit((q) => moveItem(q, it.id, d))} onReorder={(from) => edit((q) => reorderItem(q, from, it.id))} />
     ) : (
-      <AlternativeEditor key={it.id} alt={it} rate={rate} pax={pax} />
+      <AlternativeEditor key={it.id} alt={it} rate={rate} pax={pax} onReorder={(from) => edit((q) => reorderItem(q, from, it.id))} />
     )
 
   return (
@@ -53,7 +53,7 @@ export function Editor({ q }: { q: Quote }) {
       {q.mode === "itinerary" && (
         <div className="space-y-4">
           {q.itinerary.map((st, i) => (
-            <StageEditor key={st.id} st={st} idx={i} count={q.itinerary.length} rate={rate} pax={pax} renderItem={renderItem} />
+            <StageEditor key={st.id} st={st} idx={i} count={q.itinerary.length} rate={rate} pax={pax} renderItem={renderItem} onReorder={(from) => edit((q) => reorderStage(q, from, st.id))} />
           ))}
           <Btn variant="primary" onClick={() => edit((q) => q.itinerary.push(newStage()))}><MapPin size={14} /> Adicionar etapa</Btn>
         </div>
@@ -87,12 +87,13 @@ function AddRow({ onService, onAlt }: { onService: () => void; onAlt: () => void
   )
 }
 
-function StageEditor({ st, idx, count, rate, pax, renderItem }: { st: Stage; idx: number; count: number; rate: number; pax: number; renderItem: (it: Item, addTo: (i: Item) => void) => React.ReactNode }) {
+function StageEditor({ st, idx, count, rate, pax, renderItem, onReorder }: { st: Stage; idx: number; count: number; rate: number; pax: number; renderItem: (it: Item, addTo: (i: Item) => void) => React.ReactNode; onReorder?: (fromId: string) => void }) {
   const edit = useStore((s) => s.edit)
   const patchStage = (fn: (s: Stage) => void) => edit((q) => { const s = q.itinerary.find((x) => x.id === st.id); if (s) fn(s) })
   return (
-    <section className="rounded-xl border border-border bg-secondary/40 p-4">
+    <section className="rounded-xl border border-border bg-secondary/40 p-4" {...(onReorder ? dropProps(DRAG_STAGE, onReorder) : {})}>
       <div className="mb-3 flex flex-wrap items-end gap-2">
+        {onReorder && <span {...handleProps(DRAG_STAGE, st.id)} title="Arrastar para reordenar a etapa" className="mb-1.5 cursor-grab self-center text-muted-foreground/60 hover:text-primary active:cursor-grabbing"><GripVertical size={16} /></span>}
         <span className="grid h-7 w-7 shrink-0 place-items-center rounded-md bg-primary text-xs font-bold text-white">{idx + 1}</span>
         <Field label="Local" className="min-w-[160px] flex-1"><Text value={st.place} onChange={(v) => patchStage((s) => { s.place = v })} placeholder="Tóquio" /></Field>
         <Field label="Dia início"><Num value={st.dayStart || 0} min={0} onChange={(v) => patchStage((s) => { s.dayStart = v })} className="w-20" /></Field>
@@ -113,7 +114,7 @@ function StageEditor({ st, idx, count, rate, pax, renderItem }: { st: Stage; idx
   )
 }
 
-function AlternativeEditor({ alt, rate, pax }: { alt: Alternative; rate: number; pax: number }) {
+function AlternativeEditor({ alt, rate, pax, onReorder }: { alt: Alternative; rate: number; pax: number; onReorder?: (fromId: string) => void }) {
   const edit = useStore((s) => s.edit)
   const patchS = (id: string, fn: (s: any) => void) => edit((q) => updateService(q, id, fn))
   const cheapest = cheapestBranch(alt, pax)
@@ -122,8 +123,9 @@ function AlternativeEditor({ alt, rate, pax }: { alt: Alternative; rate: number;
     walk(q.general); q.itinerary.forEach((st) => walk(st.items))
   })
   return (
-    <div className="rounded-lg border-2 border-dashed border-primary/30 bg-teal-50/30 p-3">
+    <div className="rounded-lg border-2 border-dashed border-primary/30 bg-teal-50/30 p-3" {...(onReorder ? dropProps(DRAG_ITEM, onReorder) : {})}>
       <div className="mb-2 flex items-center gap-2">
+        {onReorder && <span {...handleProps(DRAG_ITEM, alt.id)} title="Arrastar para reordenar" className="cursor-grab text-muted-foreground/60 hover:text-primary active:cursor-grabbing"><GripVertical size={15} /></span>}
         <Layers size={15} className="text-primary" />
         <Text value={alt.title || ""} onChange={(v) => patchAlt((a) => { a.title = v })} placeholder="Escolha uma opção (ex.: Passeio da tarde)" className="max-w-xs" />
         <span className="text-[0.62rem] text-muted-foreground">a mais barata entra no preço base</span>

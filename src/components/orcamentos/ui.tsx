@@ -51,6 +51,24 @@ export function MoneyPair({ net, pvp, rate, onChange }: { net: number; pvp: numb
   )
 }
 
+// --- drag & drop (reordenar dentro de uma lista) ---
+// tipos distintos p/ não largar uma etapa sobre um item e vice-versa
+export const handleProps = (type: string, id: string) => ({
+  draggable: true,
+  onDragStart: (e: React.DragEvent) => { e.dataTransfer.setData(type, id); e.dataTransfer.effectAllowed = "move" },
+})
+export const dropProps = (type: string, onDrop: (fromId: string) => void) => ({
+  onDragOver: (e: React.DragEvent) => { if (e.dataTransfer.types.includes(type)) { e.preventDefault(); e.dataTransfer.dropEffect = "move"; e.currentTarget.classList.add("ring-2", "ring-primary/50") } },
+  onDragLeave: (e: React.DragEvent) => e.currentTarget.classList.remove("ring-2", "ring-primary/50"),
+  onDrop: (e: React.DragEvent) => {
+    e.currentTarget.classList.remove("ring-2", "ring-primary/50")
+    const from = e.dataTransfer.getData(type)
+    if (from) { e.preventDefault(); onDrop(from) }
+  },
+})
+export const DRAG_ITEM = "application/x-orc-item"
+export const DRAG_STAGE = "application/x-orc-stage"
+
 export function Btn({ children, onClick, variant = "ghost", title, className = "" }: { children: ReactNode; onClick: () => void; variant?: "primary" | "ghost" | "danger"; title?: string; className?: string }) {
   const v = {
     primary: "bg-primary text-white hover:bg-teal-700",

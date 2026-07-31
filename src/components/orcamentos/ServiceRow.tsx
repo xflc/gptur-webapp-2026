@@ -1,13 +1,14 @@
 import { useState } from "react"
-import { Trash2, ChevronUp, ChevronDown, Plus } from "lucide-react"
+import { Trash2, ChevronUp, ChevronDown, Plus, GripVertical } from "lucide-react"
 import type { Service } from "../../orcamentos/model"
 import { CATEGORIES, UNITS } from "../../orcamentos/model"
 import { lineValue, money } from "../../orcamentos/pricing"
-import { MoneyPair, Num, Select, Text } from "./ui"
+import { MoneyPair, Num, Select, Text, handleProps, dropProps, DRAG_ITEM } from "./ui"
 
 // One service line. `patch` mutates this service; move/remove are optional (branches hide move).
+// `onReorder` enables drag-and-drop (a grip handle) — passed only for top-level items.
 export function ServiceRow({
-  s, rate, pax, patch, remove, move,
+  s, rate, pax, patch, remove, move, onReorder,
 }: {
   s: Service
   rate: number
@@ -15,14 +16,18 @@ export function ServiceRow({
   patch: (fn: (s: Service) => void) => void
   remove: () => void
   move?: (dir: -1 | 1) => void
+  onReorder?: (fromId: string) => void
 }) {
   const [open, setOpen] = useState(false)
   const cat = CATEGORIES.find((c) => c.id === s.category)
   const line = lineValue(s, pax)
 
   return (
-    <div className={`rounded-lg border p-2.5 ${s.optional ? "border-dashed border-gold-300 bg-gold-50/40" : "border-border bg-white"}`}>
+    <div className={`rounded-lg border p-2.5 ${s.optional ? "border-dashed border-gold-300 bg-gold-50/40" : "border-border bg-white"}`} {...(onReorder ? dropProps(DRAG_ITEM, onReorder) : {})}>
       <div className="flex flex-wrap items-end gap-2">
+        {onReorder && (
+          <span {...handleProps(DRAG_ITEM, s.id)} title="Arrastar para reordenar" className="mb-1.5 cursor-grab self-center text-muted-foreground/60 hover:text-primary active:cursor-grabbing"><GripVertical size={15} /></span>
+        )}
         <div className="flex min-w-[180px] flex-1 flex-col gap-1">
           <Text value={s.title} onChange={(v) => patch((s) => { s.title = v })} placeholder="Descrição do serviço" />
         </div>
