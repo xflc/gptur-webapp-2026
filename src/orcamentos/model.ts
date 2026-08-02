@@ -87,7 +87,7 @@ export interface Quote {
 // Print grouping / quick-pick order (BLUEPRINT §6.1). Free text always allowed.
 export const CATEGORIES: { id: string; label: string; chips: string[] }[] = [
   { id: "transporte", label: "Transporte", chips: ["Passagem aérea internacional", "Passagem aérea nacional", "Comboio", "Autocarro", "Cruzeiro", "Aluguer de viatura", "Transfer aeroporto / hotel", "Transfer hotel / aeroporto", "Fretamento de autocarro"] },
-  { id: "hospedagem", label: "Hospedagem", chips: ["Hotel", "Pousada / Resort", "Apart-hotel / Hostel", "Estadia com pequeno-almoço", "Estadia all-inclusive"] },
+  { id: "hospedagem", label: "Alojamento", chips: ["Hotel", "Pousada / Resort", "Apart-hotel / Hostel", "Estadia com pequeno-almoço", "Estadia all-inclusive"] },
   { id: "pacotes", label: "Pacotes e Roteiros", chips: ["Pacote completo (voo + hotel + passeios)", "Roteiro personalizado", "Excursão / day tour", "Pacote de lua de mel", "Viagem em grupo", "Turismo de incentivo", "Viagem corporativa"] },
   { id: "passeios", label: "Passeios e Experiências", chips: ["City tour", "Passeio guiado temático", "Bilhetes de atrações / museus", "Bilhetes de espetáculos / parques", "Atividade de aventura"] },
   { id: "documentacao", label: "Documentação e Assessoria", chips: ["Assessoria e emissão de visto", "Consultoria de documentação", "Legalização de documentos"] },
