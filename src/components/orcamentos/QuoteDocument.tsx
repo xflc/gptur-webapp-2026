@@ -8,11 +8,13 @@ import { CATEGORY_ORDER, categoryLabel } from "../../orcamentos/model"
 import { quoteTotals, cheapestBranch, lineValue, money, isRealService } from "../../orcamentos/pricing"
 import { branchLabel } from "../../orcamentos/factory"
 
-// coluna de quantidade natural: "3 noites", "4 unidades", "p/ pessoa", "p/ grupo"
-function qtyUnit(s: Service): string {
+// coluna de quantidade: contagens descritivas ("3 noites", "4 unidades") sempre;
+// a base de preço ("p/ pessoa", "p/ grupo") só faz sentido no modo detalhado.
+function qtyUnit(s: Service, detalhado: boolean): string {
   const q = s.qty || 1
   if (s.unit === "por_noite") return `${q} ${q === 1 ? "noite" : "noites"}`
   if (s.unit === "por_unidade") return `${q} ${q === 1 ? "unidade" : "unidades"}`
+  if (!detalhado) return ""
   const base = s.unit === "por_pessoa" ? "p/ pessoa" : "p/ grupo"
   return q > 1 ? `${base} · ${q}×` : base
 }
@@ -44,7 +46,7 @@ function serviceRow(s: Service, pax: number, detalhado: boolean, extra = false) 
         {extra && <span className="tag tag-extra">opcional</span>}
         {s.description && <span className="sub">{s.description}</span>}
       </td>
-      <td className="qty">{qtyUnit(s)}</td>
+      <td className="qty">{qtyUnit(s, detalhado)}</td>
       {detalhado
         ? <><td className="num">{money(line.net)}</td><td className="num strong">{money(line.pvp)}</td></>
         : <td className="num strong">{extra ? `+ ${money(line.net)}` : ""}</td>}
