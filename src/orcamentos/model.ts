@@ -56,8 +56,13 @@ export interface Stage {
 
 export interface Quote {
   id: string
-  taxRate: number // one rate per quote (default 0.23)
+  taxRate: number // one rate per quote (default 0.23), used only when pricing === "detalhado"
   mode: "itinerary" | "flat"
+  // how prices are presented:
+  //  - "simples": one final price for the whole trip, no per-service price, no IVA split (most clients)
+  //  - "detalhado": price per service, with sem/com IVA (companies)
+  pricing: "simples" | "detalhado"
+  finalPrice?: number // "simples": the single final price (base, before extras)
 
   // framing around the numbers
   title?: string

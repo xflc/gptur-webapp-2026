@@ -139,11 +139,21 @@ function TotalsBar({ q }: { q: ReturnType<typeof useStore.getState>["quotes"][nu
   const t = quoteTotals(q)
   return (
     <footer className="flex flex-wrap items-center gap-x-8 gap-y-2 border-t border-border bg-white px-5 py-3">
-      <Stat label="Base sem impostos" value={money(t.baseNet)} />
-      <Stat label="Base com impostos" value={money(t.basePvp)} big />
-      <Stat label={`Por pessoa (${t.pax}) c/ imp.`} value={money(t.perPaxPvp)} />
-      {t.extrasNet > 0 && <Stat label="Extras c/ imp." value={money(t.extrasPvp)} gold />}
-      <div className="ml-auto text-xs text-muted-foreground">IVA {Math.round(t.rate * 100)}%</div>
+      {t.taxed ? (
+        <>
+          <Stat label="Base sem impostos" value={money(t.baseNet)} />
+          <Stat label="Base com impostos" value={money(t.basePvp)} big />
+          <Stat label={`Por pessoa (${t.pax}) c/ imp.`} value={money(t.perPaxPvp)} />
+          {t.extrasNet > 0 && <Stat label="Extras c/ imp." value={money(t.extrasPvp)} gold />}
+          <div className="ml-auto text-xs text-muted-foreground">IVA {Math.round(t.rate * 100)}%</div>
+        </>
+      ) : (
+        <>
+          <Stat label="Preço final" value={money(t.baseNet)} big />
+          <Stat label={`Por pessoa (${t.pax})`} value={money(t.perPaxNet)} />
+          {t.extrasNet > 0 && <Stat label="Extras (opcionais)" value={money(t.extrasNet)} gold />}
+        </>
+      )}
     </footer>
   )
 }

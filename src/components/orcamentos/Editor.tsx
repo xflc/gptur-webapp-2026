@@ -9,13 +9,13 @@ import { ServiceRow } from "./ServiceRow"
 export function Editor({ q }: { q: Quote }) {
   const edit = useStore((s) => s.edit)
   const patchS = (id: string, fn: (s: any) => void) => edit((q) => updateService(q, id, fn))
-  const rate = q.taxRate, pax = q.pax
+  const rate = q.taxRate, pax = q.pax, pricing = q.pricing
 
   const renderItem = (it: Item, addTo: (item: Item) => void) =>
     it.kind === "service" ? (
-      <ServiceRow key={it.id} s={it} rate={rate} pax={pax} patch={(fn) => patchS(it.id, fn)} remove={() => edit((q) => removeById(q, it.id))} move={(d) => edit((q) => moveItem(q, it.id, d))} onReorder={(from) => edit((q) => reorderItem(q, from, it.id))} />
+      <ServiceRow key={it.id} s={it} rate={rate} pax={pax} pricing={pricing} patch={(fn) => patchS(it.id, fn)} remove={() => edit((q) => removeById(q, it.id))} move={(d) => edit((q) => moveItem(q, it.id, d))} onReorder={(from) => edit((q) => reorderItem(q, from, it.id))} />
     ) : (
-      <AlternativeEditor key={it.id} alt={it} rate={rate} pax={pax} onReorder={(from) => edit((q) => reorderItem(q, from, it.id))} />
+      <AlternativeEditor key={it.id} alt={it} rate={rate} pax={pax} pricing={pricing} onReorder={(from) => edit((q) => reorderItem(q, from, it.id))} />
     )
 
   return (
@@ -28,7 +28,12 @@ export function Editor({ q }: { q: Quote }) {
           <Field label="Referência"><Text value={q.ref || ""} onChange={(v) => edit((q) => { q.ref = v })} placeholder="ORC-2026-001" /></Field>
           <Field label="Consultor"><Text value={q.consultant || ""} onChange={(v) => edit((q) => { q.consultant = v })} /></Field>
           <Field label="Nº de pessoas"><Num value={q.pax} min={1} onChange={(v) => edit((q) => { q.pax = Math.max(1, v) })} /></Field>
-          <Field label="Taxa de imposto (%)"><Num value={Math.round(q.taxRate * 100)} min={0} onChange={(v) => edit((q) => { q.taxRate = (v || 0) / 100 })} /></Field>
+          <Field label="Apresentação do preço">
+            <Select value={q.pricing} onChange={(v) => edit((q) => { q.pricing = v })} options={[{ id: "simples", label: "Preço final único" }, { id: "detalhado", label: "Detalhado + IVA" }]} />
+          </Field>
+          {q.pricing === "detalhado"
+            ? <Field label="Taxa de IVA (%)"><Num value={Math.round(q.taxRate * 100)} min={0} onChange={(v) => edit((q) => { q.taxRate = (v || 0) / 100 })} /></Field>
+            : <Field label="Preço final (€)"><Num value={q.finalPrice || 0} min={0} step={0.01} onChange={(v) => edit((q) => { q.finalPrice = v })} /></Field>}
           <Field label="Validade"><Text value={q.validity || ""} onChange={(v) => edit((q) => { q.validity = v })} placeholder="30 dias" /></Field>
           <Field label="Modo">
             <Select value={q.mode} onChange={(v) => edit((q) => { q.mode = v })} options={[{ id: "itinerary", label: "Itinerário (dia a dia)" }, { id: "flat", label: "Destino único" }]} />
@@ -118,8 +123,9 @@ function StageEditor({ st, idx, count, rate, pax, renderItem, onReorder }: { st:
   )
 }
 
-function AlternativeEditor({ alt, rate, pax, onReorder }: { alt: Alternative; rate: number; pax: number; onReorder?: (fromId: string) => void }) {
+function AlternativeEditor({ alt, rate, pax, pricing, onReorder }: { alt: Alternative; rate: number; pax: number; pricing: "simples" | "detalhado"; onReorder?: (fromId: string) => void }) {
   const edit = useStore((s) => s.edit)
+  const detalhado = pricing === "detalhado"
   const patchS = (id: string, fn: (s: any) => void) => edit((q) => updateService(q, id, fn))
   const cheapest = cheapestBranch(alt, pax)
   const patchAlt = (fn: (a: Alternative) => void) => edit((q) => {
@@ -132,24 +138,24 @@ function AlternativeEditor({ alt, rate, pax, onReorder }: { alt: Alternative; ra
         {onReorder && <span {...handleProps(DRAG_ITEM, alt.id)} title="Arrastar para reordenar" className="cursor-grab text-muted-foreground/60 hover:text-primary active:cursor-grabbing"><GripVertical size={15} /></span>}
         <Layers size={15} className="text-primary" />
         <Text value={alt.title || ""} onChange={(v) => patchAlt((a) => { a.title = v })} placeholder="Escolha uma opção (ex.: Passeio da tarde)" className="max-w-xs" />
-        <span className="text-[0.62rem] text-muted-foreground">a mais barata entra no preço base</span>
+        {detalhado && <span className="text-[0.62rem] text-muted-foreground">a mais barata entra no preço base</span>}
       </div>
       <div className="space-y-2">
         {alt.branches.map((b, i) => {
-          const isBase = cheapest?.id === b.id
+          const isBase = detalhado && cheapest?.id === b.id
           const total = b.services.reduce((acc, s) => acc + lineValue(s, pax).pvp, 0)
           return (
             <div key={b.id} className={`rounded-lg border p-2.5 ${isBase ? "border-primary bg-white" : "border-border bg-white/70"}`}>
               <div className="mb-2 flex items-center gap-2">
-                {isBase ? <span className="inline-flex items-center gap-1 rounded-full bg-primary px-2 py-0.5 text-[0.6rem] font-semibold text-white"><Check size={10} /> incluída na base</span>
-                        : <span className="rounded-full bg-secondary px-2 py-0.5 text-[0.6rem] font-medium text-muted-foreground">alternativa</span>}
+                {detalhado && (isBase ? <span className="inline-flex items-center gap-1 rounded-full bg-primary px-2 py-0.5 text-[0.6rem] font-semibold text-white"><Check size={10} /> incluída na base</span>
+                        : <span className="rounded-full bg-secondary px-2 py-0.5 text-[0.6rem] font-medium text-muted-foreground">alternativa</span>)}
                 <Text value={b.label || ""} onChange={(v) => patchAlt((a) => { const br = a.branches.find((x) => x.id === b.id); if (br) br.label = v })} placeholder={branchLabel(b, i)} className="max-w-[160px]" />
-                <span className="ml-auto text-xs font-semibold tabular-nums text-primary">{money(total)}</span>
-                <button onClick={() => patchAlt((a) => { a.branches = a.branches.filter((x) => x.id !== b.id) })} title="Remover opção" className="grid h-6 w-6 place-items-center rounded text-muted-foreground hover:text-destructive"><Trash2 size={13} /></button>
+                {detalhado && <span className="ml-auto text-xs font-semibold tabular-nums text-primary">{money(total)}</span>}
+                <button onClick={() => patchAlt((a) => { a.branches = a.branches.filter((x) => x.id !== b.id) })} title="Remover opção" className={`grid h-6 w-6 place-items-center rounded text-muted-foreground hover:text-destructive ${detalhado ? "" : "ml-auto"}`}><Trash2 size={13} /></button>
               </div>
               <div className="space-y-2">
                 {b.services.map((s) => (
-                  <ServiceRow key={s.id} s={s} rate={rate} pax={pax} patch={(fn) => patchS(s.id, fn)} remove={() => edit((q) => removeById(q, s.id))} />
+                  <ServiceRow key={s.id} s={s} rate={rate} pax={pax} pricing={pricing} patch={(fn) => patchS(s.id, fn)} remove={() => edit((q) => removeById(q, s.id))} />
                 ))}
               </div>
               <button onClick={() => patchAlt((a) => { const br = a.branches.find((x) => x.id === b.id); if (br) br.services.push(newService()) })} className="mt-2 text-xs text-primary underline-offset-2 hover:underline"><Plus size={11} className="mr-0.5 inline" />Serviço nesta opção</button>

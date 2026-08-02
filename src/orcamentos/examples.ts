@@ -18,13 +18,14 @@ const alt = (title: string, branches: { label: string; services: Service[] }[]):
 const stage = (place: string, dayStart: number, dayEnd: number, description: string, items: Item[]): Stage => ({ id: uid(), place, dayStart, dayEnd, description, items })
 
 function base(rate: number, extra: Partial<Quote>): Quote {
-  return { id: uid(), taxRate: rate, mode: "itinerary", pax: 2, general: [], itinerary: [], createdAt: Date.now(), updatedAt: Date.now(), ...extra }
+  return { id: uid(), taxRate: rate, mode: "itinerary", pricing: "detalhado", finalPrice: 0, pax: 2, general: [], itinerary: [], createdAt: Date.now(), updatedAt: Date.now(), ...extra }
 }
 
 // 1) Lua de mel na Tailândia — itinerário complexo, alternativas, extras, datas
 function tailandia(): Quote {
   const s = maker(0.23)
   return base(0.23, {
+    pricing: "simples", finalPrice: 6790,
     title: "Lua de mel na Tailândia", client: "Francisco & Madalena", ref: "ORC-2026-0148", consultant: "Rute", pax: 2,
     validity: "30 dias", startDate: "2026-09-14",
     greeting: "Caros Francisco e Madalena,", intro: "É com muito gosto que apresentamos a proposta para a vossa lua de mel, desenhada ao pormenor para os 18 dias que vão passar na Tailândia.",
@@ -102,6 +103,7 @@ function italiaGrupo(): Quote {
 function sevilha(): Quote {
   const s = maker(0.23)
   return base(0.23, {
+    pricing: "simples", finalPrice: 580,
     mode: "flat", title: "Fim de semana em Sevilha", client: "Ana & João", ref: "ORC-2026-0203", consultant: "Rute", pax: 2,
     durationDays: 3, validity: "15 dias",
     greeting: "Olá Ana e João,", intro: "Uma escapadela de três dias a Sevilha, com voos, hotel no centro e uma noite de flamenco.",
@@ -119,6 +121,7 @@ function sevilha(): Quote {
 function maldivas(): Quote {
   const s = maker(0.23)
   return base(0.23, {
+    pricing: "simples", finalPrice: 7125,
     mode: "flat", title: "Maldivas — estadia de sonho", client: "Sr. e Sra. Costa", ref: "ORC-2026-0177", consultant: "GPTur", pax: 2,
     durationDays: 9, validity: "30 dias",
     intro: "Sete noites num resort overwater, em regime de tudo incluído, com transfer de hidroavião.",

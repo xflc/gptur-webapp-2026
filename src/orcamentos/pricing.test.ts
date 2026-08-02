@@ -17,7 +17,7 @@ const svc = (o: Partial<Service>): Service => ({
 
 // --- §4.5 fixture: 3 pax, rate 23% ---
 const q: Quote = {
-  id: "t", taxRate: 0.23, mode: "itinerary", pax: 3,
+  id: "t", taxRate: 0.23, mode: "itinerary", pricing: "detalhado", pax: 3,
   general: [svc({ title: "Voo internacional", unit: "por_pessoa", net: 300, pvp: 369 })],
   itinerary: [
     {

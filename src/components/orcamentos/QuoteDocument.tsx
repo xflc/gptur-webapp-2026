@@ -1,5 +1,7 @@
 // Client-facing quote document — brand-styled HTML, print-friendly (A4).
-// Self-contained <style> so it renders identically in a preview pane or a print window.
+// Two presentations (BLUEPRINT + real usage):
+//  - "detalhado": price per service, sem/com IVA columns, base = cheapest branch + services.
+//  - "simples": services are just the description of what's included; ONE final price. Extras "+X€".
 import { Fragment } from "react"
 import type { Quote, Item, Service, Stage } from "../../orcamentos/model"
 import { CATEGORY_ORDER, categoryLabel } from "../../orcamentos/model"
@@ -32,8 +34,7 @@ function stageTiming(q: Quote, st: Stage): string {
   return parts.join(" · ")
 }
 
-// helpers return keyed <tr> arrays so the parent <tbody> gets one flat keyed list
-function serviceRow(s: Service, pax: number, extra = false) {
+function serviceRow(s: Service, pax: number, detalhado: boolean, extra = false) {
   if (!isRealService(s)) return null
   const line = lineValue(s, pax)
   return (
@@ -44,23 +45,22 @@ function serviceRow(s: Service, pax: number, extra = false) {
         {s.description && <span className="sub">{s.description}</span>}
       </td>
       <td className="qty">{qtyUnit(s)}</td>
-      <td className="num">{money(line.net)}</td>
-      <td className="num strong">{money(line.pvp)}</td>
+      {detalhado
+        ? <><td className="num">{money(line.net)}</td><td className="num strong">{money(line.pvp)}</td></>
+        : <td className="num strong">{extra ? `+ ${money(line.net)}` : ""}</td>}
     </tr>
   )
 }
 
-function itemRows(it: Item, pax: number): React.ReactNode[] {
-  if (it.kind === "service") { const r = serviceRow(it, pax, !!it.optional); return r ? [r] : [] }
+function itemRows(it: Item, pax: number, detalhado: boolean, cols: number): React.ReactNode[] {
+  if (it.kind === "service") { const r = serviceRow(it, pax, detalhado, !!it.optional); return r ? [r] : [] }
   const cheap = cheapestBranch(it, pax)
   const valid = it.branches.filter((b) => b.services.some(isRealService))
-  const ordered = cheap ? [cheap, ...valid.filter((b) => b.id !== cheap.id)] : valid
+  const ordered = detalhado && cheap ? [cheap, ...valid.filter((b) => b.id !== cheap.id)] : valid
   return [
-    <tr key={`${it.id}-h`} className="althead">
-      <td colSpan={4}>{it.title?.trim() || "Escolha uma opção"}</td>
-    </tr>,
+    <tr key={`${it.id}-h`} className="althead"><td colSpan={cols}>{it.title?.trim() || "Escolha uma opção"}</td></tr>,
     ...ordered.map((b, i) => {
-      const included = cheap?.id === b.id
+      const included = detalhado && cheap?.id === b.id
       const total = b.services.reduce((a, s) => ({ net: a.net + lineValue(s, pax).net, pvp: a.pvp + lineValue(s, pax).pvp }), { net: 0, pvp: 0 })
       const real = b.services.filter(isRealService)
       const single = real.length === 1
@@ -68,12 +68,11 @@ function itemRows(it: Item, pax: number): React.ReactNode[] {
         <tr key={b.id} className={`branch ${included ? "included" : "alt"}`}>
           <td className="desc">
             <span className="tag tag-opt">{branchLabel(b, i)}</span>
-            <span className={`tag ${included ? "tag-inc" : "tag-alt"}`}>{included ? "incluída na base" : "alternativa"}</span>
+            {detalhado && <span className={`tag ${included ? "tag-inc" : "tag-alt"}`}>{included ? "incluída na base" : "alternativa"}</span>}
             {single ? <span className="title">{real[0].title || "—"}</span> : <span className="sub">{real.map((s) => s.title).filter(Boolean).join(" · ")}</span>}
           </td>
           <td className="qty"></td>
-          <td className="num">{money(total.net)}</td>
-          <td className="num strong">{money(total.pvp)}</td>
+          {detalhado ? <><td className="num">{money(total.net)}</td><td className="num strong">{money(total.pvp)}</td></> : <td className="num"></td>}
         </tr>
       )
     }),
@@ -82,6 +81,8 @@ function itemRows(it: Item, pax: number): React.ReactNode[] {
 
 export function QuoteDocument({ q }: { q: Quote }) {
   const t = quoteTotals(q)
+  const detalhado = q.pricing === "detalhado"
+  const cols = detalhado ? 4 : 3
   const generalByCat = CATEGORY_ORDER.map((cat) => ({
     cat,
     items: q.general.filter((it) => it.kind === "service" && it.category === cat) as Service[],
@@ -120,26 +121,24 @@ export function QuoteDocument({ q }: { q: Quote }) {
         </section>
       )}
 
-      {/* General / flat services grouped by category */}
       {(generalByCat.length > 0 || generalAlts.length > 0) && (
         <section className="block">
-          {q.mode === "itinerary" && <h2>Serviços gerais</h2>}
+          {q.mode === "itinerary" && <h2>Serviços incluídos</h2>}
           <table className="lines">
-            <thead><tr><th>Serviço</th><th></th><th className="num">Sem impostos</th><th className="num">Com impostos</th></tr></thead>
+            <thead><tr><th>Serviço</th><th></th>{detalhado ? <><th className="num">Sem impostos</th><th className="num">Com impostos</th></> : <th></th>}</tr></thead>
             <tbody>
               {generalByCat.map((g) => (
                 <Fragment key={g.cat}>
-                  <tr className="cathead"><td colSpan={4}>{categoryLabel(g.cat)}</td></tr>
-                  {g.items.map((s) => serviceRow(s, q.pax, !!s.optional))}
+                  <tr className="cathead"><td colSpan={cols}>{categoryLabel(g.cat)}</td></tr>
+                  {g.items.map((s) => serviceRow(s, q.pax, detalhado, !!s.optional))}
                 </Fragment>
               ))}
-              {generalAlts.flatMap((it) => itemRows(it, q.pax))}
+              {generalAlts.flatMap((it) => itemRows(it, q.pax, detalhado, cols))}
             </tbody>
           </table>
         </section>
       )}
 
-      {/* Itinerary */}
       {q.mode === "itinerary" && q.itinerary.filter((st) => st.place || st.items.length || st.description).map((st, i) => (
         <section className="block stage" key={st.id}>
           <h2>
@@ -150,7 +149,7 @@ export function QuoteDocument({ q }: { q: Quote }) {
           {st.description && <p className="stagedesc">{st.description}</p>}
           {st.items.length > 0 && (
             <table className="lines">
-              <tbody>{st.items.flatMap((it) => itemRows(it, q.pax))}</tbody>
+              <tbody>{st.items.flatMap((it) => itemRows(it, q.pax, detalhado, cols))}</tbody>
             </table>
           )}
         </section>
@@ -160,13 +159,27 @@ export function QuoteDocument({ q }: { q: Quote }) {
       <section className="totals">
         <table>
           <tbody>
-            <tr><th>Preço base (sem impostos)</th><td>{money(t.baseNet)}</td></tr>
-            <tr className="big"><th>Preço base (com impostos)</th><td>{money(t.basePvp)}</td></tr>
-            <tr><th>Por pessoa ({t.pax}) com impostos</th><td>{money(t.perPaxPvp)}</td></tr>
-            {t.extrasNet > 0 && <tr className="extras"><th>Extras / opcionais (com impostos)</th><td>{money(t.extrasPvp)}</td></tr>}
+            {detalhado ? (
+              <>
+                <tr><th>Preço base (sem impostos)</th><td>{money(t.baseNet)}</td></tr>
+                <tr className="big"><th>Preço base (com impostos)</th><td>{money(t.basePvp)}</td></tr>
+                <tr><th>Por pessoa ({t.pax}) com impostos</th><td>{money(t.perPaxPvp)}</td></tr>
+                {t.extrasNet > 0 && <tr className="extras"><th>Extras / opcionais (com impostos)</th><td>{money(t.extrasPvp)}</td></tr>}
+              </>
+            ) : (
+              <>
+                <tr className="big"><th>Preço final</th><td>{money(t.baseNet)}</td></tr>
+                <tr><th>Por pessoa ({t.pax})</th><td>{money(t.perPaxNet)}</td></tr>
+                {t.extrasNet > 0 && <tr className="extras"><th>Extras / opcionais</th><td>+ {money(t.extrasNet)}</td></tr>}
+              </>
+            )}
           </tbody>
         </table>
-        <p className="taxnote">Valores em euros. IVA a {Math.round(t.rate * 100)}%. As opções mais económicas estão incluídas no preço base; alternativas e extras são apresentados à parte.</p>
+        <p className="taxnote">
+          {detalhado
+            ? `Valores em euros. IVA a ${Math.round(t.rate * 100)}%. As opções mais económicas estão incluídas no preço base; alternativas e extras são apresentados à parte.`
+            : "Valores em euros. Preço final para o programa descrito; os extras são opcionais e apresentados à parte."}
+        </p>
       </section>
 
       {q.notes && (
@@ -233,7 +246,7 @@ tr.branch.included td.num.strong { color:var(--teal); }
 .totals tr.big td { font-size:20px; color:var(--teal); }
 .totals tr.big { border-top:1px solid var(--line); border-bottom:2px solid var(--teal); }
 .totals tr.extras td, .totals tr.extras th { color:var(--gold); }
-.taxnote { text-align:right; font-size:10px; color:var(--muted); margin-top:8px; max-width:420px; margin-left:auto; }
+.taxnote { text-align:right; font-size:10px; color:var(--muted); margin-top:8px; max-width:440px; margin-left:auto; }
 .notes { margin-top:18px; padding-top:12px; border-top:1px solid var(--line); }
 .notes h3 { font-size:15px; margin:0 0 4px; }
 .notes p { white-space:pre-wrap; color:#3a4744; }

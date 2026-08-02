@@ -72,23 +72,31 @@ export interface QuoteTotals {
   perPaxNet: number
   rate: number
   pax: number
+  taxed: boolean // "detalhado" ⇒ show sem/com IVA; "simples" ⇒ a single price, no tax
 }
 
 // The one function the whole document/editor reads.
 export function quoteTotals(q: Quote): QuoteTotals {
   const pax = Math.max(1, q.pax || 1)
-  const rate = q.taxRate ?? 0.23
-  let baseNet = 0
+  const taxed = q.pricing === "detalhado"
+  const rate = taxed ? q.taxRate ?? 0.23 : 0
 
-  for (const it of allItems(q)) {
-    if (it.kind === "service") {
-      if (isRealService(it) && !it.optional) baseNet += lineValue(it, pax).net
-    } else {
-      const b = cheapestBranch(it, pax)
-      if (b) baseNet += branchBase(b, pax).net
+  let baseNet = 0
+  if (q.pricing === "simples") {
+    // um só preço final para toda a viagem
+    baseNet = q.finalPrice || 0
+  } else {
+    for (const it of allItems(q)) {
+      if (it.kind === "service") {
+        if (isRealService(it) && !it.optional) baseNet += lineValue(it, pax).net
+      } else {
+        const b = cheapestBranch(it, pax)
+        if (b) baseNet += branchBase(b, pax).net
+      }
     }
   }
 
+  // extras (opcionais) somam à parte em ambos os modos
   const extrasNet = optionalServices(q).reduce((acc, s) => acc + lineValue(s, pax).net, 0)
 
   baseNet = round2(baseNet)
@@ -102,6 +110,7 @@ export function quoteTotals(q: Quote): QuoteTotals {
     perPaxNet: round2(baseNet / pax),
     rate,
     pax,
+    taxed,
   }
 }
 

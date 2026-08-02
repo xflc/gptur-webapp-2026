@@ -17,7 +17,7 @@ export const newAlternative = (): Alternative => ({
 export const newStage = (): Stage => ({ id: uid(), place: "", items: [] })
 
 export const newQuote = (): Quote => ({
-  id: uid(), taxRate: 0.23, mode: "itinerary",
+  id: uid(), taxRate: 0.23, mode: "itinerary", pricing: "simples", finalPrice: 0,
   title: "", client: "", ref: "", consultant: "", pax: 2,
   validity: "", startDate: "", greeting: "", intro: "", notes: "",
   general: [], itinerary: [newStage()],
