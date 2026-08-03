@@ -26,6 +26,11 @@ export interface Program {
   included: string // one item per line
   notIncluded: string
   notes: string
+  // viagem de grupo com data fixa (inscrição) em vez de datas sob consulta
+  groupTrip?: boolean
+  departureStart?: string // ISO yyyy-mm-dd
+  departureEnd?: string
+  spots?: number
   createdAt: number
   updatedAt: number
 }

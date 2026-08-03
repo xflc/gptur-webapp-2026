@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
-import { Calendar, MapPin, Check, X } from "lucide-react"
+import { Calendar, MapPin, Check, X, Users, CalendarDays } from "lucide-react"
 import type { Program } from "../../programas/model"
+import { departureLabel } from "../../data/offers"
 
 const lines = (s: string) => s.split(/\n+/).map((x) => x.trim()).filter(Boolean)
 
@@ -23,6 +24,7 @@ export default function ProgramPreview() {
   if (!p) return null
 
   const inc = lines(p.included), exc = lines(p.notIncluded)
+  const departure = p.groupTrip ? departureLabel(p.departureStart, p.departureEnd) : null
 
   return (
     <div className="min-h-screen bg-white">
@@ -38,6 +40,7 @@ export default function ProgramPreview() {
         <div className="absolute inset-0 flex items-end">
           <div className="mx-auto w-full max-w-7xl px-5 pb-9 lg:px-8">
             <div className="flex flex-wrap items-center gap-2">
+              {p.groupTrip && <span className="eyebrow flex items-center gap-1 bg-primary px-2.5 py-1 text-[0.6rem] text-white"><Users size={11} /> Viagem de grupo</span>}
               <span className="eyebrow bg-accent px-2.5 py-1 text-[0.6rem] text-accent-foreground">{p.type === "circuito" ? "Roteiro" : "Destino único"}</span>
               <span className="eyebrow bg-white/15 px-2.5 py-1 text-[0.6rem] text-white backdrop-blur">{p.region}</span>
             </div>
@@ -53,6 +56,13 @@ export default function ProgramPreview() {
         <div className="mx-auto grid max-w-7xl gap-12 px-5 lg:grid-cols-[1fr_340px] lg:px-8">
           <div>
             {p.overview && <p className="text-[0.98rem] leading-relaxed text-foreground/85">{p.overview}</p>}
+
+            {departure && (
+              <div className="mt-6 flex items-start gap-3 rounded-lg border border-teal-200 bg-teal-50/60 p-5 text-sm">
+                <CalendarDays size={18} className="mt-0.5 shrink-0 text-primary" />
+                <p className="text-foreground/80"><span className="font-semibold text-ink">Viagem de grupo com partida a {departure}.</span>{p.spots ? ` Lugares limitados a ${p.spots} participantes.` : ""} As inscrições fazem-se connosco.</p>
+              </div>
+            )}
 
             {p.days.some((d) => d.title || d.body) && (
               <div className="mt-10">
@@ -105,8 +115,15 @@ export default function ProgramPreview() {
                   <div className="font-display text-4xl text-primary">{p.priceFrom.toLocaleString("pt-PT")} €</div>
                   <div className="text-xs text-muted-foreground">por pessoa</div>
                 </>
-              ) : <div className="font-display text-2xl text-primary">Sob consulta</div>}
+              ) : (
+                <>
+                  <div className="font-display text-2xl text-primary">Preço sob consulta</div>
+                  <p className="mt-1 text-xs text-muted-foreground">Para mais informações, entre em contacto connosco.</p>
+                </>
+              )}
               <div className="mt-4 space-y-2 border-t border-border pt-4 text-sm text-foreground/80">
+                {departure && <p className="flex items-center gap-2"><CalendarDays size={15} className="text-primary" /> Partida: {departure}</p>}
+                {p.groupTrip && p.spots ? <p className="flex items-center gap-2"><Users size={15} className="text-primary" /> Máx. {p.spots} participantes</p> : null}
                 {p.nights ? <p className="flex items-center gap-2"><Calendar size={15} className="text-primary" /> {p.nights} noites</p> : null}
                 {p.destino && <p className="flex items-center gap-2"><MapPin size={15} className="text-primary" /> {p.destino}</p>}
               </div>

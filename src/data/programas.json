@@ -15,6 +15,10 @@
       "heroW": 1280,
       "heroH": 853,
       "nights": 7,
+      "groupTrip": true,
+      "departureStart": "2027-02-02",
+      "departureEnd": "2027-02-09",
+      "spots": 46,
       "days": [
         {
           "id": "d1",
@@ -59,7 +63,7 @@
       ],
       "included": "Voos internacionais\nAlojamento em hotéis (7 noites)\nRefeições indicadas (pequeno-almoço, almoço e jantar)\nTodas as visitas e entradas mencionadas no programa\nGuia acompanhante\nTransportes e transferes",
       "notIncluded": "Bebidas às refeições\nDespesas de carácter pessoal e gorjetas\nVisto de entrada no Egito\nSeguro de viagem\nTudo o que não esteja indicado como incluído",
-      "notes": "Número máximo de participantes: 46. Partidas previstas para fevereiro de 2027 (datas a indicar).",
+      "notes": "",
       "createdAt": 1785795839577,
       "updatedAt": 1785796283052
     }

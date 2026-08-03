@@ -3,8 +3,8 @@ import Layout from "../../layouts/Layout.astro"
 import Header from "../../components/Header.astro"
 import Footer from "../../components/Footer.astro"
 import OfferCard from "../../components/OfferCard.astro"
-import { offers, offerImage, boardLabel, splitServices, typeLabel, offerTitle, offerLocation, offerOperator } from "../../data/offers"
-import { Calendar, BedDouble, Utensils, MapPin, Phone, Plane, Check, X, Star, Mail, Clipboard } from "lucide-react"
+import { offers, offerImage, boardLabel, splitServices, typeLabel, offerTitle, offerLocation, offerOperator, departureLabel } from "../../data/offers"
+import { Calendar, BedDouble, Utensils, MapPin, Phone, Plane, Check, X, Star, Mail, Clipboard, Users, CalendarDays } from "lucide-react"
 
 export function getStaticPaths() {
   return offers.map((offer) => ({ params: { slug: offer.slug }, props: { offer } }))
@@ -16,6 +16,7 @@ const prog = d.program ?? null
 const days = prog?.days ?? []
 const included = splitServices(prog?.included)
 const notIncluded = splitServices(prog?.notIncluded)
+const departure = offer.groupTrip ? departureLabel(offer.departureStart, offer.departureEnd) : null
 const related = offers.filter((o) => o.region === offer.region && o.slug !== offer.slug).slice(0, 3)
 
 const pageTitle = `${offerTitle(offer)} | GPTur`
@@ -43,6 +44,7 @@ const jsonLd = {
             <span class="text-white/90">{offerTitle(offer)}</span>
           </nav>
           <div class="flex flex-wrap items-center gap-2">
+            {offer.groupTrip && <span class="eyebrow flex items-center gap-1 bg-primary px-2.5 py-1 text-[0.6rem] text-white"><Users size={11} /> Viagem de grupo</span>}
             <span class="eyebrow bg-accent px-2.5 py-1 text-[0.6rem] text-accent-foreground">{typeLabel(offer.type)}</span>
             <span class="eyebrow bg-white/15 px-2.5 py-1 text-[0.6rem] text-white backdrop-blur">{offer.region}</span>
           </div>
@@ -136,29 +138,46 @@ const jsonLd = {
             </div>
           )}
 
-          <p class="mt-8 rounded-lg border border-border bg-cream p-5 text-sm text-muted-foreground">
-            Datas de partida e disponibilidade sob consulta — a nossa equipa envia-lhe a proposta completa à medida.
-          </p>
+          {departure ? (
+            <div class="mt-8 flex items-start gap-3 rounded-lg border border-teal-200 bg-teal-50/60 p-5 text-sm">
+              <CalendarDays size={18} className="mt-0.5 shrink-0 text-primary" />
+              <p class="text-foreground/80">
+                <span class="font-semibold text-ink">Viagem de grupo com partida a {departure}.</span>
+                {offer.spots ? ` Lugares limitados a ${offer.spots} participantes.` : ""} As inscrições fazem-se connosco: fale com a nossa equipa para reservar o seu lugar.
+              </p>
+            </div>
+          ) : (
+            <p class="mt-8 rounded-lg border border-border bg-cream p-5 text-sm text-muted-foreground">
+              Datas de partida e disponibilidade sob consulta. A nossa equipa envia-lhe a proposta completa à medida.
+            </p>
+          )}
         </div>
 
         <!-- Sidebar -->
         <aside>
           <div class="sticky top-24 rounded-xl border border-border bg-card p-6 shadow-sm">
             <div class="space-y-4 border-b border-border pb-5">
+              {departure && <div class="flex items-start gap-3"><CalendarDays size={18} className="mt-0.5 shrink-0 text-primary" /><div><p class="eyebrow text-[0.58rem] text-muted-foreground">Partida de grupo</p><p class="text-sm font-medium">{departure}</p></div></div>}
               {offer.nights && <div class="flex items-start gap-3"><Calendar size={18} className="mt-0.5 shrink-0 text-primary" /><div><p class="eyebrow text-[0.58rem] text-muted-foreground">Duração</p><p class="text-sm font-medium">{offer.nights} noites</p></div></div>}
+              {offer.groupTrip && offer.spots && <div class="flex items-start gap-3"><Users size={18} className="mt-0.5 shrink-0 text-primary" /><div><p class="eyebrow text-[0.58rem] text-muted-foreground">Grupo</p><p class="text-sm font-medium">Máx. {offer.spots} participantes</p></div></div>}
               {offer.type === "estadia" && offer.hotels && <div class="flex items-start gap-3"><BedDouble size={18} className="mt-0.5 shrink-0 text-primary" /><div><p class="eyebrow text-[0.58rem] text-muted-foreground">Alojamento</p><p class="text-sm font-medium">{offer.hotels} hotéis à escolha</p></div></div>}
               {offer.boards?.length ? <div class="flex items-start gap-3"><Utensils size={18} className="mt-0.5 shrink-0 text-primary" /><div><p class="eyebrow text-[0.58rem] text-muted-foreground">Regime</p><p class="text-sm font-medium">{offer.boards.map(boardLabel).join(", ")}</p></div></div> : null}
               <div class="flex items-start gap-3"><Plane size={18} className="mt-0.5 shrink-0 text-primary" /><div><p class="eyebrow text-[0.58rem] text-muted-foreground">Voos</p><p class="text-sm font-medium">Incluídos (ida e volta)</p></div></div>
               <div class="flex items-start gap-3"><MapPin size={18} className="mt-0.5 shrink-0 text-primary" /><div><p class="eyebrow text-[0.58rem] text-muted-foreground">Destino</p><p class="text-sm font-medium">{offerLocation(offer)}</p></div></div>
             </div>
-            {offer.priceFrom && (
+            {offer.priceFrom ? (
               <div class="pt-5">
                 <p class="text-[0.65rem] text-muted-foreground">preço por pessoa, desde</p>
                 <p class="font-display text-4xl font-semibold text-primary">{offer.priceFrom.toLocaleString("pt-PT")} €</p>
                 {offer.priceNote && <p class="mt-1 text-[0.65rem] leading-snug text-muted-foreground">{offer.priceNote}</p>}
               </div>
+            ) : (
+              <div class="pt-5">
+                <p class="font-display text-2xl font-semibold text-primary">Preço sob consulta</p>
+                <p class="mt-1 text-[0.72rem] leading-snug text-muted-foreground">Para mais informações, entre em contacto connosco.</p>
+              </div>
             )}
-            <a href={`mailto:altalisboa@gptur.pt,lisboa@gptur.pt?subject=Reserva: ${offerTitle(offer)}`} class="mt-5 flex h-12 w-full items-center justify-center rounded-md bg-primary text-sm font-semibold uppercase tracking-widest text-primary-foreground transition-colors hover:bg-teal-700">Reservar / Pedir proposta</a>
+            <a href={`mailto:altalisboa@gptur.pt,lisboa@gptur.pt?subject=${offer.groupTrip ? "Inscrição" : "Reserva"}: ${offerTitle(offer)}`} class="mt-5 flex h-12 w-full items-center justify-center rounded-md bg-primary text-sm font-semibold uppercase tracking-widest text-primary-foreground transition-colors hover:bg-teal-700">{offer.groupTrip ? "Inscrever-se" : "Reservar / Pedir proposta"}</a>
             <div class="mt-2.5 grid grid-cols-2 gap-2.5">
               <div class="flex h-11 items-center overflow-hidden rounded-md border border-primary text-sm font-semibold text-primary">
                 <a href="tel:+351217530021" title="217 530 021" class="flex h-full flex-1 items-center justify-center gap-1.5 transition-colors hover:bg-primary hover:text-primary-foreground"><Phone size={15} /> Telefone</a>

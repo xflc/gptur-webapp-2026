@@ -52,6 +52,28 @@ export interface Offer {
   thumb?: string
   heroW?: number
   heroH?: number
+  // viagem de grupo com data fixa (inscrição) em vez de datas "sob consulta"
+  groupTrip?: boolean
+  departureStart?: string // ISO yyyy-mm-dd
+  departureEnd?: string
+  spots?: number // nº máximo de participantes
+}
+
+// intervalo de datas em português: "2 a 9 de fevereiro de 2027"
+export function departureLabel(start?: string, end?: string): string | null {
+  if (!start) return null
+  const s = new Date(start + "T00:00:00")
+  if (isNaN(+s)) return null
+  const full = { day: "numeric", month: "long", year: "numeric" } as const
+  if (!end) return s.toLocaleDateString("pt-PT", full)
+  const e = new Date(end + "T00:00:00")
+  if (isNaN(+e)) return s.toLocaleDateString("pt-PT", full)
+  const month = (d: Date) => d.toLocaleDateString("pt-PT", { month: "long" })
+  if (s.getMonth() === e.getMonth() && s.getFullYear() === e.getFullYear())
+    return `${s.getDate()} a ${e.getDate()} de ${month(e)} de ${e.getFullYear()}`
+  if (s.getFullYear() === e.getFullYear())
+    return `${s.getDate()} de ${month(s)} a ${e.getDate()} de ${month(e)} de ${e.getFullYear()}`
+  return `${s.toLocaleDateString("pt-PT", full)} a ${e.toLocaleDateString("pt-PT", full)}`
 }
 
 // slug legível a partir do título ("Japão Medieval" → "japao-medieval")
@@ -65,6 +87,7 @@ interface ProgramInput {
   type?: "circuito" | "estadia"; overview?: string; hero?: string; heroW?: number; heroH?: number
   nights?: number; priceFrom?: number; days?: { title: string; body: string }[]
   included?: string; notIncluded?: string; notes?: string
+  groupTrip?: boolean; departureStart?: string; departureEnd?: string; spots?: number
 }
 const programOffers: Offer[] = ((programas as { programs?: ProgramInput[] }).programs ?? []).map((p) => ({
   slug: p.slug || slugify(p.title || p.id),
@@ -84,6 +107,10 @@ const programOffers: Offer[] = ((programas as { programs?: ProgramInput[] }).pro
   thumb: p.hero,
   heroW: p.heroW,
   heroH: p.heroH,
+  groupTrip: p.groupTrip,
+  departureStart: p.departureStart,
+  departureEnd: p.departureEnd,
+  spots: p.spots,
 }))
 
 export const offers: Offer[] = [...(data.offers as Offer[]), ...(catai.offers as Offer[]), ...programOffers]

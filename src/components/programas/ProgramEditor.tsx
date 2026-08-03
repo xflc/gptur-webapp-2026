@@ -39,6 +39,20 @@ export function ProgramEditor({ p }: { p: Program }) {
         <Field label="Descrição / apresentação" className="mt-3">
           <textarea className={area} value={p.overview} onChange={(e) => edit((p) => { p.overview = e.target.value })} placeholder="Uma viagem pelo Japão clássico, de..." />
         </Field>
+
+        <div className="mt-3 rounded-lg border border-border bg-secondary/30 p-3">
+          <label className="flex items-center gap-2 text-sm font-medium text-ink">
+            <input type="checkbox" checked={!!p.groupTrip} onChange={(e) => edit((p) => { p.groupTrip = e.target.checked })} className="accent-[var(--primary)]" />
+            Viagem de grupo (data fixa, com inscrição)
+          </label>
+          {p.groupTrip && (
+            <div className="mt-3 grid gap-3 sm:grid-cols-3">
+              <Field label="Partida"><input type="date" className="w-full rounded-md border border-border bg-white px-2.5 py-1.5 text-sm" value={p.departureStart || ""} onChange={(e) => edit((p) => { p.departureStart = e.target.value })} /></Field>
+              <Field label="Regresso"><input type="date" className="w-full rounded-md border border-border bg-white px-2.5 py-1.5 text-sm" value={p.departureEnd || ""} onChange={(e) => edit((p) => { p.departureEnd = e.target.value })} /></Field>
+              <Field label="Máx. participantes"><Num value={p.spots || 0} min={0} onChange={(v) => edit((p) => { p.spots = v || undefined })} /></Field>
+            </div>
+          )}
+        </div>
       </section>
 
       {/* Program days */}

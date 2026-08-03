@@ -11,6 +11,7 @@ export const newProgram = (): Program => ({
   nights: undefined, priceFrom: undefined,
   days: [newDay("1º Dia")],
   included: "", notIncluded: "", notes: "",
+  groupTrip: false, departureStart: undefined, departureEnd: undefined, spots: undefined,
   createdAt: Date.now(), updatedAt: Date.now(),
 })
 
