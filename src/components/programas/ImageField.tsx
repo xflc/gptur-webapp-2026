@@ -12,7 +12,6 @@ function processImage(file: File): Promise<{ url: string; w: number; h: number }
       URL.revokeObjectURL(src)
       const w = img.naturalWidth, h = img.naturalHeight
       if (w < MIN_HERO_W) { resolve({ error: `Imagem demasiado pequena: ${w}×${h}px. Mínimo ${MIN_HERO_W}px de largura.` }); return }
-      if (w < h) { resolve({ error: `A imagem é vertical (${w}×${h}). Use uma imagem horizontal para o hero.` }); return }
       const maxW = 1600
       const scale = Math.min(1, maxW / w)
       const cw = Math.round(w * scale), ch = Math.round(h * scale)
@@ -64,7 +63,7 @@ export function ImageField({ hero, heroW, heroH, onChange, onClear }: {
         <button onClick={() => ref.current?.click()} disabled={busy} className="flex aspect-[16/9] w-full flex-col items-center justify-center gap-2 rounded-xl border-2 border-dashed border-border text-muted-foreground transition hover:border-primary hover:text-primary">
           <ImagePlus size={26} />
           <span className="text-sm font-medium">{busy ? "A processar…" : "Carregar foto do hero"}</span>
-          <span className="text-xs">Horizontal, mínimo {MIN_HERO_W}px de largura</span>
+          <span className="text-xs">Mínimo {MIN_HERO_W}px de largura</span>
         </button>
       )}
       {error && <p className="mt-2 flex items-start gap-1.5 text-xs text-destructive"><AlertTriangle size={14} className="mt-0.5 shrink-0" /> {error}</p>}

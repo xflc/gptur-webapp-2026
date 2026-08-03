@@ -32,5 +32,6 @@ export interface Program {
 
 export const REGIONS = ["Portugal", "Europa", "África", "Ásia", "América", "Oceânia", "Médio Oriente"]
 
-// A hero photo must be at least this wide to look good full-bleed (same rule as the site hero).
-export const MIN_HERO_W = 1500
+// A hero photo must be at least this wide to look good full-bleed.
+// (temporariamente mais permissivo para testar — subir para 1500 depois)
+export const MIN_HERO_W = 800
