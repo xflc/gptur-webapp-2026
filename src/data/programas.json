@@ -1,0 +1,29 @@
+{
+  "_comment": "Programas GPTur incluídos manualmente no site. Cola aqui o JSON exportado da ferramenta /programas (um objeto por programa dentro de \"programs\"). A imagem (\"hero\") pode ser um link: copia o ficheiro para public/destinos/ e usa \"/destinos/<nome>.jpg\", ou um URL externo. Cada programa ganha página em /ofertas/<slug> (slug gerado do título se não indicares um).",
+  "programs": [
+    {
+      "id": "demo-australia",
+      "slug": "programa-australia-selvagem",
+      "title": "Austrália Selvagem",
+      "destino": "Sydney · Uluru · Great Barrier Reef",
+      "country": "Austrália",
+      "region": "Oceânia",
+      "type": "circuito",
+      "tagline": "Da ópera de Sydney ao coração vermelho do outback",
+      "overview": "Uma grande viagem pela Austrália, do cosmopolitismo de Sydney à imensidão do deserto central e à vida marinha da Grande Barreira de Coral.",
+      "hero": "/destinos/belezas-da-australia.jpg",
+      "heroW": 1920,
+      "heroH": 1080,
+      "nights": 13,
+      "priceFrom": 4250,
+      "days": [
+        { "title": "1º ao 4º Dia · Sydney", "body": "Chegada e descoberta de Sydney: a Ópera, a ponte do porto e as praias de Bondi." },
+        { "title": "5º ao 7º Dia · Uluru", "body": "Voo para o centro vermelho. O nascer do sol sobre Uluru e a cultura aborígene." },
+        { "title": "8º ao 14º Dia · Cairns e Grande Barreira", "body": "Floresta de Daintree e mergulho na Grande Barreira de Coral. Regresso a Portugal." }
+      ],
+      "included": "Voos internacionais e domésticos\nAlojamento\nExcursões indicadas\nEntradas nos parques nacionais",
+      "notIncluded": "Refeições não indicadas\nAtividades opcionais\nVisto eletrónico (ETA)",
+      "notes": "Preços por pessoa em quarto duplo. Datas de partida sob consulta."
+    }
+  ]
+}

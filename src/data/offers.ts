@@ -1,5 +1,6 @@
 import data from "./solferias-offers.json"
 import catai from "./catai-offers.json"
+import programas from "./programas.json"
 import credits from "../../public/destinos/credits.json"
 
 export interface HotelRow {
@@ -46,16 +47,62 @@ export interface Offer {
   boards?: string[]
   details?: OfferDetails
   source: { file: string; hash: string; page?: number }
+  // programas manuais (src/data/programas.json): imagem por link em vez de /destinos/<slug>.jpg
+  image?: string
+  thumb?: string
+  heroW?: number
+  heroH?: number
 }
 
-export const offers: Offer[] = [...(data.offers as Offer[]), ...(catai.offers as Offer[])]
+// slug legível a partir do título ("Japão Medieval" → "japao-medieval")
+const slugify = (s: string) =>
+  s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "")
+
+// programas criados na ferramenta /programas e colados em programas.json (forma Program).
+// Convertidos para a forma Offer para entrarem no catálogo e ganharem página em /ofertas/<slug>.
+interface ProgramInput {
+  id: string; slug?: string; title: string; destino?: string; country?: string; region?: string
+  type?: "circuito" | "estadia"; overview?: string; hero?: string; heroW?: number; heroH?: number
+  nights?: number; priceFrom?: number; days?: { title: string; body: string }[]
+  included?: string; notIncluded?: string; notes?: string
+}
+const programOffers: Offer[] = ((programas as { programs?: ProgramInput[] }).programs ?? []).map((p) => ({
+  slug: p.slug || slugify(p.title || p.id),
+  type: p.type || "circuito",
+  title: p.title,
+  destino: p.destino || p.country || p.title,
+  country: p.country || "",
+  region: p.region || "Europa",
+  priceFrom: p.priceFrom ?? null,
+  nights: p.nights ?? null,
+  details: {
+    overview: p.overview || null,
+    program: { days: (p.days || []).map((d) => ({ header: d.title, body: d.body })), included: p.included || "", notIncluded: p.notIncluded || "" },
+  },
+  source: { file: "programa", hash: p.id },
+  image: p.hero,
+  thumb: p.hero,
+  heroW: p.heroW,
+  heroH: p.heroH,
+}))
+
+export const offers: Offer[] = [...(data.offers as Offer[]), ...(catai.offers as Offer[]), ...programOffers]
 export const offersGeneratedAt: string = data.generatedAt
+
+// overrides de imagem por link (programas manuais); senão cai em /destinos/<slug>.jpg
+const imageBy = new Map<string, string>()
+const thumbBy = new Map<string, string>()
+const heroDims = new Map<string, { w: number; h: number }>()
+for (const o of offers) {
+  if (o.image) { imageBy.set(o.slug, o.image); heroDims.set(o.slug, { w: o.heroW ?? 2000, h: o.heroH ?? 1000 }) }
+  if (o.thumb || o.image) thumbBy.set(o.slug, (o.thumb || o.image) as string)
+}
 
 export const offerRegions: string[] = [...new Set(offers.map((o) => o.region))].sort()
 
-export const offerImage = (slug: string) => `/destinos/${slug}.jpg`
+export const offerImage = (slug: string) => imageBy.get(slug) ?? `/destinos/${slug}.jpg`
 // miniatura (cartões); a full fica para o hero e página da oferta
-export const offerThumb = (slug: string) => `/destinos/${slug}-thumb.jpg`
+export const offerThumb = (slug: string) => thumbBy.get(slug) ?? `/destinos/${slug}-thumb.jpg`
 
 // baralha um array de forma determinística com um seed do dia (YYYYMMDD), para
 // os cartões não aparecerem sempre agrupados pela mesma origem. Muda a cada dia
@@ -91,7 +138,8 @@ export function shuffleSeed<T>(arr: T[], seed: number): T[] {
 export const typeLabel = (t: string) => (t === "circuito" ? "Roteiro" : "Destino único")
 
 // operador turístico da oferta (pela origem dos dados)
-export const offerOperator = (o: Offer) => (/catai/i.test(o.source?.file || "") ? "Catai" : "Solférias")
+export const offerOperator = (o: Offer) =>
+  /programa/i.test(o.source?.file || "") ? "GPTur" : /catai/i.test(o.source?.file || "") ? "Catai" : "Solférias"
 
 // título a mostrar (nome do circuito, ou o destino se não houver nome de produto)
 export const offerTitle = (o: Offer) => o.title || o.destino
@@ -107,6 +155,8 @@ const imageMeta = credits as Record<string, ImageMeta>
 // resolução (≥1500px). Exclui heros de brochuras de baixa resolução (Golfo,
 // Ilhas Idílicas), que ficam disponíveis apenas no catálogo.
 export const hasHeroImage = (slug: string) => {
+  const h = heroDims.get(slug)
+  if (h) return h.w >= 1500 && h.w >= h.h
   const c = imageMeta[slug]
   return !!c && !c.placeholder && (c.w ?? 0) >= 1500 && (c.w ?? 0) >= (c.h ?? 1)
 }
