@@ -2,28 +2,66 @@
   "_comment": "Programas GPTur incluídos manualmente no site. Cola aqui o JSON exportado da ferramenta /programas (um objeto por programa dentro de \"programs\"). A imagem (\"hero\") pode ser um link: copia o ficheiro para public/destinos/ e usa \"/destinos/<nome>.jpg\", ou um URL externo. Cada programa ganha página em /ofertas/<slug> (slug gerado do título se não indicares um).",
   "programs": [
     {
-      "id": "demo-australia",
-      "slug": "programa-australia-selvagem",
-      "title": "Austrália Selvagem",
-      "destino": "Sydney · Uluru · Great Barrier Reef",
-      "country": "Austrália",
-      "region": "Oceânia",
+      "id": "8pplrzcd",
+      "title": "Egito: Seguindo os Padres do Deserto",
+      "slug": "egite_padras_igreja",
+      "destino": "",
+      "country": "Egito",
+      "region": "África",
       "type": "circuito",
-      "tagline": "Da ópera de Sydney ao coração vermelho do outback",
-      "overview": "Uma grande viagem pela Austrália, do cosmopolitismo de Sydney à imensidão do deserto central e à vida marinha da Grande Barreira de Coral.",
-      "hero": "/destinos/belezas-da-australia.jpg",
-      "heroW": 1920,
-      "heroH": 1080,
-      "nights": 13,
-      "priceFrom": 4250,
+      "tagline": "teste: Los Mejores cristianos amigos nel deserto egipcio",
+      "overview": "teste: Los Mejores cristianos amigos nel deserto egipcio bla bla bla",
+      "hero": "/destinos/egite_padras_igreja.jpg",
+      "nights": 7,
       "days": [
-        { "title": "1º ao 4º Dia · Sydney", "body": "Chegada e descoberta de Sydney: a Ópera, a ponte do porto e as praias de Bondi." },
-        { "title": "5º ao 7º Dia · Uluru", "body": "Voo para o centro vermelho. O nascer do sol sobre Uluru e a cultura aborígene." },
-        { "title": "8º ao 14º Dia · Cairns e Grande Barreira", "body": "Floresta de Daintree e mergulho na Grande Barreira de Coral. Regresso a Portugal." }
+        {
+          "id": "km6xj0at",
+          "title": "1º Dia",
+          "body": "chegada a Cairo"
+        },
+        {
+          "id": "aeex9tzf",
+          "title": "2º Dia",
+          "body": "Rezar bue"
+        },
+        {
+          "id": "xl9ej228",
+          "title": "3º Dia",
+          "body": "Ver mumias"
+        },
+        {
+          "id": "jqc77qqm",
+          "title": "4º Dia",
+          "body": "Ver piramides fora das mumias"
+        },
+        {
+          "id": "7nbhk9d4",
+          "title": "5º Dia",
+          "body": "ver mais um mosteiro"
+        },
+        {
+          "id": "4vdb9c34",
+          "title": "6º Dia",
+          "body": "comprar souveniers"
+        },
+        {
+          "id": "10xc92j4",
+          "title": "7º Dia",
+          "body": "papar comida estragada"
+        },
+        {
+          "id": "fnbnpt3c",
+          "title": "8º Dia",
+          "body": "Regresso a tugolandia"
+        }
       ],
-      "included": "Voos internacionais e domésticos\nAlojamento\nExcursões indicadas\nEntradas nos parques nacionais",
-      "notIncluded": "Refeições não indicadas\nAtividades opcionais\nVisto eletrónico (ETA)",
-      "notes": "Preços por pessoa em quarto duplo. Datas de partida sob consulta."
+      "included": "Voos\nAlojamento\nRefeiçoes (tudinho)",
+      "notIncluded": "Souveniers\nbebidas",
+      "notes": "isto é só um teste. e um grupo fechado",
+      "createdAt": 1785795839577,
+      "updatedAt": 1785796283052,
+      "heroW": 1280,
+      "heroH": 853
     }
   ]
 }
