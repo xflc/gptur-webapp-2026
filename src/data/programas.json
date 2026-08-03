@@ -5,63 +5,63 @@
       "id": "8pplrzcd",
       "title": "Egito: Seguindo os Padres do Deserto",
       "slug": "egite_padras_igreja",
-      "destino": "",
+      "destino": "Cairo · Wadi El Natrun · Alexandria · Sinai",
       "country": "Egito",
       "region": "África",
       "type": "circuito",
-      "tagline": "teste: Los Mejores cristianos amigos nel deserto egipcio",
-      "overview": "teste: Los Mejores cristianos amigos nel deserto egipcio bla bla bla",
+      "tagline": "Mosteiros coptas, o Monte Sinai e o Cairo dos faraós",
+      "overview": "Uma peregrinação pelo Egito cristão, seguindo os passos dos Padres do Deserto: dos mosteiros coptas de Wadi El Natrun e do Mar Vermelho ao Monte Sinai e ao Mosteiro de Santa Catarina, terminando no Cairo dos faraós, com as pirâmides de Gizé e o Grande Museu Egípcio.",
       "hero": "/destinos/egite_padras_igreja.jpg",
+      "heroW": 1280,
+      "heroH": 853,
       "nights": 7,
       "days": [
         {
-          "id": "km6xj0at",
-          "title": "1º Dia",
-          "body": "chegada a Cairo"
+          "id": "d1",
+          "title": "1º Dia · Cairo",
+          "body": "Chegada ao aeroporto do Cairo, formalidades de desembarque, recolha da bagagem e transporte ao hotel. Instalação e alojamento."
         },
         {
-          "id": "aeex9tzf",
-          "title": "2º Dia",
-          "body": "Rezar bue"
+          "id": "d2",
+          "title": "2º Dia · Cairo",
+          "body": "Visita à Igreja Suspensa (Hanging Church), importante monumento do cristianismo copta erguido sobre a antiga Fortaleza da Babilónia, conhecido pelo teto em madeira que lembra o casco invertido da Arca de Noé. Seguimos para a Igreja de Santa Maria em Zeitoun, um dos santuários marianos mais famosos do Egito, mundialmente conhecido pelas aparições da Virgem Maria observadas por milhares de pessoas entre 1968 e 1971. Almoço durante as visitas e jantar em restaurante."
         },
         {
-          "id": "xl9ej228",
-          "title": "3º Dia",
-          "body": "Ver mumias"
+          "id": "d3",
+          "title": "3º Dia · Cairo · Wadi El Natrun · Alexandria",
+          "body": "No deserto de Wadi El Natrun, visita ao Mosteiro de Deir El-Surian (dos Sírios), do século VI, célebre pelos frescos medievais e pela antiga biblioteca de manuscritos, e ao Mosteiro de São Bishoi (Anba Bishoi), do século IV, dedicado a um dos grandes Padres do Deserto. Chegada a Alexandria e visita à Igreja de Santa Catarina, dedicada à virgem e mártir do século IV e testemunho da rica herança cristã da cidade. Almoço durante as visitas e jantar em restaurante."
         },
         {
-          "id": "jqc77qqm",
-          "title": "4º Dia",
-          "body": "Ver piramides fora das mumias"
+          "id": "d4",
+          "title": "4º Dia · Alexandria · Cairo",
+          "body": "Visita à Catedral de São Marcos, sede histórica do Patriarcado Copta Ortodoxo de Alexandria, onde a tradição situa a pregação e o martírio de São Marcos Evangelista, primeiro Patriarca da cidade. Destaque para a cripta que conserva as suas relíquias. Regresso ao Cairo. Almoço durante as visitas e jantar em restaurante."
         },
         {
-          "id": "7nbhk9d4",
-          "title": "5º Dia",
-          "body": "ver mais um mosteiro"
+          "id": "d5",
+          "title": "5º Dia · Cairo · Zaafarana · Santa Catarina",
+          "body": "Partida para o Mosteiro de Santo António, junto às montanhas do Deserto Oriental, perto do Mar Vermelho: fundado no século IV, é o mais antigo mosteiro cristão ainda em funcionamento no mundo, erguido junto à gruta onde viveu Santo António, o Pai do Monaquismo. Continuação em direção ao Sinai, instalação no hotel e jantar."
         },
         {
-          "id": "4vdb9c34",
-          "title": "6º Dia",
-          "body": "comprar souveniers"
+          "id": "d6",
+          "title": "6º Dia · Santa Catarina · Cairo",
+          "body": "De madrugada, subida ao Monte Sinai (Horeb), local onde, segundo a tradição bíblica, Moisés recebeu as Tábuas da Lei com os Dez Mandamentos. Visita ao Mosteiro de Santa Catarina, do século VI, Património Mundial da UNESCO, com a Basílica da Transfiguração e os seus mosaicos bizantinos, a célebre biblioteca de manuscritos antigos e a Capela da Sarça Ardente. Partida para o Cairo. Almoço durante as visitas e jantar em restaurante."
         },
         {
-          "id": "10xc92j4",
-          "title": "7º Dia",
-          "body": "papar comida estragada"
+          "id": "d7",
+          "title": "7º Dia · Cairo",
+          "body": "Visita ao Templo do Vale de Quéfren, no planalto de Gizé, e às Grandes Pirâmides de Quéops, Quéfren e Miquerinos, com a lendária Esfinge. Visita ao novo Grande Museu Egípcio, que reúne cerca de 100.000 artefactos, incluindo os tesouros de Tutankhamon e a colossal estátua de Ramsés II. Almoço durante as visitas e jantar em restaurante."
         },
         {
-          "id": "fnbnpt3c",
-          "title": "8º Dia",
-          "body": "Regresso a tugolandia"
+          "id": "d8",
+          "title": "8º Dia · Cairo · Aeroporto",
+          "body": "Pequeno-almoço no hotel. Em hora a combinar localmente, transporte ao aeroporto e formalidades de embarque."
         }
       ],
-      "included": "Voos\nAlojamento\nRefeiçoes (tudinho)",
-      "notIncluded": "Souveniers\nbebidas",
-      "notes": "isto é só um teste. e um grupo fechado",
+      "included": "Voos internacionais\nAlojamento em hotéis (7 noites)\nRefeições indicadas (pequeno-almoço, almoço e jantar)\nTodas as visitas e entradas mencionadas no programa\nGuia acompanhante\nTransportes e transferes",
+      "notIncluded": "Bebidas às refeições\nDespesas de carácter pessoal e gorjetas\nVisto de entrada no Egito\nSeguro de viagem\nTudo o que não esteja indicado como incluído",
+      "notes": "Número máximo de participantes: 46. Partidas previstas para fevereiro de 2027 (datas a indicar).",
       "createdAt": 1785795839577,
-      "updatedAt": 1785796283052,
-      "heroW": 1280,
-      "heroH": 853
+      "updatedAt": 1785796283052
     }
   ]
 }

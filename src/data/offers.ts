@@ -26,10 +26,10 @@ export interface OfferDetails {
   program?: OfferProgram | null
 }
 
-// divide um texto de serviços (separado por ; ou .) em itens de lista
+// divide um texto de serviços (uma linha por item, ou separado por ; ou .) em itens de lista
 export const splitServices = (s?: string) =>
   (s || "")
-    .split(/;|(?<=\.)\s+(?=[A-ZÀ-Ú])/)
+    .split(/\n+|;|(?<=\.)\s+(?=[A-ZÀ-Ú])/)
     .map((x) => x.replace(/^[\s;.]+|[\s;]+$/g, "").trim())
     .filter((x) => x.length > 2)
 export interface Offer {
