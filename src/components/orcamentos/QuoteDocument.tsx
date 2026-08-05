@@ -7,6 +7,7 @@ import type { Quote, Item, Service, Stage } from "../../orcamentos/model"
 import { CATEGORY_ORDER, categoryLabel } from "../../orcamentos/model"
 import { quoteTotals, cheapestBranch, lineValue, money, isRealService } from "../../orcamentos/pricing"
 import { branchLabel } from "../../orcamentos/factory"
+import { stageDayRange, stageDateRange, fmtDate } from "../../orcamentos/dates"
 
 // coluna de quantidade: contagens descritivas ("3 noites", "4 unidades") sempre;
 // a base de preço ("p/ pessoa", "p/ grupo") só faz sentido no modo detalhado.
@@ -19,19 +20,12 @@ function qtyUnit(s: Service, detalhado: boolean): string {
   return q > 1 ? `${base} · ${q}×` : base
 }
 
-function fmtDate(startDate: string | undefined, day: number | undefined): string | null {
-  if (!startDate || !day) return null
-  const d = new Date(startDate + "T00:00:00")
-  if (isNaN(d.getTime())) return null
-  d.setDate(d.getDate() + (day - 1))
-  return d.toLocaleDateString("pt-PT", { day: "numeric", month: "long" })
-}
-
 function stageTiming(q: Quote, st: Stage): string {
+  const { ds, de } = stageDayRange(q, st)
+  const { start, end } = stageDateRange(q, st)
   const parts: string[] = []
-  if (st.dayStart) parts.push(st.dayEnd && st.dayEnd !== st.dayStart ? `Dias ${st.dayStart}–${st.dayEnd}` : `Dia ${st.dayStart}`)
-  const d1 = fmtDate(q.startDate, st.dayStart)
-  const d2 = fmtDate(q.startDate, st.dayEnd)
+  if (ds) parts.push(de && de !== ds ? `Dias ${ds}–${de}` : `Dia ${ds}`)
+  const d1 = fmtDate(start), d2 = fmtDate(end)
   if (d1) parts.push(d2 && d2 !== d1 ? `${d1} a ${d2}` : d1)
   return parts.join(" · ")
 }

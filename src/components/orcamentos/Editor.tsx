@@ -2,6 +2,7 @@ import { Plus, Trash2, ChevronUp, ChevronDown, Layers, MapPin, Check, GripVertic
 import type { Quote, Item, Stage, Alternative } from "../../orcamentos/model"
 import { newService, newAlternative, newStage, newBranch, updateService, removeById, moveItem, moveStage, reorderItem, reorderStage, branchLabel } from "../../orcamentos/factory"
 import { cheapestBranch, money, lineValue } from "../../orcamentos/pricing"
+import { stageDayRange, stageDateRange } from "../../orcamentos/dates"
 import { useStore } from "../../orcamentos/store"
 import { Field, Text, Num, Select, Btn, handleProps, dropProps, DRAG_ITEM, DRAG_STAGE } from "./ui"
 import { ServiceRow } from "./ServiceRow"
@@ -39,7 +40,7 @@ export function Editor({ q }: { q: Quote }) {
             <Select value={q.mode} onChange={(v) => edit((q) => { q.mode = v })} options={[{ id: "itinerary", label: "Itinerário (dia a dia)" }, { id: "flat", label: "Destino único" }]} />
           </Field>
           {q.mode === "itinerary"
-            ? <Field label="Data de início (dias⇄datas)"><input type="date" className="w-full rounded-md border border-border bg-white px-2.5 py-1.5 text-sm" value={q.startDate || ""} onChange={(e) => edit((q) => { q.startDate = e.target.value })} /></Field>
+            ? <Field label="Data de partida (Dia 1)"><input type="date" className="w-full rounded-md border border-border bg-white px-2.5 py-1.5 text-sm" value={q.startDate || ""} onChange={(e) => edit((q) => { q.startDate = e.target.value })} /></Field>
             : <Field label="Duração (dias)"><Num value={q.durationDays || 0} min={0} onChange={(v) => edit((q) => { q.durationDays = v })} /></Field>}
         </div>
         <div className="mt-3 grid gap-3 sm:grid-cols-3">
@@ -58,7 +59,7 @@ export function Editor({ q }: { q: Quote }) {
       {q.mode === "itinerary" && (
         <div className="space-y-4">
           {q.itinerary.map((st, i) => (
-            <StageEditor key={st.id} st={st} idx={i} count={q.itinerary.length} rate={rate} pax={pax} renderItem={renderItem} onReorder={(from) => edit((q) => reorderStage(q, from, st.id))} />
+            <StageEditor key={st.id} q={q} st={st} idx={i} count={q.itinerary.length} rate={rate} pax={pax} renderItem={renderItem} onReorder={(from) => edit((q) => reorderStage(q, from, st.id))} />
           ))}
           <Btn variant="primary" onClick={() => edit((q) => q.itinerary.push(newStage()))}><MapPin size={14} /> Adicionar etapa</Btn>
         </div>
@@ -92,9 +93,12 @@ function AddRow({ onService, onAlt }: { onService: () => void; onAlt: () => void
   )
 }
 
-function StageEditor({ st, idx, count, rate, pax, renderItem, onReorder }: { st: Stage; idx: number; count: number; rate: number; pax: number; renderItem: (it: Item, addTo: (i: Item) => void) => React.ReactNode; onReorder?: (fromId: string) => void }) {
+function StageEditor({ q, st, idx, count, rate, pax, renderItem, onReorder }: { q: Quote; st: Stage; idx: number; count: number; rate: number; pax: number; renderItem: (it: Item, addTo: (i: Item) => void) => React.ReactNode; onReorder?: (fromId: string) => void }) {
   const edit = useStore((s) => s.edit)
   const patchStage = (fn: (s: Stage) => void) => edit((q) => { const s = q.itinerary.find((x) => x.id === st.id); if (s) fn(s) })
+  const { ds, de } = stageDayRange(q, st) // dia efetivo (override ou calculado da data)
+  const eff = stageDateRange(q, st) // data efetiva (para pré-preencher em dados antigos)
+  const dateCls = "rounded-md border border-border bg-white px-2 py-1.5 text-sm outline-none focus:border-primary"
   return (
     <section className="rounded-xl border border-border bg-secondary/40 p-4" {...(onReorder ? dropProps(DRAG_STAGE, onReorder) : {})}>
       <div className="mb-3 flex flex-wrap items-end gap-2">
@@ -107,8 +111,15 @@ function StageEditor({ st, idx, count, rate, pax, renderItem, onReorder }: { st:
         </div>
         <span className="grid h-7 w-7 shrink-0 place-items-center rounded-md bg-primary text-xs font-bold text-white">{idx + 1}</span>
         <Field label="Local" className="min-w-[160px] flex-1"><Text value={st.place} onChange={(v) => patchStage((s) => { s.place = v })} placeholder="Tóquio" /></Field>
-        <Field label="Dia início"><Num value={st.dayStart || 0} min={0} onChange={(v) => patchStage((s) => { s.dayStart = v })} className="w-20" /></Field>
-        <Field label="Dia fim"><Num value={st.dayEnd || 0} min={0} onChange={(v) => patchStage((s) => { s.dayEnd = v })} className="w-20" /></Field>
+        <Field label="Data início"><input type="date" className={dateCls} value={st.dateStart || eff.start || ""} onChange={(e) => patchStage((s) => { s.dateStart = e.target.value; s.dayStart = undefined })} /></Field>
+        <Field label="Data fim"><input type="date" className={dateCls} value={st.dateEnd || eff.end || ""} onChange={(e) => patchStage((s) => { s.dateEnd = e.target.value; s.dayEnd = undefined })} /></Field>
+        <Field label="Dia (auto)">
+          <div className="flex items-center gap-1">
+            <Num value={ds || 0} min={0} onChange={(v) => patchStage((s) => { s.dayStart = v || undefined })} className="w-12" />
+            <span className="text-muted-foreground">–</span>
+            <Num value={de || 0} min={0} onChange={(v) => patchStage((s) => { s.dayEnd = v || undefined })} className="w-12" />
+          </div>
+        </Field>
         <div className="ml-auto flex items-center gap-0.5">
           <button onClick={() => edit((q) => removeById(q, st.id))} title="Remover etapa" className="grid h-7 w-7 place-items-center rounded text-muted-foreground hover:bg-red-50 hover:text-destructive"><Trash2 size={15} /></button>
         </div>

@@ -45,10 +45,14 @@ export interface Alternative {
 export type Item = Service | Alternative
 
 // A day-range in ONE place. Revisiting a place = a new stage.
+// Dates are the primary input; the travel day is derived (see dates.ts) but the
+// day (dayStart/dayEnd) can be set to override the calculation.
 export interface Stage {
   id: string
   place: string
-  dayStart?: number // travel day (1-based); date derived from quote.startDate
+  dateStart?: string // ISO yyyy-mm-dd — primary input
+  dateEnd?: string
+  dayStart?: number // optional override of the derived travel day (1-based)
   dayEnd?: number
   description?: string
   items: Item[]
