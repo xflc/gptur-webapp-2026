@@ -4,7 +4,8 @@ import Header from "../components/Header.astro"
 import Footer from "../components/Footer.astro"
 import PageBanner from "../components/PageBanner.astro"
 import OfferCard from "../components/OfferCard.astro"
-import { offers, offerRegions, shuffleByDay } from "../data/offers"
+import { offers, offerRegions, shuffleByDay, offerTitle } from "../data/offers"
+import { Search } from "lucide-react"
 
 // ordem baralhada por dia — evita mostrar tudo do mesmo país/origem em bloco
 const catalogo = shuffleByDay(offers)
@@ -25,6 +26,14 @@ const catalogo = shuffleByDay(offers)
 
     <section class="bg-white py-12">
       <div class="mx-auto max-w-7xl px-5 lg:px-8">
+        <div class="relative mb-5 max-w-md">
+          <span class="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground"><Search size={18} /></span>
+          <input
+            id="search" type="search" autocomplete="off"
+            placeholder="Procurar destino, país ou viagem…"
+            class="w-full rounded-full border border-border bg-white py-2.5 pl-10 pr-4 text-sm outline-none transition focus:border-primary focus:ring-2 focus:ring-teal-100"
+          />
+        </div>
         <div class="mb-8 flex flex-wrap gap-2" id="region-filter">
           <button data-region="all" class="filter-chip rounded-full border border-primary bg-primary px-4 py-1.5 text-sm font-medium text-primary-foreground">Todas</button>
           {offerRegions.map((r) => (
@@ -34,7 +43,7 @@ const catalogo = shuffleByDay(offers)
 
         <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3" id="grid">
           {catalogo.map((o) => (
-            <div class="offer-item" data-region={o.region} data-type={o.type} data-price={o.priceFrom ?? ""}>
+            <div class="offer-item" data-region={o.region} data-type={o.type} data-price={o.priceFrom ?? ""} data-search={`${offerTitle(o)} ${o.destino} ${o.country} ${o.region}`.toLowerCase()}>
               <OfferCard offer={o} />
             </div>
           ))}
@@ -50,14 +59,15 @@ const catalogo = shuffleByDay(offers)
   const chips = document.querySelectorAll<HTMLButtonElement>(".filter-chip")
   const items = document.querySelectorAll<HTMLElement>(".offer-item")
   const empty = document.getElementById("empty")
-  const on = ["border-primary", "bg-primary", "text-primary-foreground"]
-  const off = ["border-border", "text-foreground/80"]
+  const search = document.getElementById("search") as HTMLInputElement | null
 
-  // filtros vindos do finder da homepage (?regiao=&tipo=&max=)
+  // filtros vindos do finder da homepage (?regiao=&tipo=&max=) e pesquisa (?q=)
   const params = new URLSearchParams(location.search)
   let region = params.get("regiao") || "all"
   const type = params.get("tipo") || ""
   const max = Number(params.get("max")) || Infinity
+  const norm = (s: string) => s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "")
+  if (search && params.get("q")) search.value = params.get("q")!
 
   function apply() {
     chips.forEach((c) => {
@@ -68,13 +78,16 @@ const catalogo = shuffleByDay(offers)
       c.classList.toggle("border-border", !active)
       c.classList.toggle("text-foreground/80", !active)
     })
+    const tokens = norm(search?.value.trim() || "").split(/\s+/).filter(Boolean)
     let vis = 0
     items.forEach((it) => {
       const price = Number(it.dataset.price) || 0
+      const hay = norm(it.dataset.search || "")
       const m =
         (region === "all" || it.dataset.region === region) &&
         (!type || it.dataset.type === type) &&
-        (max === Infinity || (price > 0 && price <= max))
+        (max === Infinity || (price > 0 && price <= max)) &&
+        tokens.every((t) => hay.includes(t))
       it.classList.toggle("hidden", !m)
       if (m) vis++
     })
@@ -84,5 +97,6 @@ const catalogo = shuffleByDay(offers)
   chips.forEach((chip) =>
     chip.addEventListener("click", () => { region = chip.dataset.region!; apply() })
   )
-  apply() // aplica filtros iniciais (do finder ou nenhum)
+  search?.addEventListener("input", apply)
+  apply() // aplica filtros iniciais (finder, pesquisa, ou nenhum)
 </script>
