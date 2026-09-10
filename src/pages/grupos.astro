@@ -109,6 +109,13 @@ const hasTrips = (y: number) => trips.some((t) => t.year === y)
 
     <section class="bg-white py-14">
       <div class="mx-auto max-w-5xl px-5 lg:px-8">
+        <a
+          href="/catalogo?grupo=1"
+          class="mb-10 inline-flex items-center gap-1.5 rounded-full border border-gold-400 px-4 py-1.5 text-sm font-medium text-gold-600 transition-colors hover:bg-gold-50"
+        >
+          <Users size={14} /> Próximas Viagens →
+        </a>
+
         {
           timelineYears.map((year) => (hasTrips(year) ? (
             <div class="mb-12">

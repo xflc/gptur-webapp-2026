@@ -5,7 +5,7 @@ import Footer from "../components/Footer.astro"
 import PageBanner from "../components/PageBanner.astro"
 import OfferCard from "../components/OfferCard.astro"
 import { offers, offerRegions, shuffleByDay, offerTitle } from "../data/offers"
-import { Search } from "lucide-react"
+import { Search, Users, Info } from "lucide-react"
 
 // ordem baralhada por dia — evita mostrar tudo do mesmo país/origem em bloco
 const catalogo = shuffleByDay(offers)
@@ -34,16 +34,40 @@ const catalogo = shuffleByDay(offers)
             class="w-full rounded-full border border-border bg-white py-2.5 pl-10 pr-4 text-sm outline-none transition focus:border-primary focus:ring-2 focus:ring-teal-100"
           />
         </div>
-        <div class="mb-8 flex flex-wrap gap-2" id="region-filter">
+        <div class="mb-8 flex flex-wrap items-center gap-2" id="region-filter">
           <button data-region="all" class="filter-chip rounded-full border border-primary bg-primary px-4 py-1.5 text-sm font-medium text-primary-foreground">Todas</button>
           {offerRegions.map((r) => (
             <button data-region={r} class="filter-chip rounded-full border border-border px-4 py-1.5 text-sm text-foreground/80 transition-colors hover:border-primary hover:text-primary">{r}</button>
           ))}
+          <span class="mx-1 h-5 w-px bg-border" aria-hidden="true"></span>
+          <div
+            id="group-filter-wrap"
+            class="flex items-center gap-1.5 rounded-full border border-gold-400 py-1.5 pl-4 pr-2.5 text-sm font-medium text-gold-600 transition-colors"
+          >
+            <button id="group-filter" type="button" aria-pressed="false" class="flex items-center gap-1.5 hover:opacity-80">
+              <Users size={14} /> Viagens de Grupo
+            </button>
+            <div class="group relative inline-flex">
+              <button
+                type="button"
+                aria-label="O que são Viagens de Grupo?"
+                class="grid h-4 w-4 place-items-center rounded-full text-current opacity-70 transition-opacity hover:opacity-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-gold-300"
+              >
+                <Info size={13} />
+              </button>
+              <div
+                role="tooltip"
+                class="pointer-events-none absolute left-1/2 top-full z-10 mt-2 w-64 -translate-x-1/2 rounded-lg border border-border bg-white p-3 text-xs font-normal normal-case leading-relaxed text-foreground/80 opacity-0 shadow-lg transition-opacity group-hover:opacity-100 group-focus-within:opacity-100"
+              >
+                Viagens fechadas, organizadas e acompanhadas por guia da GPTur, com data de partida fixa — é necessária inscrição prévia e há um número limitado de lugares.
+              </div>
+            </div>
+          </div>
         </div>
 
         <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3" id="grid">
           {catalogo.map((o) => (
-            <div class="offer-item" data-region={o.region} data-type={o.type} data-price={o.priceFrom ?? ""} data-search={`${offerTitle(o)} ${o.destino} ${o.country} ${o.region}`.toLowerCase()}>
+            <div class="offer-item" data-region={o.region} data-type={o.type} data-group={o.groupTrip ? "1" : "0"} data-price={o.priceFrom ?? ""} data-search={`${offerTitle(o)} ${o.destino} ${o.country} ${o.region}`.toLowerCase()}>
               <OfferCard offer={o} />
             </div>
           ))}
@@ -60,12 +84,15 @@ const catalogo = shuffleByDay(offers)
   const items = document.querySelectorAll<HTMLElement>(".offer-item")
   const empty = document.getElementById("empty")
   const search = document.getElementById("search") as HTMLInputElement | null
+  const groupBtn = document.getElementById("group-filter") as HTMLButtonElement | null
+  const groupWrap = document.getElementById("group-filter-wrap") as HTMLElement | null
 
   // filtros vindos do finder da homepage (?regiao=&tipo=&max=) e pesquisa (?q=)
   const params = new URLSearchParams(location.search)
   let region = params.get("regiao") || "all"
   const type = params.get("tipo") || ""
   const max = Number(params.get("max")) || Infinity
+  let groupOnly = params.get("grupo") === "1"
   const norm = (s: string) => s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "")
   if (search && params.get("q")) search.value = params.get("q")!
 
@@ -78,6 +105,12 @@ const catalogo = shuffleByDay(offers)
       c.classList.toggle("border-border", !active)
       c.classList.toggle("text-foreground/80", !active)
     })
+    groupWrap?.classList.toggle("border-gold-400", !groupOnly)
+    groupWrap?.classList.toggle("text-gold-600", !groupOnly)
+    groupWrap?.classList.toggle("bg-gold-300", groupOnly)
+    groupWrap?.classList.toggle("border-gold-300", groupOnly)
+    groupWrap?.classList.toggle("text-accent-foreground", groupOnly)
+    groupBtn?.setAttribute("aria-pressed", String(groupOnly))
     const tokens = norm(search?.value.trim() || "").split(/\s+/).filter(Boolean)
     let vis = 0
     items.forEach((it) => {
@@ -86,6 +119,7 @@ const catalogo = shuffleByDay(offers)
       const m =
         (region === "all" || it.dataset.region === region) &&
         (!type || it.dataset.type === type) &&
+        (!groupOnly || it.dataset.group === "1") &&
         (max === Infinity || (price > 0 && price <= max)) &&
         tokens.every((t) => hay.includes(t))
       it.classList.toggle("hidden", !m)
@@ -97,6 +131,7 @@ const catalogo = shuffleByDay(offers)
   chips.forEach((chip) =>
     chip.addEventListener("click", () => { region = chip.dataset.region!; apply() })
   )
+  groupBtn?.addEventListener("click", () => { groupOnly = !groupOnly; apply() })
   search?.addEventListener("input", apply)
   apply() // aplica filtros iniciais (finder, pesquisa, ou nenhum)
 </script>

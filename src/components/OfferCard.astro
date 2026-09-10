@@ -1,12 +1,14 @@
 ---
 import type { Offer } from "../data/offers"
-import { offerThumb, typeLabel, offerTitle } from "../data/offers"
+import { offerThumb, typeLabel, offerTitle, departureLabel } from "../data/offers"
+import { Users } from "lucide-react"
 
 interface Props { offer: Offer }
 const { offer } = Astro.props
 const meta = [
   offer.nights ? `${offer.nights} noites` : null,
 ].filter(Boolean).join(" · ")
+const departure = offer.groupTrip ? departureLabel(offer.departureStart, offer.departureEnd) : null
 ---
 
 <article
@@ -23,6 +25,16 @@ const meta = [
       {typeLabel(offer.type)}
     </span>
     <span class="eyebrow absolute right-3 top-3 bg-cream/90 px-2.5 py-1 text-[0.6rem] text-primary">{offer.region}</span>
+    {offer.groupTrip && (
+      <div class="absolute inset-x-3 bottom-3 flex flex-col items-start gap-1">
+        <span class="eyebrow flex items-center gap-1 rounded bg-gold-300 px-2.5 py-1 text-[0.6rem] text-accent-foreground">
+          <Users size={11} /> Viagem de Grupo
+        </span>
+        {departure && (
+          <span class="rounded bg-black/55 px-2 py-0.5 text-[0.7rem] font-medium text-white">{departure}</span>
+        )}
+      </div>
+    )}
   </a>
 
   <div class="flex flex-1 flex-col p-5">
